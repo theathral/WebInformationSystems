@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block content %}
+
+<div class="row-sign-in row mx-auto mt-5" >
+  <div class="col-md-6" >
+    <div class="card">
+      <div class="card-body"style="background-color: #c6c7c9;">
+        <h5 class="card-title" >Using e-mail</h5>
+        <form>
+          <label for="input-email" class="sr-only">Email address</label>
+          <input type="email" id="input-email" class="form-control" placeholder="Email address" required autofocus>
+          <label for="input-password" class="sr-only">Password</label>
+          <input type="password" id="input-password" class="form-control" placeholder="Password" required>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Using a social network</h5>
+        <button class="btn btn-block btn-social btn-facebook"><i class="fab fa-facebook"></i> Sign in with
+          Facebook</button>
+        <button class="btn btn-block btn-social btn-twitter"><i class="fab fa-twitter"></i> Sign in with
+          Twitter</button>
+        <button class="btn btn-block btn-social btn-google"><i class="fab fa-google"></i> Sign in with Google</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

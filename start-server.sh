@@ -1,0 +1,1 @@
+FLASK_APP=health4u flask runFLASK_ENV=development
