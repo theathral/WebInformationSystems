@@ -1,1 +1,1 @@
-FLASK_APP=health4u flask runFLASK_ENV=development
+FLASK_APP=health4u FLASK_ENV=development FLASK_DEBUG=1 flask run
