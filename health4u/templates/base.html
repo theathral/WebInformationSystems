@@ -38,6 +38,8 @@
                     <a class="nav-link" href="{{ url_for('on_duty') }}">On Duty</a></li>
                 <li class="nav-item{%- if request.endpoint == 'contact_us' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('contact_us') }}">Contact Us</a></li>
+                <li class="nav-item{%- if request.endpoint == 'covid19' %} active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('covid19') }}">COVID-19</a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item{%- if request.endpoint == 'sign_up' %} active{% endif %}">

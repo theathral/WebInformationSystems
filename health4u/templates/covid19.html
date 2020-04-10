@@ -1,0 +1,62 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='covid_19.css') }}">
+    <script src="/health4u/static/covid_19.js"></script>
+</head>
+
+{% extends 'base.html' %}
+
+{% block title %}Hospitals{% endblock %}
+
+{% block content %}
+
+
+<ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab"
+           aria-controls="pills-map" aria-selected="true">Map (by: https://www.imedd.org/)</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-information-tab" data-toggle="pill" href="#pills-information" role="tab"
+           aria-controls="pills-profile" aria-selected="false">More Information</a>
+    </li>
+</ul>
+<div class="tab-content my-responsive-height" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+        <iframe
+                src="https://lab.imedd.org/covid19/"
+                style="border:0 #ffffff none;"
+                name="imedd-covid"
+                scrolling="no"
+                frameborder="1"
+                marginheight="0px"
+                marginwidth="0px"
+                height="75%"
+                width="100%"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <div class="tab-pane fade" id="pills-information" role="tabpanel" aria-labelledby="pills-information-tab">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum faucibus nisl, eget maximus dolor vestibulum at.
+            Nullam auctor quam at lectus rhoncus, eget fermentum libero pharetra. Mauris in quam vel erat finibus euismod. Fusce non commodo neque,
+            id egestas justo. Proin mollis enim nec dolor gravida, id consequat nisi sodales. Integer euismod mauris nec felis pretium, vel eleifend
+            quam varius. Nam maximus felis fermentum mauris finibus, eu aliquam ex placerat. Nunc eget orci a risus molestie luctus nec nec tortor.
+            Etiam dignissim, nibh in vehicula pulvinar, sapien diam efficitur magna, tristique lacinia nisi turpis quis quam. Mauris eget nibh mattis,
+            interdum tellus vel, feugiat dolor. Nullam tincidunt nulla neque, eu bibendum metus vestibulum quis. In ex magna, vulputate non mi eget,
+            efficitur ultrices nibh. Sed sit amet ornare tellus.
+        </p>
+
+        <p>
+            Vestibulum tincidunt consectetur ligula, ac elementum diam dignissim non. Aenean ligula massa, aliquet ac fermentum mollis, faucibus eget
+            quam. Proin vitae hendrerit nisl. Donec blandit tellus at ornare elementum. Fusce auctor auctor purus non elementum. Duis venenatis ac nibh
+            in tempor. Quisque sagittis risus a consequat bibendum. Donec id ornare libero. Cras quam ipsum, euismod id vestibulum nec, consequat sed sem.
+            Quisque magna tellus, semper ut egestas ut, eleifend nec quam. Suspendisse vitae est vel mi porta sagittis nec quis sem. Nulla vestibulum dolor
+            ac nibh imperdiet, eget volutpat massa sollicitudin. Donec rutrum id libero in tincidunt. Quisque odio nulla, condimentum rutrum aliquet a,
+            commodo et elit.
+        </p>
+
+    </div>
+</div>
+
+
+{% endblock %}
