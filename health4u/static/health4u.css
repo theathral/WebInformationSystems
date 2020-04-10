@@ -60,3 +60,12 @@
 .hospital-select-form {
     background-color: var(--color-4);
 }
+
+.cite_covid {
+    text-align: center;
+    font-weight: bold;
+}
+
+.my-responsive-height {
+    max-height: 100%;
+}
