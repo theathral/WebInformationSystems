@@ -34,8 +34,6 @@
                     <a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
                 <li class="nav-item{%- if request.endpoint == 'hospitals' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('hospitals') }}">Hospitals</a></li>
-                <li class="nav-item{%- if request.endpoint == 'on_duty' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('on_duty') }}">On Duty</a></li>
                 <li class="nav-item{%- if request.endpoint == 'contact_us' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('contact_us') }}">Contact Us</a></li>
                 <li class="nav-item{%- if request.endpoint == 'covid19' %} active{% endif %}">
