@@ -6,30 +6,31 @@
     <title>{% block title %}{% endblock %} - Health4U</title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"  >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='health4u.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-social.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contact-bts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='health4u.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-social.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contact-bts.css') }}">
     {% block head %}{% endblock %}
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #355D5F; height: 65px " >
-        <a class="navbar-brand" href="{{ url_for('home') }}" ><img src="../static/images/logo1.1.png" style="margin-bottom: 10px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
-            aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-dark m-0" id="main-navbar">
+        <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../static/images/logo1.1.png"
+                style="margin-bottom: 10px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+            aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse  navbar-collapse" id="main-navbar"  >
-            <ul class="navbar-nav mr-auto" style="font-size: 22px" >
-                <li  class="nav-item{%- if request.endpoint == 'home' %} active{% endif %}">
+        <div class="collapse  navbar-collapse" id="main-menu">
+            <ul class="navbar-nav mr-auto" style="font-size: 22px">
+                <li class="nav-item{%- if request.endpoint == 'home' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
                 <li class="nav-item{%- if request.endpoint == 'hospitals' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('hospitals') }}">Hospitals</a></li>

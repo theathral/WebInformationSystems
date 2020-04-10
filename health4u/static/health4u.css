@@ -1,3 +1,15 @@
+:root {
+    --main-theme-color: #255557;
+    --color-2: #7B7E81;
+    --color-3: #727072;
+    --color-4: #AF929D;
+    --color-5: #D2D6EF;
+}
+
+#main-navbar {
+    background-color: var(--main-theme-color);
+}
+
 .medium-im {
     width: 50%;
 }
@@ -8,45 +20,43 @@
 }
 
 .row-sign-in {
-  max-width: 60rem;
+    max-width: 60rem;
 }
 
 .btn-social {
     max-width: 20rem;
 }
 
-*{
-    box-sizing: border-box;
-}
-*:before, *:after {
-     box-sizing: border-box;
- }
-
-html{
-    height: 100%;
-    position: relative;
-    background-color: #ececed;
+.btn-collapse-hospital {
+    background-color: var(--main-theme-color);
+    color: rgba(255, 255, 255, 0.9);
 }
 
-body {
-      height: 100%;
-      position: relative;
-      background-color: #ececed;
-  }
+.btn-collapse-hospital:hover {
+    color: rgba(255, 255, 255, 1.0);
+}
 
+.rotate-icon.fa-angle-up {
+    float: right;
+}
 
-.main-container {
-       min-height: 100vh; /* will cover the 100% of viewport */
-       overflow: hidden;
-       display: block;
-       position: relative;
-       padding-bottom: 100px; /* height of your footer */
-   }
+.rotate-icon {
+    transform: rotate(180deg);
+    transition: .3s transform ease-in-out;
+    display: inline-block;
+}
 
-footer {
-    background-color: #55595d;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    }
+.collapsed .rotate-icon {
+    transform: rotate(0);
+}
+
+.contact-info-wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 1.5rem;
+    align-items: baseline;
+}
+
+.hospital-select-form {
+    background-color: var(--color-4);
+}
