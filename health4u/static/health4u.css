@@ -4,6 +4,8 @@
     --color-3: #727072;
     --color-4: #AF929D;
     --color-5: #D2D6EF;
+    --color-6: #55595D;
+    --color-7: #c6c7c9;
 }
 
 #main-navbar {
@@ -72,4 +74,22 @@
 
 .my-responsive-height {
     max-height: 100%;
+}
+
+.with-border{
+    border-color: var(--color-6);
+}
+
+.with-bg{
+    background-color: var(--main-theme-color);
+}
+
+.grey-bg{
+    background-color: var(--color-7);
+}
+
+.ic{
+    color: var(--main-theme-color);
+    margin-right: 4px; 
+    margin-top: 12px;
 }
