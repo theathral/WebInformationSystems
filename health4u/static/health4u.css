@@ -10,6 +10,10 @@
     background-color: var(--main-theme-color);
 }
 
+.navbar-nav {
+    font-size: 1.4rem;
+}
+
 .medium-im {
     width: 50%;
 }
@@ -61,6 +65,11 @@
     background-color: var(--color-4);
 }
 
-.navbar-nav {
-    font-size: 1.4rem;
+.cite_covid {
+    text-align: center;
+    font-weight: bold;
+}
+
+.my-responsive-height {
+    max-height: 100%;
 }
