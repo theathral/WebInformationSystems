@@ -41,13 +41,13 @@
 }
 
 .rotate-icon {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
     transition: .3s transform ease-in-out;
     display: inline-block;
 }
 
 .collapsed .rotate-icon {
-    transform: rotate(0);
+    transform: rotate(180deg);
 }
 
 .contact-info-wrapper {
@@ -59,4 +59,8 @@
 
 .hospital-select-form {
     background-color: var(--color-4);
+}
+
+.navbar-nav {
+    font-size: 1.4rem;
 }
