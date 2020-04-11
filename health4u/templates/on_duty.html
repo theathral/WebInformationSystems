@@ -6,27 +6,46 @@
 
 <div class="container">
 
-    <form class="hospital-select-form rounded-lg p-2 my-2">
-        <div class="form-group">
-            <label for="region">Region:</label>
-            <select class="selectpicker form-control" id="region" data-live-search="true" title="Select Region">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select>
-            <label for="hospital">Hospital:</label>
-            <select class="selectpicker form-control" id="hospital" data-live-search="true" title="Select Hospital">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select>
-            <label for="date">Department:</label>
-            <input placeholder="Selected date" class="datepicker form-control" id="date" data-date-format="mm/dd/yyyy">
-        </div>
-    </form>
+<!--    <div class="accordion my-3" id="filter-list" role="tablist" aria-multiselectable="true">-->
+        <div class="card my-3" >
+            <div class="card-header p-0" role="tab" id="headingFilter">
+                <button class="btn btn-block text-left btn-collapse-filters" data-toggle="collapse"
+                        data-parent="#hospital-results" data-target="#collapseFilter" aria-expanded="true"
+                        aria-controls="collapseFilter">
+                    <h5 class="mb-0">
+                        <i class="fas fa-filter"></i> Filters <i class="fas fa-angle-up rotate-icon"></i>
+                    </h5>
+                </button>
+            </div>
 
+            <div id="collapseFilter" class="collapse show" role="tabpanel" aria-labelledby="headingFilter"
+                 data-parent="#filter-list">
+
+                <form class="hospital-select-form rounded-lg p-2">
+                    <div class="form-group">
+                        <label for="region">Region:</label>
+                        <select class="selectpicker form-control" id="region" data-live-search="true"
+                                title="Select Region">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <label for="hospital">Hospital:</label>
+                        <select class="selectpicker form-control" id="hospital" data-live-search="true"
+                                title="Select Hospital">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <label for="date">Select Date:</label>
+                        <input type="date" class="form-control" id="date" data-date-format="dd/mm/yyyy" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!--    </div>-->
 
     <div class="accordion" id="hospital-results" role="tablist" aria-multiselectable="true">
 
@@ -36,7 +55,7 @@
                         data-parent="#hospital-results" data-target="#collapseOne1" aria-expanded="true"
                         aria-controls="collapseOne1">
                     <h5 class="mb-0">
-                        <i class="fas fa-hospital"></i>Hospital 1 <i class="fas fa-angle-up rotate-icon"></i>
+                        <i class="fas fa-hospital"></i> Hospital 1 <i class="fas fa-angle-up rotate-icon"></i>
                     </h5>
                 </button>
             </div>
@@ -64,7 +83,7 @@
                         data-parent="#hospital-results" data-target="#collapseOne2" aria-expanded="true"
                         aria-controls="collapseOne2">
                     <h5 class="mb-0">
-                        <i class="fas fa-hospital"></i>Hospital 2 <i class="fas fa-angle-up rotate-icon"></i>
+                        <i class="fas fa-hospital"></i> Hospital 2 <i class="fas fa-angle-up rotate-icon"></i>
                     </h5>
                 </button>
             </div>
@@ -92,7 +111,7 @@
                         data-parent="#hospital-results" data-target="#collapseOne3" aria-expanded="true"
                         aria-controls="collapseOne3">
                     <h5 class="mb-0">
-                        <i class="fas fa-hospital"></i>Hospital 3 <i class="fas fa-angle-up rotate-icon"></i>
+                        <i class="fas fa-hospital"></i> Hospital 3 <i class="fas fa-angle-up rotate-icon"></i>
                     </h5>
                 </button>
             </div>
