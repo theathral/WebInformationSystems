@@ -3,9 +3,43 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<img class="rounded mx-auto d-block" style="width: 260px; height: 210px; margin-top: 65px;" ;
-     src="{{ url_for('static', filename='images/homeLogo.png') }}" alt="Logo">
-<div class="search-form  has-search">
-    <input class="form-control search-input mx-auto" type="text" placeholder="Search..." style="background-color: #c6c7c9; margin-top: 5px">
+
+<div class="container">
+
+    <a href="{{ url_for('hospitals') }}" class="my-3 btn btn-danger btn-lg btn-block">Find on duty hospital NOW!</a>
+
+    <!-- Page Features -->
+    <div class="card-deck text-center">
+
+        <div class="card bg-light">
+            <a href="{{ url_for('on_duty') }}">
+                <div class="card-header"><h4 class="card-title">On Duty</h4></div>
+            </a>
+            <div class="card-body">
+                <p class="card-text">In this page you can find all the ON DUTY hospitals of Greece on a date of your
+                    selection.</p>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <a href="{{ url_for('hospitals') }}">
+                <div class="card-header"><h4 class="card-title">Hospitals</h4></div>
+            </a>
+            <div class="card-body">
+                <p class="card-text">In this page you can find more information about the hospitals of Greece.</p>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <a href="{{ url_for('covid19') }}">
+                <div class="card-header"><h4 class="card-title">COVID-19</h4></div>
+            </a>
+            <div class="card-body">
+                <p class="card-text">In this page you can find out more about COVID-19 disease are more.</p>
+            </div>
+        </div>
+
+    </div>
 </div>
+
 {% endblock %}
