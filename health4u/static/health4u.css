@@ -35,10 +35,19 @@
 
 .btn-collapse-hospital {
     background-color: var(--main-theme-color);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .btn-collapse-hospital:hover {
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.btn-collapse-filters {
+    background-color: var(--color-3);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-collapse-filters:hover {
     color: rgba(255, 255, 255, 1.0);
 }
 
