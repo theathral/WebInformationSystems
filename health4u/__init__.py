@@ -13,10 +13,6 @@ def create_app(test_config=None):
     def home():
         return render_template("home.html", req_datetime=datetime.now())
 
-    @app.route("/on_duty")
-    def on_duty():
-        return render_template("on_duty.html", req_datetime=datetime.now())
-
     @app.route("/hospitals")
     def hospitals():
         return render_template("hospitals.html", req_datetime=datetime.now())
