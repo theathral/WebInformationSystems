@@ -27,17 +27,15 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark m-0" id="main-navbar">
-        <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../static/images/logo1.1.png"></a>
+        <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../static/images/logo1.1.png" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
             aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse  navbar-collapse" id="main-menu">
+        <div class="collapse  navbar-collapse " id="main-menu">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item{%- if request.endpoint == 'home' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-                <li class="nav-item{%- if request.endpoint == 'on_duty' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('on_duty') }}">On Duty</a></li>
                 <li class="nav-item{%- if request.endpoint == 'hospitals' %} active{% endif %}">
                     <a class="nav-link" href="{{ url_for('hospitals') }}">Hospitals</a></li>
                 <li class="nav-item{%- if request.endpoint == 'covid19' %} active{% endif %}">
