@@ -29,7 +29,8 @@
                             <div class="mt-3">
                                 <label for="region">Region:</label>
                                 <select class="selectpicker form-control" id="region" data-live-search="true"
-                                    title="Select Region">
+                                        title="Select Region" onchange="selectFilter(this);">
+                                    <option value="Select Region">Select Region</option>
                                     <option value="Athens">Athens</option>
                                     <option value="Patra">Patra</option>
                                     <option value="Thessaloniki">Thessaloniki</option>
@@ -38,7 +39,7 @@
                             <div class="mt-3">
                                 <label for="hospital">Hospital:</label>
                                 <select class="selectpicker form-control" id="hospital" data-live-search="true"
-                                    title="Select Hospital">
+                                    <option value="Select Hospital">Select Hospital</option>
                                     <option value="Agios Andreas">Agios Andreas</option>
                                     <option value="AHEPA">AHEPA</option>
                                     <option value="Attikon">Attikon</option>
@@ -48,7 +49,8 @@
                             <div class="mt-3" id="departmentDiv">
                                 <label for="hospital">Department:</label>
                                 <select class="selectpicker form-control" id="department" data-live-search="true"
-                                    title="Select Department">
+                                        title="Select Department" onchange="selectFilter(this);">
+                                    <option value="Select Department">Select Department</option>
                                     <option value="Cardiology">Cardiology</option>
                                     <option value="Neurology">Neurology</option>
                                     <option value="Obstetrics">Obstetrics and gynaecology</option>
@@ -155,4 +157,7 @@
     </div>
 </div>
 
+<script src="{{ url_for('static', filename='selectFilter.js') }}"></script>
+
 {% endblock %}
+
