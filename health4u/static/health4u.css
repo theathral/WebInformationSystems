@@ -33,21 +33,19 @@
     max-width: 20rem;
 }
 
-.btn-collapse-hospital {
-    background-color: var(--main-theme-color);
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.btn-collapse-hospital:hover {
-    color: rgba(255, 255, 255, 1.0);
-}
-
 .btn-collapse-filters {
     background-color: var(--color-3);
+}
+
+.btn-collapse-hospital {
+    background-color: var(--main-theme-color);
+}
+
+.btn-collapse-filters, .btn-collapse-hospital {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.btn-collapse-filters:hover {
+.btn-collapse-filters:hover, .btn-collapse-hospital:hover {
     color: rgba(255, 255, 255, 1.0);
 }
 
@@ -85,20 +83,20 @@
     max-height: 100%;
 }
 
-.with-border{
+.with-border {
     border-color: var(--color-6);
 }
 
-.with-bg{
+.with-bg {
     background-color: var(--main-theme-color);
 }
 
-.grey-bg{
+.grey-bg {
     background-color: var(--color-7);
 }
 
-.ic{
+.ic {
     color: var(--main-theme-color);
-    margin-right: 4px; 
+    margin-right: 4px;
     margin-top: 12px;
 }
