@@ -6,119 +6,153 @@
 
 <div class="container">
 
-    <div class="card my-3">
-        <div class="card-header p-0" role="tab" id="headingFilter">
-            <button class="btn btn-block text-left btn-collapse-filters" data-toggle="collapse"
-                data-target="#collapseFilters" aria-expanded="true" aria-controls="collapseFilters">
-                <h5 class="mb-0">
-                    <i class="fas fa-filter"></i> Filters <i class="fas fa-angle-up rotate-icon"></i>
-                </h5>
-            </button>
+    <div class="row">
+
+        <!-- Filter Tab -->
+        <div class="col col-md-3">
+            <div class="card mx-1 my-3" id="filter-results" role="tablist" aria-multiselectable="true">
+                <div class="card-header p-0" role="tab" id="headingFilter">
+                    <button class="btn btn-block text-left btn-collapse-filters" data-toggle="collapse"
+                        data-parent="#filter-results" data-target="#collapseFilter" aria-expanded="true"
+                        aria-controls="collapseFilter">
+                        <div class="h4 mb-0">
+                            <i class="fas fa-filter"></i> Filters <i class="fas fa-angle-up rotate-icon"></i>
+                        </div>
+                    </button>
+                </div>
+
+                <div id="collapseFilter" class="collapse show" role="tabpanel" aria-labelledby="headingFilter"
+                    data-parent="#filter-list">
+
+                    <form class="hospital-select-form rounded-lg p-2">
+                        <div class="form-group">
+                            <div class="mt-3">
+                                <label for="region">Region:</label>
+                                <select class="selectpicker form-control" id="region" data-live-search="true"
+                                    title="Select Region">
+                                    <option value="Athens">Athens</option>
+                                    <option value="Patra">Patra</option>
+                                    <option value="Thessaloniki">Thessaloniki</option>
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <label for="hospital">Hospital:</label>
+                                <select class="selectpicker form-control" id="hospital" data-live-search="true"
+                                    title="Select Hospital">
+                                    <option value="Agios Andreas">Agios Andreas</option>
+                                    <option value="AHEPA">AHEPA</option>
+                                    <option value="Attikon">Attikon</option>
+                                    <option value="Euaggelismos">Euaggelismos</option>
+                                </select>
+                            </div>
+                            <div class="mt-3" id="departmentDiv">
+                                <label for="hospital">Department:</label>
+                                <select class="selectpicker form-control" id="department" data-live-search="true"
+                                    title="Select Department">
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Obstetrics">Obstetrics and gynaecology</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                </select>
+                            </div>
+                            <div class="mt-3" id="dateDiv">
+                                <label for="date">Date:</label>
+                                <input type="date" class="form-control" id="date" data-date-format="dd/mm/yyyy"
+                                    required>
+                            </div>
+                            <div class="custom-control custom-checkbox my-3">
+                                <input type="checkbox" class="custom-control-input" id="onDutyCheckbox"
+                                    onchange="onDutyChange(this);">
+                                <label class="custom-control-label" for="onDutyCheckbox">On duty</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
-        <div id="collapseFilters" class="collapse show" role="tabpanel" aria-labelledby="headingFilter">
-            <form class="hospital-select-form rounded-lg p-2">
-                <div class="form-group">
-                    <label for="region">Region:</label>
-                    <select class="selectpicker form-control" id="region" data-live-search="true" title="Select Region">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                    <label for="hospital">Hospital:</label>
-                    <select class="selectpicker form-control" id="hospital" data-live-search="true"
-                        title="Select Hospital">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                    <label for="date">Select Date:</label>
-                    <input type="date" class="form-control" id="date" data-date-format="dd/mm/yyyy" required>
+        <!-- Results -->
+        <div class="col col-md-9">
+            <div class="accordion mx-1 my-3" id="hospital-results" role="tablist" aria-multiselectable="true">
+
+                <div class="card">
+                    <div class="card-header p-0" role="tab">
+                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                            data-parent="#hospital-results" aria-expanded="true">
+                            <div class="h5 mb-0">
+                                <i class="fas fa-hospital"></i> Hospital 1 <i class="fas fa-angle-up rotate-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="collapse show" role="tabpanel" data-parent="#hospital-results">
+                        <div class="contact-info-wrapper m-2">
+                            <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
+                            <div>12345 09876</div>
+                            <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
+                            <div>Road Street, Town</div>
+                            <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
+                            <div>example@email.com</div>
+                            <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
+                            <div>12345 12345</div>
+                        </div>
+
+                    </div>
                 </div>
-            </form>
+
+                <div class="card">
+                    <div class="card-header p-0" role="tab">
+                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                            data-parent="#hospital-results" aria-expanded="true">
+                            <div class="h5 mb-0">
+                                <i class="fas fa-hospital"></i> Hospital 2 <i class="fas fa-angle-up rotate-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="collapse" role="tabpanel" data-parent="#hospital-results">
+                        <div class="contact-info-wrapper m-2">
+                            <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
+                            <div>12345 09876</div>
+                            <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
+                            <div>Road Street, Town</div>
+                            <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
+                            <div>example@email.com</div>
+                            <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
+                            <div>12345 12345</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header p-0" role="tab">
+                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                            data-parent="#hospital-results" aria-expanded="true">
+                            <div class="h5 mb-0">
+                                <i class="fas fa-hospital"></i> Hospital 3 <i class="fas fa-angle-up rotate-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="collapse" role="tabpanel" data-parent="#hospital-results">
+                        <div class="contact-info-wrapper m-2">
+                            <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
+                            <div>12345 09876</div>
+                            <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
+                            <div>Road Street, Town</div>
+                            <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
+                            <div>example@email.com</div>
+                            <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
+                            <div>12345 12345</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-
-    <div class="accordion" id="hospital-results" role="tablist" aria-multiselectable="true">
-
-        <div class="card">
-            <div class="card-header p-0" role="tab">
-                <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                    data-parent="#hospital-results">
-                    <h5 class="mb-0">
-                        <i class="fas fa-hospital"></i> Hospital 1 <i class="fas fa-angle-up rotate-icon"></i>
-                    </h5>
-                </button>
-            </div>
-
-            <div class="collapse show" role="tabpanel" data-parent="#hospital-results">
-                <div class="contact-info-wrapper m-2">
-                    <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
-                    <div>12345 09876</div>
-                    <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
-                    <div>Road Street, Town</div>
-                    <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
-                    <div>example@email.com</div>
-                    <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
-                    <div>12345 12345</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header p-0" role="tab">
-                <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                    data-parent="#hospital-results">
-                    <h5 class="mb-0">
-                        <i class="fas fa-hospital"></i> Hospital 2 <i class="fas fa-angle-up rotate-icon"></i>
-                    </h5>
-                </button>
-            </div>
-
-            <div class="collapse" role="tabpanel" data-parent="#hospital-results">
-                <div class="contact-info-wrapper m-2">
-                    <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
-                    <div>12345 09876</div>
-                    <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
-                    <div>Road Street, Town</div>
-                    <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
-                    <div>example@email.com</div>
-                    <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
-                    <div>12345 12345</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header p-0" role="tab">
-                <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                    data-parent="#hospital-results">
-                    <h5 class="mb-0">
-                        <i class="fas fa-hospital"></i> Hospital 3 <i class="fas fa-angle-up rotate-icon"></i>
-                    </h5>
-                </button>
-            </div>
-
-            <div class="collapse" role="tabpanel" data-parent="#hospital-results">
-                <div class="contact-info-wrapper m-2">
-                    <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
-                    <div>12345 09876</div>
-                    <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
-                    <div>Road Street, Town</div>
-                    <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
-                    <div>example@email.com</div>
-                    <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
-                    <div>12345 12345</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
 </div>
-
 
 {% endblock %}
