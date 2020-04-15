@@ -13,8 +13,8 @@
             <div class="card mx-1 my-3" id="filter-results" role="tablist" aria-multiselectable="true">
                 <div class="card-header p-0" role="tab" id="headingFilter">
                     <button class="btn btn-block text-left btn-collapse-filters" data-toggle="collapse"
-                            data-parent="#filter-results" data-target="#collapseFilter" aria-expanded="true"
-                            aria-controls="collapseFilter">
+                        data-parent="#filter-results" data-target="#collapseFilter" aria-expanded="true"
+                        aria-controls="collapseFilter">
                         <div class="h4 mb-0">
                             <i class="fas fa-filter"></i> Filters <i class="fas fa-angle-up rotate-icon"></i>
                         </div>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div id="collapseFilter" class="collapse show" role="tabpanel" aria-labelledby="headingFilter"
-                     data-parent="#filter-list">
+                    data-parent="#filter-list">
 
                     <form class="hospital-select-form rounded-lg p-2">
                         <div class="form-group">
@@ -39,7 +39,6 @@
                             <div class="mt-3">
                                 <label for="hospital">Hospital:</label>
                                 <select class="selectpicker form-control" id="hospital" data-live-search="true"
-                                        title="Select Hospital" onchange="selectFilter(this);">
                                     <option value="Select Hospital">Select Hospital</option>
                                     <option value="Agios Andreas">Agios Andreas</option>
                                     <option value="AHEPA">AHEPA</option>
@@ -61,11 +60,11 @@
                             <div class="mt-3" id="dateDiv">
                                 <label for="date">Date:</label>
                                 <input type="date" class="form-control" id="date" data-date-format="dd/mm/yyyy"
-                                       required>
+                                    required>
                             </div>
                             <div class="custom-control custom-checkbox my-3">
                                 <input type="checkbox" class="custom-control-input" id="onDutyCheckbox"
-                                       onchange="onDutyChange(this);">
+                                    onchange="onDutyChange(this);">
                                 <label class="custom-control-label" for="onDutyCheckbox">On duty</label>
                             </div>
                         </div>
@@ -79,19 +78,16 @@
             <div class="accordion mx-1 my-3" id="hospital-results" role="tablist" aria-multiselectable="true">
 
                 <div class="card">
-                    <div class="card-header p-0" role="tab" id="headingOne1">
+                    <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                                data-parent="#hospital-results" data-target="#collapseOne1" aria-expanded="true"
-                                aria-controls="collapseOne1">
+                            data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
                                 <i class="fas fa-hospital"></i> Hospital 1 <i class="fas fa-angle-up rotate-icon"></i>
                             </div>
                         </button>
                     </div>
 
-                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
-                         data-parent="#hospital-results">
-
+                    <div class="collapse show" role="tabpanel" data-parent="#hospital-results">
                         <div class="contact-info-wrapper m-2">
                             <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
                             <div>12345 09876</div>
@@ -107,19 +103,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-0" role="tab" id="headingOne2">
+                    <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                                data-parent="#hospital-results" data-target="#collapseOne2" aria-expanded="true"
-                                aria-controls="collapseOne2">
+                            data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
                                 <i class="fas fa-hospital"></i> Hospital 2 <i class="fas fa-angle-up rotate-icon"></i>
                             </div>
                         </button>
                     </div>
 
-                    <div id="collapseOne2" class="collapse" role="tabpanel" aria-labelledby="headingOne2"
-                         data-parent="#hospital-results">
-
+                    <div class="collapse" role="tabpanel" data-parent="#hospital-results">
                         <div class="contact-info-wrapper m-2">
                             <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
                             <div>12345 09876</div>
@@ -135,19 +128,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-0" role="tab" id="headingOne3">
+                    <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                                data-parent="#hospital-results" data-target="#collapseOne3" aria-expanded="true"
-                                aria-controls="collapseOne3">
+                            data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
                                 <i class="fas fa-hospital"></i> Hospital 3 <i class="fas fa-angle-up rotate-icon"></i>
                             </div>
                         </button>
                     </div>
 
-                    <div id="collapseOne3" class="collapse" role="tabpanel" aria-labelledby="headingOne3"
-                         data-parent="#hospital-results">
-
+                    <div class="collapse" role="tabpanel" data-parent="#hospital-results">
                         <div class="contact-info-wrapper m-2">
                             <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
                             <div>12345 09876</div>
@@ -170,3 +160,4 @@
 <script src="{{ url_for('static', filename='selectFilter.js') }}"></script>
 
 {% endblock %}
+
