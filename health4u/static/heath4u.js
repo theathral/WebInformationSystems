@@ -1,3 +1,3 @@
-$("[data-toggle='collapse']").on('click', function () {
+$("*.btn-collapse-hospital").on('click', function () {
     $(this).closest("*.card-header").next().collapse('toggle');
 });
