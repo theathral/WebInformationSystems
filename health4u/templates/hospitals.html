@@ -9,8 +9,8 @@
     <div class="row">
 
         <!-- Filter Tab -->
-        <div class="col col-md-3">
-            <div class="card mx-1 my-3" id="filter-results" role="tablist" aria-multiselectable="true">
+        <div class="col-lg-3">
+            <div class="card mx-1" id="filter-results" role="tablist" aria-multiselectable="true">
                 <div class="card-header p-0" role="tab" id="headingFilter">
                     <button class="btn btn-block text-left btn-collapse-filters" data-toggle="collapse"
                             data-parent="#filter-results" data-target="#collapseFilter" aria-expanded="true"
@@ -29,30 +29,33 @@
                             <div class="mt-3">
                                 <label for="region">Region:</label>
                                 <select class="selectpicker form-control" id="region" data-live-search="true"
-                                        title="Select Region" onchange="selectFilter(this);">
-                                    <option value="Athens">Athens</option>
-                                    <option value="Patra">Patra</option>
-                                    <option value="Thessaloniki">Thessaloniki</option>
+                                        title="Select Region">
+                                    <option value="-" id="SelectRegion">Select Region</option>
+                                    <option value="0" id="Athens">Athens</option>
+                                    <option value="1" id="Patra">Patra</option>
+                                    <option value="2" id="Thessaloniki">Thessaloniki</option>
                                 </select>
                             </div>
                             <div class="mt-3">
                                 <label for="hospital">Hospital:</label>
                                 <select class="selectpicker form-control" id="hospital" data-live-search="true"
-                                        title="Select Hospital" onchange="selectFilter(this);">
-                                    <option value="Agios Andreas">Agios Andreas</option>
-                                    <option value="AHEPA">AHEPA</option>
-                                    <option value="Attikon">Attikon</option>
-                                    <option value="Euaggelismos">Euaggelismos</option>
+                                        title="Select Hospital">
+                                    <option value="-" id="SelectHospital">Select Hospital</option>
+                                    <option value="0" id="AgiosAndreas">Agios Andreas</option>
+                                    <option value="1" id="AHEPA">AHEPA</option>
+                                    <option value="2" id="Attikon">Attikon</option>
+                                    <option value="3" id="Euaggelismos">Euaggelismos</option>
                                 </select>
                             </div>
                             <div class="mt-3" id="departmentDiv">
                                 <label for="hospital">Department:</label>
                                 <select class="selectpicker form-control" id="department" data-live-search="true"
-                                        title="Select Department" onchange="selectFilter(this);">
-                                    <option value="Cardiology">Cardiology</option>
-                                    <option value="Neurology">Neurology</option>
-                                    <option value="Obstetrics">Obstetrics and gynaecology</option>
-                                    <option value="Pediatrics">Pediatrics</option>
+                                        title="Select Department">
+                                    <option value="-" id="SelectDepartment">Select Department</option>
+                                    <option value="0" id="Cardiology">Cardiology</option>
+                                    <option value="1" id="Neurology">Neurology</option>
+                                    <option value="2" id="Obstetrics">Obstetrics and gynaecology</option>
+                                    <option value="3" id="Pediatrics">Pediatrics</option>
                                 </select>
                             </div>
                             <div class="mt-3" id="dateDiv">
@@ -61,8 +64,7 @@
                                        required>
                             </div>
                             <div class="custom-control custom-checkbox my-3">
-                                <input type="checkbox" class="custom-control-input" id="onDutyCheckbox"
-                                       onchange="onDutyChange(this);">
+                                <input type="checkbox" class="custom-control-input" id="onDutyCheckbox">
                                 <label class="custom-control-label" for="onDutyCheckbox">On duty</label>
                             </div>
                         </div>
@@ -72,15 +74,40 @@
         </div>
 
         <!-- Results -->
-        <div class="col col-md-9">
-            <div class="accordion mx-1 my-3" id="hospital-results" role="tablist" aria-multiselectable="true">
-                {% for i in range(1,4) %}
-                <div class="card">
+        <div class="col-lg-9">
+            <div class="accordion mx-1" id="hospital-results" role="tablist" aria-multiselectable="true">
+
+                <div class="card" id="AgiosAndreasCard">
+                    <div class="card-header p-0" role="tab">
+                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                                data-parent="#hospital-results" aria-expanded="true">
+                            <div class="h5 mb-0">
+                                <i class="fas fa-hospital"></i> Agios Andreas <i class="fas fa-angle-up rotate-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="collapse show" role="tabpanel">
+                        <div class="contact-info-wrapper m-2">
+                            <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
+                            <div>12345 09876</div>
+                            <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
+                            <div>Road Street, Town</div>
+                            <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
+                            <div>example@email.com</div>
+                            <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
+                            <div>12345 12345</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card" id="AHEPACard">
                     <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
                             data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
-                                <i class="fas fa-hospital"></i> Hospital {{ i }} <i class="fas fa-angle-up rotate-icon"></i>
+                                <i class="fas fa-hospital"></i> AHEPA <i class="fas fa-angle-up rotate-icon"></i>
                             </div>
                         </button>
                     </div>
@@ -99,14 +126,63 @@
 
                     </div>
                 </div>
-                {% endfor %}
+
+                <div class="card"  id="AttikonCard">
+                    <div class="card-header p-0" role="tab">
+                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                                data-parent="#hospital-results" aria-expanded="true">
+                            <div class="h5 mb-0">
+                                <i class="fas fa-hospital"></i> Attikon <i class="fas fa-angle-up rotate-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="collapse" role="tabpanel">
+                        <div class="contact-info-wrapper m-2">
+                            <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
+                            <div>12345 09876</div>
+                            <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
+                            <div>Road Street, Town</div>
+                            <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
+                            <div>example@email.com</div>
+                            <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
+                            <div>12345 12345</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card"  id="EuaggelismosCard">
+                    <div class="card-header p-0" role="tab">
+                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                                data-parent="#hospital-results" aria-expanded="true">
+                            <div class="h5 mb-0">
+                                <i class="fas fa-hospital"></i> Euaggelismos <i class="fas fa-angle-up rotate-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="collapse" role="tabpanel">
+                        <div class="contact-info-wrapper m-2">
+                            <div><i class="fas fa-phone-alt fa-lg"></i>Telephone:</div>
+                            <div>12345 09876</div>
+                            <div><i class="fas fa-map-marker-alt fa-lg"></i>Address:</div>
+                            <div>Road Street, Town</div>
+                            <div><i class="fas fa-envelope fa-lg"></i>Email:</div>
+                            <div>example@email.com</div>
+                            <div><i class="fas fa-fax fa-lg"></i>Fax:</div>
+                            <div>12345 12345</div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
 
     </div>
 </div>
 
-<script src="{{ url_for('static', filename='selectFilter.js') }}"></script>
 
 {% endblock %}
 
