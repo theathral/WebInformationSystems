@@ -43,10 +43,10 @@
             </ul>
             <ul class="navbar-nav ml-auto" id="rightMenu">
                 <li class="nav-item{%- if request.endpoint == 'sign_up' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i>Sign Up</a>
+                    <a class="nav-link" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i> Sign Up</a>
                 </li>
                 <li class="nav-item{%- if request.endpoint == 'log_in' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i>Login</a>
+                    <a class="nav-link" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
             </ul>
         </div>
