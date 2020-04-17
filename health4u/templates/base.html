@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css"
-        integrity="sha256-rFMLRbqAytD9ic/37Rnzr2Ycy/RlpxE5QH52h7VoIZo=" crossorigin="anonymous" />
+          integrity="sha256-rFMLRbqAytD9ic/37Rnzr2Ycy/RlpxE5QH52h7VoIZo=" crossorigin="anonymous"/>
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.min.css"
-        integrity="sha256-l3FykDBm9+58ZcJJtzcFvWjBZNJO40HmvebhpHXEhC0=" crossorigin="anonymous" />
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.min.css"
+          integrity="sha256-l3FykDBm9+58ZcJJtzcFvWjBZNJO40HmvebhpHXEhC0=" crossorigin="anonymous"/>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='health4u.css') }}">
     {% block head %}{% endblock %}
@@ -24,64 +24,61 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark m-0 p-1" id="main-navbar">
-        <a class="navbar-left" href="{{ url_for('home') }}"><img src="../static/images/logo1.1.png" alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+<nav class="navbar navbar-expand-md navbar-dark m-0 p-1" id="main-navbar">
+    <a class="navbar-left" href="{{ url_for('home') }}"><img src="../static/images/logo1.1.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
             aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse  navbar-collapse " id="main-menu">
-            <ul class="navbar-nav mr-auto" id="leftMenu">
-                <li class="nav-item{%- if request.endpoint == 'home' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-                <li class="nav-item{%- if request.endpoint == 'hospitals' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('hospitals') }}">Hospitals</a></li>
-                <li class="nav-item{%- if request.endpoint == 'covid19' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('covid19') }}">Covid-19</a></li>
-                <li class="nav-item{%- if request.endpoint == 'contact_us' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('contact_us') }}">Contact Us</a></li>
-            </ul>
-            <ul class="navbar-nav ml-auto" id="rightMenu">
-                <li class="nav-item{%- if request.endpoint == 'sign_up' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i> Sign Up</a>
-                </li>
-                <li class="nav-item{%- if request.endpoint == 'log_in' %} active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="main-menu">
+        <ul class="navbar-nav mr-auto" id="leftMenu">
+            <li class="nav-item{%- if request.endpoint == 'home' %} active{% endif %}">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+            <li class="nav-item{%- if request.endpoint == 'hospitals' %} active{% endif %}">
+                <a class="nav-link" href="{{ url_for('hospitals') }}">Hospitals</a></li>
+            <li class="nav-item{%- if request.endpoint == 'covid19' %} active{% endif %}">
+                <a class="nav-link" href="{{ url_for('covid19') }}">Covid-19</a></li>
+            <li class="nav-item{%- if request.endpoint == 'contact_us' %} active{% endif %}">
+                <a class="nav-link" href="{{ url_for('contact_us') }}">Contact Us</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto" id="rightMenu">
+            <li class="nav-item{%- if request.endpoint == 'sign_up' %} active{% endif %}">
+                <a class="nav-link" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i> Sign Up</a>
+            </li>
+            <li class="nav-item{%- if request.endpoint == 'log_in' %} active{% endif %}">
+                <a class="nav-link" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 
-    <!--    <footer class="">-->
-    <!--        <div class="">-->
-    <!--            <p class="">-->
-    <!--                ©Copyright {{ req_datetime.year }}<br>-->
-    <!--                Made with ❤️ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis<br>-->
-    <!--                <a href="{{ url_for('contact_us') }}">Contact us</a>-->
-    <!--            </p>-->
-    <!--        </div>-->
-    <!--    </footer>-->
+<footer id="sticky-footer" class="py-4 text-white">
+    <div class="container text-center">
+        ©Copyright {{ req_datetime.year }}<br>
+        Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis<br>
+    </div>
+</footer>
 
-    <!--============================================================
-        Bootstrap core JavaScript
-        Placed at the end of the document so the pages load faster
-        ============================================================-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+<!--============================================================
+    Bootstrap core JavaScript
+    Placed at the end of the document so the pages load faster
+    ============================================================-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.min.js"
         integrity="sha256-+o/X+QCcfTkES5MroTdNL5zrLNGb3i4dYdWPWuq6whY=" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='health4u.js') }}"></script>
-    <script src="{{ url_for('static', filename='selectFilter.js') }}"></script>
+<script src="{{ url_for('static', filename='health4u.js') }}"></script>
+<script src="{{ url_for('static', filename='selectFilter.js') }}"></script>
 
 </body>
 

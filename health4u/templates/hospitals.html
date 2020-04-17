@@ -82,7 +82,8 @@
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
-                                <i class="fas fa-hospital"></i> Agios Andreas <i class="fas fa-angle-up rotate-icon"></i>
+                                <i class="fas fa-hospital"></i> Agios Andreas <i
+                                    class="fas fa-angle-up rotate-icon"></i>
                             </div>
                         </button>
                     </div>
@@ -105,7 +106,7 @@
                 <div class="card" id="AHEPACard">
                     <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
-                            data-parent="#hospital-results" aria-expanded="true">
+                                data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
                                 <i class="fas fa-hospital"></i> AHEPA <i class="fas fa-angle-up rotate-icon"></i>
                             </div>
@@ -127,7 +128,7 @@
                     </div>
                 </div>
 
-                <div class="card"  id="AttikonCard">
+                <div class="card" id="AttikonCard">
                     <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
@@ -152,7 +153,7 @@
                     </div>
                 </div>
 
-                <div class="card"  id="EuaggelismosCard">
+                <div class="card" id="EuaggelismosCard">
                     <div class="card-header p-0" role="tab">
                         <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
@@ -183,6 +184,11 @@
     </div>
 </div>
 
+<script>
+    document.getElementById("onDutyCheckbox").checked = true;
+    document.getElementById("departmentDiv").style.display = "none";
+    document.getElementById("dateDiv").style.display = "block";
+</script>
 
 {% endblock %}
 
