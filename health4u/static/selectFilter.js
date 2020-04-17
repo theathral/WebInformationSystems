@@ -113,7 +113,6 @@ $('select.selectpicker').on('change', function () {
     }
 
     $('.selectpicker').selectpicker('refresh');
-    // $('.selectpicker').selectpicker('render');
 
 });
 
