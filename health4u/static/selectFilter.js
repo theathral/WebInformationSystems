@@ -53,7 +53,6 @@ $('select.selectpicker').on('change', function () {
             $("#EuaggelismosCard").show();
 
             $("#region").val("");
-            // $('#region').selectpicker('val', '');
 
             break;
     }
@@ -109,7 +108,6 @@ $('select.selectpicker').on('change', function () {
             $("#Thessaloniki").show();
 
             $("#hospital").val("");
-            // $('#hospital').selectpicker('val', 'default');
 
             break;
     }
