@@ -1,8 +1,3 @@
-document.getElementById("onDutyCheckbox").checked = true;
-document.getElementById("departmentDiv").style.display = "none";
-document.getElementById("dateDiv").style.display = "block";
-// current date
-
 $("#onDutyCheckbox").on("change", function onDutyChange() {
     if ($(this).prop("checked")) {
         document.getElementById("departmentDiv").style.display = "none";
