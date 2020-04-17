@@ -50,7 +50,7 @@ footer {
     font-size: 1.1rem;
 }
 
-.nav-link:hover {
+.nav-link-hover:hover {
     background-color: #19393b;
     height: 100%;
 }
