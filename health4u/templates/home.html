@@ -4,31 +4,26 @@
 
 {% block content %}
 
-<div class="container justify-content-start">
+<div class="container mt-2 justify-content-start">
 
-    <div class="row my-2 align-items-center">
     <!-- Alert covid -->
     <div class="card rounded rounded-lg col-xs-auto m-auto">
         <div class="card-title text-white bg-danger rounded mt-2 p-2 w-50 mx-3">
-            <h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Ειδοποίηση Covid-19</h6>
+            <h6><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> COVID-19 alert</h6>
         </div>
         <div class="card-body">
-            <p class="card-subtitle">Εάν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπικής <br>υγειονομικής αρχής. Πηγή: <a class="underlined" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank">Παγκόσμιος Οργανισμός Υγείας</a></p>
+            <p class="card-subtitle">Stay at home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority. Source: <a class="underlined" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank">World Health Organization</a></p>
 
             <button type="button" class="btn btn-link btn-md border-secondary rounded-pill col-xs">
-                <i class="fa fa-globe" aria-hidden="true"></i><a class="underlined" href="https://eody.gov.gr/neos-koronaios-covid-19/" target="_blank"> ΕΟΔΥ/Covid-19</a>
+                <i class="fa fa-globe" aria-hidden="true"></i><a class="underlined" href="https://eody.gov.gr/neos-koronaios-covid-19/" target="_blank"> National Organization of Public Health</a>
             </button>
 
         </div>
     </div>
     <!-- Alert covid end-->
 
-        <div class="col-xs m-auto">
-        <a href="{{ url_for('hospitals') }}" class="btn btn-lg btn-block pink-bg rounded-pill">Find on duty <br>hospitals <br>nearby</a>
-        </div>
-    </div>
 
-    <div class="row col-xs w-75 m-auto">
+    <div class="row col-xs mt-3">
 
         <div id="carouselIndicators" class="carousel slide col-lg-12" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -38,14 +33,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100 h-100" src="../static/images/photo1.png" alt="First slide">
+                    <img class="d-block w-100 h-100" src="../static/images/photo1.png" alt="Health Care - photo">
                 </div>
                 <div class="carousel-item">
-                    <div class="flourish-embed flourish-chart h-100" data-src="story/230114"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-                    <!--<img class="d-block w-100" src="../static/images/photo.jpg" alt="Second slide">-->
+                    <img class="d-block w-100 h-50" src="../static/images/who-photo.png" alt="Who choose health - sdg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 h-50" src="../static/images/photo2.png" alt="Third slide">
+                    <img class="d-block w-100 h-50" src="../static/images/photo2.png" alt="Who - covid19">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
@@ -62,29 +56,33 @@
     <!-- Page Features -->
     <div class="row text-center mt-2">
 
-        <div class="card img-fluid col-xs m-auto">
+        <a class="underlined col-xs m-auto" href="{{ url_for('hospitals') }}">
+        <div class="card img-fluid">
             <img class="card-img-top" src="../static/images/hospitals1.png" alt="Card image">
             <div class="card-img-overlay">
-            <a class="underlined" href="{{ url_for('hospitals') }}">
-                <div class="card-header"><h5 class="card-title">Hospitals</h5></div>
-            </a>
+
+                <div class="card-header"><h5 class="card-title underlined">Hospitals</h5></div>
+
             <div class="card-body">
-                <p class="card-text font-weight-bold">On this page, you can find more information about the hospitals in Greece.</p>
+                <p class="card-text font-weight-bold text-dark">On this page, you can find more information about the hospitals in Greece.</p>
             </div>
             </div>
         </div>
+        </a>
 
-        <div class="card img-fluid col-xs m-auto">
+        <a class="col-xs m-auto" href="{{ url_for('covid19') }}">
+        <div class="card img-fluid ">
             <img class="card-img-top" src="../static/images/covid12.png" alt="Card image">
             <div class="card-img-overlay">
-            <a class="white_underlined" href="{{ url_for('covid19') }}">
-                <div class="card-header"><h5 class="card-title text-white und">COVID-19</h5></div>
-            </a>
+
+                <div class="card-header"><h5 class="card-title text-white underlined">COVID-19</h5></div>
+
             <div class="card-body">
-                <p class="card-text font-weight-bold">On this page, you can find out more about COVID-19 disease.</p>
+                <p class="card-text font-weight-bold text-dark">On this page, you can find out more about COVID-19 disease.</p>
             </div>
             </div>
         </div>
+        </a>
 
     </div>
 </div>

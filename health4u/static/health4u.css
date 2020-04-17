@@ -258,12 +258,6 @@ footer {
     background-color: var(--color-4);
 }
 
-
-a.underlined {
-    text-decoration: underline;
-}
-
-a.white_underlined {
-    color: white;
+.underlined{
     text-decoration: underline;
 }
