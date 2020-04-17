@@ -7,8 +7,28 @@
     --color-6: #55595D;
     --color-7: #c6c7c9;
 }
-body{
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
     background-color: #e8e8e8;
+}
+
+body::after {
+    content: '';
+    display: block;
+    min-height: 200px;
+}
+
+footer {
+    background-color: var(--color-3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #main-navbar {
