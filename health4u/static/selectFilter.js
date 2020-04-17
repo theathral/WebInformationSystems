@@ -41,7 +41,7 @@ $('select.selectpicker').on('change', function () {
             $("#EuaggelismosCard").hide();
 
             break;
-        case "-":
+        default:
             $("#AgiosAndreas").show();
             $("#AHEPA").show();
             $("#Attikon").show();
@@ -51,6 +51,9 @@ $('select.selectpicker').on('change', function () {
             $("#AHEPACard").show();
             $("#AttikonCard").show();
             $("#EuaggelismosCard").show();
+
+            $("#region").val("");
+            // $('#region').selectpicker('val', '');
 
             break;
     }
@@ -100,13 +103,23 @@ $('select.selectpicker').on('change', function () {
             $("#EuaggelismosCard").show();
 
             break;
-        case "-":
+        default:
             $("#Athens").show();
             $("#Patra").show();
             $("#Thessaloniki").show();
+
+            $("#hospital").val("");
+            // $('#hospital').selectpicker('val', 'default');
 
             break;
     }
 
     $('.selectpicker').selectpicker('refresh');
+    // $('.selectpicker').selectpicker('render');
+
 });
+
+// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+//     $('.selectpicker').selectpicker('mobile');
+// }
+
