@@ -50,7 +50,7 @@ footer {
     font-size: 1.1rem;
 }
 
-.nav-link-hover:hover {
+.nav-link:hover {
     background-color: #19393b;
     height: 100%;
 }
@@ -206,4 +206,13 @@ footer {
 
 .underlined{
     text-decoration: underline;
+}
+
+.carousel-inner{
+    max-height: 520px;
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
 }
