@@ -38,6 +38,7 @@
 
 .rgba-opacity:hover { color: rgba(255, 255, 255, 1.0); }
 
+/* Base */
 body::after {
     content: '';
     display: block;
@@ -49,6 +50,17 @@ body::after {
     height: 100%;
 }
 
+
+/* Home */
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(1);
+}
+
+.carousel-inner-height {
+    max-height: 512px;
+}
+
+/* Hospitals */
 .rotate-icon {
     transform: rotate(0deg);
     transition: .3s transform ease-in-out;
@@ -59,18 +71,17 @@ body::after {
     transform: rotate(180deg);
 }
 
-.contact-info-wrapper {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-column-gap: 1.5rem;
-    align-items: baseline;
-}
+/* Covid-19 */
 
+
+/* Contact Us */
 .ic {
     margin-right: 4px;
     margin-top: 12px;
 }
 
+
+/* Log In, Sign Up */
 .sign-card {
     max-width: 32em;
 }
@@ -96,25 +107,9 @@ body::after {
     justify-content: space-evenly;
 }
 
-
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%var(--main-theme-color)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%var(--main-theme-color)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-
-.underlined{
-    text-decoration: underline;
-}
-
-.carousel-inner{
-    max-height: 520px;
-    height: 100%;
-}
-
-.carousel-item{
-    height: 100%;
+.contact-info-wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 1.5rem;
+    align-items: baseline;
 }
