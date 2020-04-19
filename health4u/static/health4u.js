@@ -8,7 +8,7 @@ $("#onDutyCheckbox").on("change", function onDutyChange() {
     }
 });
 
-$("*.btn-collapse-hospital").on('click', function () {
+$("*.btn-collapse").on('click', function () {
     $(this).closest("*.card-header").next().collapse('toggle');
 });
 
