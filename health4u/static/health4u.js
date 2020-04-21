@@ -2,6 +2,8 @@
 $("*.btn-collapse").on('click', function () {
     $(this).closest("*.card-header").next().collapse('toggle');
 });
+// #Hospital Results
+
 
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
@@ -13,6 +15,8 @@ $("#onDutyCheckbox").on("change", function onDutyChange() {
         document.getElementById("dateDiv").style.display = "none";
     }
 });
+// #Checkbox for On Duty Changes
+
 
 // Date Options
 $(".datepicker").datepicker({
@@ -24,6 +28,8 @@ $(".datepicker").datepicker({
     autoclose: true,
     todayHighlight: true
 }).datepicker("setDate",'now');
+// #Date Options
+
 
 // Static Filtering for Part 1
 $(".selectpicker").selectpicker();
@@ -143,3 +149,4 @@ $('select.selectpicker').on('change', function () {
     $('.selectpicker').selectpicker('refresh');
 
 });
+// #Static Filtering for Part 1
