@@ -56,10 +56,6 @@ body::after {
     filter: invert(1);
 }
 
-.carousel-inner-height {
-    max-height: 512px;
-}
-
 
 /* Hospitals */
 .rotate-icon {

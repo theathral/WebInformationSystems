@@ -34,20 +34,26 @@
     <div class="collapse navbar-collapse" id="main-menu">
         <ul class="navbar-nav mr-auto h4 font-weight-normal">
             <li class="nav-item {%- if request.endpoint == 'home' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('home') }}">Home</a></li>
+                <a class="nav-link nav-link-hover" href="{{ url_for('home') }}">Home</a>
+            </li>
             <li class="nav-item {%- if request.endpoint == 'hospitals' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('hospitals') }}">Hospitals</a></li>
+                <a class="nav-link nav-link-hover" href="{{ url_for('hospitals') }}">Hospitals</a>
+            </li>
             <li class="nav-item {%- if request.endpoint == 'covid19' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('covid19') }}">Covid-19</a></li>
+                <a class="nav-link nav-link-hover" href="{{ url_for('covid19') }}">Covid-19</a>
+            </li>
             <li class="nav-item {%- if request.endpoint == 'contact_us' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('contact_us') }}">Contact Us</a></li>
+                <a class="nav-link nav-link-hover" href="{{ url_for('contact_us') }}">Contact Us</a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto h6 font-weight-normal">
             <li class="nav-item {%- if request.endpoint == 'sign_up' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i> Sign Up</a>
+                <a class="nav-link nav-link-hover" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i> Sign
+                    Up</a>
             </li>
             <li class="nav-item {%- if request.endpoint == 'log_in' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a class="nav-link nav-link-hover" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i>
+                    Login</a>
             </li>
         </ul>
     </div>
