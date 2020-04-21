@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Hospitals{% endblock %}
 
 {% block content %}
 
@@ -12,11 +12,12 @@
         <div class="col-lg-3">
             <div class="card mx-1 mb-4" id="filter-results" role="tablist" aria-multiselectable="true">
                 <div class="card-header p-0" role="tab" id="headingFilter">
-                    <button class="btn btn-block text-left btn-collapse-filters" data-toggle="collapse"
+                    <button class="btn btn-block text-left color-3 rgba-opacity color-3-bg" data-toggle="collapse"
                             data-parent="#filter-results" data-target="#collapseFilter" aria-expanded="true"
                             aria-controls="collapseFilter">
                         <div class="h4 mb-0">
-                            <i class="fas fa-filter"></i> Filters <i class="fas fa-angle-up rotate-icon"></i>
+                            <i class="fas fa-filter"></i> Filters <i
+                                class="fas fa-angle-up rotate-icon float-right"></i>
                         </div>
                     </button>
                 </div>
@@ -24,23 +25,23 @@
                 <div id="collapseFilter" class="collapse show" role="tabpanel" aria-labelledby="headingFilter"
                      data-parent="#filter-list">
 
-                    <form class="hospital-select-form rounded-lg p-2">
+                    <form class="rounded-lg p-2 color-4-bg">
                         <div class="form-group">
                             <div class="mt-3">
-                                <label for="region">Region:</label>
-                                <select class="selectpicker form-control" id="region" data-live-search="true"
+                                <label for="regionFilter">Region:</label>
+                                <select class="selectpicker form-control" id="regionFilter" data-live-search="true"
                                         title="Select Region">
-                                    <option value="-" id="SelectRegion">Select Region</option>
+                                    <option value="-" id="SelectRegion"></option>
                                     <option value="0" id="Athens">Athens</option>
                                     <option value="1" id="Patra">Patra</option>
                                     <option value="2" id="Thessaloniki">Thessaloniki</option>
                                 </select>
                             </div>
                             <div class="mt-3">
-                                <label for="hospital">Hospital:</label>
-                                <select class="selectpicker form-control" id="hospital" data-live-search="true"
+                                <label for="hospitalFilter">Hospital:</label>
+                                <select class="selectpicker form-control" id="hospitalFilter" data-live-search="true"
                                         title="Select Hospital">
-                                    <option value="-" id="SelectHospital">Select Hospital</option>
+                                    <option value="-" id="SelectHospital"></option>
                                     <option value="0" id="AgiosAndreas">Agios Andreas</option>
                                     <option value="1" id="AHEPA">AHEPA</option>
                                     <option value="2" id="Attikon">Attikon</option>
@@ -48,30 +49,30 @@
                                 </select>
                             </div>
                             <div class="mt-3" id="departmentDiv">
-                                <label for="hospital">Department:</label>
-                                <select class="selectpicker form-control" id="department" data-live-search="true"
+                                <label for="hospitalFilter">Department:</label>
+                                <select class="selectpicker form-control" id="departmentFilter" data-live-search="true"
                                         title="Select Department">
-                                    <option value="-" id="SelectDepartment">Select Department</option>
+                                    <option value="-" id="SelectDepartment"></option>
                                     <option value="0" id="Cardiology">Cardiology</option>
                                     <option value="1" id="Neurology">Neurology</option>
                                     <option value="2" id="Obstetrics">Obstetrics and gynaecology</option>
                                     <option value="3" id="Pediatrics">Pediatrics</option>
                                 </select>
                             </div>
-                            <div class="mt-3" id="dateDiv">
-                                <label for="date">Date:</label>
-                                <input type="date" class="form-control" id="date" data-date-format="dd/mm/yyyy"
-                                       required>
-                            </div>
                             <div class="custom-control custom-checkbox my-3">
                                 <input type="checkbox" class="custom-control-input" id="onDutyCheckbox">
                                 <label class="custom-control-label" for="onDutyCheckbox">On duty</label>
+                            </div>
+                            <div class="mt-3" id="dateDiv">
+                                <label for="dateFilter">Date:</label>
+                                <input type='text' class="form-control datepicker" id="dateFilter">
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <!-- #Filter Tab -->
 
         <!-- Results -->
         <div class="col-lg-9">
@@ -79,11 +80,12 @@
 
                 <div class="card" id="AgiosAndreasCard">
                     <div class="card-header p-0" role="tab">
-                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                        <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse"
+                                data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
                                 <i class="fas fa-hospital"></i> Agios Andreas <i
-                                    class="fas fa-angle-up rotate-icon"></i>
+                                    class="fas fa-angle-up rotate-icon float-right"></i>
                             </div>
                         </button>
                     </div>
@@ -105,10 +107,12 @@
 
                 <div class="card" id="AHEPACard">
                     <div class="card-header p-0" role="tab">
-                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                        <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse"
+                                data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
-                                <i class="fas fa-hospital"></i> AHEPA <i class="fas fa-angle-up rotate-icon"></i>
+                                <i class="fas fa-hospital"></i> AHEPA <i
+                                    class="fas fa-angle-up rotate-icon float-right"></i>
                             </div>
                         </button>
                     </div>
@@ -130,10 +134,12 @@
 
                 <div class="card" id="AttikonCard">
                     <div class="card-header p-0" role="tab">
-                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                        <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse"
+                                data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
-                                <i class="fas fa-hospital"></i> Attikon <i class="fas fa-angle-up rotate-icon"></i>
+                                <i class="fas fa-hospital"></i> Attikon <i
+                                    class="fas fa-angle-up rotate-icon float-right"></i>
                             </div>
                         </button>
                     </div>
@@ -155,10 +161,12 @@
 
                 <div class="card" id="EuaggelismosCard">
                     <div class="card-header p-0" role="tab">
-                        <button class="btn btn-block text-left btn-collapse-hospital" data-toggle="collapse"
+                        <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse"
+                                data-toggle="collapse"
                                 data-parent="#hospital-results" aria-expanded="true">
                             <div class="h5 mb-0">
-                                <i class="fas fa-hospital"></i> Euaggelismos <i class="fas fa-angle-up rotate-icon"></i>
+                                <i class="fas fa-hospital"></i> Euaggelismos <i
+                                    class="fas fa-angle-up rotate-icon float-right"></i>
                             </div>
                         </button>
                     </div>
@@ -180,14 +188,14 @@
                 </div>
             </div>
         </div>
+        <!-- #Results -->
 
     </div>
 </div>
 
 <script>
     document.getElementById("onDutyCheckbox").checked = true;
-    document.getElementById("departmentDiv").style.display = "none";
-    document.getElementById("dateDiv").style.display = "block";
+    document.getElementById("departmentFilter").disabled = true;
 </script>
 
 {% endblock %}
