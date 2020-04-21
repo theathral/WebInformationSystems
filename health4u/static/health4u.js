@@ -8,11 +8,11 @@ $("*.btn-collapse").on('click', function () {
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
     if ($(this).prop("checked")) {
-        document.getElementById("departmentDiv").style.display = "none";
-        document.getElementById("dateDiv").style.display = "block";
+        document.getElementById("departmentFilter").disabled = true;
+        $("#dateDiv").show();
     } else {
-        document.getElementById("departmentDiv").style.display = "block";
-        document.getElementById("dateDiv").style.display = "none";
+        document.getElementById("departmentFilter").disabled = false;
+        $("#dateDiv").hide();
     }
 });
 // #Checkbox for On Duty Changes
