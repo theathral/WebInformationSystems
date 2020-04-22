@@ -25,12 +25,14 @@ $("*.btn-collapse").on("click", function () {
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
     if ($(this).prop("checked")) {
-        document.getElementById("departmentFilter").disabled = true;
+        $("#departmentFilter").prop("disabled", true);
         $("#dateDiv").fadeIn();
     } else {
-        document.getElementById("departmentFilter").disabled = false;
+        $("#departmentFilter").prop("disabled", false);
         $("#dateDiv").fadeOut();
     }
+
+    $(".selectpicker").selectpicker("refresh");
 });
 // #Checkbox for On Duty Changes
 
