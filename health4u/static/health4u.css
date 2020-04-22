@@ -50,6 +50,22 @@ body::after {
     height: 100%;
 }
 
+.back-to-top {
+    display: none;
+    cursor: pointer;
+    z-index: 10000;
+    position: fixed;
+    padding: 12px 16px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+}
+
+/* Darker background on mouse-over */
+.back-to-top:hover {
+    background-color: var(--main-theme-color);
+}
+
 
 /* Home */
 .carousel-control-next-icon, .carousel-control-prev-icon {

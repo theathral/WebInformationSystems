@@ -1,5 +1,22 @@
+// Back to Top Button
+// $(".back-to-top").hide();
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 150) {
+        $(".back-to-top").fadeIn();
+    } else {
+        $(".back-to-top").fadeOut();
+    }
+});
+
+$(".back-to-top").on("click", function () {
+    $("html, body").animate({scrollTop: 0}, 800);
+    return false;
+});
+
+
 // Hospital Results
-$("*.btn-collapse").on('click', function () {
+$("*.btn-collapse").on("click", function () {
     $(this).closest("*.card-header").next().collapse('toggle');
 });
 // #Hospital Results
@@ -9,10 +26,10 @@ $("*.btn-collapse").on('click', function () {
 $("#onDutyCheckbox").on("change", function onDutyChange() {
     if ($(this).prop("checked")) {
         document.getElementById("departmentFilter").disabled = true;
-        $("#dateDiv").show();
+        $("#dateDiv").fadeIn();
     } else {
         document.getElementById("departmentFilter").disabled = false;
-        $("#dateDiv").hide();
+        $("#dateDiv").fadeOut();
     }
 });
 // #Checkbox for On Duty Changes
@@ -34,7 +51,7 @@ $(".datepicker").datepicker({
 // Static Filtering for Part 1
 $(".selectpicker").selectpicker();
 
-$('select.selectpicker').on('change', function () {
+$('select.selectpicker').on("change", function () {
 
     var region = $('#regionFilter option:selected').val().toString();
     var hospital = $('#hospitalFilter option:selected').val().toString();
