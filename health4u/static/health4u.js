@@ -17,6 +17,7 @@ $(".back-to-top").on("click", function () {
 
 // Hospital Results
 $("*.btn-collapse").on("click", function () {
+    $(this).toggleClass("collapsed");
     $(this).closest("*.card-header").next().collapse('toggle');
 });
 // #Hospital Results
