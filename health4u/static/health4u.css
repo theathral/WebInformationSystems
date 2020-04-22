@@ -61,7 +61,6 @@ body::after {
     font-size: 16px;
 }
 
-/* Darker background on mouse-over */
 .back-to-top:hover {
     background-color: var(--main-theme-color);
 }
