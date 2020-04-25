@@ -83,6 +83,12 @@ body::after {
     transform: rotate(180deg);
 }
 
+.datepicker:read-only {
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+
 /* Covid-19 */
 
 

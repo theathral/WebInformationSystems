@@ -43,11 +43,12 @@ $(".datepicker").datepicker({
     format: "dd/mm/yyyy",
     startDate: "+0d",
     endDate: "+100d",
+    disableTouchKeyboard: true,
     maxViewMode: 1,
     todayBtn: "linked",
     autoclose: true,
     todayHighlight: true
-}).datepicker("setDate",'now');
+}).datepicker("setDate", "now");
 // #Date Options
 
 
