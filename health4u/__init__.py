@@ -3,10 +3,14 @@ from types import SimpleNamespace
 
 from flask import Flask, render_template
 
+from .db import create_db
+
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
+    db, db_models = create_db(app)
+    db.create_all()
 
     @app.route("/")
     @app.route("/home")
