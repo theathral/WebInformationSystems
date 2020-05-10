@@ -1,19 +1,21 @@
 from flask_sqlalchemy import SQLAlchemy
 
+from flask_login import UserMixin
+
 
 def create_db(app):
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
     db = SQLAlchemy(app)
 
-    class User(db.Model):
+    class User(UserMixin, db.Model):
         id = db.Column(db.Integer, primary_key=True)
         email = db.Column(db.String, unique=True, nullable=False)
         password = db.Column(db.String, nullable=False)
         first_name = db.Column(db.String)
         last_name = db.Column(db.String)
         region = db.Column(db.String)
-        valid = db.Column(db.Boolean, nullable=False)
+        #valid = db.Column(db.Boolean, nullable=True)
 
     class Hospital(db.Model):
         id = db.Column(db.Integer, primary_key=True)

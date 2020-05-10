@@ -1,16 +1,27 @@
 from datetime import datetime
 from types import SimpleNamespace
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 from .db import create_db
+
+from flask_login import LoginManager, login_user, login_required, logout_user
+
+from werkzeug import generate_password_hash, check_password_hash
 
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
+    app.secret_key='gfdskjn@/r31ff@#%g45'
     db, db_models = create_db(app)
+    User = db_models["user"]
     db.create_all()
+
+    login_manager = LoginManager()
+    login_manager.login_view = 'login'
+    login_manager.init_app(app)
+
 
     @app.route("/")
     @app.route("/home")
@@ -29,7 +40,7 @@ def create_app(test_config=None):
     def covid19():
         return render_template("covid19.html", req_datetime=datetime.now())
 
-    @app.route("/log_in")
+    @app.route("/log_in", methods=['POST', 'GET'])
     def log_in():
         return render_template("log_in.html", req_datetime=datetime.now())
 
@@ -37,7 +48,61 @@ def create_app(test_config=None):
     def sign_up():
         return render_template("sign_up.html", req_datetime=datetime.now())
 
+    @app.route("/signUp", methods=['POST', 'GET'])
+    def signUp():
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        region = request.form['region']
+        email = request.form['email']
+        password = request.form['password']
+        confirm = request.form['confirm-password']
+
+        existing_user = User.query.filter_by(email=email).first()
+
+        if existing_user is None:
+            if password == confirm:
+                new_user = User(first_name=first_name, last_name=last_name, region=region, email=email, password=generate_password_hash(password, method='sha256'))
+                db.session.add(new_user)
+                db.session.commit()
+                flash('Registration was Successful. Please Log in.')
+                return redirect(url_for('log_in'))
+            flash('Passwords do not match. Please try again.')
+            return redirect(url_for('sign_up'))
+        else:
+            flash('Email address already exists.')
+            return redirect(url_for('sign_up'))
+        return redirect(url_for('log_in'))
+
+    @app.route('/login', methods=['POST', 'GET'])
+    def login():
+        email = request.form['email']
+        password = request.form['password']
+
+        temp_user = User.query.filter_by(email=email).first()
+
+        if temp_user is not None:
+            if check_password_hash(temp_user.password, password):
+                flash('You logged in successfully')
+                login_user(temp_user)
+                return redirect(url_for('home'))
+            else:
+                flash('Password was incorrect. Try Again')
+                return redirect(url_for('log_in'))
+        else:
+            flash('No user found with this email')
+            return redirect(url_for('log_in'))
+
+    @app.route('/logout')
+    @login_required
+    def logout():
+        logout_user()
+        return redirect(url_for('log_in'))
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
     return app
 
-
 app = create_app()
+
+
