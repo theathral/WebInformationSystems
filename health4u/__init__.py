@@ -7,7 +7,7 @@ from .db import create_db
 
 from flask_login import LoginManager, login_user, login_required, logout_user
 
-from werkzeug import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 def create_app(test_config=None):
