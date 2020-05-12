@@ -1,19 +1,16 @@
 from datetime import datetime
-from types import SimpleNamespace
 
 from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_login import LoginManager, login_user, login_required, logout_user
+from werkzeug.security import generate_password_hash, check_password_hash
 
 from .db import create_db
-
-from flask_login import LoginManager, login_user, login_required, logout_user
-
-from werkzeug.security import generate_password_hash, check_password_hash
 
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
-    app.secret_key='gfdskjn@/r31ff@#%g45'
+    app.secret_key = 'gfdskjn@/r31ff@#%g45'
     db, db_models = create_db(app)
     User = db_models["user"]
     db.create_all()
@@ -21,7 +18,6 @@ def create_app(test_config=None):
     login_manager = LoginManager()
     login_manager.login_view = 'login'
     login_manager.init_app(app)
-
 
     @app.route("/")
     @app.route("/home")
@@ -61,17 +57,17 @@ def create_app(test_config=None):
 
         if existing_user is None:
             if password == confirm:
-                new_user = User(first_name=first_name, last_name=last_name, region=region, email=email, password=generate_password_hash(password, method='sha256'))
+                new_user = User(first_name=first_name, last_name=last_name, region=region, email=email,
+                                password=generate_password_hash(password, method='sha256'))
                 db.session.add(new_user)
                 db.session.commit()
                 flash('Registration was Successful. Please Log in.')
                 return redirect(url_for('log_in'))
             flash('Passwords do not match. Please try again.')
             return redirect(url_for('sign_up'))
-        else:
-            flash('Email address already exists.')
-            return redirect(url_for('sign_up'))
-        return redirect(url_for('log_in'))
+
+        flash('Email address already exists.')
+        return redirect(url_for('sign_up'))
 
     @app.route('/login', methods=['POST', 'GET'])
     def login():
@@ -80,16 +76,12 @@ def create_app(test_config=None):
 
         temp_user = User.query.filter_by(email=email).first()
 
-        if temp_user is not None:
-            if check_password_hash(temp_user.password, password):
-                flash('You logged in successfully')
-                login_user(temp_user)
-                return redirect(url_for('home'))
-            else:
-                flash('Password was incorrect. Try Again')
-                return redirect(url_for('log_in'))
+        if temp_user is not None and check_password_hash(temp_user.password, password):
+            flash('You have successfully logged in')
+            login_user(temp_user)
+            return redirect(url_for('home'))
         else:
-            flash('No user found with this email')
+            flash('Wrong Credentials')
             return redirect(url_for('log_in'))
 
     @app.route('/logout')
@@ -101,8 +93,8 @@ def create_app(test_config=None):
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
+
     return app
 
+
 app = create_app()
-
-

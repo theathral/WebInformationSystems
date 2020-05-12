@@ -4,135 +4,137 @@
 
 {% block content %}
 
-<div class="container mt-4 justify-content-start">
-    {% with messages = get_flashed_messages() %}
+    <div class="container mt-4 justify-content-start">
+        {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
                         <span>{{ message }}</span>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
-    <!-- Alert for Covid-19 -->
-    <div class="card rounded-lg">
+        <!-- Alert for Covid-19 -->
+        <div class="card rounded-lg">
 
-        <div class="card-title text-white bg-danger rounded w-50 mx-3 my-3 p-2">
-            <div class="h6 my-2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> COVID-19 alert</div>
-        </div>
-
-        <div class="card-body">
-            <div class="card-subtitle mb-2">Stay at home if you feel unwell. If you have a fever, cough and difficulty
-                breathing, seek medical attention and call in advance. Follow the directions of your local health
-                authority. Source:
-                <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
-                   target="_blank"><u>World Health Organization</u></a>
+            <div class="card-title text-white bg-danger rounded w-50 mx-3 my-3 p-2">
+                <div class="h6 my-2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> COVID-19 alert</div>
             </div>
 
-            <button type="button" class="btn btn-link btn-md border-secondary rounded-pill col-xs">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-                <a href="https://eody.gov.gr/neos-koronaios-covid-19/" target="_blank">
-                    <u> National Organization of Public Health</u>
-                </a>
-            </button>
-
-        </div>
-    </div>
-    <!-- #Alert for Covid-19 -->
-
-    <!-- Carousel -->
-    <div class="row mx-2 my-3 p-auto color-6-bg">
-
-        <div class="col-md-4 m-0 p-3 text-white">
-            <div class="h2">
-                Welcome
-            </div>
-            <div class="h5 font-weight-light">
-                Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers up to
-                date information about Covid-19 as long as the outbreak is active.
-            </div>
-        </div>
-
-        <div class="col-md-8 m-0 p-0">
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item h-100 active">
-                        <img class="d-block w-100" src="../static/images/img-carousel-who.png"
-                             alt="Who Choose Health Image from Sustainable Development Goals">
-                    </div>
-                    <div class="carousel-item h-100">
-                        <img class="d-block w-100" src="../static/images/img-carousel-health-care.png"
-                             alt="Health Care Image">
-                    </div>
-                    <div class="carousel-item h-100">
-                        <img class="d-block w-100" src="../static/images/img-carousel-covid.png"
-                             alt="World Health Organization Image about Covid-19">
-                    </div>
+            <div class="card-body">
+                <div class="card-subtitle mb-2">Stay at home if you feel unwell. If you have a fever, cough and
+                    difficulty
+                    breathing, seek medical attention and call in advance. Follow the directions of your local health
+                    authority. Source:
+                    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+                       target="_blank"><u>World Health Organization</u></a>
                 </div>
 
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <button type="button" class="btn btn-link btn-md border-secondary rounded-pill col-xs">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <a href="https://eody.gov.gr/neos-koronaios-covid-19/" target="_blank">
+                        <u> National Organization of Public Health</u>
+                    </a>
+                </button>
+
+            </div>
+        </div>
+        <!-- #Alert for Covid-19 -->
+
+        <!-- Carousel -->
+        <div class="row mx-2 my-3 p-auto color-6-bg">
+
+            <div class="col-md-4 m-0 p-3 text-white">
+                <div class="h2">
+                    Welcome
+                </div>
+                <div class="h5 font-weight-light">
+                    Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers
+                    up to
+                    date information about Covid-19 as long as the outbreak is active.
+                </div>
+            </div>
+
+            <div class="col-md-8 m-0 p-0">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item h-100 active">
+                            <img class="d-block w-100" src="../static/images/img-carousel-who.png"
+                                 alt="Who Choose Health Image from Sustainable Development Goals">
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img class="d-block w-100" src="../static/images/img-carousel-health-care.png"
+                                 alt="Health Care Image">
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img class="d-block w-100" src="../static/images/img-carousel-covid.png"
+                                 alt="World Health Organization Image about Covid-19">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
             </div>
 
         </div>
+        <!-- #Carousel -->
 
-    </div>
-    <!-- #Carousel -->
+        <!-- Page Features -->
+        <div class="row text-center m-3">
 
-    <!-- Page Features -->
-    <div class="row text-center m-3">
+            <a class="col-xs mx-auto my-3" href="{{ url_for('hospitals') }}">
+                <div class="card img-fluid">
+                    <img class="card-img-top" src="../static/images/img-card-hospitals.png" alt="Hospital Card Image">
+                    <div class="card-img-overlay">
 
-        <a class="col-xs mx-auto my-3" href="{{ url_for('hospitals') }}">
-            <div class="card img-fluid">
-                <img class="card-img-top" src="../static/images/img-card-hospitals.png" alt="Hospital Card Image">
-                <div class="card-img-overlay">
+                        <div class="card-header card-title text-dark h5"><u>Hospitals</u></div>
 
-                    <div class="card-header card-title text-dark h5"><u>Hospitals</u></div>
-
-                    <div class="card-body">
-                        <p class="card-text font-weight-bold text-dark">
-                            On this page, you can find more information about the hospitals in Greece.
-                        </p>
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold text-dark">
+                                On this page, you can find more information about the hospitals in Greece.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="col-xs m-auto my-3" href="{{ url_for('covid19') }}">
-            <div class="card img-fluid ">
-                <img class="card-img-top" src="../static/images/img-card-covid.png" alt="Covid-19 Card Image">
-                <div class="card-img-overlay">
+            <a class="col-xs m-auto my-3" href="{{ url_for('covid19') }}">
+                <div class="card img-fluid ">
+                    <img class="card-img-top" src="../static/images/img-card-covid.png" alt="Covid-19 Card Image">
+                    <div class="card-img-overlay">
 
-                    <div class="card-header card-title text-white h5"><u>Covid-19</u></div>
+                        <div class="card-header card-title text-white h5"><u>Covid-19</u></div>
 
-                    <div class="card-body">
-                        <p class="card-text font-weight-bold text-white">
-                            On this page, you can find out more about Covid-19 disease.
-                        </p>
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold text-white">
+                                On this page, you can find out more about Covid-19 disease.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+
+        </div>
+        <!-- #Page Features -->
 
     </div>
-    <!-- #Page Features -->
-
-</div>
 
 {% endblock %}

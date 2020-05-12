@@ -1,6 +1,4 @@
 // Back to Top Button
-// $(".back-to-top").hide();
-
 $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {
         $(".back-to-top").fadeIn();
@@ -13,6 +11,7 @@ $(".back-to-top").on("click", function () {
     $("html, body").animate({scrollTop: 0}, 800);
     return false;
 });
+// #Back to Top Button
 
 
 // Hospital Results
