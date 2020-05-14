@@ -30,8 +30,15 @@ def create_db(app):
     class Department(db.Model):
         hospital_id = db.Column(db.Integer, primary_key=True)
         department = db.Column(db.Integer, primary_key=True)
+        
+    class Request(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        name = db.Column(db.String)
+        email = db.Column(db.String)
+        need = db.Column(db.String)
+        message = db.Column(db.String, nullable=False)
 
     return (
         db,
-        {Model.__table__.name.lower(): Model for Model in (User, Hospital, Department)},
+        {Model.__table__.name.lower(): Model for Model in (User, Hospital, Department, Request)},
     )
