@@ -13,6 +13,7 @@ def create_app(test_config=None):
     app.secret_key = 'gfdskjn@/r31ff@#%g45'
     db, db_models = create_db(app)
     User = db_models["user"]
+    Request = db_models["request"]
     db.create_all()
 
     login_manager = LoginManager()
@@ -61,12 +62,12 @@ def create_app(test_config=None):
                                 password=generate_password_hash(password, method='sha256'))
                 db.session.add(new_user)
                 db.session.commit()
-                flash('Registration was Successful. Please Log in.')
+                flash('Registration was Successful. Please Log in.','success')
                 return redirect(url_for('log_in'))
-            flash('Passwords do not match. Please try again.')
+            flash('Passwords do not match. Please try again.','danger')
             return redirect(url_for('sign_up'))
 
-        flash('Email address already exists.')
+        flash('Email address already exists.','danger')
         return redirect(url_for('sign_up'))
 
     @app.route('/login', methods=['POST', 'GET'])
@@ -77,11 +78,11 @@ def create_app(test_config=None):
         temp_user = User.query.filter_by(email=email).first()
 
         if temp_user is not None and check_password_hash(temp_user.password, password):
-            flash('You have successfully logged in')
+            flash('You have successfully logged in!','success')
             login_user(temp_user)
             return redirect(url_for('home'))
         else:
-            flash('Wrong Credentials')
+            flash('Wrong Credentials','danger')
             return redirect(url_for('log_in'))
 
     @app.route('/logout')
@@ -93,6 +94,23 @@ def create_app(test_config=None):
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
+
+    @app.route("/contactUs", methods=['POST', 'GET'])
+    def contactUs():
+        rname = request.form['contact-name']
+        remail = request.form['contact-email']
+        rneed = request.form['contact-need']
+        rmessage = request.form['contact-message']
+
+        if rmessage == "":
+            flash('Warning : No message included!','danger')
+            return redirect(url_for('contact_us'))
+        new_Req = Request(name=rname, email=remail, need=rneed, message=rmessage)
+        db.session.add(new_Req)
+        db.session.commit()
+
+        flash('Message sent successfully!','success')
+        return redirect(url_for('contact_us'))
 
     return app
 
