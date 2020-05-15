@@ -38,6 +38,10 @@ def create_db(app):
         need = db.Column(db.String)
         message = db.Column(db.String, nullable=False)
 
+        #just for debug
+        #def __repr__(self):
+         #   return '<Request from {}, with email : {}. Subject of this request is : {}, and message : {}>'.format(self.name,self.email,self.need,self.message)
+
     return (
         db,
         {Model.__table__.name.lower(): Model for Model in (User, Hospital, Department, Request)},

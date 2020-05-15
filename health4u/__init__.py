@@ -106,6 +106,7 @@ def create_app(test_config=None):
             flash('Warning : No message included!','danger')
             return redirect(url_for('contact_us'))
         new_Req = Request(name=rname, email=remail, need=rneed, message=rmessage)
+        #print(new_Req)
         db.session.add(new_Req)
         db.session.commit()
 
