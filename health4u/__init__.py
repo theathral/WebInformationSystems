@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_login import LoginManager, login_user, login_required, logout_user
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .db import create_db
@@ -44,6 +44,10 @@ def create_app(test_config=None):
     @app.route("/sign_up")
     def sign_up():
         return render_template("sign_up.html", req_datetime=datetime.now())
+
+    @app.route("/change_password", methods=['POST', 'GET'])
+    def change_password():
+        return render_template("change_password.html", req_datetime=datetime.now())
 
     @app.route("/signUp", methods=['POST', 'GET'])
     def signUp():
@@ -112,6 +116,22 @@ def create_app(test_config=None):
 
         flash('Message sent successfully!','success')
         return redirect(url_for('contact_us'))
+
+    @app.route("/changePassword", methods=['POST', 'GET'])
+    def changePassword():
+        password = request.form['old_password']
+        new_password = request.form['new_password']
+        conf_new_pass = request.form['conf_new_password']
+
+        if check_password_hash(current_user.password, password) and new_password == conf_new_pass:
+            current_user.password = generate_password_hash(new_password, method='sha256')
+            db.session.add(current_user)
+            db.session.commit()
+            flash('Password changed successfully!', 'success')
+            return redirect(url_for('home'))
+        else:
+            flash('Something went wrong. Try again', 'danger')
+            return redirect(url_for('change_password'))
 
     return app
 
