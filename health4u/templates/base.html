@@ -70,9 +70,11 @@
                         <i class="fa fa-user"></i> Account
                     </a>
                     <div class="dropdown-menu dropdown-menu-right main-color-bg" aria-labelledby="Account">
-                        <a class="dropdown-item nav-link-hover text-white rgba-opacity" href="#">
+                        <a class="dropdown-item nav-link-hover text-white rgba-opacity"
+                           href="{{ url_for('account_details') }}">
                             <i class="fa fa-cog"></i> Account Details</a>
-                        <a class="dropdown-item nav-link-hover text-white rgba-opacity" href="{{ url_for('change_password') }}">
+                        <a class="dropdown-item nav-link-hover text-white rgba-opacity"
+                           href="{{ url_for('change_password') }}">
                             <i class="fa fa-key"></i> Change Password</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item nav-link-hover text-white rgba-opacity" href="/logout">

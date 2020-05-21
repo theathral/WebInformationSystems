@@ -49,6 +49,10 @@ def create_app(test_config=None):
     def change_password():
         return render_template("change_password.html", req_datetime=datetime.now())
 
+    @app.route("/account_details", methods=['POST', 'GET'])
+    def account_details():
+        return render_template("account_details.html", req_datetime=datetime.now())
+
     @app.route("/signUp", methods=['POST', 'GET'])
     def signUp():
         first_name = request.form['first_name']
@@ -66,12 +70,12 @@ def create_app(test_config=None):
                                 password=generate_password_hash(password, method='sha256'))
                 db.session.add(new_user)
                 db.session.commit()
-                flash('Registration was Successful. Please Log in.','success')
+                flash('Registration was Successful. Please Log in.', 'success')
                 return redirect(url_for('log_in'))
-            flash('Passwords do not match. Please try again.','danger')
+            flash('Passwords do not match. Please try again.', 'danger')
             return redirect(url_for('sign_up'))
 
-        flash('Email address already exists.','danger')
+        flash('Email address already exists.', 'danger')
         return redirect(url_for('sign_up'))
 
     @app.route('/login', methods=['POST', 'GET'])
@@ -82,11 +86,11 @@ def create_app(test_config=None):
         temp_user = User.query.filter_by(email=email).first()
 
         if temp_user is not None and check_password_hash(temp_user.password, password):
-            flash('You have successfully logged in!','success')
+            flash('You have successfully logged in!', 'success')
             login_user(temp_user)
             return redirect(url_for('home'))
         else:
-            flash('Wrong Credentials','danger')
+            flash('Wrong Credentials', 'danger')
             return redirect(url_for('log_in'))
 
     @app.route('/logout')
@@ -107,14 +111,14 @@ def create_app(test_config=None):
         rmessage = request.form['contact-message']
 
         if rmessage == "":
-            flash('Warning : No message included!','danger')
+            flash('Warning : No message included!', 'danger')
             return redirect(url_for('contact_us'))
         new_Req = Request(name=rname, email=remail, need=rneed, message=rmessage)
-        #print(new_Req)
+        # print(new_Req)
         db.session.add(new_Req)
         db.session.commit()
 
-        flash('Message sent successfully!','success')
+        flash('Message sent successfully!', 'success')
         return redirect(url_for('contact_us'))
 
     @app.route("/changePassword", methods=['POST', 'GET'])
@@ -133,9 +137,29 @@ def create_app(test_config=None):
             flash('Something went wrong. Try again', 'danger')
             return redirect(url_for('change_password'))
 
+    @app.route("/accountDetails", methods=['POST', 'GET'])
+    def accountDetails():
+        email = request.form['email']
+        existing_user = User.query.filter_by(email=email).first()
+
+        if existing_user is None or current_user.email == email:
+            current_user.first_name = request.form['first_name']
+            current_user.last_name = request.form['last_name']
+            current_user.region = request.form['region']
+            current_user.email = request.form['email']
+
+            db.session.add(current_user)
+            db.session.commit()
+            flash('Account details changed successfully!', 'success')
+            return redirect(url_for('home'))
+        else:
+            flash('This email already exists. Try again', 'danger')
+            return redirect(url_for('account_details'))
+
     @app.errorhandler(Exception)
     def page_not_found(e):
         return render_template('error.html'), 400
+
     app.register_error_handler(400, page_not_found)
 
     return app
