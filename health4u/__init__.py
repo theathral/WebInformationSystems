@@ -133,6 +133,11 @@ def create_app(test_config=None):
             flash('Something went wrong. Try again', 'danger')
             return redirect(url_for('change_password'))
 
+    @app.errorhandler(Exception)
+    def page_not_found(e):
+        return render_template('error.html'), 400
+    app.register_error_handler(400, page_not_found)
+
     return app
 
 
