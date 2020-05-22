@@ -5,16 +5,27 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .db import create_db
-
+#from .init_db import load_hospital_details, load_hospital_departments, load_on_duty
+from .init_db import get_hospital_details, get_hospital_departments, get_on_duty
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
     app.secret_key = 'gfdskjn@/r31ff@#%g45'
     db, db_models = create_db(app)
-    User = db_models["user"]
-    Request = db_models["request"]
     db.create_all()
+
+    User = db_models["user"]
+    Hospital = db_models["hospital"]
+    Department = db_models["department"]
+    OnDuty = db_models["on_duty"]
+    Request = db_models["request"]
+
+    if db.session.query(Hospital).count() == 0:
+        db.session.bulk_save_objects(get_hospital_details(db, Hospital))
+        db.session.bulk_save_objects(get_hospital_departments(db, Department))
+        db.session.bulk_save_objects(get_on_duty(db, OnDuty))
+        db.session.commit()
 
     login_manager = LoginManager()
     login_manager.login_view = 'login'
