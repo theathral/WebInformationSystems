@@ -1,11 +1,12 @@
 from datetime import datetime
 
 from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_restful import Api
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .db import db, User, Hospital, Department, OnDuty, Request
-#from .init_db import load_hospital_details, load_hospital_departments, load_on_duty
+from .api import HospitalResource
 from .init_db import load_data
 
 def create_app(test_config=None):
@@ -24,6 +25,9 @@ def create_app(test_config=None):
     login_manager = LoginManager()
     login_manager.login_view = 'login'
     login_manager.init_app(app)
+
+    api = Api(app, "/api/v1")
+    api.add_resource(HospitalResource, "/hospital", "/hospital/<int:id>")
 
     @app.route("/")
     @app.route("/home")

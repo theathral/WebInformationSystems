@@ -1,5 +1,6 @@
 from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import inspect
 
 
 db = SQLAlchemy()
@@ -50,3 +51,8 @@ class Request(db.Model):
     # just for debug
     # def __repr__(self):
     #   return '<Request from {}, with email : {}. Subject of this request is : {}, and message : {}>'.format(self.name,self.email,self.need,self.message)
+
+
+# Nabbed from https://stackoverflow.com/a/37350445
+def object_as_dict(obj):
+    return {c.key: getattr(obj, c.key) for c in inspect(obj).mapper.column_attrs}
