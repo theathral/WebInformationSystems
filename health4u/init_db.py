@@ -2,24 +2,38 @@ import csv
 import datetime
 from pathlib import Path
 
-from .db import db, Hospital, Department, OnDuty
+from .db import db, Region, Hospital, Department, HasDepartment, OnDuty
 
 data_folder = Path(__file__).parent.parent
-hospital_details_path = data_folder / "Hospital-Details.csv"
+regions_path = data_folder / "Regions.csv"
+hospitals_path = data_folder / "Hospitals.csv"
+departments_path = data_folder / "Departments.csv"
 hospital_departments_path = data_folder / "Hospital-Departments.csv"
-hospital_on_duty_path = data_folder / "On-duty-May-2020.csv"
+hospital_on_duty_path = data_folder / "On-duty.csv"
 
 
-def get_hospital_details(data_path=hospital_details_path):
+def get_regions(data_path=regions_path):
+    with open(str(data_path), newline="", encoding="utf8") as csv_file:
+        reader = csv.DictReader(csv_file, delimiter=";")
+        return [Region(**row) for row in reader]
+
+
+def get_hospitals(data_path=hospitals_path):
     with open(str(data_path), newline="", encoding="utf8") as csv_file:
         reader = csv.DictReader(csv_file, delimiter=";")
         return [Hospital(**row) for row in reader]
 
 
-def get_hospital_departments(data_path=hospital_departments_path):
+def get_departments(data_path=departments_path):
     with open(str(data_path), newline="", encoding="utf8") as csv_file:
         reader = csv.DictReader(csv_file, delimiter=";")
         return [Department(**row) for row in reader]
+
+
+def get_hospital_departments(data_path=hospital_departments_path):
+    with open(str(data_path), newline="", encoding="utf8") as csv_file:
+        reader = csv.DictReader(csv_file, delimiter=";")
+        return [HasDepartment(**row) for row in reader]
 
 
 def get_on_duty(data_path=hospital_on_duty_path):
@@ -34,7 +48,9 @@ def get_on_duty(data_path=hospital_on_duty_path):
 
 
 def load_data():
-    db.session.bulk_save_objects(get_hospital_details())
+    db.session.bulk_save_objects(get_regions())
+    db.session.bulk_save_objects(get_hospitals())
+    db.session.bulk_save_objects(get_departments())
     db.session.bulk_save_objects(get_hospital_departments())
     db.session.bulk_save_objects(get_on_duty())
     db.session.commit()
