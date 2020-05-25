@@ -44,8 +44,6 @@ class HasDepartment(db.Model):
     department_id = db.Column(
         db.Integer, db.ForeignKey("department.id"), primary_key=True
     )
-    #in_hospital = relationship("Hospital")
-
 
 
 class OnDuty(db.Model):

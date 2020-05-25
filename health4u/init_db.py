@@ -1,8 +1,9 @@
 import csv
-import datetime
 from pathlib import Path
 
 from .db import db, Region, Hospital, Department, HasDepartment, OnDuty
+from .utils import to_date
+
 
 data_folder = Path(__file__).parent.parent
 regions_path = data_folder / "Regions.csv"
@@ -37,10 +38,6 @@ def get_hospital_departments(data_path=hospital_departments_path):
 
 
 def get_on_duty(data_path=hospital_on_duty_path):
-    def to_date(text):
-        day, month, year = [int(date_part) for date_part in text.split("/")]
-        return datetime.date(year, month, day)
-
     with open(str(data_path), newline="", encoding="utf8") as csv_file:
         reader = csv.DictReader(csv_file, delimiter=";")
         mapped_dates = [{**row, "date": to_date(row["date"])} for row in reader]

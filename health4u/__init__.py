@@ -6,7 +6,7 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .db import db, User, Hospital, Department, OnDuty, Request
-from .api import RegionResource, HospitalResource, DepartmentResource
+from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
 from .init_db import load_data
 
 def create_app(test_config=None):
@@ -30,6 +30,7 @@ def create_app(test_config=None):
     api.add_resource(RegionResource, "/region", "/region/", "/region/<int:id>")
     api.add_resource(HospitalResource, "/hospital", "/hospital/", "/hospital/<int:id>")
     api.add_resource(DepartmentResource, "/department", "/department/", "/department/<int:id>")
+    api.add_resource(FilterResource, "/filter", "/filter/")
 
     @app.route("/")
     @app.route("/home")
