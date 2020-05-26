@@ -9,6 +9,7 @@ from .db import db, User, Hospital, Department, OnDuty, Request
 from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
 from .init_db import load_data
 
+
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
@@ -69,7 +70,7 @@ def create_app(test_config=None):
     def signUp():
         first_name = request.form['first_name']
         last_name = request.form['last_name']
-        region = request.form['region']
+        region_id = request.form['region']
         email = request.form['email']
         password = request.form['password']
         confirm = request.form['confirm-password']
@@ -78,7 +79,7 @@ def create_app(test_config=None):
 
         if existing_user is None:
             if password == confirm:
-                new_user = User(first_name=first_name, last_name=last_name, region=region, email=email,
+                new_user = User(first_name=first_name, last_name=last_name, region_id=region_id, email=email,
                                 password=generate_password_hash(password, method='sha256'))
                 db.session.add(new_user)
                 db.session.commit()
@@ -168,11 +169,11 @@ def create_app(test_config=None):
             flash('This email already exists. Try again', 'danger')
             return redirect(url_for('account_details'))
 
-    @app.errorhandler(Exception)
-    def page_not_found(e):
-        return render_template('error.html'), 400
-
-    app.register_error_handler(400, page_not_found)
+    # @app.errorhandler(Exception)
+    # def page_not_found(e):
+    #     return render_template('error.html'), 400
+    #
+    # app.register_error_handler(400, page_not_found)
 
     return app
 
