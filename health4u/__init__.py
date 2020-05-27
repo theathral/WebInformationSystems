@@ -47,7 +47,7 @@ def create_app(test_config=None):
     def contact_us():
         if flask.request.method == 'GET':
             return render_template("contact_us.html", req_datetime=datetime.now())
-        else:
+        elif flask.request.method == 'POST':
             rname = request.form['contact-name']
             remail = request.form['contact-email']
             rneed = request.form['contact-need']
@@ -72,7 +72,7 @@ def create_app(test_config=None):
     def log_in():
         if flask.request.method == 'GET':
             return render_template("log_in.html", req_datetime=datetime.now())
-        else:
+        elif flask.request.method == 'POST':
             email = request.form['email']
             password = request.form['password']
 
@@ -90,7 +90,7 @@ def create_app(test_config=None):
     def sign_up():
         if flask.request.method == 'GET':
             return render_template("sign_up.html", req_datetime=datetime.now())
-        else:
+        elif flask.request.method == 'POST':
             first_name = request.form['first_name']
             last_name = request.form['last_name']
             region_id = request.form['region']
@@ -118,7 +118,7 @@ def create_app(test_config=None):
     def change_password():
         if flask.request.method == 'GET':
             return render_template("change_password.html", req_datetime=datetime.now())
-        else:
+        elif flask.request.method == 'POST':
             password = request.form['old_password']
             new_password = request.form['new_password']
             conf_new_pass = request.form['conf_new_password']
@@ -141,7 +141,7 @@ def create_app(test_config=None):
     def forgot_password():
         if flask.request.method == 'GET':
             return render_template("forgot_password.html", req_datetime=datetime.now())
-        else:
+        elif flask.request.method == 'POST':
             email = request.form['email']
             first_name = request.form['first_name']
             last_name = request.form['last_name']
