@@ -14,17 +14,6 @@ $(".back-to-top").on("click", function () {
 // #Back to Top Button
 
 
-// Hospital Results
-function setcollapse() {
-    $("*.btn-collapse").on("click", function () {
-        $(this).toggleClass("collapsed");
-        $(this).closest("*.card-header").next().collapse("toggle");
-    });
-}
-
-// #Hospital Results
-
-
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
     if ($(this).prop("checked"))
@@ -53,15 +42,23 @@ $(".datepicker").datepicker({
 
 
 // Dynamic Filtering
-function add_options_region(divId) {
+function add_options_region(divId, currentRegion) {
     fetch("/api/v1/region")
         .then(response => response.json())
         .then(data => {
 
             Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
-                $("#" + divId)
-                    .append($("<option></option>").attr("value", data.id)
-                        .append(data.name));
+
+                if (currentRegion === data.id.toString()) {
+                    $("#" + divId)
+                        .append($("<option></option>").attr('selected', true).attr("value", data.id)
+                            .append(data.name));
+                    $('.selectpicker').selectpicker('refresh');
+                } else {
+                    $("#" + divId)
+                        .append($("<option></option>").attr("value", data.id)
+                            .append(data.name));
+                }
             });
 
             $('.selectpicker').selectpicker('refresh');
@@ -149,7 +146,7 @@ function make_info(hos) {
     return info;
 }
 
-function setHospitals() {
+function setHospitals(current_region) {
 
     const region_id = $('#regionFilter').val().toString();
     const hospital = $('#hospitalFilter').val().toString();
@@ -160,6 +157,8 @@ function setHospitals() {
     let filterStr = ""
     if (region_id !== "") {
         filterStr += "region_id=" + region_id + "&"
+    } else if (current_region !== "") {
+        filterStr += "region_id=" + current_region + "&"
     }
     if (hospital !== "") {
         filterStr += "hospital=" + hospital + "&"
@@ -177,7 +176,11 @@ function setHospitals() {
 
             document.getElementById("hospital-results").innerHTML = "";
             Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
-            setcollapse();
+
+            $("*.btn-collapse").on("click", function () {
+                $(this).toggleClass("collapsed");
+                $(this).closest("*.card-header").next().collapse("toggle");
+            });
 
             console.log(data)
 
@@ -185,29 +188,43 @@ function setHospitals() {
 
 }
 
-$(document).ready(function () {
-    //alert(window.location.pathname);
-
-    if (window.location.pathname === "/hospitals") {
-        setHospitals();
-        add_options_region("regionFilter");
-        add_options_hospital();
-        add_options_department();
-
-    } else if (window.location.pathname === "/sign_up" ) {
-        add_options_region("region");
-        
-    } else if (window.location.pathname === "/account_details") {
-        add_options_region("region_account");
-        // value="{{ current_user.region }}
-    }
+$('.filterChange').on("change", function () {
+    setHospitals("");
+});
+// #Dynamic Filtering
 
 
+const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+    },
+    buttonsStyling: false
 })
 
-$('.filterChange').on("change", function () {
-    setHospitals();
-});
-
-
-// #Dynamic Filtering
+swalWithBootstrapButtons.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete my account!',
+    cancelButtonText: 'No, cancel!',
+    reverseButtons: true
+}).then((result) => {
+    if (result.value) {
+        swalWithBootstrapButtons.fire(
+            'Deleted!',
+            'Your account has been deleted.',
+            'success'
+        )
+    } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+    ) {
+        swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'Your account is safe :)',
+            'error'
+        )
+    }
+})
