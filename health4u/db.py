@@ -14,8 +14,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String, nullable=False)
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
-    # region = db.Column(db.String)
-    # valid = db.Column(db.Boolean, nullable=True)
+    region_id = db.Column(db.Integer, db.ForeignKey("region.id"))
 
 
 class Region(db.Model):

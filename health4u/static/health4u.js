@@ -15,22 +15,23 @@ $(".back-to-top").on("click", function () {
 
 
 // Hospital Results
-$("*.btn-collapse").on("click", function () {
-    $(this).toggleClass("collapsed");
-    $(this).closest("*.card-header").next().collapse("toggle");
-});
+function setcollapse() {
+    $("*.btn-collapse").on("click", function () {
+        $(this).toggleClass("collapsed");
+        $(this).closest("*.card-header").next().collapse("toggle");
+    });
+}
+
 // #Hospital Results
 
 
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
-    if ($(this).prop("checked")) {
-        $("#departmentFilter").prop("disabled", true);
+    if ($(this).prop("checked"))
         $("#dateDiv").fadeIn();
-    } else {
-        $("#departmentFilter").prop("disabled", false);
+    else
         $("#dateDiv").fadeOut();
-    }
+
 
     $(".selectpicker").selectpicker("refresh");
 });
@@ -40,7 +41,7 @@ $("#onDutyCheckbox").on("change", function onDutyChange() {
 // Date Options
 $(".datepicker").datepicker({
     format: "dd/mm/yyyy",
-    startDate: "+0d",
+    startDate: "-100d",
     endDate: "+100d",
     disableTouchKeyboard: true,
     maxViewMode: 1,
@@ -51,122 +52,162 @@ $(".datepicker").datepicker({
 // #Date Options
 
 
-// Static Filtering for Part 1
-$(".selectpicker").selectpicker();
+// Dynamic Filtering
+function add_options_region(divId) {
+    fetch("/api/v1/region")
+        .then(response => response.json())
+        .then(data => {
 
-$('select.selectpicker').on("change", function () {
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+                $("#" + divId)
+                    .append($("<option></option>").attr("value", data.id)
+                        .append(data.name));
+            });
 
-    var region = $('#regionFilter option:selected').val().toString();
-    var hospital = $('#hospitalFilter option:selected').val().toString();
+            $('.selectpicker').selectpicker('refresh');
 
-    switch (region) {
-        case "0": // Athens
-            $("#AgiosAndreas").hide();
-            $("#AHEPA").hide();
-            $("#Attikon").show();
-            $("#Euaggelismos").show();
+            console.log(data)
 
-            $("#AgiosAndreasCard").hide();
-            $("#AHEPACard").hide();
-            $("#AttikonCard").show();
-            $("#EuaggelismosCard").show();
-            break;
-        case "1": // Patra
-            $("#AgiosAndreas").show();
-            $("#AHEPA").hide();
-            $("#Attikon").hide();
-            $("#Euaggelismos").hide();
+        });
+}
 
-            $("#AgiosAndreasCard").show();
-            $("#AHEPACard").hide();
-            $("#AttikonCard").hide();
-            $("#EuaggelismosCard").hide();
+function add_options_hospital() {
+    fetch("/api/v1/hospital")
+        .then(response => response.json())
+        .then(data => {
 
-            break;
-        case "2": // Thessaloniki
-            $("#AgiosAndreas").hide();
-            $("#AHEPA").show();
-            $("#Attikon").hide();
-            $("#Euaggelismos").hide();
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+                $("#hospitalFilter")
+                    .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
+                        .append(data.name));
+            });
 
-            $("#AgiosAndreasCard").hide();
-            $("#AHEPACard").show();
-            $("#AttikonCard").hide();
-            $("#EuaggelismosCard").hide();
+            $('.selectpicker').selectpicker('refresh');
 
-            break;
-        default:
-            $("#AgiosAndreas").show();
-            $("#AHEPA").show();
-            $("#Attikon").show();
-            $("#Euaggelismos").show();
+            console.log(data)
 
-            $("#AgiosAndreasCard").show();
-            $("#AHEPACard").show();
-            $("#AttikonCard").show();
-            $("#EuaggelismosCard").show();
+        });
+}
 
-            $("#regionFilter").val("");
+function add_options_department() {
+    fetch("/api/v1/department")
+        .then(response => response.json())
+        .then(data => {
 
-            break;
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+                $("#departmentFilter")
+                    .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
+                        .append(data.name));
+            });
+
+            $('.selectpicker').selectpicker('refresh');
+
+            console.log(data)
+
+        });
+}
+
+function add_hospital_result(hos) {
+    $("<div/>").addClass(["card", "hospital-card"]).attr("id", "hos-res-" + hos.id).append(
+        $("<div/>").addClass(["card-header", "p-0"]).attr("role", "tab").append(
+            $("<button/>").addClass(["btn", "btn-block", "text-left", "rgba-opacity", "main-color-bg", "btn-collapse", "collapsed"]).attr("aria-expanded", "true").append(
+                $("<div/>").addClass(["h5", "mb-0"]).append(
+                    $("<i/>").addClass(["fas", "fa-hospital"]),
+                    " ", hos.name,
+                    $("<i/>").addClass(["fas", "fa-angle-up", "rotate-icon", "float-right"])
+                )
+            )
+        ),
+        $("<div/>").addClass("collapse").attr("role", "tabpanel").append(
+            make_info(hos)
+        )
+    ).appendTo($("#hospital-results"));
+}
+
+function make_info(hos) {
+    let info = $("<div/>").addClass(["contact-info-wrapper", "m-3", "overflow-auto"]);
+    let info_fields = [
+        {name: "telephone", icon_class: "fa-phone-alt", pretext: "Telephone:"},
+        {name: "address", icon_class: "fa-map-marker-alt", pretext: "Address:"},
+        {name: "email", icon_class: "fa-envelope", pretext: "Email:"},
+        {name: "postcode", icon_class: "fa-map-pin", pretext: "Postcode:"},
+        {name: "website", icon_class: "fa-link", pretext: "Website:"}
+    ];
+    info_fields.forEach(
+        info_field => {
+            if (hos[info_field.name] !== null) {
+                info.append(
+                    $("<div/>").append(
+                        $("<i/>").addClass(["fas", info_field.icon_class, "fa-lg", "m-2"]),
+                        info_field.pretext
+                    ),
+                    $("<div/>").text(hos[info_field.name])
+                );
+            }
+        }
+    )
+    return info;
+}
+
+function setHospitals() {
+
+    const region_id = $('#regionFilter').val().toString();
+    const hospital = $('#hospitalFilter').val().toString();
+    const department = $('#departmentFilter').val().toString();
+    const onDuty = $('#onDutyCheckbox').is(":checked");
+    const date = $('#dateFilter').val().toString();
+
+    let filterStr = ""
+    if (region_id !== "") {
+        filterStr += "region_id=" + region_id + "&"
+    }
+    if (hospital !== "") {
+        filterStr += "hospital=" + hospital + "&"
+    }
+    if (department !== "") {
+        filterStr += "department=" + department + "&"
+    }
+    if (onDuty) {
+        filterStr += "date=" + date + "&"
     }
 
-    switch (hospital) {
-        case "0": // Agios Andreas
-            $("#Athens").hide();
-            $("#Patra").show();
-            $("#Thessaloniki").hide();
+    fetch("/api/v1/filter?" + filterStr)
+        .then(response => response.json())
+        .then(data => {
 
-            $("#AgiosAndreasCard").show();
-            $("#AHEPACard").hide();
-            $("#AttikonCard").hide();
-            $("#EuaggelismosCard").hide();
+            document.getElementById("hospital-results").innerHTML = "";
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
+            setcollapse();
 
-            break;
-        case "1": // AHEPA
-            $("#Athens").hide();
-            $("#Patra").hide();
-            $("#Thessaloniki").show();
+            console.log(data)
 
-            $("#AgiosAndreasCard").hide();
-            $("#AHEPACard").show();
-            $("#AttikonCard").hide();
-            $("#EuaggelismosCard").hide();
+        });
 
-            break;
-        case "2": // Attikon
-            $("#Athens").show();
-            $("#Patra").hide();
-            $("#Thessaloniki").hide();
+}
 
-            $("#AgiosAndreasCard").hide();
-            $("#AHEPACard").hide();
-            $("#AttikonCard").show();
-            $("#EuaggelismosCard").hide();
+$(document).ready(function () {
+    alert(window.location.pathname);
 
-            break;
-        case "3": // Euaggelismos
-            $("#Athens").show();
-            $("#Patra").hide();
-            $("#Thessaloniki").hide();
+    if (window.location.pathname === "/hospitals") {
+        setHospitals();
+        add_options_region("regionFilter");
+        add_options_hospital();
+        add_options_department();
 
-            $("#AgiosAndreasCard").hide();
-            $("#AHEPACard").hide();
-            $("#AttikonCard").hide();
-            $("#EuaggelismosCard").show();
-
-            break;
-        default:
-            $("#Athens").show();
-            $("#Patra").show();
-            $("#Thessaloniki").show();
-
-            $("#hospitalFilter").val("");
-
-            break;
+    } else if (window.location.pathname === "/sign_up" ) {
+        add_options_region("region");
+        
+    } else if (window.location.pathname === "/account_details") {
+        add_options_region("region_account");
+        // value="{{ current_user.region }}
     }
 
-    $('.selectpicker').selectpicker('refresh');
 
+})
+
+$('.filterChange').on("change", function () {
+    setHospitals();
 });
-// #Static Filtering for Part 1
+
+
+// #Dynamic Filtering

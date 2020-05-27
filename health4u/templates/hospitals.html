@@ -22,7 +22,8 @@
                         </button>
                     </div>
 
-                    <div id="collapseFilter" class="collapse show" role="tabpanel" aria-labelledby="headingFilter"
+                    <div id="collapseFilter" class="collapse filterChange show" role="tabpanel"
+                         aria-labelledby="headingFilter"
                          data-parent="#filter-list">
 
                         <form class="rounded-lg p-2 color-4-bg">
@@ -31,34 +32,25 @@
                                     <label for="regionFilter">Region:</label>
                                     <select class="selectpicker form-control" id="regionFilter" data-live-search="true"
                                             title="Select Region">
-                                        <option value="-" id="SelectRegion"></option>
-                                        <option value="0" id="Athens">Athens</option>
-                                        <option value="1" id="Patra">Patra</option>
-                                        <option value="2" id="Thessaloniki">Thessaloniki</option>
+                                        <option value=""></option>
+                                        {# Dynamic loading of options #}
                                     </select>
                                 </div>
                                 <div class="mt-3">
                                     <label for="hospitalFilter">Hospital:</label>
                                     <select class="selectpicker form-control" id="hospitalFilter"
-                                            data-live-search="true"
-                                            title="Select Hospital">
-                                        <option value="-" id="SelectHospital"></option>
-                                        <option value="0" id="AgiosAndreas">Agios Andreas</option>
-                                        <option value="1" id="AHEPA">AHEPA</option>
-                                        <option value="2" id="Attikon">Attikon</option>
-                                        <option value="3" id="Euaggelismos">Euaggelismos</option>
+                                            data-live-search="true" title="Select Hospital">
+                                        <option value=""></option>
+                                        {# Dynamic loading of options #}
                                     </select>
                                 </div>
                                 <div class="mt-3" id="departmentDiv">
                                     <label for="hospitalFilter">Department:</label>
                                     <select class="selectpicker form-control" id="departmentFilter"
                                             data-live-search="true"
-                                            title="Select Department" disabled>
-                                        <option value="-" id="SelectDepartment"></option>
-                                        <option value="0" id="Cardiology">Cardiology</option>
-                                        <option value="1" id="Neurology">Neurology</option>
-                                        <option value="2" id="Obstetrics">Obstetrics and gynaecology</option>
-                                        <option value="3" id="Pediatrics">Pediatrics</option>
+                                            title="Select Department">
+                                        <option value=""></option>
+                                        {# Dynamic loading of option #}
                                     </select>
                                 </div>
                                 <div class="custom-control custom-checkbox my-3">
@@ -80,111 +72,7 @@
             <!-- Results -->
             <div class="col-lg-9">
                 <div class="accordion mx-1" id="hospital-results" role="tablist" aria-multiselectable="true">
-
-                    <div class="card hospital-card" id="AgiosAndreasCard">
-                        <div class="card-header p-0" role="tab">
-                            <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse"
-                                    aria-expanded="true">
-                                <div class="h5 mb-0">
-                                    <i class="fas fa-hospital"></i> Agios Andreas <i
-                                        class="fas fa-angle-up rotate-icon float-right"></i>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="collapse show" role="tabpanel">
-                            <div class="contact-info-wrapper m-2 overflow-auto">
-                                <div><i class="fas fa-phone-alt fa-lg mx-3"></i>Telephone:</div>
-                                <div>12345 09876</div>
-                                <div><i class="fas fa-map-marker-alt fa-lg mx-3"></i> Address:</div>
-                                <div>Road Street, Town</div>
-                                <div><i class="fas fa-envelope fa-lg mx-3"></i>Email:</div>
-                                <div>example@email.com</div>
-                                <div><i class="fas fa-fax fa-lg mx-3"></i>Fax:</div>
-                                <div>12345 12345</div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card hospital-card" id="AHEPACard">
-                        <div class="card-header p-0" role="tab">
-                            <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse collapsed"
-                                    aria-expanded="true">
-                                <div class="h5 mb-0">
-                                    <i class="fas fa-hospital"></i> AHEPA <i
-                                        class="fas fa-angle-up rotate-icon float-right"></i>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="collapse" role="tabpanel">
-                            <div class="contact-info-wrapper m-2 overflow-auto">
-                                <div><i class="fas fa-phone-alt fa-lg mx-3"></i>Telephone:</div>
-                                <div>12345 09876</div>
-                                <div><i class="fas fa-map-marker-alt fa-lg mx-3"></i> Address:</div>
-                                <div>Road Street, Town</div>
-                                <div><i class="fas fa-envelope fa-lg mx-3"></i>Email:</div>
-                                <div>example@email.com</div>
-                                <div><i class="fas fa-fax fa-lg mx-3"></i>Fax:</div>
-                                <div>12345 12345</div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card hospital-card" id="AttikonCard">
-                        <div class="card-header p-0" role="tab">
-                            <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse collapsed"
-                                    aria-expanded="true">
-                                <div class="h5 mb-0">
-                                    <i class="fas fa-hospital"></i> Attikon <i
-                                        class="fas fa-angle-up rotate-icon float-right"></i>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="collapse" role="tabpanel">
-                            <div class="contact-info-wrapper m-2 overflow-auto">
-                                <div><i class="fas fa-phone-alt fa-lg mx-3"></i>Telephone:</div>
-                                <div>12345 09876</div>
-                                <div><i class="fas fa-map-marker-alt fa-lg mx-3"></i> Address:</div>
-                                <div>Road Street, Town</div>
-                                <div><i class="fas fa-envelope fa-lg mx-3"></i>Email:</div>
-                                <div>example@email.com</div>
-                                <div><i class="fas fa-fax fa-lg mx-3"></i>Fax:</div>
-                                <div>12345 12345</div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card hospital-card" id="EuaggelismosCard">
-                        <div class="card-header p-0" role="tab">
-                            <button class="btn btn-block text-left rgba-opacity main-color-bg btn-collapse collapsed"
-                                    aria-expanded="true">
-                                <div class="h5 mb-0">
-                                    <i class="fas fa-hospital"></i> Euaggelismos <i
-                                        class="fas fa-angle-up rotate-icon float-right"></i>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="collapse" role="tabpanel">
-                            <div class="contact-info-wrapper m-2 overflow-auto">
-                                <div><i class="fas fa-phone-alt fa-lg mx-3"></i>Telephone:</div>
-                                <div>12345 09876</div>
-                                <div><i class="fas fa-map-marker-alt fa-lg mx-3"></i> Address:</div>
-                                <div>Road Street, Town</div>
-                                <div><i class="fas fa-envelope fa-lg mx-3"></i>Email:</div>
-                                <div>example@email.com</div>
-                                <div><i class="fas fa-fax fa-lg mx-3"></i>Fax:</div>
-                                <div>12345 12345</div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    {# Dynamic loading of elements #}
                 </div>
             </div>
             <!-- #Results -->
@@ -193,4 +81,3 @@
     </div>
 
 {% endblock %}
-

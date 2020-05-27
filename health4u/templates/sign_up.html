@@ -51,8 +51,10 @@
                 </div>
                 <div class="form-group mt-4">
                     <label for="region" class="sr-only">Region</label>
-                    <input type="text" class="form-control input-lg" id="region" name="region" placeholder="Region"
-                           required="required">
+                    <select class="selectpicker form-control" id="region" title="Select Region"
+                            required="required">
+                        {# Dynamic loading of options #}
+                    </select>
                 </div>
                 <div class="form-group mt-4">
                     <label for="email" class="sr-only">Email</label>

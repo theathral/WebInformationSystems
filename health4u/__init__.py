@@ -1,13 +1,14 @@
 from datetime import datetime
 
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_restful import Api
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
+from flask_restful import Api
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from .db import db, User, Hospital, Department, OnDuty, Request
 from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
+from .db import db, User, Hospital, Department, OnDuty, Request
 from .init_db import load_data
+
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
@@ -69,7 +70,7 @@ def create_app(test_config=None):
     def signUp():
         first_name = request.form['first_name']
         last_name = request.form['last_name']
-        region = request.form['region']
+        region_id = request.form['region']
         email = request.form['email']
         password = request.form['password']
         confirm = request.form['confirm-password']
@@ -78,7 +79,7 @@ def create_app(test_config=None):
 
         if existing_user is None:
             if password == confirm:
-                new_user = User(first_name=first_name, last_name=last_name, region=region, email=email,
+                new_user = User(first_name=first_name, last_name=last_name, region_id=region_id, email=email,
                                 password=generate_password_hash(password, method='sha256'))
                 db.session.add(new_user)
                 db.session.commit()

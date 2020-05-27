@@ -2,8 +2,8 @@
 
 <!--<script>-->
 <!--    {% if current_user.is_authenticated %}-->
-<!--    document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";-->
-<!--    {% endif %}-->
+    <!--    document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";-->
+    <!--    {% endif %}-->
 <!--</script>-->
 
 
@@ -49,12 +49,13 @@
                                 <div class="input-group-addon">
                                     <i class="fa fa-user fa-lg ic main-color"></i>
                                 </div>
-                                <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Name" required="required">
+                                <input type="text" class="form-control" id="contact-name" name="contact-name"
+                                       placeholder="Name" required="required">
                                 <script>
                                     {% if current_user.is_authenticated %}
-                                    document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";
-                                    document.getElementById("contact-name").style.backgroundColor = "#e3fcfe";
-                                    document.getElementById("contact-name").style.color = 'black';
+                                        document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";
+                                        document.getElementById("contact-name").style.backgroundColor = "#e3fcfe";
+                                        document.getElementById("contact-name").style.color = 'black';
                                     {% endif %}
                                 </script>
                             </div>
@@ -66,12 +67,13 @@
                                 <div class="input-group-addon">
                                     <i class="fa fa-envelope fa-lg ic main-color"></i>
                                 </div>
-                                <input type="text" class="form-control" id="contact-email" name="contact-email" placeholder="Email" required="required">
+                                <input type="text" class="form-control" id="contact-email" name="contact-email"
+                                       placeholder="Email" required="required">
                                 <script>
                                     {% if current_user.is_authenticated %}
-                                    document.getElementById("contact-email").value = "{{ current_user.email }}";
-                                    document.getElementById("contact-email").style.backgroundColor = "#e3fcfe";
-                                    document.getElementById("contact-email").style.color = 'black';
+                                        document.getElementById("contact-email").value = "{{ current_user.email }}";
+                                        document.getElementById("contact-email").style.backgroundColor = "#e3fcfe";
+                                        document.getElementById("contact-email").style.color = 'black';
                                     {% endif %}
                                 </script>
                             </div>
@@ -81,7 +83,8 @@
                             <label class="h5" for="contact-need">Please specify your need *</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"><i class="fa fa-tag fa-lg ic main-color"></i></div>
-                                <select id="contact-need" class="form-control selectpicker" name="contact-need" required="required"
+                                <select id="contact-need" class="selectpicker form-control" name="contact-need"
+                                        required="required"
                                         data-error="Please specify your need." data-live-search="true">
                                     <option value=""></option>
                                     <option value="0">Functionalities Addition</option>
@@ -112,7 +115,7 @@
             <!-- #Contact Form -->
 
         </div>
-    <!-- Other Options -->
+        <!-- Other Options -->
         <div class="row text-center align-items-center">
             <div class="row text-center col-lg-7">
                 <div class="col-md-4">
