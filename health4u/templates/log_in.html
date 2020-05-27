@@ -38,7 +38,7 @@
             <!-- #Or -->
 
             <!-- Log In Form -->
-            <form method="post" action="/login">
+            <form method="post" action="{{ url_for('log_in') }}">
                 <div class="form-group mt-4">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" class="form-control input-lg" id="email" name="email"
@@ -58,7 +58,7 @@
 
             <!-- Forgot Password -->
             <div class="mt-4">
-                <a class="main-color small" href="#">Forgot Your password?</a>
+                <a class="main-color small" href="{{ url_for('forgot_password') }}">Forgot Your password?</a>
             </div>
             <!-- #Forgot Password -->
 
