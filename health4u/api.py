@@ -1,4 +1,4 @@
-from flask_restful import marshal_with, reqparse, Resource
+from flask_restful import reqparse, Resource
 from sqlalchemy.sql.expression import and_
 
 from .db import Region, Hospital, Department, HasDepartment, OnDuty, object_as_dict
@@ -35,7 +35,7 @@ class DepartmentResource(Resource):
 filter_parser = reqparse.RequestParser()
 filter_parser.add_argument("region_id", type=int)
 filter_parser.add_argument("department_id", type=int)
-filter_parser.add_argument("on_duty", type=to_date)
+filter_parser.add_argument("date", type=to_date)
 
 
 class FilterResource(Resource):
@@ -48,7 +48,7 @@ class FilterResource(Resource):
             hospital_query = hospital_query.join(
                 HasDepartment, Hospital.id == HasDepartment.hospital_id
             ).filter_by(department_id=args["department_id"])
-        if args["on_duty"] is not None:
+        if args["date"] is not None:
             if args["department_id"] is None:
                 hospital_query = hospital_query.join(
                     OnDuty, Hospital.id == OnDuty.hospital_id
@@ -61,7 +61,7 @@ class FilterResource(Resource):
                         Department.id == OnDuty.department_id,
                     ),
                 )
-            hospital_query = hospital_query.filter_by(date=args["on_duty"])
+            hospital_query = hospital_query.filter_by(date=args["date"])
 
         all_objects = [object_as_dict(hos) for hos in hospital_query.all()]
         return {obj["id"]: obj for obj in all_objects}

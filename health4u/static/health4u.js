@@ -27,13 +27,11 @@ function setcollapse() {
 
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
-    if ($(this).prop("checked")) {
-        $("#departmentFilter").prop("disabled", true);
+    if ($(this).prop("checked"))
         $("#dateDiv").fadeIn();
-    } else {
-        $("#departmentFilter").prop("disabled", false);
+    else
         $("#dateDiv").fadeOut();
-    }
+
 
     $(".selectpicker").selectpicker("refresh");
 });
@@ -54,7 +52,61 @@ $(".datepicker").datepicker({
 // #Date Options
 
 
-// Static Filtering for Part 1
+// Dynamic Filtering
+function add_options_region(divId) {
+    fetch("/api/v1/region")
+        .then(response => response.json())
+        .then(data => {
+
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+                $("#" + divId)
+                    .append($("<option></option>").attr("value", data.id)
+                        .append(data.name));
+            });
+
+            $('.selectpicker').selectpicker('refresh');
+
+            console.log(data)
+
+        });
+}
+
+function add_options_hospital() {
+    fetch("/api/v1/hospital")
+        .then(response => response.json())
+        .then(data => {
+
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+                $("#hospitalFilter")
+                    .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
+                        .append(data.name));
+            });
+
+            $('.selectpicker').selectpicker('refresh');
+
+            console.log(data)
+
+        });
+}
+
+function add_options_department() {
+    fetch("/api/v1/department")
+        .then(response => response.json())
+        .then(data => {
+
+            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+                $("#departmentFilter")
+                    .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
+                        .append(data.name));
+            });
+
+            $('.selectpicker').selectpicker('refresh');
+
+            console.log(data)
+
+        });
+}
+
 function add_hospital_result(hos) {
     $("<div/>").addClass(["card", "hospital-card"]).attr("id", "hos-res-" + hos.id).append(
         $("<div/>").addClass(["card-header", "p-0"]).attr("role", "tab").append(
@@ -97,10 +149,7 @@ function make_info(hos) {
     return info;
 }
 
-
-$(".selectpicker").selectpicker();
-
-$('select.selectpicker').on("change", function () {
+function setHospitals() {
 
     const region_id = $('#regionFilter').val().toString();
     const hospital = $('#hospitalFilter').val().toString();
@@ -127,132 +176,38 @@ $('select.selectpicker').on("change", function () {
         .then(data => {
 
             document.getElementById("hospital-results").innerHTML = "";
-
             Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
-
             setcollapse();
 
             console.log(data)
 
         });
 
+}
 
+$(document).ready(function () {
+    alert(window.location.pathname);
+
+    if (window.location.pathname === "/hospitals") {
+        setHospitals();
+        add_options_region("regionFilter");
+        add_options_hospital();
+        add_options_department();
+
+    } else if (window.location.pathname === "/sign_up" ) {
+        add_options_region("region");
+        
+    } else if (window.location.pathname === "/account_details") {
+        add_options_region("region_account");
+        // value="{{ current_user.region }}
+    }
+
+
+})
+
+$('.filterChange').on("change", function () {
+    setHospitals();
 });
 
 
-// $('select.selectpicker').on("change", function () {
-//
-//     var region = $('#regionFilter option:selected').val().toString();
-//     var hospital = $('#hospitalFilter option:selected').val().toString();
-//
-//     switch (region) {
-//         case "0": // Athens
-//             $("#AgiosAndreas").hide();
-//             $("#AHEPA").hide();
-//             $("#Attikon").show();
-//             $("#Euaggelismos").show();
-//
-//             $("#AgiosAndreasCard").hide();
-//             $("#AHEPACard").hide();
-//             $("#AttikonCard").show();
-//             $("#EuaggelismosCard").show();
-//             break;
-//         case "1": // Patra
-//             $("#AgiosAndreas").show();
-//             $("#AHEPA").hide();
-//             $("#Attikon").hide();
-//             $("#Euaggelismos").hide();
-//
-//             $("#AgiosAndreasCard").show();
-//             $("#AHEPACard").hide();
-//             $("#AttikonCard").hide();
-//             $("#EuaggelismosCard").hide();
-//
-//             break;
-//         case "2": // Thessaloniki
-//             $("#AgiosAndreas").hide();
-//             $("#AHEPA").show();
-//             $("#Attikon").hide();
-//             $("#Euaggelismos").hide();
-//
-//             $("#AgiosAndreasCard").hide();
-//             $("#AHEPACard").show();
-//             $("#AttikonCard").hide();
-//             $("#EuaggelismosCard").hide();
-//
-//             break;
-//         default:
-//             $("#AgiosAndreas").show();
-//             $("#AHEPA").show();
-//             $("#Attikon").show();
-//             $("#Euaggelismos").show();
-//
-//             $("#AgiosAndreasCard").show();
-//             $("#AHEPACard").show();
-//             $("#AttikonCard").show();
-//             $("#EuaggelismosCard").show();
-//
-//             $("#regionFilter").val("");
-//
-//             break;
-//     }
-//
-//     switch (hospital) {
-//         case "0": // Agios Andreas
-//             $("#Athens").hide();
-//             $("#Patra").show();
-//             $("#Thessaloniki").hide();
-//
-//             $("#AgiosAndreasCard").show();
-//             $("#AHEPACard").hide();
-//             $("#AttikonCard").hide();
-//             $("#EuaggelismosCard").hide();
-//
-//             break;
-//         case "1": // AHEPA
-//             $("#Athens").hide();
-//             $("#Patra").hide();
-//             $("#Thessaloniki").show();
-//
-//             $("#AgiosAndreasCard").hide();
-//             $("#AHEPACard").show();
-//             $("#AttikonCard").hide();
-//             $("#EuaggelismosCard").hide();
-//
-//             break;
-//         case "2": // Attikon
-//             $("#Athens").show();
-//             $("#Patra").hide();
-//             $("#Thessaloniki").hide();
-//
-//             $("#AgiosAndreasCard").hide();
-//             $("#AHEPACard").hide();
-//             $("#AttikonCard").show();
-//             $("#EuaggelismosCard").hide();
-//
-//             break;
-//         case "3": // Euaggelismos
-//             $("#Athens").show();
-//             $("#Patra").hide();
-//             $("#Thessaloniki").hide();
-//
-//             $("#AgiosAndreasCard").hide();
-//             $("#AHEPACard").hide();
-//             $("#AttikonCard").hide();
-//             $("#EuaggelismosCard").show();
-//
-//             break;
-//         default:
-//             $("#Athens").show();
-//             $("#Patra").show();
-//             $("#Thessaloniki").show();
-//
-//             $("#hospitalFilter").val("");
-//
-//             break;
-//     }
-//
-//     $('.selectpicker').selectpicker('refresh');
-//
-// });
-// #Static Filtering for Part 1
+// #Dynamic Filtering

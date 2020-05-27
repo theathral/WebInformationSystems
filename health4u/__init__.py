@@ -1,12 +1,12 @@
 from datetime import datetime
 
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_restful import Api
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
+from flask_restful import Api
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from .db import db, User, Hospital, Department, OnDuty, Request
 from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
+from .db import db, User, Hospital, Department, OnDuty, Request
 from .init_db import load_data
 
 
@@ -169,11 +169,11 @@ def create_app(test_config=None):
             flash('This email already exists. Try again', 'danger')
             return redirect(url_for('account_details'))
 
-    # @app.errorhandler(Exception)
-    # def page_not_found(e):
-    #     return render_template('error.html'), 400
-    #
-    # app.register_error_handler(400, page_not_found)
+    @app.errorhandler(Exception)
+    def page_not_found(e):
+        return render_template('error.html'), 400
+
+    app.register_error_handler(400, page_not_found)
 
     return app
 
