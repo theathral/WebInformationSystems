@@ -140,13 +140,13 @@
             setHospitals("{{ current_user.region_id }}");
 
         } else if (window.location.pathname === "/sign_up") {
-            add_options_region("region", "");
+            add_options_region("region");
 
         } else if (window.location.pathname === "/account_details") {
             add_options_region("region_account", "{{ current_user.region_id }}");
 
         } else if (window.location.pathname === "/forgot_password") {
-            add_options_region("region_forgot", "");
+            add_options_region("region_forgot");
         }
 
     })

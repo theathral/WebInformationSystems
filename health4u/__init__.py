@@ -168,7 +168,7 @@ def create_app(test_config=None):
                 flash('This email already exists. Try again', 'danger')
                 return redirect(url_for('account_details'))
 
-    @app.route("/deleteUser", methods=['POST'])
+    @app.route("/deleteUser")
     @login_required
     def delete_account():
 
@@ -196,7 +196,7 @@ def create_app(test_config=None):
 
             temp_user = User.query.filter_by(email=email).first()
 
-            if temp_user.email == email and temp_user.first_name == first_name and temp_user.last_name == last_name and temp_user.region_id == region_id:
+            if temp_user and temp_user.email == email and temp_user.first_name == first_name and temp_user.last_name == last_name and temp_user.region_id == region_id:
                 new_req = Request(email=temp_user.email, name=temp_user.last_name, need='-1', message='-1')
                 db.session.add(new_req)
                 db.session.commit()

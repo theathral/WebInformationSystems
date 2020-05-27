@@ -194,37 +194,45 @@ $('.filterChange').on("change", function () {
 // #Dynamic Filtering
 
 
-const swalWithBootstrapButtons = Swal.mixin({
-    customClass: {
-        confirmButton: 'btn btn-success',
-        cancelButton: 'btn btn-danger'
-    },
-    buttonsStyling: false
-})
+// Confirmation alert when deleting an account
+$("#deleteBtn").on("click", function () {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "Delete my account.\nYou won't be able to revert this!",
+        icon: 'warning',
+        timer: 10000,
+        timerProgressBar: true,
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        confirmButtonColor: '#d33',
+        cancelButtonText: 'No, cancel!',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false
 
-swalWithBootstrapButtons.fire({
-    title: 'Are you sure?',
-    text: "You won't be able to revert this!",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonText: 'Yes, delete my account!',
-    cancelButtonText: 'No, cancel!',
-    reverseButtons: true
-}).then((result) => {
-    if (result.value) {
-        swalWithBootstrapButtons.fire(
-            'Deleted!',
-            'Your account has been deleted.',
-            'success'
-        )
-    } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-    ) {
-        swalWithBootstrapButtons.fire(
-            'Cancelled',
-            'Your account is safe :)',
-            'error'
-        )
-    }
+    }).then((result) => {
+        if (result.value) {
+            Swal.fire({
+                    title: 'Deleted!',
+                    text: 'Your account has been deleted.\n"We will miss you!"',
+                    icon: 'success',
+                    timer: 5000,
+                    timerProgressBar: true,
+                }
+            ).then(() => {
+                window.location = "/deleteUser"
+            })
+        } else {
+            Swal.fire({
+                    title: 'Cancelled!',
+                    text: 'Your account is safe ❤',
+                    icon: 'info',
+                    timer: 5000,
+                    timerProgressBar: true,
+                }
+            )
+        }
+    })
 })
+// #Confirmation alert when deleting an account
+
