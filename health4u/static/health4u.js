@@ -186,7 +186,7 @@ function setHospitals() {
 }
 
 $(document).ready(function () {
-    alert(window.location.pathname);
+    // alert(window.location.pathname);
 
     if (window.location.pathname === "/hospitals") {
         setHospitals();
