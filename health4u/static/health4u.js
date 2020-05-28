@@ -197,15 +197,15 @@ $('.filterChange').on("change", function () {
 // Confirmation alert when deleting an account
 $("#deleteBtn").on("click", function () {
     Swal.fire({
-        title: 'Are you sure?',
-        text: "Delete my account.\nYou won't be able to revert this!",
-        icon: 'warning',
+        title: "Are you sure?",
+        text: "Your account will be deleted. You won't be able to revert this!",
+        icon: "warning",
         timer: 10000,
         timerProgressBar: true,
         showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
+        confirmButtonText: "Yes, delete it!",
         confirmButtonColor: '#d33',
-        cancelButtonText: 'No, cancel!',
+        cancelButtonText: "No, cancel!",
         allowOutsideClick: false,
         allowEscapeKey: false,
         allowEnterKey: false
@@ -213,9 +213,9 @@ $("#deleteBtn").on("click", function () {
     }).then((result) => {
         if (result.value) {
             Swal.fire({
-                    title: 'Deleted!',
-                    text: 'Your account has been deleted.\n"We will miss you!"',
-                    icon: 'success',
+                    title: "Deleted!",
+                    text: "Your account has been deleted. We will miss you!",
+                    icon: "success",
                     timer: 5000,
                     timerProgressBar: true,
                 }
@@ -224,9 +224,9 @@ $("#deleteBtn").on("click", function () {
             })
         } else {
             Swal.fire({
-                    title: 'Cancelled!',
-                    text: 'Your account is safe ❤',
-                    icon: 'info',
+                    title: "Cancelled!",
+                    text: "Your account is safe ❤",
+                    icon: "info",
                     timer: 5000,
                     timerProgressBar: true,
                 }
