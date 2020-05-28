@@ -51,7 +51,9 @@
                                 </div>
                                 <input type="text" class="form-control" id="contact-name" name="contact-name"
                                        placeholder="Name"
+                                        {% if current_user.is_authenticated %}
                                        value="{{ current_user.first_name }} {{ current_user.last_name }}"
+                                        {% endif %}
                                        required="required">
                             </div>
                         </div>
