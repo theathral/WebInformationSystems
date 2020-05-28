@@ -4,6 +4,7 @@ import flask
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from flask_restful import Api
+from flask_babel import Babel
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
@@ -34,6 +35,12 @@ def create_app(test_config=None):
     api.add_resource(HospitalResource, "/hospital", "/hospital/", "/hospital/<int:id>")
     api.add_resource(DepartmentResource, "/department", "/department/", "/department/<int:id>")
     api.add_resource(FilterResource, "/filter", "/filter/")
+
+    babel = Babel(app)
+    @babel.localeselector
+    def get_locale():
+        translations = [str(translation) for translation in babel.list_translations()]
+        return request.accept_languages.best_match(translations)
 
     @app.route("/")
     @app.route("/home")

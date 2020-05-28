@@ -39,46 +39,45 @@
     <div class="collapse navbar-collapse" id="main-menu">
         <ul class="navbar-nav mr-auto h4 font-weight-normal">
             <li class="nav-item {%- if request.endpoint == 'home' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-link nav-link-hover" href="{{ url_for('home') }}">{{ gettext("Home") }}</a>
             </li>
             <li class="nav-item {%- if request.endpoint == 'hospitals' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('hospitals') }}">Hospitals</a>
+                <a class="nav-link nav-link-hover" href="{{ url_for('hospitals') }}">{{ gettext("Hospitals") }}</a>
             </li>
             <li class="nav-item {%- if request.endpoint == 'covid19' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('covid19') }}">Covid-19</a>
+                <a class="nav-link nav-link-hover" href="{{ url_for('covid19') }}">{{ gettext("Covid-19") }}</a>
             </li>
             <li class="nav-item {%- if request.endpoint == 'contact_us' %} active{% endif %}">
-                <a class="nav-link nav-link-hover" href="{{ url_for('contact_us') }}">Contact Us</a>
+                <a class="nav-link nav-link-hover" href="{{ url_for('contact_us') }}">{{ gettext("Contact Us") }}</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto h6 font-weight-normal">
             {% if not current_user.is_authenticated %}
                 <li id="signUpTile" class="nav-item {%- if request.endpoint == 'sign_up' %} active{% endif %}">
                     <a class="nav-link nav-link-hover" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i>
-                        Sign
-                        Up</a>
+                        {{ gettext("Sign Up") }}</a>
                 </li>
                 <li id="loginTile" class="nav-item {%- if request.endpoint == 'log_in' %} active{% endif %}">
                     <a class="nav-link nav-link-hover" href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i>
-                        Login</a>
+                        {{ gettext("Login") }}</a>
                 </li>
 
             {% else %}
                 <li id="userTile" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-link-hover" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                        <i class="fa fa-user"></i> Account
+                        <i class="fa fa-user"></i> {{ gettext("Account") }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right main-color-bg" aria-labelledby="Account">
                         <a class="dropdown-item nav-link-hover text-white rgba-opacity"
                            href="{{ url_for('account_details') }}">
-                            <i class="fa fa-cog"></i> Account Details</a>
+                            <i class="fa fa-cog"></i> {{ gettext("Account Details") }}</a>
                         <a class="dropdown-item nav-link-hover text-white rgba-opacity"
                            href="{{ url_for('change_password') }}">
-                            <i class="fa fa-key"></i> Change Password</a>
+                            <i class="fa fa-key"></i> {{ gettext("Change Password") }}</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item nav-link-hover text-white rgba-opacity" href="/logout">
-                            <i class="fa fa-sign-out-alt"></i> Logout</a>
+                            <i class="fa fa-sign-out-alt"></i> {{ gettext("Logout") }}</a>
                     </div>
                 </li>
             {% endif %}
@@ -94,7 +93,7 @@
 <footer class="p-3 w-100 color-3-bg position-absolute fixed-bottom low-z-index">
     <div class="container text-center text-white">
         ©Copyright {{ req_datetime.year }}<br>
-        Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis<br>
+        {{ gettext("Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis") }}<br>
     </div>
 </footer>
 <!-- #Footer -->
