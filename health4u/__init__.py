@@ -44,7 +44,7 @@ def create_app(test_config=None):
     def hospitals():
         return render_template("hospitals.html", req_datetime=datetime.now())
 
-    @app.route("/contact_us")
+    @app.route("/contact_us", methods=['POST', 'GET'])
     def contact_us():
         if flask.request.method == 'GET':
             return render_template("contact_us.html", req_datetime=datetime.now())
@@ -58,7 +58,7 @@ def create_app(test_config=None):
                 flash('Warning : No message included!', 'danger')
                 return redirect(url_for('contact_us'))
             new_Req = Request(name=rname, email=remail, need=rneed, message=rmessage)
-            # print(new_Req)
+
             db.session.add(new_Req)
             db.session.commit()
 

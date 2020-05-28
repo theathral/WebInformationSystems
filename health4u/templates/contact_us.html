@@ -20,7 +20,7 @@
         <div class="row align-items-center">
 
             <!-- Contact Form -->
-            <form class="col-lg-7 mb-4" method="post" action="{{ url_for('contact_us') }}">
+            <form class="col-lg-7 mb-4" method="post" action="/contact_us">
                 {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
                         {% for category, message in messages %}
