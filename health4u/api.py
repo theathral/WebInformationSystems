@@ -61,7 +61,7 @@ class FilterResource(Resource):
                     OnDuty,
                     and_(
                         Hospital.id == OnDuty.hospital_id,
-                        Department.id == OnDuty.department_id,
+                        HasDepartment.department_id == OnDuty.department_id,
                     ),
                 )
             hospital_query = hospital_query.filter_by(date=args["date"])
