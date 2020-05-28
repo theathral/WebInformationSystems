@@ -238,3 +238,17 @@ $("#deleteBtn").on("click", function () {
 })
 // #Confirmation alert when deleting an account
 
+
+// Under Construction alert
+$(".underConstruction").on("click", function () {
+    Swal.fire({
+        title: "Under Construction!",
+        text: "This functionality is not available, yet. Try something else!",
+        icon: "info",
+        timer: 10000,
+        timerProgressBar: true,
+        confirmButtonText: "OK!"
+    })
+})
+// #Under Construction alert
+
