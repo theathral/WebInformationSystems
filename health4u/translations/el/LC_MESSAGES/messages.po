@@ -40,7 +40,7 @@ msgstr "Εγγραφή"
 
 #: templates/base.html:62
 msgid "Login"
-msgstr "Είσοδος"
+msgstr "Σύνδεση"
 
 #: templates/base.html:69
 msgid "Account"
@@ -56,11 +56,9 @@ msgstr "Αλλαγή Κωδικού"
 
 #: templates/base.html:80
 msgid "Logout"
-msgstr "Έξοδος"
+msgstr "Αποσύνδεση"
 
 #: templates/base.html:96
-msgid ""
-"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
-"Styliani, Makris Ioannis"
-msgstr ""
+msgid "Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis"
+msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, Μακρή Ιωάννη"
 
