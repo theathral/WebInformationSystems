@@ -50,14 +50,9 @@
                                     <i class="fa fa-user fa-lg ic main-color"></i>
                                 </div>
                                 <input type="text" class="form-control" id="contact-name" name="contact-name"
-                                       placeholder="Name" required="required">
-                                <script>
-                                    {% if current_user.is_authenticated %}
-                                        document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";
-                                        document.getElementById("contact-name").style.backgroundColor = "#e3fcfe";
-                                        document.getElementById("contact-name").style.color = 'black';
-                                    {% endif %}
-                                </script>
+                                       placeholder="Name"
+                                       value="{{ current_user.first_name }} {{ current_user.last_name }}"
+                                       required="required">
                             </div>
                         </div>
 
@@ -68,14 +63,9 @@
                                     <i class="fa fa-envelope fa-lg ic main-color"></i>
                                 </div>
                                 <input type="text" class="form-control" id="contact-email" name="contact-email"
-                                       placeholder="Email" required="required">
-                                <script>
-                                    {% if current_user.is_authenticated %}
-                                        document.getElementById("contact-email").value = "{{ current_user.email }}";
-                                        document.getElementById("contact-email").style.backgroundColor = "#e3fcfe";
-                                        document.getElementById("contact-email").style.color = 'black';
-                                    {% endif %}
-                                </script>
+                                       placeholder="Email"
+                                       value="{{ current_user.email }}"
+                                       required="required">
                             </div>
                         </div>
 
@@ -84,8 +74,8 @@
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"><i class="fa fa-tag fa-lg ic main-color"></i></div>
                                 <select id="contact-need" class="selectpicker form-control" name="contact-need"
-                                        required="required"
-                                        data-error="Please specify your need." data-live-search="true">
+                                        data-error="Please specify your need." data-live-search="true"
+                                        required="required">
                                     <option value=""></option>
                                     <option value="0">Functionalities Addition</option>
                                     <option value="1">Report a Problem</option>
@@ -119,21 +109,31 @@
         <div class="row text-center align-items-center">
             <div class="row text-center col-lg-7">
                 <div class="col-md-4">
-                    <a class="px-3 py-2 rounded text-white mb-2 d-inline-block main-color-bg"><i
-                            class="fa fa-map-marker fa-lg"></i></a>
-                    <p>Thessaloniki,<br> Greece</p>
+                    <a class="px-3 py-2 rounded text-white mb-2 d-inline-block main-color-bg">
+                        <i class="fa fa-map-marker fa-lg"></i>
+                    </a>
+                    <p>
+                        Thessaloniki,<br>
+                        Greece
+                    </p>
                 </div>
 
                 <div class="col-md-4">
                     <a class="px-3 py-2 rounded text-white mb-2 d-inline-block main-color-bg"><i
                             class="fa fa-phone fa-lg fa-flip-horizontal"></i></a>
-                    <p>231 011 1222, <br> Mon - Fri, 12:00-24:00</p>
+                    <p>
+                        <a href="tel:231 011 1222">231 011 1222</a><br>
+                        Mon - Fri, 12:00-24:00
+                    </p>
                 </div>
 
                 <div class="col-md-4">
                     <a class="px-3 py-2 rounded text-white mb-2 d-inline-block main-color-bg"><i
                             class="fa fa-envelope fa-lg"></i></a>
-                    <p>info1@gmail.com <br> info2@hotmail.com</p>
+                    <p>
+                        <a href="mailto:info1@gmail.com">info1@gmail.com</a><br>
+                        <a href="mailto:info2@gmail.com">info2@gmail.com</a>
+                    </p>
                 </div>
             </div>
         </div>
