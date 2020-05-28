@@ -161,10 +161,10 @@ function setHospitals(current_region) {
         filterStr += "region_id=" + current_region + "&"
     }
     if (hospital !== "") {
-        filterStr += "hospital=" + hospital + "&"
+        filterStr += "hospital_id=" + hospital + "&"
     }
     if (department !== "") {
-        filterStr += "department=" + department + "&"
+        filterStr += "department_id=" + department + "&"
     }
     if (onDuty) {
         filterStr += "date=" + date + "&"
@@ -181,6 +181,8 @@ function setHospitals(current_region) {
                 $(this).toggleClass("collapsed");
                 $(this).closest("*.card-header").next().collapse("toggle");
             });
+
+            $('.selectpicker').selectpicker('refresh');
 
             console.log(data)
 

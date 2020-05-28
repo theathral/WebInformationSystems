@@ -33,6 +33,7 @@ class DepartmentResource(Resource):
 
 
 filter_parser = reqparse.RequestParser()
+filter_parser.add_argument("hospital_id", type=int)
 filter_parser.add_argument("region_id", type=int)
 filter_parser.add_argument("department_id", type=int)
 filter_parser.add_argument("date", type=to_date)
@@ -42,6 +43,8 @@ class FilterResource(Resource):
     def get(self):
         args = filter_parser.parse_args()
         hospital_query = Hospital.query
+        if args["hospital_id"] is not None:
+            hospital_query = hospital_query.filter_by(id=args["hospital_id"])
         if args["region_id"] is not None:
             hospital_query = hospital_query.filter_by(region_id=args["region_id"])
         if args["department_id"] is not None:
