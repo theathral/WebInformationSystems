@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-28 19:17+0300\n"
+"POT-Creation-Date: 2020-05-29 23:48+0300\n"
 "PO-Revision-Date: 2020-05-29 03:34+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -16,22 +16,40 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.8.0\n"
 
-#: views.py:18
-msgid "Please translate me, I am a message or some stuff!"
+#: templates/account_details.html:23 templates/base.html:80
+msgid "Account Details"
 msgstr ""
 
-#: views.py:18
-#, python-format
-msgid "My name is %(name)s."
+#: templates/account_details.html:26 templates/forgot_password.html:32
+#: templates/sign_up.html:43
+msgid "First Name"
+msgstr ""
+
+#: templates/account_details.html:31 templates/forgot_password.html:37
+#: templates/sign_up.html:48
+msgid "Last Name"
+msgstr ""
+
+#: templates/account_details.html:36 templates/forgot_password.html:42
+#: templates/hospitals.html:32 templates/sign_up.html:53
+msgid "Region"
+msgstr ""
+
+#: templates/account_details.html:48
+msgid "Change Account Details"
+msgstr ""
+
+#: templates/account_details.html:52
+msgid "Delete Account"
 msgstr ""
 
 #: templates/base.html:42
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:45
+#: templates/base.html:45 templates/home.html:123
 msgid "Hospitals"
 msgstr ""
 
@@ -43,33 +61,264 @@ msgstr ""
 msgid "Contact Us"
 msgstr ""
 
-#: templates/base.html:58
+#: templates/base.html:64
 msgid "Sign Up"
 msgstr ""
 
-#: templates/base.html:62
+#: templates/base.html:68
 msgid "Login"
 msgstr ""
 
-#: templates/base.html:69
+#: templates/base.html:75
 msgid "Account"
 msgstr ""
 
-#: templates/base.html:74
-msgid "Account Details"
-msgstr ""
-
-#: templates/base.html:77
+#: templates/base.html:83 templates/change_password.html:23
+#: templates/change_password.html:43
 msgid "Change Password"
 msgstr ""
 
-#: templates/base.html:80
+#: templates/base.html:86
 msgid "Logout"
 msgstr ""
 
-#: templates/base.html:96
+#: templates/base.html:102
 msgid ""
 "Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
 "Styliani, Makris Ioannis"
 msgstr ""
+
+#: templates/change_password.html:24
+msgid "Fill the following form, to change your password"
+msgstr ""
+
+#: templates/change_password.html:27
+msgid "Old Password"
+msgstr ""
+
+#: templates/change_password.html:33
+msgid "New Password"
+msgstr ""
+
+#: templates/change_password.html:38
+msgid "Confirm New Password"
+msgstr ""
+
+#: templates/contact_us.html:17
+msgid "Contact us"
+msgstr ""
+
+#: templates/contact_us.html:20
+msgid "Please use the contact form below."
+msgstr ""
+
+#: templates/contact_us.html:43
+msgid "Write to us:"
+msgstr ""
+
+#: templates/contact_us.html:50
+msgid "Your name *"
+msgstr ""
+
+#: templates/contact_us.html:65
+msgid "Your email *"
+msgstr ""
+
+#: templates/contact_us.html:78
+msgid "Please specify your need *"
+msgstr ""
+
+#: templates/contact_us.html:85
+msgid "Functionalities Addition"
+msgstr ""
+
+#: templates/contact_us.html:86
+msgid "Report a Problem"
+msgstr ""
+
+#: templates/contact_us.html:87
+msgid "Out of Date Data"
+msgstr ""
+
+#: templates/contact_us.html:88
+msgid "Other"
+msgstr ""
+
+#: templates/contact_us.html:94
+msgid "Message"
+msgstr ""
+
+#: templates/contact_us.html:103 templates/forgot_password.html:49
+msgid "Submit"
+msgstr ""
+
+#: templates/contact_us.html:121
+msgid "Thessaloniki"
+msgstr ""
+
+#: templates/contact_us.html:122
+msgid "Greece"
+msgstr ""
+
+#: templates/contact_us.html:131
+msgid "Mon - Fri"
+msgstr ""
+
+#: templates/covid19.html:12
+msgid "Map"
+msgstr ""
+
+#: templates/covid19.html:14
+msgid "Information"
+msgstr ""
+
+#: templates/covid19.html:32
+msgid "About the COVID-19 disease"
+msgstr ""
+
+#: templates/covid19.html:35
+msgid ""
+"Coronavirus disease 2019 (COVID-19) is an infectious disease caused by "
+"severe acute respiratory\n"
+"                    syndrome coronavirus 2 (SARS-CoV-2). The disease was "
+"first identified in December 2019 in Wuhan, the\n"
+"                    capital of China's Hubei province, and has since "
+"spread globally, resulting in the ongoing 2019–20\n"
+"                    coronavirus pandemic. Common symptoms include fever, "
+"cough and shortness of breath. Other symptoms\n"
+"                    may include fatigue, muscle pain, diarrhoea, sore "
+"throat, loss of smell and abdominal pain. The time\n"
+"                    from exposure to onset of symptoms is typically "
+"around five days, but may range from two to fourteen\n"
+"                    days. While the majority of cases result in mild "
+"symptoms, some progress to viral pneumonia and\n"
+"                    multi-organ failure. As of 11 April 2020, more than "
+"1.69 million cases have been reported in more\n"
+"                    than 200 countries and territories, resulting in more"
+" than 102,000 deaths. More than 376,000 people\n"
+"                    have recovered."
+msgstr ""
+
+#: templates/covid19.html:48
+msgid ""
+"In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
+"hospitals are:"
+msgstr ""
+
+#: templates/error.html:9
+msgid "Page Not Found."
+msgstr ""
+
+#: templates/error.html:10
+msgid "What you were looking for is just not there."
+msgstr ""
+
+#: templates/error.html:11
+msgid "go somewhere nice"
+msgstr ""
+
+#: templates/home.html:24
+msgid "Welcome!"
+msgstr ""
+
+#: templates/home.html:27
+msgid ""
+"Health4U brings all hospitals of Greece in your hands with only a couple "
+"of clicks and it delivers\n"
+"                up to date information about"
+msgstr ""
+
+#: templates/home.html:29
+msgid "as long as the outbreak is active."
+msgstr ""
+
+#: templates/home.html:38
+msgid "COVID-19 alert"
+msgstr ""
+
+#: templates/home.html:42
+msgid ""
+"Stay at home if you feel unwell. If you have a fever, cough and\n"
+"                    difficulty breathing, seek medical attention and call"
+" in advance. Follow the directions of your\n"
+"                    local health authority. Source:"
+msgstr ""
+
+#: templates/home.html:46
+msgid "World Health Organization"
+msgstr ""
+
+#: templates/home.html:52
+msgid "National Organization of Public Health"
+msgstr ""
+
+#: templates/home.html:127
+msgid "On this page, you can find more information about the hospitals in Greece."
+msgstr ""
+
+#: templates/home.html:143
+msgid "On this page, you can find out more about Covid-19 disease."
+msgstr ""
+
+#: templates/hospitals.html:19
+msgid "Filters"
+msgstr ""
+
+#: templates/hospitals.html:40
+msgid "Hospital"
+msgstr ""
+
+#: templates/hospitals.html:48
+msgid "Department"
+msgstr ""
+
+#: templates/hospitals.html:57
+msgid "On duty"
+msgstr ""
+
+#: templates/hospitals.html:60
+msgid "Date"
+msgstr ""
+
+#: templates/log_in.html:21 templates/log_in.html:54
+msgid "Sign in"
+msgstr ""
+
+#: templates/log_in.html:22
+msgid "Sign in with your social media account or username"
+msgstr ""
+
+#: templates/log_in.html:35 templates/sign_up.html:35
+msgid "or"
+msgstr ""
+
+#: templates/log_in.html:49 templates/sign_up.html:65
+msgid "Password"
+msgstr ""
+
+#: templates/log_in.html:61
+msgid "Forgot Your password?"
+msgstr ""
+
+#: templates/sign_up.html:21
+msgid "Create an Account"
+msgstr ""
+
+#: templates/sign_up.html:22
+msgid "Sign up with your social media account or email address"
+msgstr ""
+
+#: templates/sign_up.html:70
+msgid "Confirm Password"
+msgstr ""
+
+#: templates/sign_up.html:75
+msgid "Sign up"
+msgstr ""
+
+#~ msgid "Please translate me, I am a message or some stuff!"
+#~ msgstr ""
+
+#~ msgid "My name is %(name)s."
+#~ msgstr ""
 

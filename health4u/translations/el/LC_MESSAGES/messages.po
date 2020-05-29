@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-28 19:08+0300\n"
+"POT-Creation-Date: 2020-05-29 23:48+0300\n"
 "PO-Revision-Date: 2020-05-28 18:57+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -18,11 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
+#: templates/account_details.html:23 templates/base.html:80
+msgid "Account Details"
+msgstr "Πληροφορίες Λογαριασμού"
+
+#: templates/account_details.html:26 templates/forgot_password.html:32
+#: templates/sign_up.html:43
+msgid "First Name"
+msgstr "Όνομα"
+
+#: templates/account_details.html:31 templates/forgot_password.html:37
+#: templates/sign_up.html:48
+msgid "Last Name"
+msgstr "Επώνυμο"
+
+#: templates/account_details.html:36 templates/forgot_password.html:42
+#: templates/hospitals.html:32 templates/sign_up.html:53
+msgid "Region"
+msgstr "Περιοχή"
+
+#: templates/account_details.html:48
+msgid "Change Account Details"
+msgstr "Αλλαγή Πληροφοριών Λογαριασμού"
+
+#: templates/account_details.html:52
+msgid "Delete Account"
+msgstr "Διαγραφή Λογαριασμού"
+
 #: templates/base.html:42
 msgid "Home"
 msgstr "Αρχική"
 
-#: templates/base.html:45
+#: templates/base.html:45 templates/home.html:123
 msgid "Hospitals"
 msgstr "Νοσοκομεία"
 
@@ -34,31 +61,270 @@ msgstr "Covid-19"
 msgid "Contact Us"
 msgstr "Επικοινωνία"
 
-#: templates/base.html:58
+#: templates/base.html:64
 msgid "Sign Up"
 msgstr "Εγγραφή"
 
-#: templates/base.html:62
+#: templates/base.html:68
 msgid "Login"
 msgstr "Σύνδεση"
 
-#: templates/base.html:69
+#: templates/base.html:75
 msgid "Account"
 msgstr "Λογαριασμός"
 
-#: templates/base.html:74
-msgid "Account Details"
-msgstr "Πληροφορίες Λογαριασμού"
-
-#: templates/base.html:77
+#: templates/base.html:83 templates/change_password.html:23
+#: templates/change_password.html:43
 msgid "Change Password"
 msgstr "Αλλαγή Κωδικού"
 
-#: templates/base.html:80
+#: templates/base.html:86
 msgid "Logout"
 msgstr "Αποσύνδεση"
 
-#: templates/base.html:96
-msgid "Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis"
-msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, Μακρή Ιωάννη"
+#: templates/base.html:102
+msgid ""
+"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
+"Styliani, Makris Ioannis"
+msgstr ""
+"Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, "
+"Μακρή Ιωάννη"
+
+#: templates/change_password.html:24
+msgid "Fill the following form, to change your password"
+msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό σας"
+
+#: templates/change_password.html:27
+msgid "Old Password"
+msgstr "Προηγούμενος κωδικός"
+
+#: templates/change_password.html:33
+msgid "New Password"
+msgstr "Νέος κωδικός"
+
+#: templates/change_password.html:38
+msgid "Confirm New Password"
+msgstr "Επιβεβαίωση νέου κωδικού"
+
+#: templates/contact_us.html:17
+msgid "Contact us"
+msgstr "Επικοινωνία"
+
+#: templates/contact_us.html:20
+msgid "Please use the contact form below."
+msgstr "Για να επικοινωνήσετε μαζί μας, μπορείτε να συμπληρώστε την παρακάτω φόρμα"
+
+#: templates/contact_us.html:43
+msgid "Write to us:"
+msgstr "Στείλτε μας μήνυμα:"
+
+#: templates/contact_us.html:50
+msgid "Your name *"
+msgstr "Το όνομά σας*"
+
+#: templates/contact_us.html:65
+msgid "Your email *"
+msgstr "Το email σας*"
+
+#: templates/contact_us.html:78
+msgid "Please specify your need *"
+msgstr "Παρακαλούμε, προσδιορίστε το λόγο αποστολής*"
+
+#: templates/contact_us.html:85
+msgid "Functionalities Addition"
+msgstr "Προσθήκη Λειτουργιών"
+
+#: templates/contact_us.html:86
+msgid "Report a Problem"
+msgstr "Αναφορά Προβλήματος"
+
+#: templates/contact_us.html:87
+msgid "Out of Date Data"
+msgstr "Μη ενημερωμένα δεδομένα"
+
+#: templates/contact_us.html:88
+msgid "Other"
+msgstr "Άλλο"
+
+#: templates/contact_us.html:94
+msgid "Message"
+msgstr "Μήνυμα"
+
+#: templates/contact_us.html:103 templates/forgot_password.html:49
+msgid "Submit"
+msgstr "Υποβολή"
+
+#: templates/contact_us.html:121
+msgid "Thessaloniki"
+msgstr "Θεσσαλονίκη"
+
+#: templates/contact_us.html:122
+msgid "Greece"
+msgstr "Ελλάδα"
+
+#: templates/contact_us.html:131
+msgid "Mon - Fri"
+msgstr "Δευ - Παρ"
+
+#: templates/covid19.html:12
+msgid "Map"
+msgstr "Χάρτης"
+
+#: templates/covid19.html:14
+msgid "Information"
+msgstr "Πληροφορίες"
+
+#: templates/covid19.html:32
+msgid "About the COVID-19 disease"
+msgstr "Σχετικά με τον COVID-19"
+
+#: templates/covid19.html:35
+msgid ""
+"Coronavirus disease 2019 (COVID-19) is an infectious disease caused by "
+"severe acute respiratory\n"
+"                    syndrome coronavirus 2 (SARS-CoV-2). The disease was "
+"first identified in December 2019 in Wuhan, the\n"
+"                    capital of China's Hubei province, and has since "
+"spread globally, resulting in the ongoing 2019–20\n"
+"                    coronavirus pandemic. Common symptoms include fever, "
+"cough and shortness of breath. Other symptoms\n"
+"                    may include fatigue, muscle pain, diarrhoea, sore "
+"throat, loss of smell and abdominal pain. The time\n"
+"                    from exposure to onset of symptoms is typically "
+"around five days, but may range from two to fourteen\n"
+"                    days. While the majority of cases result in mild "
+"symptoms, some progress to viral pneumonia and\n"
+"                    multi-organ failure. As of 11 April 2020, more than "
+"1.69 million cases have been reported in more\n"
+"                    than 200 countries and territories, resulting in more"
+" than 102,000 deaths. More than 376,000 people\n"
+"                    have recovered."
+msgstr ""
+
+#: templates/covid19.html:48
+msgid ""
+"In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
+"hospitals are:"
+msgstr ""
+"Στην Ελλάδα υπάρχουν 13 νοσοκομεία αναφοράς, αποκλειστικά για κρούσματα "
+"Covid-19. Τα νοσοκομεία αυτά είναι τα εξής :"
+
+#: templates/error.html:9
+msgid "Page Not Found."
+msgstr "Η σελίδα δε βρέθηκε."
+
+#: templates/error.html:10
+msgid "What you were looking for is just not there."
+msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
+
+#: templates/error.html:11
+msgid "go somewhere nice"
+msgstr "Μεταφερθείτε κάπου ωραία!"
+
+#: templates/home.html:24
+msgid "Welcome!"
+msgstr "Καλωσήρθατε!"
+
+#: templates/home.html:27
+msgid ""
+"Health4U brings all hospitals of Greece in your hands with only a couple "
+"of clicks and it delivers\n"
+"                up to date information about"
+msgstr ""
+"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας, με ένα μόνο "
+"κλικ καθώς και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
+
+#: templates/home.html:29
+msgid "as long as the outbreak is active."
+msgstr " όσο η πανδημία παραμένει σε έξαρση!"
+
+#: templates/home.html:38
+msgid "COVID-19 alert"
+msgstr ""
+
+#: templates/home.html:42
+msgid ""
+"Stay at home if you feel unwell. If you have a fever, cough and\n"
+"                    difficulty breathing, seek medical attention and call"
+" in advance. Follow the directions of your\n"
+"                    local health authority. Source:"
+msgstr ""
+"Εαν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπική υγειονομικής "
+"αρχής. Πηγή:"
+
+#: templates/home.html:46
+msgid "World Health Organization"
+msgstr "Παγκόσμιος Οργανισμός Υγείας"
+
+#: templates/home.html:52
+msgid "National Organization of Public Health"
+msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
+
+#: templates/home.html:127
+msgid "On this page, you can find more information about the hospitals in Greece."
+msgstr ""
+"Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα "
+"νοσοκομεία της Ελλάδας."
+
+#: templates/home.html:143
+msgid "On this page, you can find out more about Covid-19 disease."
+msgstr ""
+"Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την "
+"ασθένεια Covid-19"
+
+#: templates/hospitals.html:19
+msgid "Filters"
+msgstr "Φίλτρα"
+
+#: templates/hospitals.html:40
+msgid "Hospital"
+msgstr "Νοσοκομείο"
+
+#: templates/hospitals.html:48
+msgid "Department"
+msgstr "Τμήμα"
+
+#: templates/hospitals.html:57
+msgid "On duty"
+msgstr "Εφημερεύον"
+
+#: templates/hospitals.html:60
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: templates/log_in.html:21 templates/log_in.html:54
+msgid "Sign in"
+msgstr "Είσοδος"
+
+#: templates/log_in.html:22
+msgid "Sign in with your social media account or username"
+msgstr "Συνδεθείτε με λογαριασμό κοινωνικού δικτύου ή με το όνομα χρήστη"
+
+#: templates/log_in.html:35 templates/sign_up.html:35
+msgid "or"
+msgstr "ή"
+
+#: templates/log_in.html:49 templates/sign_up.html:65
+msgid "Password"
+msgstr "Κωδικός"
+
+#: templates/log_in.html:61
+msgid "Forgot Your password?"
+msgstr "Ξεχάσατε τον κωδικό σας;"
+
+#: templates/sign_up.html:21
+msgid "Create an Account"
+msgstr "Δημιουργία Λογαριασμού"
+
+#: templates/sign_up.html:22
+msgid "Sign up with your social media account or email address"
+msgstr "Συνδεθείτε με λογαριασμό από social media ή με το email"
+
+#: templates/sign_up.html:70
+msgid "Confirm Password"
+msgstr "Επιβεβαίωση κωδικού"
+
+#: templates/sign_up.html:75
+msgid "Sign up"
+msgstr "Δημιουργία"
 
