@@ -21,12 +21,12 @@
         <!-- Welcome Card -->
         <div class="card rounded-lg with-border my-2">
             <div class="h2 card-title text-white text-center main-color-bg rounded mx-3 my-3 p-2">
-                Welcome!
+                {{ gettext("Welcome!") }}
             </div>
             <div class="h5 font-weight-light card-body">
-                Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers
-                up to date information about <a class="main-color" href="{{ url_for('covid19') }}"><u>Covid-19</u></a>
-                as long as the outbreak is active.
+                {{ gettext("Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers
+                up to date information about") }} <a class="main-color" href="{{ url_for('covid19') }}"><u>Covid-19</u></a>
+                {{ gettext("as long as the outbreak is active.") }}
             </div>
         </div>
         <!-- #Welcome Card -->
@@ -35,21 +35,21 @@
         <div class="card rounded-lg">
 
             <div class="card-title text-white bg-danger rounded w-50 mx-3 my-3 p-2">
-                <div class="h6 my-2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> COVID-19 alert</div>
+                <div class="h6 my-2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {[ gettext("COVID-19 alert") }}</div>
             </div>
 
             <div class="card-body">
-                <div class="card-subtitle mb-2">Stay at home if you feel unwell. If you have a fever, cough and
+                <div class="card-subtitle mb-2">{{ gettext("Stay at home if you feel unwell. If you have a fever, cough and
                     difficulty breathing, seek medical attention and call in advance. Follow the directions of your
-                    local health authority. Source:
+                    local health authority. Source:") }}
                     <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
-                       target="_blank"><u>World Health Organization</u></a>
+                       target="_blank"><u>{{ gettext("World Health Organization") }}</u></a>
                 </div>
 
                 <button type="button" class="btn btn-link btn-md border-secondary rounded-pill col-xs">
                     <i class="fa fa-globe" aria-hidden="true"></i>
                     <a href="https://eody.gov.gr/neos-koronaios-covid-19/" target="_blank">
-                        <u> National Organization of Public Health</u>
+                        <u>{{ gettext("National Organization of Public Health") }}</u>
                     </a>
                 </button>
 
@@ -120,11 +120,11 @@
                     <img class="card-img-top" src="../static/images/img-card-hospitals.png" alt="Hospital Card Image">
                     <div class="card-img-overlay">
 
-                        <div class="card-header card-title text-dark h5"><u>Hospitals</u></div>
+                        <div class="card-header card-title text-dark h5"><u>{{ gettext("Hospitals") }}</u></div>
 
                         <div class="card-body">
                             <p class="card-text font-weight-bold text-dark">
-                                On this page, you can find more information about the hospitals in Greece.
+                                {{ gettext("On this page, you can find more information about the hospitals in Greece.") }}
                             </p>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
 
                         <div class="card-body">
                             <p class="card-text font-weight-bold text-white">
-                                On this page, you can find out more about Covid-19 disease.
+                                {{ gettext("On this page, you can find out more about Covid-19 disease.") }}
                             </p>
                         </div>
                     </div>

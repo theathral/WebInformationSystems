@@ -18,8 +18,8 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-            <h1 class="mt-3">Sign in</h1>
-            <p class="hint-text">Sign in with your social media account or username</p>
+            <h1 class="mt-3">{{ gettext("Sign in") }}</h1>
+            <p class="hint-text">{{ gettext("Sign in with your social media account or username") }}</p>
 
             <!-- Social Media -->
             <div class="social-buttons mt-4">
@@ -32,7 +32,7 @@
             <!-- Or -->
             <div class="d-flex align-items-center mt-4">
                 <span class="horizontal-line"></span>
-                <div class="or-bubble">or</div>
+                <div class="or-bubble">{{ gettext("or") }}</div>
                 <span class="horizontal-line"></span>
             </div>
             <!-- #Or -->
@@ -46,19 +46,19 @@
                            required="required">
                 </div>
                 <div class="form-group mt-4">
-                    <label for="password" class="sr-only">Password</label>
+                    <label for="password" class="sr-only">{{ gettext("Password") }}</label>
                     <input type="password" class="form-control input-lg" id="password" name="password"
                            placeholder="Password" required="required">
                 </div>
                 <button type="submit" class="btn btn-lg btn-block rgba-opacity main-color-bg font-weight-bold mt-3">
-                    Sign in
+                    {{ gettext("Sign in") }}
                 </button>
             </form>
             <!-- #Log In Form -->
 
             <!-- Forgot Password -->
             <div class="mt-4">
-                <a class="main-color small" href="{{ url_for('forgot_password') }}">Forgot Your password?</a>
+                <a class="main-color small" href="{{ url_for('forgot_password') }}">{{ gettext("Forgot Your password?") }}</a>
             </div>
             <!-- #Forgot Password -->
 

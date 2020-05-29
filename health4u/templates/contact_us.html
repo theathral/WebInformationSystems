@@ -14,10 +14,10 @@
     <div class="container mt-4 mx-auto justify-content-center">
 
         <div class="row mx-auto">
-            <h1 class="text-center row mx-auto">Contact us</h1>
+            <h1 class="text-center row mx-auto">{{ gettext("Contact us") }}</h1>
         </div>
         <div class="row mx-auto">
-            <p class="text-center row pb-2 mx-auto">Please use the contact form below.</p>
+            <p class="text-center row pb-2 mx-auto">{{ gettext("Please use the contact form below.") }}</p>
         </div>
 
         <div class="row align-items-center justify-content-center mx-auto">
@@ -40,14 +40,14 @@
 
                     <div class="card-header p-0 main-color-bg">
                         <div class="text-white text-center py-2 h2">
-                            <i class="fa fa-envelope"></i> Write to us:
+                            <i class="fa fa-envelope"></i> {{ gettext("Write to us:") }}
                         </div>
                     </div>
 
                     <div class="card-body p-3">
 
                         <div class="form-group">
-                            <label class="h5" for="contact-name">Your name *</label>
+                            <label class="h5" for="contact-name">{{ gettext("Your name *") }}</label>
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user fa-lg ic main-color"></i>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="h5" for="contact-email">Your email *</label>
+                            <label class="h5" for="contact-email">{{ gettext("Your email *") }}</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon">
                                     <i class="fa fa-envelope fa-lg ic main-color"></i>
@@ -75,23 +75,23 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="h5" for="contact-need">Please specify your need *</label>
+                            <label class="h5" for="contact-need">{{ gettext("Please specify your need *") }}</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"><i class="fa fa-tag fa-lg ic main-color"></i></div>
                                 <select id="contact-need" class="selectpicker form-control" name="contact-need"
                                         data-error="Please specify your need." data-live-search="true"
                                         required="required">
                                     <option value=""></option>
-                                    <option value="0">Functionalities Addition</option>
-                                    <option value="1">Report a Problem</option>
-                                    <option value="2">Out of Date Data</option>
-                                    <option value="3">Other</option>
+                                    <option value="0">{{ gettext("Functionalities Addition") }}</option>
+                                    <option value="1">{{ gettext("Report a Problem") }}</option>
+                                    <option value="2">{{ gettext("Out of Date Data") }}</option>
+                                    <option value="3">{{ gettext("Other") }}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="h5" for="contact-message">Message</label>
+                            <label class="h5" for="contact-message">{{ gettext("Message") }}</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"></div>
                                 <textarea class="form-control" id="contact-message" name="contact-message"
@@ -100,7 +100,7 @@
                         </div>
 
                         <div class="text-center">
-                            <button class="btn btn-block py-2 text-white main-color-bg with-border"><h3>Submit</h3>
+                            <button class="btn btn-block py-2 text-white main-color-bg with-border"><h3>{{ gettext("Submit") }}</h3>
                             </button>
                         </div>
 
@@ -118,8 +118,8 @@
                         <i class="fa fa-map-marker fa-lg"></i>
                     </a>
                     <p>
-                        Thessaloniki,<br>
-                        Greece
+                        {{ gettext("Thessaloniki") }},<br>
+                        {{ gettext("Greece") }}
                     </p>
                 </div>
 
@@ -128,7 +128,7 @@
                             class="fa fa-phone fa-lg fa-flip-horizontal"></i></a>
                     <p>
                         <a href="tel:231 011 1222">231 011 1222</a><br>
-                        Mon - Fri, 12:00-24:00
+                        {{ gettext("Mon - Fri") }}, 12:00-24:00
                     </p>
                 </div>
 
