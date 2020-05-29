@@ -1,44 +1,52 @@
-id;name
-1;ΚΑΡΠΑΘΟΣ
-2;ΛΕΣΒΟΣ
-3;ΚΩΣ
-4;ΠΑΡΟΣ
-5;ΠΑΤΜΟΣ
-6;ΠΤΟΛΕΜΑΪΔΑ
-7;ΜΗΛΟΣ
-8;ΘΗΡΑ
-9;ΜΥΚΟΝΟΣ
-10;ΚΑΣΤΟΡΙΑ
-11;ΚΑΤΕΡΙΝΗ
-12;ΧΙΟΣ
-13;ΛΗΜΝΟΣ
-14;ΗΡΑΚΛΕΙΟ
-15;ΦΛΩΡΙΝΑ
-16;ΑΝΔΡΟΣ
-17;ΛΑΣΙΘΙ
-18;ΘΕΣΣΑΛΟΝΙΚΗ
-19;ΡΕΘΥΜΝΟ
-20;ΣΑΛΑΜΙΝΑ
-21;ΓΡΕΒΕΝΑ
-22;ΙΚΑΡΙΑ
-23;ΑΤΤΙΚΗ
-24;ΧΑΝΙΑ
-25;ΛΕΡΟΣ
-26;ΣΥΡΟΣ
-27;ΕΔΕΣΣΑ
-28;ΡΟΔΟΣ
-29;ΑΙΓΙΝΑ
-30;ΕΛΕΥΣΙΝΑ
-31;ΙΟΣ
-32;ΤΗΝΟΣ
-33;ΚΑΛΥΜΝΟΣ
-34;ΜΥΤΙΛΗΝΗ
-35;ΝΑΟΥΣΑ
-36;ΓΙΑΝΝΙΤΣΑ
-37;ΣΑΜΟΣ
-38;ΚΑΛΛΟΝΗ
-39;ΝΑΞΟΣ
-40;ΒΕΡΟΙΑ
-41;ΑΜΟΡΓΟΣ
-42;ΚΟΖΑΝΗ
-43;ΕΥΔΗΛΟΣ
+id;name;name_en
+1;ΝΟΜΟΣ ΑΤΤΙΚΗΣ;DISTRICT ATTIKI
+2;ΝΟΜΟΣ ΕΥΒΟΙΑΣ;DISTRICT EVIA
+3;ΝΟΜΟΣ ΕΥΡΥΤΑΝΙΑΣ;DISTRICT EVRITANIA
+4;ΝΟΜΟΣ ΦΩΚΙΔΑΣ;DISTRICT FOKIDA
+5;ΝΟΜΟΣ ΦΘΙΩΤΙΔΑΣ;DISTRICT FTHIOTIDA
+6;ΝΟΜΟΣ ΒΟΙΩΤΙΑΣ;DISTRICT VIOTIA
+7;ΝΟΜΟΣ ΧΑΛΚΙΔΙΚΗΣ;DISTRICT CHALKIDIKI
+8;ΝΟΜΟΣ ΗΜΑΘΙΑΣ;DISTRICT IMATHIA
+9;ΝΟΜΟΣ ΚΙΛΚΙΣ;DISTRICT KILKIS
+10;ΝΟΜΟΣ ΠΕΛΛΑΣ;DISTRICT PELLA
+11;ΝΟΜΟΣ ΠΙΕΡΙΑΣ;DISTRICT PIERIA
+12;ΝΟΜΟΣ ΣΕΡΡΩΝ;DISTRICT SERRES
+13;ΝΟΜΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ;DISTRICT THESSALONIKI
+14;ΝΟΜΟΣ ΧΑΝΙΩΝ;DISTRICT XANIA
+15;ΝΟΜΟΣ ΗΡΑΚΛΕΙΟΥ;DISTRICT IRAKLIO
+16;ΝΟΜΟΣ ΛΑΣΙΘΙΟΥ;DISTRICT LASITHI
+17;ΝΟΜΟΣ ΡΕΘΥΜΝΗΣ;DISTRICT RETHIMNO
+18;ΝΟΜΟΣ ΔΡΑΜΑΣ;DISTRICT DRAMA
+19;ΝΟΜΟΣ ΈΒΡΟΥ;DISTRICT EVROS
+20;ΝΟΜΟΣ ΚΑΒΑΛΑΣ;DISTRICT KAVALA
+21;ΝΟΜΟΣ ΡΟΔΟΠΗΣ;DISTRICT RODOPI
+22;ΝΟΜΟΣ ΞΑΝΘΗΣ;DISTRICT XANTHI
+23;ΝΟΜΟΣ ΆΡΤΑΣ;DISTRICT ARTA
+24;ΝΟΜΟΣ ΙΩΑΝΝΙΝΩΝ;DISTRICT IOANNINA
+25;ΝΟΜΟΣ ΠΡΕΒΕΖΑΣ;DISTRICT PREVEZA
+26;ΝΟΜΟΣ ΘΕΣΠΡΩΤΙΑΣ;DISTRICT THESPROTIA
+27;ΝΟΜΟΣ ΚΕΡΚΥΡΑΣ;DISTRICT KERKIRA
+28;ΝΟΜΟΣ ΚΕΦΑΛΛΗΝΙΑΣ;DISTRICT KEFALLINIA
+29;ΝΟΜΟΣ ΛΕΥΚΑΔΑΣ;DISTRICT LEFKADA
+30;ΝΟΜΟΣ ΖΑΚΥΝΘΟΥ;DISTRICT ZAKINTHOS
+31;ΝΟΜΟΣ ΧΙΟΥ;DISTRICT CHIOS
+32;ΝΟΜΟΣ ΛΕΣΒΟΥ;DISTRICT LESVOS
+33;ΝΟΜΟΣ ΣΑΜΟΥ;DISTRICT SAMOS
+34;ΝΟΜΟΣ ΑΡΚΑΔΙΑΣ;DISTRICT ARKADIA
+35;ΝΟΜΟΣ ΑΡΓΟΛΙΔΑΣ;DISTRICTARGOLIDA
+36;ΝΟΜΟΣ ΚΟΡΙΝΘΙΑΣ;DISTRICT KORINTHIA
+37;ΝΟΜΟΣ ΛΑΚΩΝΙΑΣ;DISTRICT LAKONIA
+38;ΝΟΜΟΣ ΜΕΣΣΗΝΙΑΣ;DISTRICT MESSINIA
+39;ΝΟΜΟΣ ΚΥΚΛΑΔΩΝ;DISTRICT KIKLADES
+40;ΝΟΜΟΣ ΔΩΔΕΚΑΝΗΣΟΥ;DISTRICT DODEKANISA
+41;ΝΟΜΟΣ ΚΑΡΔΙΤΣΑΣ;DISTRICT KARDITSA
+42;ΝΟΜΟΣ ΛΑΡΙΣΑΣ;DISTRICT LARISA
+43;ΝΟΜΟΣ ΜΑΓΝΗΣΙΑΣ;DISTRICT MAGNISIA
+44;ΝΟΜΟΣ ΤΡΙΚΑΛΩΝ;DISTRICT TRIKALA
+45;ΝΟΜΟΣ ΑΧΑΪΑΣ;DISTRICT ACHAIA
+46;ΝΟΜΟΣ ΑΙΤΩΛΟΑΚΑΡΝΑΝΙΑΣ;DISTRICT ETOLOAKARNANIA
+47;ΝΟΜΟΣ ΗΛΕΙΑΣ;DISTRICT ILIA
+48;ΝΟΜΟΣ ΦΛΩΡΙΝΑΣ;DISTRICT FLORINA
+49;ΝΟΜΟΣ ΓΡΕΒΕΝΩΝ;DISTRICT GREVENA
+50;ΝΟΜΟΣ ΚΑΣΤΟΡΙΑΣ;DISTRICT KASTORIA
+51;ΝΟΜΟΣ ΚΟΖΑΝΗΣ;DISTRICT KOZANI
