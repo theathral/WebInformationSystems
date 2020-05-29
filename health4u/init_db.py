@@ -10,7 +10,7 @@ regions_path = data_folder / "Regions.csv"
 hospitals_path = data_folder / "Hospitals.csv"
 departments_path = data_folder / "Departments.csv"
 hospital_departments_path = data_folder / "Hospital-Departments.csv"
-hospital_on_duty_path = data_folder / "On-duty.csv"
+hospital_on_duty_path = data_folder / "On-Duty.csv"
 
 
 def get_regions(data_path=regions_path):
