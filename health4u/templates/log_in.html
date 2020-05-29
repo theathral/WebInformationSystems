@@ -42,13 +42,13 @@
                 <div class="form-group mt-4">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" class="form-control input-lg" id="email" name="email"
-                           placeholder="Email Address"
+                           placeholder="{{ gettext("Email Address") }}"
                            required="required">
                 </div>
                 <div class="form-group mt-4">
                     <label for="password" class="sr-only">{{ gettext("Password") }}</label>
                     <input type="password" class="form-control input-lg" id="password" name="password"
-                           placeholder="Password" required="required">
+                           placeholder="{{ gettext("Password") }}" required="required">
                 </div>
                 <button type="submit" class="btn btn-lg btn-block rgba-opacity main-color-bg font-weight-bold mt-3">
                     {{ gettext("Sign in") }}

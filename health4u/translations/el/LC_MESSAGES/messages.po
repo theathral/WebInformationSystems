@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-29 23:48+0300\n"
+"POT-Creation-Date: 2020-05-30 01:47+0300\n"
 "PO-Revision-Date: 2020-05-28 18:57+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -18,17 +18,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
+#: __init__.py:67
+msgid "Warning : No message included!"
+msgstr "Προσοχή : Δε συμπεριλάβατε κάποιο μήνυμα!"
+
+#: __init__.py:74
+msgid "Message sent successfully!"
+msgstr "Το μήνυμά σας στάλθηκε επιτυχώς!"
+
+#: __init__.py:84 __init__.py:106
+msgid "You are already logged in!"
+msgstr "Είστε ήδη συνδεδεμένος!"
+
+#: __init__.py:96
+msgid "You have successfully logged in!"
+msgstr "Η σύνδεση έγινε με επιτυχία!"
+
+#: __init__.py:100
+msgid "Wrong Credentials"
+msgstr "Εσφαλμένα στοιχεία"
+
+#: __init__.py:127
+msgid "Registration was Successful. Please Log in."
+msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
+
+#: __init__.py:129
+msgid "Passwords do not match. Please try again."
+msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
+
+#: __init__.py:132
+msgid "Email address already exists."
+msgstr "Η διεύθυνση email υπάρχει ήδη."
+
+#: __init__.py:150
+msgid "Password changed successfully!"
+msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
+
+#: __init__.py:153
+msgid "Something went wrong. Try again"
+msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
+
+#: __init__.py:174
+msgid "Account details changed successfully!"
+msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
+
+#: __init__.py:177
+msgid "This email already exists. Try again"
+msgstr "Η διεύθυνση email υπάρχει ήδη. Προσπαθήστε ξανά."
+
+#: __init__.py:189
+msgid "Your account has been successfully deleted."
+msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
+
+#: __init__.py:195
+msgid "Logout to access this page!"
+msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
+
+#: __init__.py:212
+msgid "Your request has been submitted. Someone will contact you soon!"
+msgstr ""
+"Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το "
+"συντομότερο δυνατό!"
+
+#: __init__.py:215
+msgid "No user found with these credentials"
+msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
+
 #: templates/account_details.html:23 templates/base.html:80
 msgid "Account Details"
 msgstr "Πληροφορίες Λογαριασμού"
 
-#: templates/account_details.html:26 templates/forgot_password.html:32
-#: templates/sign_up.html:43
+#: templates/account_details.html:26 templates/account_details.html:28
+#: templates/forgot_password.html:32 templates/forgot_password.html:34
+#: templates/sign_up.html:43 templates/sign_up.html:45
 msgid "First Name"
 msgstr "Όνομα"
 
-#: templates/account_details.html:31 templates/forgot_password.html:37
-#: templates/sign_up.html:48
+#: templates/account_details.html:31 templates/account_details.html:33
+#: templates/forgot_password.html:37 templates/forgot_password.html:39
+#: templates/sign_up.html:48 templates/sign_up.html:50
 msgid "Last Name"
 msgstr "Επώνυμο"
 
@@ -37,9 +105,19 @@ msgstr "Επώνυμο"
 msgid "Region"
 msgstr "Περιοχή"
 
+#: templates/account_details.html:38 templates/forgot_password.html:44
+#: templates/hospitals.html:34 templates/sign_up.html:54
+msgid "Select Region"
+msgstr "Επιλογή Περιοχής"
+
+#: templates/account_details.html:45 templates/forgot_password.html:29
+#: templates/log_in.html:45 templates/sign_up.html:62
+msgid "Email Address"
+msgstr "Διεύθυνση email"
+
 #: templates/account_details.html:48
 msgid "Change Account Details"
-msgstr "Αλλαγή Πληροφοριών Λογαριασμού"
+msgstr "Αλλαγή Στοιχείων Λογαριασμού"
 
 #: templates/account_details.html:52
 msgid "Delete Account"
@@ -94,15 +172,15 @@ msgstr ""
 msgid "Fill the following form, to change your password"
 msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό σας"
 
-#: templates/change_password.html:27
+#: templates/change_password.html:27 templates/change_password.html:29
 msgid "Old Password"
 msgstr "Προηγούμενος κωδικός"
 
-#: templates/change_password.html:33
+#: templates/change_password.html:33 templates/change_password.html:35
 msgid "New Password"
 msgstr "Νέος κωδικός"
 
-#: templates/change_password.html:38
+#: templates/change_password.html:38 templates/change_password.html:40
 msgid "Confirm New Password"
 msgstr "Επιβεβαίωση νέου κωδικού"
 
@@ -112,23 +190,35 @@ msgstr "Επικοινωνία"
 
 #: templates/contact_us.html:20
 msgid "Please use the contact form below."
-msgstr "Για να επικοινωνήσετε μαζί μας, μπορείτε να συμπληρώστε την παρακάτω φόρμα"
+msgstr "Μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας την παρακάτω φόρμα."
 
 #: templates/contact_us.html:43
 msgid "Write to us:"
-msgstr "Στείλτε μας μήνυμα:"
+msgstr "Στείλτε μας μήνυμα: "
 
 #: templates/contact_us.html:50
-msgid "Your name *"
-msgstr "Το όνομά σας*"
+msgid "Your name "
+msgstr "Όνομα"
+
+#: templates/contact_us.html:56
+msgid "Name"
+msgstr "Όνομα"
 
 #: templates/contact_us.html:65
-msgid "Your email *"
-msgstr "Το email σας*"
+msgid "Your email "
+msgstr "Email"
 
-#: templates/contact_us.html:78
-msgid "Please specify your need *"
-msgstr "Παρακαλούμε, προσδιορίστε το λόγο αποστολής*"
+#: templates/contact_us.html:71
+msgid "Email"
+msgstr "Email"
+
+#: templates/contact_us.html:78 templates/contact_us.html:82
+msgid "Please specify your need"
+msgstr "Λόγος αποστολής μηνύματος"
+
+#: templates/contact_us.html:83
+msgid "Select Need"
+msgstr "Επιλογής κατηγορίας μηνύματος"
 
 #: templates/contact_us.html:85
 msgid "Functionalities Addition"
@@ -149,6 +239,10 @@ msgstr "Άλλο"
 #: templates/contact_us.html:94
 msgid "Message"
 msgstr "Μήνυμα"
+
+#: templates/contact_us.html:98
+msgid "Type your message here"
+msgstr "Πληκτρολογήστε το μήνυμά σας εδώ"
 
 #: templates/contact_us.html:103 templates/forgot_password.html:49
 msgid "Submit"
@@ -200,6 +294,21 @@ msgid ""
 " than 102,000 deaths. More than 376,000 people\n"
 "                    have recovered."
 msgstr ""
+"Η νόσος Coronavirus 2019 (COVID-19) είναι μια μολυσματική ασθένεια που "
+"προκαλείται από σοβαρό σύνδρομο οξέος αναπνευστικού coronavirus 2 (SARS-"
+"CoV-2). Η ασθένεια εντοπίστηκε για πρώτη φορά τον Δεκέμβριο του 2019 στο "
+"Γουχάν, την πρωτεύουσα της επαρχίας Χουμπέι της Κίνας, και έκτοτε "
+"εξαπλώθηκε παγκοσμίως, με αποτέλεσμα την συνεχιζόμενη πανδημία κοροναϊού "
+"2019-20. Τα κοινά συμπτώματα περιλαμβάνουν πυρετό, βήχα και δύσπνοια. "
+"Άλλα συμπτώματα μπορεί να περιλαμβάνουν κόπωση, μυϊκό πόνο, διάρροια, "
+"πονόλαιμο, απώλεια μυρωδιάς και κοιλιακό άλγος. Ο χρόνος από την έκθεση "
+"έως την έναρξη των συμπτωμάτων είναι συνήθως περίπου πέντε ημέρες, αλλά "
+"μπορεί να κυμαίνεται από δύο έως δεκατέσσερις ημέρες. Ενώ η πλειονότητα "
+"των περιπτώσεων οδηγεί σε ήπια συμπτώματα, ορισμένες εξελίσσονται σε "
+"ιογενή πνευμονία και αποτυχία πολλαπλών οργάνων. Από τις 11 Απριλίου "
+"2020, έχουν αναφερθεί περισσότερα από 1,69 εκατομμύρια περιπτώσεις σε "
+"περισσότερες από 200 χώρες και εδάφη, με αποτέλεσμα περισσότερους από "
+"102.000 θανάτους. Περισσότεροι από 376.000 άνθρωποι έχουν αναρρώσει."
 
 #: templates/covid19.html:48
 msgid ""
@@ -209,17 +318,25 @@ msgstr ""
 "Στην Ελλάδα υπάρχουν 13 νοσοκομεία αναφοράς, αποκλειστικά για κρούσματα "
 "Covid-19. Τα νοσοκομεία αυτά είναι τα εξής :"
 
-#: templates/error.html:9
-msgid "Page Not Found."
-msgstr "Η σελίδα δε βρέθηκε."
+#: templates/error.html:2 templates/error.html:9
+msgid "Page Not Found"
+msgstr "Η σελίδα δε βρέθηκε"
 
 #: templates/error.html:10
 msgid "What you were looking for is just not there."
 msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
 
 #: templates/error.html:11
-msgid "go somewhere nice"
-msgstr "Μεταφερθείτε κάπου ωραία!"
+msgid "Go somewhere nice"
+msgstr "Μεταφερθείτε κάπου όμορφα"
+
+#: templates/forgot_password.html:23
+msgid "Forgot Password"
+msgstr "Επαναφορά Κωδικού"
+
+#: templates/forgot_password.html:24
+msgid "Fill the following details in order to submit a new password"
+msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούριο κωδικό"
 
 #: templates/home.html:24
 msgid "Welcome!"
@@ -231,8 +348,8 @@ msgid ""
 "of clicks and it delivers\n"
 "                up to date information about"
 msgstr ""
-"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας, με ένα μόνο "
-"κλικ καθώς και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
+"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα μόνο "
+"κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
 
 #: templates/home.html:29
 msgid "as long as the outbreak is active."
@@ -240,7 +357,7 @@ msgstr " όσο η πανδημία παραμένει σε έξαρση!"
 
 #: templates/home.html:38
 msgid "COVID-19 alert"
-msgstr ""
+msgstr " Προειδοποίηση COVID-19"
 
 #: templates/home.html:42
 msgid ""
@@ -260,11 +377,27 @@ msgstr "Παγκόσμιος Οργανισμός Υγείας"
 msgid "National Organization of Public Health"
 msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
 
+#: templates/home.html:102
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: templates/home.html:106
+msgid "Next"
+msgstr "Επόμενο"
+
+#: templates/home.html:120
+msgid "Hospital Card Image"
+msgstr "Κάρτα/φωτογραφεία σελίδας νοσοκομείων"
+
 #: templates/home.html:127
 msgid "On this page, you can find more information about the hospitals in Greece."
 msgstr ""
 "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα "
 "νοσοκομεία της Ελλάδας."
+
+#: templates/home.html:136
+msgid "Covid-19 Card Image"
+msgstr "Κάρτα/φωτογραφεία σελίδας Covid-19"
 
 #: templates/home.html:143
 msgid "On this page, you can find out more about Covid-19 disease."
@@ -280,9 +413,17 @@ msgstr "Φίλτρα"
 msgid "Hospital"
 msgstr "Νοσοκομείο"
 
+#: templates/hospitals.html:42
+msgid "Select Hospital"
+msgstr "Επιλογή Νοσοκομείου"
+
 #: templates/hospitals.html:48
 msgid "Department"
 msgstr "Τμήμα"
+
+#: templates/hospitals.html:50
+msgid "Select Department"
+msgstr "Επιλογή Τμήματος"
 
 #: templates/hospitals.html:57
 msgid "On duty"
@@ -298,13 +439,14 @@ msgstr "Είσοδος"
 
 #: templates/log_in.html:22
 msgid "Sign in with your social media account or username"
-msgstr "Συνδεθείτε με λογαριασμό κοινωνικού δικτύου ή με το όνομα χρήστη"
+msgstr "Συνδεθείτε με λογαριασμό κοινωνικού δικτύου ή με το όνομα χρήστη σας"
 
 #: templates/log_in.html:35 templates/sign_up.html:35
 msgid "or"
-msgstr "ή"
+msgstr "Ή"
 
-#: templates/log_in.html:49 templates/sign_up.html:65
+#: templates/log_in.html:49 templates/log_in.html:51 templates/sign_up.html:65
+#: templates/sign_up.html:67
 msgid "Password"
 msgstr "Κωδικός"
 
@@ -320,7 +462,7 @@ msgstr "Δημιουργία Λογαριασμού"
 msgid "Sign up with your social media account or email address"
 msgstr "Συνδεθείτε με λογαριασμό από social media ή με το email"
 
-#: templates/sign_up.html:70
+#: templates/sign_up.html:70 templates/sign_up.html:72
 msgid "Confirm Password"
 msgstr "Επιβεβαίωση κωδικού"
 

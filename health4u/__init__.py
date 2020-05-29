@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from flask_restful import Api
 from flask_babel import Babel
+from flask_babel import gettext
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
@@ -64,14 +65,14 @@ def create_app(test_config=None):
             rmessage = request.form['contact-message']
 
             if rmessage == "":
-                flash('Warning : No message included!', 'danger')
+                flash(gettext('Warning : No message included!'), 'danger')
                 return redirect(url_for('contact_us'))
             new_Req = Request(name=rname, email=remail, need=rneed, message=rmessage)
 
             db.session.add(new_Req)
             db.session.commit()
 
-            flash('Message sent successfully!', 'success')
+            flash(gettext('Message sent successfully!'), 'success')
             return redirect(url_for('contact_us'))
 
     @app.route("/covid19")
@@ -81,7 +82,7 @@ def create_app(test_config=None):
     @app.route("/log_in", methods=['POST', 'GET'])
     def log_in():
         if current_user.is_authenticated:
-            flash('You are already logged in!', 'info')
+            flash(gettext('You are already logged in!'), 'info')
             return redirect(url_for('home'))
 
         if flask.request.method == 'GET':
@@ -93,17 +94,17 @@ def create_app(test_config=None):
             temp_user = User.query.filter_by(email=email).first()
 
             if temp_user is not None and check_password_hash(temp_user.password, password):
-                flash('You have successfully logged in!', 'success')
+                flash(gettext('You have successfully logged in!'), 'success')
                 login_user(temp_user)
                 return redirect(url_for('home'))
             else:
-                flash('Wrong Credentials', 'danger')
+                flash(gettext('Wrong Credentials'), 'danger')
                 return redirect(url_for('log_in'))
 
     @app.route("/sign_up", methods=['POST', 'GET'])
     def sign_up():
         if current_user.is_authenticated:
-            flash('You are already logged in!', 'info')
+            flash(gettext('You are already logged in!'), 'info')
             return redirect(url_for('home'))
 
         if flask.request.method == 'GET':
@@ -124,12 +125,12 @@ def create_app(test_config=None):
                                     password=generate_password_hash(password, method='sha256'))
                     db.session.add(new_user)
                     db.session.commit()
-                    flash('Registration was Successful. Please Log in.', 'success')
+                    flash(gettext('Registration was Successful. Please Log in.'), 'success')
                     return redirect(url_for('log_in'))
-                flash('Passwords do not match. Please try again.', 'danger')
+                flash(gettext('Passwords do not match. Please try again.'), 'danger')
                 return redirect(url_for('sign_up'))
 
-            flash('Email address already exists.', 'danger')
+            flash(gettext('Email address already exists.'), 'danger')
             return redirect(url_for('sign_up'))
 
     @app.route("/change_password", methods=['POST', 'GET'])
@@ -147,10 +148,10 @@ def create_app(test_config=None):
                 db.session.add(current_user)
                 db.session.commit()
 
-                flash('Password changed successfully!', 'success')
+                flash(gettext('Password changed successfully!'), 'success')
                 return redirect(url_for('home'))
             else:
-                flash('Something went wrong. Try again', 'danger')
+                flash(gettext('Something went wrong. Try again'), 'danger')
                 return redirect(url_for('change_password'))
 
     @app.route("/account_details", methods=['POST', 'GET'])
@@ -171,10 +172,10 @@ def create_app(test_config=None):
                 db.session.add(current_user)
                 db.session.commit()
 
-                flash('Account details changed successfully!', 'success')
+                flash(gettext('Account details changed successfully!'), 'success')
                 return redirect(url_for('home'))
             else:
-                flash('This email already exists. Try again', 'danger')
+                flash(gettext('This email already exists. Try again'), 'danger')
                 return redirect(url_for('account_details'))
 
     @app.route("/deleteUser")
@@ -186,13 +187,13 @@ def create_app(test_config=None):
 
         logout_user()
 
-        flash('Your account has been successfully deleted.', 'success')
+        flash(gettext('Your account has been successfully deleted.'), 'success')
         return redirect(url_for('home'))
 
     @app.route("/forgot_password", methods=['POST', 'GET'])
     def forgot_password():
         if current_user.is_authenticated:
-            flash('Logout to access this page!', 'info')
+            flash(gettext('Logout to access this page!'), 'info')
             return redirect(url_for('home'))
 
         if flask.request.method == 'GET':
@@ -209,10 +210,10 @@ def create_app(test_config=None):
                 new_req = Request(email=temp_user.email, name=temp_user.last_name, need='-1', message='-1')
                 db.session.add(new_req)
                 db.session.commit()
-                flash('Your request has been submitted. Someone will contact you soon!', 'success')
+                flash(gettext('Your request has been submitted. Someone will contact you soon!'), 'success')
                 return redirect(url_for('home'))
             else:
-                flash('No user found with these credentials', 'danger')
+                flash(gettext('No user found with these credentials'), 'danger')
                 return redirect(url_for('forgot_password'))
 
     @app.route('/logout')

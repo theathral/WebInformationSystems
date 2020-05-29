@@ -25,24 +25,24 @@
                 <div class="form-group mt-4">
                     <label for="first_name" class="sr-only">{{ gettext("First Name") }}</label>
                     <input type="text" class="form-control input-lg" id="first_name" name="first_name"
-                           placeholder="First Name" value="{{ current_user.first_name }}" required="required">
+                           placeholder="{{ gettext("First Name") }}" value="{{ current_user.first_name }}" required="required">
                 </div>
                 <div class="form-group mt-4">
                     <label for="last_name" class="sr-only">{{ gettext("Last Name") }}</label>
                     <input type="text" class="form-control input-lg" id="last_name" name="last_name"
-                           placeholder="Last Name" value="{{ current_user.last_name }}" required="required">
+                           placeholder="{{ gettext("Last Name") }}" value="{{ current_user.last_name }}" required="required">
                 </div>
                 <div class="form-group mt-4">
                     <label for="region_account" class="sr-only">{{ gettext("Region") }}</label>
                     <select class="selectpicker form-control" id="region_account" name="region_account"
-                            title="Select Region" required="required">
+                            title="{{ gettext("Select Region") }}" required="required">
                         {# Dynamic loading of options #}
                     </select>
                 </div>
                 <div class="form-group mt-4">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" class="form-control input-lg" id="email" name="email"
-                           placeholder="Email Address" value="{{ current_user.email }}" required="required">
+                           placeholder="{{ gettext("Email Address") }}" value="{{ current_user.email }}" required="required">
                 </div>
                 <button type="submit" class="btn btn-lg btn-block rgba-opacity main-color-bg font-weight-bold mt-3">
                     {{ gettext("Change Account Details") }}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-29 23:48+0300\n"
+"POT-Creation-Date: 2020-05-30 01:47+0300\n"
 "PO-Revision-Date: 2020-05-29 03:34+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,23 +18,99 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
+#: __init__.py:67
+msgid "Warning : No message included!"
+msgstr ""
+
+#: __init__.py:74
+msgid "Message sent successfully!"
+msgstr ""
+
+#: __init__.py:84 __init__.py:106
+msgid "You are already logged in!"
+msgstr ""
+
+#: __init__.py:96
+msgid "You have successfully logged in!"
+msgstr ""
+
+#: __init__.py:100
+msgid "Wrong Credentials"
+msgstr ""
+
+#: __init__.py:127
+msgid "Registration was Successful. Please Log in."
+msgstr ""
+
+#: __init__.py:129
+msgid "Passwords do not match. Please try again."
+msgstr ""
+
+#: __init__.py:132
+msgid "Email address already exists."
+msgstr ""
+
+#: __init__.py:150
+msgid "Password changed successfully!"
+msgstr ""
+
+#: __init__.py:153
+msgid "Something went wrong. Try again"
+msgstr ""
+
+#: __init__.py:174
+msgid "Account details changed successfully!"
+msgstr ""
+
+#: __init__.py:177
+msgid "This email already exists. Try again"
+msgstr ""
+
+#: __init__.py:189
+msgid "Your account has been successfully deleted."
+msgstr ""
+
+#: __init__.py:195
+msgid "Logout to access this page!"
+msgstr ""
+
+#: __init__.py:212
+msgid "Your request has been submitted. Someone will contact you soon!"
+msgstr ""
+
+#: __init__.py:215
+msgid "No user found with these credentials"
+msgstr ""
+
 #: templates/account_details.html:23 templates/base.html:80
 msgid "Account Details"
 msgstr ""
 
-#: templates/account_details.html:26 templates/forgot_password.html:32
-#: templates/sign_up.html:43
+#: templates/account_details.html:26 templates/account_details.html:28
+#: templates/forgot_password.html:32 templates/forgot_password.html:34
+#: templates/sign_up.html:43 templates/sign_up.html:45
 msgid "First Name"
 msgstr ""
 
-#: templates/account_details.html:31 templates/forgot_password.html:37
-#: templates/sign_up.html:48
+#: templates/account_details.html:31 templates/account_details.html:33
+#: templates/forgot_password.html:37 templates/forgot_password.html:39
+#: templates/sign_up.html:48 templates/sign_up.html:50
 msgid "Last Name"
 msgstr ""
 
 #: templates/account_details.html:36 templates/forgot_password.html:42
 #: templates/hospitals.html:32 templates/sign_up.html:53
 msgid "Region"
+msgstr ""
+
+#: templates/account_details.html:38 templates/forgot_password.html:44
+#: templates/hospitals.html:34 templates/sign_up.html:54
+msgid "Select Region"
+msgstr ""
+
+#: templates/account_details.html:45 templates/forgot_password.html:29
+#: templates/log_in.html:45 templates/sign_up.html:62
+msgid "Email Address"
 msgstr ""
 
 #: templates/account_details.html:48
@@ -92,15 +168,15 @@ msgstr ""
 msgid "Fill the following form, to change your password"
 msgstr ""
 
-#: templates/change_password.html:27
+#: templates/change_password.html:27 templates/change_password.html:29
 msgid "Old Password"
 msgstr ""
 
-#: templates/change_password.html:33
+#: templates/change_password.html:33 templates/change_password.html:35
 msgid "New Password"
 msgstr ""
 
-#: templates/change_password.html:38
+#: templates/change_password.html:38 templates/change_password.html:40
 msgid "Confirm New Password"
 msgstr ""
 
@@ -117,15 +193,27 @@ msgid "Write to us:"
 msgstr ""
 
 #: templates/contact_us.html:50
-msgid "Your name *"
+msgid "Your name "
+msgstr ""
+
+#: templates/contact_us.html:56
+msgid "Name"
 msgstr ""
 
 #: templates/contact_us.html:65
-msgid "Your email *"
+msgid "Your email "
 msgstr ""
 
-#: templates/contact_us.html:78
-msgid "Please specify your need *"
+#: templates/contact_us.html:71
+msgid "Email"
+msgstr ""
+
+#: templates/contact_us.html:78 templates/contact_us.html:82
+msgid "Please specify your need"
+msgstr ""
+
+#: templates/contact_us.html:83
+msgid "Select Need"
 msgstr ""
 
 #: templates/contact_us.html:85
@@ -146,6 +234,10 @@ msgstr ""
 
 #: templates/contact_us.html:94
 msgid "Message"
+msgstr ""
+
+#: templates/contact_us.html:98
+msgid "Type your message here"
 msgstr ""
 
 #: templates/contact_us.html:103 templates/forgot_password.html:49
@@ -205,8 +297,8 @@ msgid ""
 "hospitals are:"
 msgstr ""
 
-#: templates/error.html:9
-msgid "Page Not Found."
+#: templates/error.html:2 templates/error.html:9
+msgid "Page Not Found"
 msgstr ""
 
 #: templates/error.html:10
@@ -214,7 +306,15 @@ msgid "What you were looking for is just not there."
 msgstr ""
 
 #: templates/error.html:11
-msgid "go somewhere nice"
+msgid "Go somewhere nice"
+msgstr ""
+
+#: templates/forgot_password.html:23
+msgid "Forgot Password"
+msgstr ""
+
+#: templates/forgot_password.html:24
+msgid "Fill the following details in order to submit a new password"
 msgstr ""
 
 #: templates/home.html:24
@@ -252,8 +352,24 @@ msgstr ""
 msgid "National Organization of Public Health"
 msgstr ""
 
+#: templates/home.html:102
+msgid "Previous"
+msgstr ""
+
+#: templates/home.html:106
+msgid "Next"
+msgstr ""
+
+#: templates/home.html:120
+msgid "Hospital Card Image"
+msgstr ""
+
 #: templates/home.html:127
 msgid "On this page, you can find more information about the hospitals in Greece."
+msgstr ""
+
+#: templates/home.html:136
+msgid "Covid-19 Card Image"
 msgstr ""
 
 #: templates/home.html:143
@@ -268,8 +384,16 @@ msgstr ""
 msgid "Hospital"
 msgstr ""
 
+#: templates/hospitals.html:42
+msgid "Select Hospital"
+msgstr ""
+
 #: templates/hospitals.html:48
 msgid "Department"
+msgstr ""
+
+#: templates/hospitals.html:50
+msgid "Select Department"
 msgstr ""
 
 #: templates/hospitals.html:57
@@ -292,7 +416,8 @@ msgstr ""
 msgid "or"
 msgstr ""
 
-#: templates/log_in.html:49 templates/sign_up.html:65
+#: templates/log_in.html:49 templates/log_in.html:51 templates/sign_up.html:65
+#: templates/sign_up.html:67
 msgid "Password"
 msgstr ""
 
@@ -308,17 +433,11 @@ msgstr ""
 msgid "Sign up with your social media account or email address"
 msgstr ""
 
-#: templates/sign_up.html:70
+#: templates/sign_up.html:70 templates/sign_up.html:72
 msgid "Confirm Password"
 msgstr ""
 
 #: templates/sign_up.html:75
 msgid "Sign up"
 msgstr ""
-
-#~ msgid "Please translate me, I am a message or some stuff!"
-#~ msgstr ""
-
-#~ msgid "My name is %(name)s."
-#~ msgstr ""
 

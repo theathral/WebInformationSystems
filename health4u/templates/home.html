@@ -58,7 +58,7 @@
         <!-- #Alert for Covid-19 -->
 
         <!-- Carousel -->
-        <div class="row mx-2 my-3 p-auto color-6-bg align-items-center">
+        <div class="row mx-2 my-3 p-auto main-color-bg align-items-center">
 
             <!-- Facebook plugin -->
             <div class="col-md-4 m-0 p-3">
@@ -99,11 +99,11 @@
 
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only">{{ gettext("Previous") }}</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only">{{ gettext("Next") }}</span>
                     </a>
                 </div>
 
@@ -117,7 +117,7 @@
 
             <a class="col-xs mx-auto my-3" href="{{ url_for('hospitals') }}">
                 <div class="card img-fluid">
-                    <img class="card-img-top" src="../static/images/img-card-hospitals.png" alt="Hospital Card Image">
+                    <img class="card-img-top" src="../static/images/img-card-hospitals.png" alt="{{ gettext("Hospital Card Image") }}">
                     <div class="card-img-overlay">
 
                         <div class="card-header card-title text-dark h5"><u>{{ gettext("Hospitals") }}</u></div>
@@ -133,7 +133,7 @@
 
             <a class="col-xs m-auto my-3" href="{{ url_for('covid19') }}">
                 <div class="card img-fluid ">
-                    <img class="card-img-top" src="../static/images/img-card-covid.png" alt="Covid-19 Card Image">
+                    <img class="card-img-top" src="../static/images/img-card-covid.png" alt="{{ gettext("Covid-19 Card Image") }}">
                     <div class="card-img-overlay">
 
                         <div class="card-header card-title text-white h5"><u>Covid-19</u></div>
