@@ -52,20 +52,12 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto h6 font-weight-normal">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-link-hover" href="#" role="button"
-                    data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                    <i class="fas fa-language"></i> {{ gettext("Language") }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-right main-color-bg">
-                    <a class="dropdown-item nav-link-hover text-white rgba-opacity" onclick="set_lang('el')">
-                        <img src="static/images/flag_gr_24.png"></img>
-                        Ελληνικά</a>
-                    <a class="dropdown-item nav-link-hover text-white rgba-opacity" onclick="set_lang('en')">
-                        <img src="static/images/flag_uk_24.png"></img>
-                        English</a>
-                </div>
-            </li>
+            <a class="nav-link nav-link-hover" id="greekFlag" onclick="set_lang('el')">
+                <img src="../static/images/flag_gr_24.png" alt="Change language to Greek"/>
+            </a>
+            <a class="nav-link nav-link-hover" id="englishFlag" onclick="set_lang('en')">
+                <img src="../static/images/flag_uk_24.png" alt="Change language to English"/>
+            </a>
             {% if not current_user.is_authenticated %}
                 <li id="signUpTile" class="nav-item {%- if request.endpoint == 'sign_up' %} active{% endif %}">
                     <a class="nav-link nav-link-hover" href="{{ url_for('sign_up') }}"><i class="fas fa-user-plus"></i>
@@ -146,6 +138,15 @@
 
     $(window).ready(function () {
 
+        // Language flag hide
+        if (document.cookie.split(";").some((item) => item.includes("lang=el")))
+            $("#greekFlag").hide();
+        else
+            $("#englishFlag").hide();
+        // #Language flag hide
+
+
+        // Database actions on window load
         if (window.location.pathname === "/hospitals") {
             add_options_region("regionFilter", "{{ current_user.region_id }}");
             add_options_hospital();
@@ -160,11 +161,13 @@
 
         } else if (window.location.pathname === "/forgot_password") {
             add_options_region("region_forgot");
+        } else {
+            // Nothing
         }
+        // #Database actions on window load
+
 
     })
-
-
 
 </script>
 
