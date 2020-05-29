@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-30 01:47+0300\n"
+"POT-Creation-Date: 2020-05-30 02:06+0300\n"
 "PO-Revision-Date: 2020-05-28 18:57+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -18,69 +18,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: __init__.py:67
+#: __init__.py:68
 msgid "Warning : No message included!"
 msgstr "Προσοχή : Δε συμπεριλάβατε κάποιο μήνυμα!"
 
-#: __init__.py:74
+#: __init__.py:75
 msgid "Message sent successfully!"
 msgstr "Το μήνυμά σας στάλθηκε επιτυχώς!"
 
-#: __init__.py:84 __init__.py:106
+#: __init__.py:85 __init__.py:107
 msgid "You are already logged in!"
 msgstr "Είστε ήδη συνδεδεμένος!"
 
-#: __init__.py:96
+#: __init__.py:97
 msgid "You have successfully logged in!"
 msgstr "Η σύνδεση έγινε με επιτυχία!"
 
-#: __init__.py:100
+#: __init__.py:101
 msgid "Wrong Credentials"
 msgstr "Εσφαλμένα στοιχεία"
 
-#: __init__.py:127
+#: __init__.py:128
 msgid "Registration was Successful. Please Log in."
 msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
 
-#: __init__.py:129
+#: __init__.py:130
 msgid "Passwords do not match. Please try again."
 msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
 
-#: __init__.py:132
+#: __init__.py:133
 msgid "Email address already exists."
 msgstr "Η διεύθυνση email υπάρχει ήδη."
 
-#: __init__.py:150
+#: __init__.py:151
 msgid "Password changed successfully!"
 msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
 
-#: __init__.py:153
+#: __init__.py:154
 msgid "Something went wrong. Try again"
 msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
 
-#: __init__.py:174
+#: __init__.py:175
 msgid "Account details changed successfully!"
 msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
 
-#: __init__.py:177
+#: __init__.py:178
 msgid "This email already exists. Try again"
 msgstr "Η διεύθυνση email υπάρχει ήδη. Προσπαθήστε ξανά."
 
-#: __init__.py:189
+#: __init__.py:190
 msgid "Your account has been successfully deleted."
 msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
 
-#: __init__.py:195
+#: __init__.py:196
 msgid "Logout to access this page!"
 msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
 
-#: __init__.py:212
+#: __init__.py:213
 msgid "Your request has been submitted. Someone will contact you soon!"
 msgstr ""
 "Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το "
 "συντομότερο δυνατό!"
 
-#: __init__.py:215
+#: __init__.py:216
 msgid "No user found with these credentials"
 msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
 
@@ -376,6 +376,18 @@ msgstr "Παγκόσμιος Οργανισμός Υγείας"
 #: templates/home.html:52
 msgid "National Organization of Public Health"
 msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
+
+#: templates/home.html:88
+msgid "Who Choose Health Image from Sustainable Development Goals"
+msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα από τα SGDs"
+
+#: templates/home.html:92
+msgid "Health Care Image"
+msgstr "Εικόνα για την υγεία"
+
+#: templates/home.html:96
+msgid "World Health Organization Image about Covid-19"
+msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα για την ασθένεια Covid-19"
 
 #: templates/home.html:102
 msgid "Previous"
