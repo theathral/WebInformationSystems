@@ -40,7 +40,9 @@ def create_app(test_config=None):
     @babel.localeselector
     def get_locale():
         translations = [str(translation) for translation in babel.list_translations()]
-        return request.accept_languages.best_match(translations)
+        if "lang" in request.cookies and request.cookies["lang"] in translations:
+            return request.cookies["lang"]
+        return request.accept_languages.best_match(translations, default="en")
 
     @app.route("/")
     @app.route("/home")

@@ -13,6 +13,10 @@ $(".back-to-top").on("click", function () {
 });
 // #Back to Top Button
 
+function set_lang(lang_code) {
+    document.cookie = "lang=" + lang_code;
+    location.reload();
+}
 
 // Checkbox for On Duty Changes
 $("#onDutyCheckbox").on("change", function onDutyChange() {
