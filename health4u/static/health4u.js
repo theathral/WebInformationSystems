@@ -8,7 +8,7 @@ $(window).scroll(function () {
 });
 
 $(".back-to-top").on("click", function () {
-    $("html, body").animate({scrollTop: 0}, 800);
+    $("html, body").animate({ scrollTop: 0 }, 800);
     return false;
 });
 // #Back to Top Button
@@ -126,13 +126,30 @@ function add_hospital_result(hos) {
 }
 
 function make_info(hos) {
+    let prepend_protocol = (url) => {
+        if (!url.match(/^[a-zA-Z]+:\/\//)) {
+            return 'http://' + url;
+        }
+        return url;
+    }
+    let make_field_value = (info_field, hos) => {
+        if (info_field.name === "telephone") {
+            return $("<a/>").attr("href", "tel:" + hos[info_field.name]).text(hos[info_field.name]);
+        } else if (info_field.name === "email") {
+            return $("<a/>").attr("href", "mailto:" + hos[info_field.name]).text(hos[info_field.name]);
+        } else if (info_field.name === "website") {
+            return $("<a/>").attr("href", prepend_protocol(hos[info_field.name])).text(hos[info_field.name]);
+        } else {
+            return hos[info_field.name];
+        }
+    };
     let info = $("<div/>").addClass(["contact-info-wrapper", "m-3", "overflow-auto"]);
     let info_fields = [
-        {name: "telephone", icon_class: "fa-phone-alt", pretext: "Telephone:"},
-        {name: "address", icon_class: "fa-map-marker-alt", pretext: "Address:"},
-        {name: "email", icon_class: "fa-envelope", pretext: "Email:"},
-        {name: "postcode", icon_class: "fa-map-pin", pretext: "Postcode:"},
-        {name: "website", icon_class: "fa-link", pretext: "Website:"}
+        { name: "telephone", icon_class: "fa-phone-alt", pretext: "Telephone:" },
+        { name: "address", icon_class: "fa-map-marker-alt", pretext: "Address:" },
+        { name: "email", icon_class: "fa-envelope", pretext: "Email:" },
+        { name: "postcode", icon_class: "fa-map-pin", pretext: "Postcode:" },
+        { name: "website", icon_class: "fa-link", pretext: "Website:" }
     ];
     info_fields.forEach(
         info_field => {
@@ -142,7 +159,7 @@ function make_info(hos) {
                         $("<i/>").addClass(["fas", info_field.icon_class, "fa-lg", "m-2"]),
                         info_field.pretext
                     ),
-                    $("<div/>").text(hos[info_field.name])
+                    $("<div/>").append(make_field_value(info_field, hos))
                 );
             }
         }
