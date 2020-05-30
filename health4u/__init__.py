@@ -217,7 +217,7 @@ def create_app(test_config=None):
                 flash(gettext("Successful request submit"), "success")
                 return redirect(url_for('home'))
             else:
-                flash(gettext('No user found with these credentials'), "danger")
+                flash(gettext("Wrong Credentials"), "danger")
                 return redirect(url_for("forgot_password"))
 
     @app.route('/logout')

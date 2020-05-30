@@ -21,53 +21,68 @@ msgstr ""
 ##### __init__.py #####
 
 #: def contact_us
-msgid "Empty message warning" #"Warning : No message included!"
-msgstr "Προσοχή : Δε συμπεριλάβατε κάποιο μήνυμα!"
+#"Warning : No message included!"
+msgid "Empty message warning"
+msgstr "Προσοχή: Δε συμπεριλάβατε κάποιο μήνυμα!"
 
-msgid "Successful Msg" #"Message sent successfully!"
+#"Message sent successfully!"
+msgid "Successful Msg"
 msgstr "Το μήνυμά σας στάλθηκε επιτυχώς!"
 
 #: def log_in & sign_up
-msgid "Already logged in" #"You are already logged in!"
+#"You are already logged in!"
+msgid "Already logged in"
 msgstr "Είστε ήδη συνδεδεμένος!"
 
-msgid "Successful log in" #"You have successfully logged in!"
+#"You have successfully logged in!"
+msgid "Successful log in"
 msgstr "Η σύνδεση έγινε με επιτυχία!"
 
-msgid "Wrong Credentials" #"No user found with these credentials"
+#"No user found with these credentials"
+msgid "Wrong Credentials"
 msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
 
-msgid "Successful registration" #"Registration was Successful. Please Log in."
+#"Registration was Successful. Please Log in."
+msgid "Successful registration"
 msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
 
-msgid "Not matched passwords" #"Passwords do not match. Please try again."
+#"Passwords do not match. Please try again."
+msgid "Not matched passwords"
 msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
 
-msgid "Existed email" #"Email address already exists."
+#"Email address already exists."
+msgid "Existed email"
 msgstr "Η διεύθυνση email υπάρχει ήδη."
 
 #: def change_password
-msgid "Successful password change" #"Password changed successfully!"
+#"Password changed successfully!"
+msgid "Successful password change"
 msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
 
-msgid "Something went wrong" #"Something went wrong. Try again"
+#"Something went wrong. Try again."
+msgid "Something went wrong"
 msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
 
 #: def account_details
-msgid "Successful details update" #"Account details changed successfully!"
+#"Account details changed successfully!"
+msgid "Successful details update"
 msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
 
     # msgid "Existed email" (above)
 
 #: def delete_account
-msgid "Successful account delete" #"Your account has been successfully deleted."
+#"Your account has been successfully deleted."
+msgid "Successful account delete"
 msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
 
 #: def forgot_password
-msgid "Logout to access page" #"Logout to access this page!"
-msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
+#"Logout to access this page!"
+msgid "Logout to access page"
+msgstr "Πρέπει να είστε αποσυνδεδεμένος για να"
+"έχετε πρόσβαση σε αυτήν την σελίδα!"
 
-msgid "Successful request submit" #"Your request has been submitted. Someone will contact you soon!"
+#"Your request has been submitted. Someone will contact you soon!"
+msgid "Successful request submit"
 msgstr "Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό!"
 
     # msgid "Wrong Credentials" (above)
@@ -87,10 +102,12 @@ msgstr "Covid-19"
 msgid "Contact Us"
 msgstr "Επικοινωνία"
 
-msgid "Lang to greek" #"Change language to greek"
+#"Change language to greek"
+msgid "Lang to greek"
 msgstr "Αλλαγή γλώσσας στα ελληνικά"
 
-msgid "Lang to english" #"Change language to english"
+#"Change language to english"
+msgid "Lang to english"
 msgstr "Αλλαγή γλώσσας στα αγγλικά"
 
 msgid "Sign Up"
@@ -111,10 +128,75 @@ msgstr "Αλλαγή Κωδικού"
 msgid "Logout"
 msgstr "Αποσύνδεση"
 
-msgid "Footer msg"
 #"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
 #"Styliani, Makris Ioannis"
+msgid "Footer msg"
 msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, Μακρή Ιωάννη"
+
+
+##### home.html #####
+
+#"Welcome!"
+msgid "Welcome"
+msgstr "Καλωσήρθατε!"
+
+#"Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers up to date information about <a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> as long as the outbreak is active."
+msgid "Welcome msg"
+msgstr "Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα μόνο  κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον <a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> όσο η πανδημία παραμένει σε έξαρση!"
+
+msgid "Covid-19 alert"
+msgstr "Προειδοποίηση για τον COVID-19"
+
+#"Stay at home if you feel unwell. If you have a fever, cough and\n"
+#"                    difficulty breathing, seek medical attention and call"
+#" in advance. Follow the directions of your\n"
+#"                    local health authority. Source:"
+msgid "Covid-19 alert msg"
+msgstr "Εαν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπική υγειονομικής αρχής. Πηγή: "
+
+#"World Health Organization"
+msgid "WHO"
+msgstr "Παγκόσμιος Οργανισμός Υγείας"
+
+msgid "National Organization of Public Health"
+msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
+
+#"Who Choose Health Image from Sustainable Development Goals"
+msgid "SDG img"
+msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα από τα SGDs"
+
+msgid "Health Care Image"
+msgstr "Εικόνα για την υγεία"
+
+#"World Health Organization Image about Covid-19"
+msgid "WHO img Covid-19"
+msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα για την ασθένεια Covid-19"
+
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+msgid "Next"
+msgstr "Επόμενο"
+
+msgid "Hospital Card Image"
+msgstr "Κάρτα/φωτογραφία σελίδας νοσοκομείων"
+
+#"On this page, you can find more information about the hospitals in Greece."
+msgid "Hospital card explanation"
+msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα νοσοκομεία της Ελλάδας."
+
+msgid "Covid-19 Card Image"
+msgstr "Κάρτα/φωτογραφία σελίδας Covid-19"
+
+#"On this page, you can find out more about Covid-19 disease."
+msgid "Covid-19 card explanation"
+msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την ασθένεια Covid-19"
+
+
+
+
+
+
 
 
 
@@ -171,8 +253,8 @@ msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννα
 #: __init__.py:216
 
 #: templates/account_details.html:23 templates/base.html:80
-msgid "Account Details"
-msgstr "Πληροφορίες Λογαριασμού"
+#msgid "Account Details"
+#msgstr "Πληροφορίες Λογαριασμού"
 
 #: templates/account_details.html:26 templates/account_details.html:28
 #: templates/forgot_password.html:32 templates/forgot_password.html:34
@@ -402,83 +484,36 @@ msgid "Fill the following details in order to submit a new password"
 msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούριο κωδικό"
 
 #: templates/home.html:24
-msgid "Welcome!"
-msgstr "Καλωσήρθατε!"
 
 #: templates/home.html:27
-msgid ""
-"Health4U brings all hospitals of Greece in your hands with only a couple "
-"of clicks and it delivers\n"
-"                up to date information about"
-msgstr ""
-"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα μόνο "
-"κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
 
 #: templates/home.html:29
-msgid "as long as the outbreak is active."
-msgstr " όσο η πανδημία παραμένει σε έξαρση!"
 
 #: templates/home.html:38
-msgid "COVID-19 alert"
-msgstr " Προειδοποίηση COVID-19"
 
 #: templates/home.html:42
-msgid ""
-"Stay at home if you feel unwell. If you have a fever, cough and\n"
-"                    difficulty breathing, seek medical attention and call"
-" in advance. Follow the directions of your\n"
-"                    local health authority. Source:"
-msgstr ""
-"Εαν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπική υγειονομικής "
-"αρχής. Πηγή:"
 
 #: templates/home.html:46
-msgid "World Health Organization"
-msgstr "Παγκόσμιος Οργανισμός Υγείας"
 
 #: templates/home.html:52
-msgid "National Organization of Public Health"
-msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
 
 #: templates/home.html:88
-msgid "Who Choose Health Image from Sustainable Development Goals"
-msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα από τα SGDs"
 
 #: templates/home.html:92
-msgid "Health Care Image"
-msgstr "Εικόνα για την υγεία"
 
 #: templates/home.html:96
-msgid "World Health Organization Image about Covid-19"
-msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα για την ασθένεια Covid-19"
 
 #: templates/home.html:102
-msgid "Previous"
-msgstr "Προηγούμενο"
 
 #: templates/home.html:106
-msgid "Next"
-msgstr "Επόμενο"
 
 #: templates/home.html:120
-msgid "Hospital Card Image"
-msgstr "Κάρτα/φωτογραφεία σελίδας νοσοκομείων"
 
 #: templates/home.html:127
-msgid "On this page, you can find more information about the hospitals in Greece."
-msgstr ""
-"Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα "
-"νοσοκομεία της Ελλάδας."
 
 #: templates/home.html:136
-msgid "Covid-19 Card Image"
-msgstr "Κάρτα/φωτογραφεία σελίδας Covid-19"
 
 #: templates/home.html:143
-msgid "On this page, you can find out more about Covid-19 disease."
-msgstr ""
-"Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την "
-"ασθένεια Covid-19"
 
 #: templates/hospitals.html:19
 msgid "Filters"
