@@ -245,7 +245,11 @@ function setHospitals(current_region) {
         .then(data => {
 
             document.getElementById("hospital-results").innerHTML = "";
-            Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
+
+            if (get_lang() === "el")
+                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
+            else
+                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(add_hospital_result);
 
             $("*.btn-collapse").on("click", function () {
                 $(this).toggleClass("collapsed");

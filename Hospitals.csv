@@ -1,150 +1,150 @@
-id;name;region_id;address;postcode;telephone;email;website
-1;Γενικό Νοσοκομείο ΠΑΠΑΓΕΩΡΓΙΟΥ;13;Περιφερειακή Οδός - Ν. Ευκαρπία;56403;2313323000;grampr@papageorgiou-hospital.gr;www.papageorgiou-hospital.gr
-2;Γενικό Νοσοκομείο Θεσσαλονίκης “ΓΕΩΡΓΙΟΣ ΠΑΠΑΝΙΚΟΛΑΟΥ”;13;Λεωφόρος Παπανικολάου, Πηλαία – Χορτιάτης;57010;2313307000;info.gpapanikolaou@n3.syzefxis.gov.gr;www.gpapanikolaou.gr
-3;Ψυχιατρικό Νοσοκομείο Θεσσαλονίκης;13;Λαγκαδά 196;56429;2313324100;info@psychothes.gr;www.psychothes.gr
-4;Γενικό Νοσοκομείο Θεσσαλονίκης “ΓΕΩΡΓΙΟΣ ΓΕΝΝΗΜΑΤΑΣ”;13;Εθνικής Αμύνης 41;54635;2313308100;info@gennimatas-thess.gr;www.gennimatas-thess.gr
-5;Γενικό Νοσοκομείο Θεσσαλονίκης “ΑΓΙΟΣ ΠΑΥΛΟΣ”;13;Λεωφόρος Εθνικής Αντιστάσεως 161, Καλαμαριά;55134;2313304400;info@agpavlos.gr;www.agpavlos.gr
-6;Γενικό Νοσοκομείο Θεσσαλονίκης “ΙΠΠΟΚΡΑΤΕΙΟ”;13;Κωνσταντινουπόλεως 49;54642;2310892000;info@ippokratio.gr;www.ippokratio.gr
-7;Γενικό Νοσοκομείο Θεσσαλονίκης “Ο ΑΓΙΟΣ ΔΗΜΗΤΡΙΟΣ”;13;Ελένης Ζωγράφου 2;54634;2313322100;agdim-plirof@3ype.gr;www.oagiosdimitrios.gr
-8;Πανεπιστημιακό Γενικό Νοσοκομείο Θεσσαλονίκης “ΑΧΕΠΑ”;13;Κυριακίδη 1;54621;2313303110;ahepahos@med.auth.gr;www.ahepahos.gr
-9;Γενικό Νοσοκομείο Κατερίνης;11;6ο χλμ Κατερίνης - Άρωνα Ν. Κεραμίδι;60100;2351350200;hoskat@otenet.gr;www.gnkaterini.gr
-10;Ψυχιατρικός Τομέας Γενικού Νοσοκομείου Κατερίνης;11;25ης Μαρτίου 102;60100;2351351800;gramatia@1228.syzefxis.gov.gr;www.psynpo.gr
-11;Γενικό Νοσοκομείο Ημαθίας - Μονάδα Βέροιας;8;Συνοικισμός Παπάγου;59100;2331351100;info1@verhospi.gr;www.verhospi.gr
-12;Γενικό Νοσοκομείο Ημαθίας – Μονάδα Νάουσας;8;Νοσοκομείου 3;59200;2332350100;grammateia@gnnaousas.gr;www.gnnaousas.gr
-13;Γενικό Νοσοκομείο Έδεσσας;10;Τέρμα Εγνατίας;58200;2381350100;info@gnedessas.eu;www.gnedessas.eu 
-14;Γενικό Νοσοκομείο Γιαννιτσών;10;Τέρμα Σεμερτζίδη;58100;2382350200;grman@gng.gr;www.gng.gr
-15;"Γενικό Νοσοκομείο Κοζάνης ""ΜΑΜΑΤΣΕΙΟ""";51;Κ. Μαματσίου 1;50100;2461352600;noskoz@mamatsio.gr;www.mamatsio.gr
-16;Γενικό Νοσοκομείο Πτολεμαΐδας “ΜΠΟΔΟΣΑΚΕΙΟ”;51;Θέση Κουρί;50200;2463351400;informatics1@mpodosakeio.gr;www.mpodosakeio.gr
-17;Γενικό Νοσοκομείο Καστοριάς;50;Μαυριωτίσσης 33;52100;2467350600;kastoriahospital@kastoriahospital.gr;www.kastoriahospital.gr
-18;Γενικό Νοσοκομείο Γρεβενών;49;Περιοχή Στρατοπέδου;51100;2462350100;admin@nosgrevenon.gr;www.nosgrevenon.gr
-19;"Γενικό Νοσοκομείο Φλώρινας ""Ελένη Θ. Δημητρίου""";48;Εγνατίας 9;53100;2385350100;admin@nosflorinas.gr;www.florinahosp.gr
-20;"Πανεπιστημιακό Γενικό Νοσοκομείο ""ΑΤΤΙΚΟΝ""";1;Ρίμινι 1, Χαιδάρι;12462;2105831000;dioikitis@attikonhospital.gr;www.attikonhospital.gr
-21;"Γενικό Νοσοκομείο Νίκαιας ""ΑΓΙΟΣ ΠΑΝΤΕΛΕΗΜΩΝ""";1;Μαντούβαλου 3, Νίκαια;18454;2132077000;gramdioik@nikaia-hosp.gr;www.nikaia-hosp.gr
-22;"Γενικό Νοσοκομείο Δυτικής Αττικής ""ΑΓΙΑ ΒΑΡΒΑΡΑ""";1;Δωδεκανήσου 1, Αγία Βαρβάρα;12351;2132072900;nosdytat@otenet.gr;www.nikaia-hosp.gr
-23;"Γενικό Νοσοκομείο Ελευσίνας ""ΘΡΙΑΣΙΟ""";1;Λ.Γ.Γεννηματά, Μαγούλα;19018;2132028000;gradi@thriassio-hosp.gr;www.thriassio-hosp.gr
-24;"Γενικό Νοσοκομείο Πειραιά ""ΤΖΑΝΕΙΟ""";1;Αφεντούλη & Τζανή;18536;2132081000;an_dioikitis@tzaneio.gr   ;www.tzaneio.gr
-25;"Ε.Α.Ν.Π. ""ΜΕΤΑΞΑ""";1;Μπόταση 51;18537;2132079100;secretary@metaxa-hospital.gr;www.metaxa-hospital.gr
-26;"Γενικό Νοσοκομείο Βούλας ""ΑΣΚΛΗΠΙΕΙΟ ΒΟΥΛΑΣ""";1;Βασ. Παύλου 1;16673;2132163560;gram.proedrou@asklepieio.gr;www.asklepieio.gr
-27;"Γενικό Νοσοκομείο-Κέντρο Υγείας Κυθήρων ""ΤΡΙΦΥΛΕΙΟ""";1;Ποταμός Κυθήρων;80200;27363033203;noskithi@otenet.gr;www.gnk.gov.gr
-28;Ψυχιατρικό Νοσοκομείο Αττικής “ΔΑΦΝΙ”;1;Λεωφόρο Αθηνών 374;12462;2132054000;secman@psyhat.gr;www.psyhat.gr
-29;"Ψυχιατρικό Νοσοκομείο Αττικής ""ΔΡΟΜΟΚΑΪΤΕΙΟ""";1;Ιερά Οδός 343;12461;2132046100;dromokat@otenet.gr;www.dromokaiteio.gr
-30;"Γενικό Νοσοκομείο Μυτιλήνης ""ΒΟΣΤΑΝΕΙΟ""";32;Ε. Βοστάνη 48;81100;2251057700;dir_bo@otenet.gr   ;www.vostanio.gr
-31;Γενικό Νοσοκομείο-Κέντρο Υγείας ΛΗΜΝΟΥ;32;Ηφαίστου 1, Μύρινα;81400;2254350400;limnoshospital@gmail.com;www.limnoshospital.gr
-32;"Γενικό Νοσοκομείο Σάμου ""ΑΓΙΟΣ ΠΑΝΤΕΛΕΗΜΩΝ""";33;Στρατηγού Κεφαλοπούλου 17;83100;2273083100;hospsam@otenet.gr;www.nosokomeiosamou.gr
-33;Γενικό Νοσοκομείο – Κέντρο Υγείας Ικαρίας;33;Άγιος Κήρυκας, Ικαρία;83300;2275350200;gni.ikarias@gmail.com;www.gnikarias.org
-34;"Γενικό Νοσοκομείο Χίου ""ΣΚΥΛΙΤΣΕΙΟ""";31;Έλενας Βενιζέλου 2;82100;2271350100;gr.manager@xioshosp.gr;www.xioshosp.gr
-35;"Γενικό Νοσοκομείο Ρόδου ""ΑΝΔΡΕΑΣ ΠΑΠΑΝΔΡΕΟΥ""";40;Χειμάρρας 65;85100;2241360000;dioikitis@rhodes-hospital.gr;www.rhodes-hospital.gr
-36;"Γενικό Νοσοκομείο-Κέντρο Υγείας Καλύμνου ""ΤΟ ΒΟΥΒΑΛΕΙΟ""";40;Ν. Ζερβού 22;85200;2243023017;noskal@kalymnos-hospital.gr;www.kalymnos-hospital.gr
-37;Γενικό Νοσοκομείο-Κέντρο Υγείας Κω;40;Ιπποκράτους 34;85300;2242054200;grammateia@kos-hospital.gr;www.ellinikifoni.gr/nosko.htm
-38;Κρατικό Θεραπευτήριο-Κέντρο Υγείας Λέρου;40;Βασιλίσσης Όλγας, Λακκί;85401;2247360100;info@leros-hospital.gr;www.leros-hospital.gr
-39;"Γενικό Νοσοκομείο Σύρου ""ΒΑΡΔΑΚΕΙΟ & ΠΡΩΪΟ""";39;Γ. Παπανδρέου 2;84100;2281360500;grammateia@vardakeio.gr;www.vardakeio.gr
-40;Γενικό Νοσοκομείο-Κέντρο Υγείας Νάξου;39;Χώρα Νάξου;84300;2285360500;nax-hosp@otenet.gr;www.naxoshospital.gr
-41;Πανεπιστημιακό Γενικό Νοσοκομείο Ηρακλείου;15;Διασταύρωση Βουτών - Σταυρακίων, Βούτες Ηρακλείου Κρήτης;71110;2813402111;dioikitis@pagni.gr;www.pagni.gr
-42;Γενικό Νοσοκομείο Ηρακλείου Βενιζέλειο-Πανάνειο;15;Λεωφόρος Κνωσσού, Ηράκλειο Κρήτης;71409;2813408000;info@venizeleio.gr;www.venizeleio.gr
-43;Γενικό Νοσοκομείο Αγίου Νικολάου;16;Κνωσσού 4, Άγιος Νικόλαος;72100;2841343000;info@agnhosp.gr;www.agnhosp.gr
-44;Γενικό Νοσοκομείο–Κέντρο Υγείας Ιεράπετρας;16;Καλημεράκη 6, Ιεράπετρα;72200;2842340222;info@ierapetrahospital.gr;www.ierapetrahospital.gr
-45;Γενικό Νοσοκομείο-Κέντρο Υγείας Σητείας;16;Καπετάν Γιάννη Παπαδάκη 3, Ξηροκαμάρες, Σητεία;72300;2843340200;ghsitia@ghsitia.gr;www.ghsitia.gr
-46;Γενικό Νοσοκομείο-Κέντρο Υγείας Νεαπόλεως;16;Γ. Διαλυνά 2;72400;2841340801;Grammateia@0529.syzefxis.gov.gr;www.dialynakeio.com
-47;Γενικό Νοσοκομείο Ρεθύμνου;17;Τρανταλίδου 17;74100;2831087100;rethymnohospital@gmail.com;www.rethymnohospital.gr
-48;Γενικό Νοσοκομείο Χανίων “Ο Άγιος Γεώργιος”;14;Μουρνιές, Χανιά;73300;2821342000;info@chaniahospital.gr;www.chaniahospital.gr
-49;ΠΕΔΥ Κέντρο Υγείας Αγίας Βαρβάρας;15;Αγίας Βαρβάρας;70003;2894340100;kyagiasvarvaras@hc-crete.gr;www.hc-crete.gr/ky-agiabarbara
-50;ΠΕΔΥ Κέντρο Υγείας Άνω Βιάννου;15;Άνω Βιάννος Βιάννου;70004;2895340000;kyanoviannou@hc-crete.gr;www.hc-crete.gr/ky-viannos
-51;ΠΕΔΥ Κέντρο Υγείας Αρκαλοχωρίου;15;Αρκαλοχώρι Μονοφατσίου;70300;2891340200;kyarkalohoriou@hc-crete.gr;www.hc-crete.gr/ky-arkaloxori
-52;ΠΕΔΥ Κέντρο Υγείας Καστελλίου;15;Καστέλι Πεδιάδος;70006;2891340000;Kykastelliou@hc-crete.gr;www.hc-crete.gr/ky-kastelli
-53;ΠΕΔΥ Κέντρο Υγείας Μοιρών;15;Μοίρες Καινουργίου;70400;2892340100;kymoires@hc-crete.gr;www.hc-crete.gr/ky-moires
-54;ΠΕΔΥ Κέντρο Υγείας Χάρακα;15;Χάρακας Μονοφατσίου;70010;2893340000;kycharakas@hc-crete.gr;www.hc-crete.gr/ky-charakas
-55;ΠΕΔΥ Κέντρο Υγείας Τζερμιάδου;16;Τζερμιάδο;72052;2844340000;kytzermiadou@hc-crete.gr;www.hc-crete.gr/ky-tzermiadon
-56;ΠΕΔΥ Κέντρο Υγείας Αγίας Φωτεινής;17;Αγία Φωτεινή Αμαρίου;74061;2833340000;kyagiasfoteinis@hc-crete.gr;www.hc-crete.gr/ky-agiafoteini
-57;ΠΕΔΥ Κέντρο Υγείας Ανωγείων;17;Ανώγεια Μυλοποτάμου;74051;2834031208;kyanogeion@hc-crete.gr;www.hc-crete.gr/ky-anogeia
-58;ΠΕΔΥ Κέντρο Υγείας Περάματος;17;Πέραμα Μυλοποτάμου;74052;2834340000;kyperamatos@hc-crete.gr;www.hc-crete.gr/ky-perama
-59;ΠΕΔΥ Κέντρο Υγείας Σπηλίου;17;Σπήλι Αγίου Βασιλείου;74053;2832340011;kyspiliou@hc-crete.gr;www.hc-crete.gr/ky-spili
-60;ΠΕΔΥ Κέντρο Υγείας Βάμου;14;Βάμος Αποκορώνου;73008;2825340401;kyvamou@hc-crete.gr;www.hc-crete.gr/ky-vamos
-61;ΠΕΔΥ Κέντρο Υγείας Κανδάνου;14;Κάνδανος Σελίνου;73004;2823340000;kykandanou@hc-crete.gr;www.hc-crete.gr/ky-kandanos
-62;ΠΕΔΥ Κέντρο Υγείας Κισσάμου;14;Καστέλλι Κισσάμου;73400;2822340100;kykissamou@hc-crete.gr;www.hc-crete.gr/ky-kissamos
-63;ΠΕΔΥ Μονάδα Υγείας Ηρακλείου;15;3ο χιλ. Εθνικής Οδού Ηρακλείου-Μοιρών, Εσταυρωμένος Ηρακλείου;71410;2810719100;pedyher@hc-crete.gr;www.kyher.gr
-64;ΠΕΔΥ Μονάδα Υγείας Ηρακλείου – Τοπική Μονάδα Υγείας Αλικαρνασσού;15;Βελισσαρίου & Αρκονήσου, Ν. Αλικαρνασσός Ηρακλείου;71500;2810246650;pedyalikar@hc-crete.gr;www.kyher.gr
-65;ΠΕΔΥ Μονάδα Υγείας Ρεθύμνου;17;Μοάτσου 19;74132;2831021723;pedyreth@hc-crete.gr;www.hc-crete.gr/υγεια/μοναδες-υγειας#tabs1-myreth
-66;ΠΕΔΥ Μονάδα Υγείας Χανίων;14;Λεωφόρος Κων/νου Καραμανλή 99;73100;28210-24660;pedychania@hc-crete.gr;www.hc-crete.gr/υγεια/μοναδες-υγειας#tabs1-mychan
-67;Γενικό Νοσοκομείο Αθηνών “ΕΥΑΓΓΕΛΙΣΜΟΣ”;1;Υψηλάντου 45-47;10675;2132041000;yppotili@evaggelismos-hosp.gr;www.evaggelismos-hosp.gr
-68;Γενικό Νοσοκομείο Αθηνών ΠΟΛΥΚΛΙΝΙΚΗ;1;Πειραιώς 3;10552;2132044000;protokollo@polykliniki.gr;www.polykliniki.gr
-69;Γενικό Νοσοκομείο Αθηνών Οφθαλμιατρείο;1;Ελ. Βενιζέλου 26;10672;2132052701;Gramm@ophthalmiatreio.gr;www.ophthalmiatreio.gr
-70;Γενικό Νοσοκομείο Αθηνών “ΙΠΠΟΚΡΑΤΕΙΟ”;1;Βασ.Σοφίας 114;11527;2132088000;gyp@hippocratio.gr;www.hippocratio.gr
-71;Γενικό Νοσοκομείο Αθηνών “ΛΑΪΚΟ”;1;Αγ. Θωμά 17;11527;2132060800;dioikisi@laiko.gr;www.laiko.gr
-72;Γενικό Νοσοκομείο Παίδων Αθηνών “ΑΓΙΑ ΣΟΦΙΑ”;1;Παπαδιαμαντοπούλου & Θηβών, Γουδί;11527;2132013000;info@paidon-agiasofia.gr;www.paidon-agiasofia.gr
-73;Γενικό Νοσοκομείο Παίδων Αθηνών “ΠΑΙΔΩΝ ΠΕΝΤΕΛΗΣ”;1;Ιπποκράτους 8, Π. Πεντέλη;15236;2132052200;dioikitis@paidon-pentelis.gr;www.paidon-pentelis.gr
-74;Γενικό Νοσοκομείο Παίδων Αθηνών “ΑΓΛΑΪΑ ΚΥΡΙΑΚΟΥ”;1;Θηβών & Λειβαδιάς, Γουδί;11527;2132009000;info@aglaiakyriakou.gr;www.aglaiakyriakou.gr
-75;Γενικό Νοσοκομείο Αθηνών “ΑΛΕΞΑΝΔΡΑ”;1;Βασ. Σοφίας 80;11528;2132162000;hospital@hosp-alexandra.gr;www.hosp-alexandra.gr
-76;Γενικό Νοσοκομείο Αθηνών “ΕΛΕΝΑ ΒΕΝΙΖΕΛΟΥ”;1;Πλ. Ελ. Βενιζέλου 2;11521;2132051000;it-dept@hospital-elena.gr;www.hospital-elena.gr
-77;Παθολογικό Νοσοκομείο Αθηνών Σπηλιοπούλειο “Η ΑΓΙΑ ΕΛΕΝΗ”;1;Δ. Σούτσου 21;11521;2132023400;grammateia.dioik@spiliopoulio.gr;www.spiliopoulio.gr
-78;Γενικό Νοσοκομείο Αττικής “ΚΑΤ”;1;Νίκης 2, Κηφισσιά;14561;2132086000;info@kat-hosp.gr;www.kat-hosp.gr
-79;Γενικό Νοσοκομείο Αττικής “ΕΘΝΙΚΟ ΙΔΡΥΜΑ ΑΝΑΠΗΡΩΝ (Εθνικό Κέντρο Αποκατάστασης)”;1;Σπ. Θεολόγου 1 & Χασιάς, 8η στάση, Ίλιον;13122;2132015110;eiaa@otenet.gr;www.ekahosp.wordpress.com
-80;Γενικό Νοσοκομείο Νέας Ιωνίας “ΚΩΝΣΤΑΝΤΟΠΟΥΛΕΙΟ”;1;Αγίας Όλγας 3-5, Ν. Ιωνία;14233;2132057000;dioikisi@konstantopouleio.gr;www.konstantopouleio.gr
-81;Γενικό Νοσοκομείο Πατησίων;1;Χαλκίδος 15-17;11143;2132056100;info@0289.syzefxis.gov.gr;www.gnpat.gr
-82;Γενικό Νοσοκομείο Αθηνών “Η ΠΑΜΜΑΚΑΡΙΣΤΟΣ”;1;Ιακωβάτων 43, Κ. Πατήσια;11144;2132042100;nosopam@otenet.gr;www.pammakaristos-hosp.gr
-83;Γενικό Νοσοκομείο Αθηνών “Γ. ΓΕΝΝΗΜΑΤΑΣ”;1;Μεσογείων 154, Χολαργός;11527;2132032000;info@gna-gennimatas.gr;www.gna-gennimatas.gr
-84;Γενικό Νοσοκομείο Νοσημάτων Θώρακος Αθηνών “Η ΣΩΤΗΡΙΑ”;1;Μεσογείων 152, Χολαργός;11527;2107763100;sotiria2@otenet.gr;www.sotiria.gr
-85;Γενικό Νοσοκομείο Αττικής “ΣΙΣΜΑΝΟΓΛΕΙΟ”;1;Σισμανογλείου 1, Μαρούσι;15126;2132058001;info@sismanoglio.gr;www.sismanoglio.gr
-86;Γενικό Νοσοκομείο Μελισσίων “ΑΜΑΛΙΑ ΦΛΕΜΙΓΚ”;1;25ης Μαρτίου 14, Μελίσσια;15127;2132003200;info@flemig-hospital.gr;www.flemig-hospital.gr
-87;Γενικό Νοσοκομείο Αθηνών “ΚΟΡΓΙΑΛΕΝΕΙΟ-ΜΠΕΝΑΚΕΙΟ”;1;Ερ. Σταυρού 1;11526;2132068000;ypostirixi_politi@0310.syzefxis.gov.gr;www.korgialenio-benakio.gr
-88;Γενικό Αντικαρκινικό Νοσοκομείο Αθηνών “ΑΓΙΟΣ ΣΑΒΒΑΣ”;1;Λ. Αλεξάνδρας 171;11522;2106409000;info@agsavvas-hosp.gr;www.agsavvas-hosp.gr
-89;Γενικό Ογκολογικό Νοσοκομείο Κηφισσιάς “ΟΙ ΑΓΙΟΙ ΑΝΑΡΓΥΡΟΙ”;1;Νουφαρων & Τίμιου Σταυρού, Κηφισσιά;14564;2103501500;desta@gonkhosp.gr;www.gonkhosp.gr
-90;Γενικό Νοσοκομείο Αθηνών “Η ΕΛΠΙΣ”;1;Δημητσανας 7, Αμπελόκηποι;11522;2132039000;director@elpis.gr;www.elpis.gr
-91;Νοσοκομείο Δερματικών & Αφροδισίων Νόσων Αθηνών “ΑΝΔΡΕΑΣ ΣΥΓΓΡΟΣ»;1;Δραγούμη 5;16121;2107265100;protokollo@syggros.gr;www.syggros-hospital.gr
-92;Κέντρο Υγεία Κορωπίου;1;Β. Κωνσταντίνου 7, Κορωπί;19400;2132030800;kykoropi@otenet.gr;
-93;Κέντρο Υγείας Μαρκοπούλου;1;Τέρμα Ευαγγελίστριας, Μαρκόπουλο;19003;2299320500;kymarkop@otenet.gr;
-94;Κέντρο Υγείας Λαυρίου;1;Ι. Ιακώβου Διαμαντόπουλου, Λαύριο;19500;2293020300;kylaurio@otenet.gr;
-95;Κέντρο Υγείας Ν. Μάκρης;1;Λ. Μαραθώνος και Αρτέμιδος, Ν. Μάκρη;19005;2294321100;nmak1@sismanoglio.gr;
-96;Κέντρο Υγείας Σπάτων;1;Περιφερειακός Σπ. Μπέκα και Πικερμίου 1, Σπάτα;19004;2132030900;;
-97;Κέντρο Υγείας Ραφήνας-Πικερμίου;1;Διασταύρωση Ραφήνα;19009;2294320039;;
-98;Κέντρο Υγείας Καπανδριτίου;1;Καπανδριτι;19014;2295052612;iatr-ky1@otenet.gr;
-99;Κέντρο Υγείας Καλυβίων;1;1ο χλμ. Λ. Καλυβίων – Αναβύσσου;19010;229904999;iatr_ke1@otenet.gr;
-100;Κέντρο Υγείας Βύρωνα;1;Κορυτσας 3;16231;2107608051;info@hcvyrona.gr;
-101;Περιφερειακό Ιατρείο Αυλώνος;1;Αυλώνας, Δήμος Ωρωπού;19011;2295041178;;
-102;Περιφερειακό Ιατρείο Καλάμου;1;Κάλαμος;19017;2295062275;;
-103;Περιφερειακό Ιατρείο Αφιδνών;1;Αφίδνες;19014;2295022600;;
-104;Περιφερειακό Ιατρείο Σκάλας Ωρωπού;1;Λεωφόρος Χαρκουτσίου Σκάλας Ωρωπού;19015;2295032260;;
-105;Περιφερειακό Ιατρείο Αναβύσσου;1;Μεγάλου Αλεξάνδρου (ΚΑΠΗ), Ανάβυσσος;19013;2231037119;;
-106;Επισκέψιμο Ιατρείο Παλαιάς Φώκαιας;1;Παλαιά Φώκαια;19013;2291038809;;
-107;Επισκέψιμο Ιατρείο Σαρωνίδας;1;Σαρωνίδα;19013;2291054891;;
-108;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Αγίου Δημητρίου;1;Πυλέως 3, Άγιος Δημήτριος;17341;2109734628;;
-109;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Αργυρούπολης;1;Κύπρου 68, Αργυρούπολη;16452;2109958947;;
-110;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Ηλιούπολης;1;Σπετσών 4, Ηλιούπολη;16345;2109921104;;
-111;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Νέας Σμύρνης;1;Εύξεινου Πόντου 147;17123;2109344550;;
-112;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Σουρμενών;1;Τριπόλεως 28;16777;2109618792;;
-113;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Μενιδίου;1;Αγίου Κωνσταντίνου 29;13674;2102463255;;
-114;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Μεταμόρφωσης;1;Κ. Βαρναλη 35;14452;2102810108;;
-115;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Καλλιθέας;1;Κρέμου Γεωργίου 110, Πλ. Δαβάκη;17676;2109560419;;
-116;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Πλ. Αμερικής;1;Φιντίου 19;11253;2108649208;;
-117;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Ζωγράφου;1;Κρίνων 24;15772;2107753145;;
-118;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Οικογένειας;1;Καρόλου 16;10437;2105222263;;
-119;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Παιδική Πολυκλινική Αθηνών;1;Καρόλου 16;10437;2105223775;;
-120;Κέντρο Υγείας Αίγινας;1;Μακρίνας Τζίκα;18010;2297022222;kentrotgeiasaegina@yahoo.gr ;
-121;Κέντρο Υγείας Αμοργού;39;Χώρα Αμοργού;84008;2285071207;amorgos@naxoshospital.gr;
-122;Κέντρο Υγείας Άνδρου;39;Χώρα Άνδρου;84500;2282360000;hc.andros@vardakeio.gr;
-123;Κέντρο Υγείας Άντισσας;32;Άντισσα Λέσβου;81103;2253350000;info@ky.antissas.gr;
-124;Κέντρο Υγείας Αρχαγγέλου;40;Αρχάγγελος;85102;2244022400;ky.arxaggelou@rhodes-hospital.gr;
-125;Κέντρο Υγείας Βάρης;1;Τριπτολέμου 22;16672;2132030300;hcvaris@0266.syzefxis.gov.gr;
-126;Κέντρο Υγείας Γαλατά;1;Γαλατάς Αττικής ;18020;2298320300;;
-127;Κέντρο Υγείας Ελευσίνας;1;Χ.Τρικούπη 43 & Ωκεανίδων;19200;2132006900;k.y.elefsinas@gmail.com;
-128;Κέντρο Υγείας Έμπωνα Ρόδου;40;Έμπωνας Ρόδου;85108;2246360000;grammateia@1649.syzefxis.gov.gr;
-129;Κέντρο Υγείας Ευδήλου;33;Ευδηλος;83302;2275033030;;
-130;Κέντρο Υγείας Θήρας;39;Φηρά - Θήρας Κυκλάδων ;84700;2286360300;hc.thira@vardakeio.gr;
-131;Κέντρο Υγείας Ίου;39;Ίος;84001;2286360000;hc.ios@vardakeio.gr;
-132;Κέντρο Υγείας Καλλόνης;32;Καλλονή;81107;2253022222;kykall@otenet.gr;
-133;Κέντρο Υγείας Καρλοβάσσου;33;Καρλόβασι Σάμου;83200;2273352000;grprosopikoukyk@gmail.com;
-134;Κέντρο Υγείας Καρπάθου;40;Πηγάδια, Κάρπαθος Δωδεκανήσου;85700;2245022228;dioik_kyk@yahoo.com;
-135;Κέντρο Υγείας Μεγάρων;1;Μέγαρα Αττικής ;19100;2296022222;megaraky@thriassio-hosp.gr;
-136;Κέντρο Υγείας Μήλου;1;Πλάκα;84800;2287360000;hc.milos@vardakeio.gr;
-137;Κέντρο Υγείας Μυκόνου;39;Αργύραινα;84600;2289360000;hc.mykonos@vardakeio.gr;
-138;Κέντρο Υγείας Πάρου;39;Παροικιά;84400;2284360000;hc.paros@vardakeio.gr;
-139;Κέντρο Υγείας Πάτμου;40;Πάτμος;85500;2247031211;k.y.patmou@yahoo.gr;
-140;Κέντρο Υγείας Περιστερίου;1;Χρήστου Λαδά 43 και Λάττα,  Περιστέρι;12132;2105748562;kyperisteriou@gmail.com;
-141;Κέντρο Υγείας Πλωμαρίου;32;Πλωμάρι Λέσβου;81200;2252032151;kentroygeiasplomarioy@yahoo.gr ;
-142;Κέντρο Υγείας Πολυχνίτου;32;Πολύχνιτος Λέσβου;83100;2252041111;kypolihnitou@gmail.com;
-143;Κέντρο Υγείας Πυργίου;31;Πυργί;82102;2271350107;kypyrgi@xios hosp.gr;
-144;Κέντρο Υγείας Σαλαμίνας;1;Λεωφόρος Φανερωμένης;18900;2132008500;ds.kys@0275.syzefxis.gov.gr;
-145;Κέντρο Υγείας Τήνου;39;Μάρκου Κρικέλη 10;84200;2283360000;hc.tinos@vardakeio.gr;
-146;Κέντρο Ψυχικής Υγείας Αγ. Αναργύρων;1;Ν. Πλαστήρα 123 & Δράμας;13562;2102621260;;
-147;Κέντρο Ψυχικής Υγείας Κορυδαλλού;1;Κων. Παλαιολόγου 3β - Κορυδαλλός (Πλατεία Μέμου);18120;2104944937;mhcntro@otenet.gr;
-148;Κέντρο Ψυχικής Υγείας Περιστερίου;1;Πλούτωνος 19 και Ηφαίστου 10;12135;2132027800;mhc.peristeri@yahoo.com;
-149;Κέντρο Ψυχικής Υγείας Σάμου;33;Πλατεία Γρ. Αυξεντίου, Βαθύ Σάμου;83100;2273080953;kpsysamos1@yahoo.gr;
+id;name;region_id;address;postcode;telephone;email;website;name_en
+1;"Γενικό Νοσοκομείο ""ΠΑΠΑΓΕΩΡΓΙΟΥ""";13;Περιφερειακή Οδός - Ν. Ευκαρπία;56403;2313323000;grampr@papageorgiou-hospital.gr;www.papageorgiou-hospital.gr;"General Hospital ""PAPAGEORGIOU"""
+2;Γενικό Νοσοκομείο Θεσσαλονίκης “ΓΕΩΡΓΙΟΣ ΠΑΠΑΝΙΚΟΛΑΟΥ”;13;Λεωφόρος Παπανικολάου, Πηλαία – Χορτιάτης;57010;2313307000;info.gpapanikolaou@n3.syzefxis.gov.gr;www.gpapanikolaou.gr;"General Hospital of Thessaloniki ""GEORGIOS PAPANIKOLAOU"""
+3;Ψυχιατρικό Νοσοκομείο Θεσσαλονίκης;13;Λαγκαδά 196;56429;2313324100;info@psychothes.gr;www.psychothes.gr;Psychiatric Institution of Thessaloniki
+4;Γενικό Νοσοκομείο Θεσσαλονίκης “ΓΕΩΡΓΙΟΣ ΓΕΝΝΗΜΑΤΑΣ”;13;Εθνικής Αμύνης 41;54635;2313308100;info@gennimatas-thess.gr;www.gennimatas-thess.gr;"General Hospital of Thessaloniki ""GEORGIOS GENNIMATAS"""
+5;Γενικό Νοσοκομείο Θεσσαλονίκης “ΑΓΙΟΣ ΠΑΥΛΟΣ”;13;Λεωφόρος Εθνικής Αντιστάσεως 161, Καλαμαριά;55134;2313304400;info@agpavlos.gr;www.agpavlos.gr;"General Hospital of Thessaloniki ""AGIOS PAVLOS"""
+6;Γενικό Νοσοκομείο Θεσσαλονίκης “ΙΠΠΟΚΡΑΤΕΙΟ”;13;Κωνσταντινουπόλεως 49;54642;2310892000;info@ippokratio.gr;www.ippokratio.gr;"General Hospital of Thessaloniki ""IPPOKRATIO"""
+7;Γενικό Νοσοκομείο Θεσσαλονίκης “Ο ΑΓΙΟΣ ΔΗΜΗΤΡΙΟΣ”;13;Ελένης Ζωγράφου 2;54634;2313322100;agdim-plirof@3ype.gr;www.oagiosdimitrios.gr;"General Hospital of Thessaloniki ""O AGIOS DIMITRIOS"""
+8;Πανεπιστημιακό Γενικό Νοσοκομείο Θεσσαλονίκης “ΑΧΕΠΑ”;13;Κυριακίδη 1;54621;2313303110;ahepahos@med.auth.gr;www.ahepahos.gr;"University Hospital of Thessaloniki ""AHEPA"""
+9;Γενικό Νοσοκομείο Κατερίνης;11;6ο χλμ Κατερίνης - Άρωνα Ν. Κεραμίδι;60100;2351350200;hoskat@otenet.gr;www.gnkaterini.gr;General Hospital of Katerini
+10;Ψυχιατρικός Τομέας Γενικού Νοσοκομείου Κατερίνης;11;25ης Μαρτίου 102;60100;2351351800;gramatia@1228.syzefxis.gov.gr;www.psynpo.gr;Psychiatric Department of General Hospital of Katerini
+11;Γενικό Νοσοκομείο Ημαθίας - Μονάδα Βέροιας;8;Συνοικισμός Παπάγου;59100;2331351100;info1@verhospi.gr;www.verhospi.gr;General Hospital of Veroia
+12;Γενικό Νοσοκομείο Ημαθίας – Μονάδα Νάουσας;8;Νοσοκομείου 3;59200;2332350100;grammateia@gnnaousas.gr;www.gnnaousas.gr;General Hospital of Naousa
+13;Γενικό Νοσοκομείο Έδεσσας;10;Τέρμα Εγνατίας;58200;2381350100;info@gnedessas.eu;www.gnedessas.eu;General Hospital of Edessa
+14;Γενικό Νοσοκομείο Γιαννιτσών;10;Τέρμα Σεμερτζίδη;58100;2382350200;grman@gng.gr;www.gng.gr;General Hospital of Giannitsa
+15;"Γενικό Νοσοκομείο Κοζάνης ""ΜΑΜΑΤΣΕΙΟ""";51;Κ. Μαματσίου 1;50100;2461352600;noskoz@mamatsio.gr;www.mamatsio.gr;"General Hospital of Kozani ""MAMATSIO"""
+16;Γενικό Νοσοκομείο Πτολεμαΐδας “ΜΠΟΔΟΣΑΚΕΙΟ”;51;Θέση Κουρί;50200;2463351400;informatics1@mpodosakeio.gr;www.mpodosakeio.gr;"General Hospital of Ptolemaida ""MPOSAKIO"""
+17;Γενικό Νοσοκομείο Καστοριάς;50;Μαυριωτίσσης 33;52100;2467350600;kastoriahospital@kastoriahospital.gr;www.kastoriahospital.gr;General Hospital of Katsoria
+18;Γενικό Νοσοκομείο Γρεβενών;49;Περιοχή Στρατοπέδου;51100;2462350100;admin@nosgrevenon.gr;www.nosgrevenon.gr;General Hospital of Grevena
+19;"Γενικό Νοσοκομείο Φλώρινας ""Ελένη Θ. Δημητρίου""";48;Εγνατίας 9;53100;2385350100;admin@nosflorinas.gr;www.florinahosp.gr;"General Hospital of Florina ""Eleni T. Dimitriou"""
+20;"Πανεπιστημιακό Γενικό Νοσοκομείο ""ΑΤΤΙΚΟΝ""";1;Ρίμινι 1, Χαιδάρι;12462;2105831000;dioikitis@attikonhospital.gr;www.attikonhospital.gr;"University Hospital ""ATTIKON"""
+21;"Γενικό Νοσοκομείο Νίκαιας ""ΑΓΙΟΣ ΠΑΝΤΕΛΕΗΜΩΝ""";1;Μαντούβαλου 3, Νίκαια;18454;2132077000;gramdioik@nikaia-hosp.gr;www.nikaia-hosp.gr;"General Hospital of Nikea ""AGIOS PANTELEIMON"""
+22;"Γενικό Νοσοκομείο Δυτικής Αττικής ""ΑΓΙΑ ΒΑΡΒΑΡΑ""";1;Δωδεκανήσου 1, Αγία Βαρβάρα;12351;2132072900;nosdytat@otenet.gr;www.nikaia-hosp.gr;"General Hospital of West Attiki ""AGIA VARVARA"""
+23;"Γενικό Νοσοκομείο Ελευσίνας ""ΘΡΙΑΣΙΟ""";1;Λ.Γ.Γεννηματά, Μαγούλα;19018;2132028000;gradi@thriassio-hosp.gr;www.thriassio-hosp.gr;"General Hospital of Elefsina ""THIASIO"""
+24;"Γενικό Νοσοκομείο Πειραιά ""ΤΖΑΝΕΙΟ""";1;Αφεντούλη & Τζανή;18536;2132081000;an_dioikitis@tzaneio.gr;www.tzaneio.gr;"General Hospital of Pirea ""TZANIO"""
+25;"Ε.Α.Ν.Π. ""ΜΕΤΑΞΑ""";1;Μπόταση 51;18537;2132079100;secretary@metaxa-hospital.gr;www.metaxa-hospital.gr;"General Hospital of Cancer Treatment of Pireas ""METAXA"""
+26;"Γενικό Νοσοκομείο Βούλας ""ΑΣΚΛΗΠΙΕΙΟ ΒΟΥΛΑΣ""";1;Βασ. Παύλου 1;16673;2132163560;gram.proedrou@asklepieio.gr;www.asklepieio.gr;"General Hospital of Voula ""ASKLIPIIO VOULAS"""
+27;"Γενικό Νοσοκομείο-Κέντρο Υγείας Κυθήρων ""ΤΡΙΦΥΛΕΙΟ""";1;Ποταμός Κυθήρων;80200;27363033203;noskithi@otenet.gr;www.gnk.gov.gr;"General Hospital of Kithira ""TRIFILIO"""
+28;Ψυχιατρικό Νοσοκομείο Αττικής “ΔΑΦΝΙ”;1;Λεωφόρο Αθηνών 374;12462;2132054000;secman@psyhat.gr;www.psyhat.gr;"Psychiatric Institution of Attiki ""DAFNI"""
+29;"Ψυχιατρικό Νοσοκομείο Αττικής ""ΔΡΟΜΟΚΑΪΤΕΙΟ""";1;Ιερά Οδός 343;12461;2132046100;dromokat@otenet.gr;www.dromokaiteio.gr;"Psychiatric Institution of Attiki ""DROMOKAITIO"""
+30;"Γενικό Νοσοκομείο Μυτιλήνης ""ΒΟΣΤΑΝΕΙΟ""";32;Ε. Βοστάνη 48;81100;2251057700;dir_bo@otenet.gr;www.vostanio.gr;"General Hospital of Mitilini ""VOSTANIO"""
+31;Γενικό Νοσοκομείο-Κέντρο Υγείας Λήμνου;32;Ηφαίστου 1, Μύρινα;81400;2254350400;limnoshospital@gmail.com;www.limnoshospital.gr;General Hospital of Limnos
+32;"Γενικό Νοσοκομείο Σάμου ""ΑΓΙΟΣ ΠΑΝΤΕΛΕΗΜΩΝ""";33;Στρατηγού Κεφαλοπούλου 17;83100;2273083100;hospsam@otenet.gr;www.nosokomeiosamou.gr;"General Hospital of Samos ""AGIOS PANTELEIMON"""
+33;Γενικό Νοσοκομείο – Κέντρο Υγείας Ικαρίας;33;Άγιος Κήρυκας, Ικαρία;83300;2275350200;gni.ikarias@gmail.com;www.gnikarias.org;General Hospital of Ikaria
+34;"Γενικό Νοσοκομείο Χίου ""ΣΚΥΛΙΤΣΕΙΟ""";31;Έλενας Βενιζέλου 2;82100;2271350100;gr.manager@xioshosp.gr;www.xioshosp.gr;"General Hospital of Chios ""SKILITSIO"""
+35;"Γενικό Νοσοκομείο Ρόδου ""ΑΝΔΡΕΑΣ ΠΑΠΑΝΔΡΕΟΥ""";40;Χειμάρρας 65;85100;2241360000;dioikitis@rhodes-hospital.gr;www.rhodes-hospital.gr;"General Hospital of Rodos ""ANDREAS PAPANDREOU"""
+36;"Γενικό Νοσοκομείο-Κέντρο Υγείας Καλύμνου ""ΤΟ ΒΟΥΒΑΛΕΙΟ""";40;Ν. Ζερβού 22;85200;2243023017;noskal@kalymnos-hospital.gr;www.kalymnos-hospital.gr;"General Hospital of Kalimnos ""TO VOUVALIO"""
+37;Γενικό Νοσοκομείο-Κέντρο Υγείας Κω;40;Ιπποκράτους 34;85300;2242054200;grammateia@kos-hospital.gr;www.ellinikifoni.gr/nosko.htm;General Hospital of Kos
+38;Κρατικό Θεραπευτήριο-Κέντρο Υγείας Λέρου;40;Βασιλίσσης Όλγας, Λακκί;85401;2247360100;info@leros-hospital.gr;www.leros-hospital.gr;Health Center of Leros
+39;"Γενικό Νοσοκομείο Σύρου ""ΒΑΡΔΑΚΕΙΟ & ΠΡΩΪΟ""";39;Γ. Παπανδρέου 2;84100;2281360500;grammateia@vardakeio.gr;www.vardakeio.gr;"General Hospital of Siros ""VARDAKIO & PROIO"""
+40;Γενικό Νοσοκομείο-Κέντρο Υγείας Νάξου;39;Χώρα Νάξου;84300;2285360500;nax-hosp@otenet.gr;www.naxoshospital.gr;General Hospital of Naxos
+41;Πανεπιστημιακό Γενικό Νοσοκομείο Ηρακλείου;15;Διασταύρωση Βουτών - Σταυρακίων, Βούτες Ηρακλείου Κρήτης;71110;2813402111;dioikitis@pagni.gr;www.pagni.gr;University Hospital of Iraklio
+42;"Γενικό Νοσοκομείο Ηρακλείου ""ΒΕΝΙΖΕΛΕΙΟ-ΠΑΝΑΝΕΙΟ""";15;Λεωφόρος Κνωσσού, Ηράκλειο Κρήτης;71409;2813408000;info@venizeleio.gr;www.venizeleio.gr;"General Hospital of Hraklio ""VENIZELIO-PANANIO"""
+43;Γενικό Νοσοκομείο Αγίου Νικολάου;16;Κνωσσού 4, Άγιος Νικόλαος;72100;2841343000;info@agnhosp.gr;www.agnhosp.gr;General Hospital of Agios Nikolaos
+44;Γενικό Νοσοκομείο–Κέντρο Υγείας Ιεράπετρας;16;Καλημεράκη 6, Ιεράπετρα;72200;2842340222;info@ierapetrahospital.gr;www.ierapetrahospital.gr;General Hospital of Ierapetra
+45;Γενικό Νοσοκομείο-Κέντρο Υγείας Σητείας;16;Καπετάν Γιάννη Παπαδάκη 3, Ξηροκαμάρες, Σητεία;72300;2843340200;ghsitia@ghsitia.gr;www.ghsitia.gr;General Hospital of Sitia
+46;Γενικό Νοσοκομείο-Κέντρο Υγείας Νεαπόλεως;16;Γ. Διαλυνά 2;72400;2841340801;Grammateia@0529.syzefxis.gov.gr;www.dialynakeio.com;General Hospital of Neapoli
+47;Γενικό Νοσοκομείο Ρεθύμνου;17;Τρανταλίδου 17;74100;2831087100;rethymnohospital@gmail.com;www.rethymnohospital.gr;General Hospital of Rethimno
+48;Γενικό Νοσοκομείο Χανίων “Ο ΑΓΙΟΣ ΓΕΩΡΓΙΟΣ”;14;Μουρνιές, Χανιά;73300;2821342000;info@chaniahospital.gr;www.chaniahospital.gr;"General Hospital of Chania ""O AGIOS GEORGIOS"""
+49;ΠΕΔΥ Κέντρο Υγείας Αγίας Βαρβάρας;15;Αγίας Βαρβάρας;70003;2894340100;kyagiasvarvaras@hc-crete.gr;www.hc-crete.gr/ky-agiabarbara;Health Center of Agia Varvara
+50;ΠΕΔΥ Κέντρο Υγείας Άνω Βιάννου;15;Άνω Βιάννος Βιάννου;70004;2895340000;kyanoviannou@hc-crete.gr;www.hc-crete.gr/ky-viannos;Health Center of Ano Viannos
+51;ΠΕΔΥ Κέντρο Υγείας Αρκαλοχωρίου;15;Αρκαλοχώρι Μονοφατσίου;70300;2891340200;kyarkalohoriou@hc-crete.gr;www.hc-crete.gr/ky-arkaloxori;Health Center of Arkalohori
+52;ΠΕΔΥ Κέντρο Υγείας Καστελλίου;15;Καστέλι Πεδιάδος;70006;2891340000;Kykastelliou@hc-crete.gr;www.hc-crete.gr/ky-kastelli;Health Center of Kastelio
+53;ΠΕΔΥ Κέντρο Υγείας Μοιρών;15;Μοίρες Καινουργίου;70400;2892340100;kymoires@hc-crete.gr;www.hc-crete.gr/ky-moires;Health Center of Mires
+54;ΠΕΔΥ Κέντρο Υγείας Χάρακα;15;Χάρακας Μονοφατσίου;70010;2893340000;kycharakas@hc-crete.gr;www.hc-crete.gr/ky-charakas;Health Center of Charakas
+55;ΠΕΔΥ Κέντρο Υγείας Τζερμιάδου;16;Τζερμιάδο;72052;2844340000;kytzermiadou@hc-crete.gr;www.hc-crete.gr/ky-tzermiadon;Health Center of Tzermiado
+56;ΠΕΔΥ Κέντρο Υγείας Αγίας Φωτεινής;17;Αγία Φωτεινή Αμαρίου;74061;2833340000;kyagiasfoteinis@hc-crete.gr;www.hc-crete.gr/ky-agiafoteini;Health Center of Agia Fotini
+57;ΠΕΔΥ Κέντρο Υγείας Ανωγείων;17;Ανώγεια Μυλοποτάμου;74051;2834031208;kyanogeion@hc-crete.gr;www.hc-crete.gr/ky-anogeia;Health Center of Anogia
+58;ΠΕΔΥ Κέντρο Υγείας Περάματος;17;Πέραμα Μυλοποτάμου;74052;2834340000;kyperamatos@hc-crete.gr;www.hc-crete.gr/ky-perama;Health Center of Perama
+59;ΠΕΔΥ Κέντρο Υγείας Σπηλίου;17;Σπήλι Αγίου Βασιλείου;74053;2832340011;kyspiliou@hc-crete.gr;www.hc-crete.gr/ky-spili;Health Center of Spili
+60;ΠΕΔΥ Κέντρο Υγείας Βάμου;14;Βάμος Αποκορώνου;73008;2825340401;kyvamou@hc-crete.gr;www.hc-crete.gr/ky-vamos;Health Center of Vamos
+61;ΠΕΔΥ Κέντρο Υγείας Κανδάνου;14;Κάνδανος Σελίνου;73004;2823340000;kykandanou@hc-crete.gr;www.hc-crete.gr/ky-kandanos;Health Center of Kandanos
+62;ΠΕΔΥ Κέντρο Υγείας Κισσάμου;14;Καστέλλι Κισσάμου;73400;2822340100;kykissamou@hc-crete.gr;www.hc-crete.gr/ky-kissamos;Health Center of Kissamos
+63;ΠΕΔΥ Μονάδα Υγείας Ηρακλείου;15;3ο χιλ. Εθνικής Οδού Ηρακλείου-Μοιρών, Εσταυρωμένος Ηρακλείου;71410;2810719100;pedyher@hc-crete.gr;www.kyher.gr;Health Center of Iraklio
+64;ΠΕΔΥ Μονάδα Υγείας Αλικαρνασσού;15;Βελισσαρίου & Αρκονήσου, Ν. Αλικαρνασσός Ηρακλείου;71500;2810246650;pedyalikar@hc-crete.gr;www.kyher.gr;Health Center of Alikarnassos
+65;ΠΕΔΥ Μονάδα Υγείας Ρεθύμνου;17;Μοάτσου 19;74132;2831021723;pedyreth@hc-crete.gr;www.hc-crete.gr/υγεια/μοναδες-υγειας#tabs1-myreth;Health Center of Rethimno
+66;ΠΕΔΥ Μονάδα Υγείας Χανίων;14;Λεωφόρος Κων/νου Καραμανλή 99;73100;28210-24660;pedychania@hc-crete.gr;www.hc-crete.gr/υγεια/μοναδες-υγειας#tabs1-mychan;Health Center of Chania
+67;Γενικό Νοσοκομείο Αθηνών “ΕΥΑΓΓΕΛΙΣΜΟΣ”;1;Υψηλάντου 45-47;10675;2132041000;yppotili@evaggelismos-hosp.gr;www.evaggelismos-hosp.gr;"General Hospital of Athens ""EUAGGELISMOS"""
+68;"Γενικό Νοσοκομείο Αθηνών ""ΠΟΛΥΚΛΙΝΙΚΗ""";1;Πειραιώς 3;10552;2132044000;protokollo@polykliniki.gr;www.polykliniki.gr;"General Hospital of Athens ""POLIKLINIKI"""
+69;Οφθαλμιατρίο Αθηνών;1;Ελ. Βενιζέλου 26;10672;2132052701;Gramm@ophthalmiatreio.gr;www.ophthalmiatreio.gr;Hospital of Ophthalmology of Athens
+70;Γενικό Νοσοκομείο Αθηνών “ΙΠΠΟΚΡΑΤΕΙΟ”;1;Βασ.Σοφίας 114;11527;2132088000;gyp@hippocratio.gr;www.hippocratio.gr;"General Hospital of Athens ""IPPOKRATIO"""
+71;Γενικό Νοσοκομείο Αθηνών “ΛΑΪΚΟ”;1;Αγ. Θωμά 17;11527;2132060800;dioikisi@laiko.gr;www.laiko.gr;"General Hospital of Athens ""LAIKO"""
+72;Γενικό Νοσοκομείο Παίδων Αθηνών “ΑΓΙΑ ΣΟΦΙΑ”;1;Παπαδιαμαντοπούλου & Θηβών, Γουδί;11527;2132013000;info@paidon-agiasofia.gr;www.paidon-agiasofia.gr;"General Hospital for Children of Athens ""AGIA SOFIA"""
+73;Γενικό Νοσοκομείο Παίδων Αθηνών “ΠΕΝΤΕΛΗΣ”;1;Ιπποκράτους 8, Π. Πεντέλη;15236;2132052200;dioikitis@paidon-pentelis.gr;www.paidon-pentelis.gr;"General Hospital for Children of Athens ""PANTELIS"""
+74;Γενικό Νοσοκομείο Παίδων Αθηνών “ΑΓΛΑΪΑ ΚΥΡΙΑΚΟΥ”;1;Θηβών & Λειβαδιάς, Γουδί;11527;2132009000;info@aglaiakyriakou.gr;www.aglaiakyriakou.gr;"General Hospital for Children of Athens ""AGLAIA KIRGIAKOU"""
+75;Γενικό Νοσοκομείο Αθηνών “ΑΛΕΞΑΝΔΡΑ”;1;Βασ. Σοφίας 80;11528;2132162000;hospital@hosp-alexandra.gr;www.hosp-alexandra.gr;"General Hospital of Athens ""ALEXANDRA"""
+76;Γενικό Νοσοκομείο Αθηνών “ΕΛΕΝΑ ΒΕΝΙΖΕΛΟΥ”;1;Πλ. Ελ. Βενιζέλου 2;11521;2132051000;it-dept@hospital-elena.gr;www.hospital-elena.gr;"General Hospital of Athens ""ELENA VENIZELOU"""
+77;Παθολογικό Νοσοκομείο Αθηνών Σπηλιοπούλειο “Η ΑΓΙΑ ΕΛΕΝΗ”;1;Δ. Σούτσου 21;11521;2132023400;grammateia.dioik@spiliopoulio.gr;www.spiliopoulio.gr;"Pathological Hospital of Athens ""I AGIA ELENI"""
+78;Γενικό Νοσοκομείο Αττικής “ΚΑΤ”;1;Νίκης 2, Κηφισσιά;14561;2132086000;info@kat-hosp.gr;www.kat-hosp.gr;"General Hospital of Attiki ""KAT"""
+79;Εθνικό Κέντρο Αποκατάστασης;1;Σπ. Θεολόγου 1 & Χασιάς, 8η στάση, Ίλιον;13122;2132015110;eiaa@otenet.gr;www.ekahosp.wordpress.com;National Center of Rehabilitation
+80;Γενικό Νοσοκομείο Νέας Ιωνίας “ΚΩΝΣΤΑΝΤΟΠΟΥΛΕΙΟ”;1;Αγίας Όλγας 3-5, Ν. Ιωνία;14233;2132057000;dioikisi@konstantopouleio.gr;www.konstantopouleio.gr;"General Hospital of Nea Ionia ""KONSTANTOPOULIO"""
+81;Γενικό Νοσοκομείο Πατησίων;1;Χαλκίδος 15-17;11143;2132056100;info@0289.syzefxis.gov.gr;www.gnpat.gr;General Hospital of Patisia
+82;Γενικό Νοσοκομείο Αθηνών “Η ΠΑΜΜΑΚΑΡΙΣΤΟΣ”;1;Ιακωβάτων 43, Κ. Πατήσια;11144;2132042100;nosopam@otenet.gr;www.pammakaristos-hosp.gr;"General Hospital of Athens ""I PAMMAKARISTOS"""
+83;Γενικό Νοσοκομείο Αθηνών “Γ. ΓΕΝΝΗΜΑΤΑΣ”;1;Μεσογείων 154, Χολαργός;11527;2132032000;info@gna-gennimatas.gr;www.gna-gennimatas.gr;"General Hospital of Athens ""G. GENNIMATAS"""
+84;Γενικό Νοσοκομείο Νοσημάτων Θώρακος Αθηνών “Η ΣΩΤΗΡΙΑ”;1;Μεσογείων 152, Χολαργός;11527;2107763100;sotiria2@otenet.gr;www.sotiria.gr;"General Thoracic Hospital ""H SOTIRIA"""
+85;Γενικό Νοσοκομείο Αττικής “ΣΙΣΜΑΝΟΓΛΕΙΟ”;1;Σισμανογλείου 1, Μαρούσι;15126;2132058001;info@sismanoglio.gr;www.sismanoglio.gr;"General Hospital of Attiki ""SISSMANOGLIO"""
+86;Γενικό Νοσοκομείο Μελισσίων “ΑΜΑΛΙΑ ΦΛΕΜΙΓΚ”;1;25ης Μαρτίου 14, Μελίσσια;15127;2132003200;info@flemig-hospital.gr;www.flemig-hospital.gr;"General Hospital of Melissia ""AMALIA FLEMING"""
+87;Γενικό Νοσοκομείο Αθηνών “ΚΟΡΓΙΑΛΕΝΕΙΟ-ΜΠΕΝΑΚΕΙΟ”;1;Ερ. Σταυρού 1;11526;2132068000;ypostirixi_politi@0310.syzefxis.gov.gr;www.korgialenio-benakio.gr;"General Hospital of Athens ""KORGIALENIO-MPENAKIO"""
+88;Γενικό Αντικαρκινικό Νοσοκομείο Αθηνών “ΑΓΙΟΣ ΣΑΒΒΑΣ”;1;Λ. Αλεξάνδρας 171;11522;2106409000;info@agsavvas-hosp.gr;www.agsavvas-hosp.gr;"General Hospital of Cancer Treatment of Athens ""AGIOS SAVVAS"""
+89;Γενικό Ογκολογικό Νοσοκομείο Κηφισσιάς “ΟΙ ΑΓΙΟΙ ΑΝΑΡΓΥΡΟΙ”;1;Νουφαρων & Τίμιου Σταυρού, Κηφισσιά;14564;2103501500;desta@gonkhosp.gr;www.gonkhosp.gr;"Hospital of Cancer Treatment of Kifissia ""I AGII ANAGRIRI"""
+90;Γενικό Νοσοκομείο Αθηνών “Η ΕΛΠΙΣ”;1;Δημητσανας 7, Αμπελόκηποι;11522;2132039000;director@elpis.gr;www.elpis.gr;"General Hospital of Athens ""I ELPIS"""
+91;Νοσοκομείο Δερματικών & Αφροδισίων Νόσων Αθηνών “ΑΝΔΡΕΑΣ ΣΥΓΓΡΟΣ»;1;Δραγούμη 5;16121;2107265100;protokollo@syggros.gr;www.syggros-hospital.gr;Hospital of Venereal and Skin Diseases
+92;Κέντρο Υγείας Κορωπίου;1;Β. Κωνσταντίνου 7, Κορωπί;19400;2132030800;kykoropi@otenet.gr;;Health Center of Koropi
+93;Κέντρο Υγείας Μαρκοπούλου;1;Τέρμα Ευαγγελίστριας, Μαρκόπουλο;19003;2299320500;kymarkop@otenet.gr;;Health Center of Markopoulo
+94;Κέντρο Υγείας Λαυρίου;1;Ι. Ιακώβου Διαμαντόπουλου, Λαύριο;19500;2293020300;kylaurio@otenet.gr;;Health Center of Lavrio
+95;Κέντρο Υγείας Ν. Μάκρης;1;Λ. Μαραθώνος και Αρτέμιδος, Ν. Μάκρη;19005;2294321100;nmak1@sismanoglio.gr;;Health Center of N. Makri
+96;Κέντρο Υγείας Σπάτων;1;Περιφερειακός Σπ. Μπέκα και Πικερμίου 1, Σπάτα;19004;2132030900;;;Health Center of Spata
+97;Κέντρο Υγείας Ραφήνας-Πικερμίου;1;Διασταύρωση Ραφήνα;19009;2294320039;;;Health Center of Rafina-Pikermi
+98;Κέντρο Υγείας Καπανδριτίου;1;Καπανδριτι;19014;2295052612;iatr-ky1@otenet.gr;;Health Center of Kapandriti
+99;Κέντρο Υγείας Καλυβίων;1;1ο χλμ. Λ. Καλυβίων – Αναβύσσου;19010;229904999;iatr_ke1@otenet.gr;;Health Center of Kalivia
+100;Κέντρο Υγείας Βύρωνα;1;Κορυτσας 3;16231;2107608051;info@hcvyrona.gr;;Health Center of Virona
+101;Περιφερειακό Ιατρείο Αυλώνος;1;Αυλώνας, Δήμος Ωρωπού;19011;2295041178;;;Health Center of Avlonas
+102;Περιφερειακό Ιατρείο Καλάμου;1;Κάλαμος;19017;2295062275;;;Health Center of Kalamos
+103;Περιφερειακό Ιατρείο Αφιδνών;1;Αφίδνες;19014;2295022600;;;Health Center of Afidnes
+104;Περιφερειακό Ιατρείο Σκάλας Ωρωπού;1;Λεωφόρος Χαρκουτσίου Σκάλας Ωρωπού;19015;2295032260;;;Health Center of Skala Oropou
+105;Περιφερειακό Ιατρείο Αναβύσσου;1;Μεγάλου Αλεξάνδρου (ΚΑΠΗ), Ανάβυσσος;19013;2231037119;;;Health Center of Anavissos
+106;Επισκέψιμο Ιατρείο Παλαιάς Φώκαιας;1;Παλαιά Φώκαια;19013;2291038809;;;Health Center of Palia Fokea
+107;Επισκέψιμο Ιατρείο Σαρωνίδας;1;Σαρωνίδα;19013;2291054891;;;Health Center of Saronida
+108;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Αγίου Δημητρίου;1;Πυλέως 3, Άγιος Δημήτριος;17341;2109734628;;;Health Center of Agios Dimitrios
+109;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Αργυρούπολης;1;Κύπρου 68, Αργυρούπολη;16452;2109958947;;;Health Center of Argyroupoli
+110;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Ηλιούπολης;1;Σπετσών 4, Ηλιούπολη;16345;2109921104;;;Health Center of Ilioupoli
+111;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Νέας Σμύρνης;1;Εύξεινου Πόντου 147;17123;2109344550;;;Health Center of Nea Smirni
+112;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Σουρμενών;1;Τριπόλεως 28;16777;2109618792;;;Health Center of Soumerna
+113;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Μενιδίου;1;Αγίου Κωνσταντίνου 29;13674;2102463255;;;Health Center of Menidi
+114;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Μεταμόρφωσης;1;Κ. Βαρναλη 35;14452;2102810108;;;Health Center of Metamorfosi
+115;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Καλλιθέας;1;Κρέμου Γεωργίου 110, Πλ. Δαβάκη;17676;2109560419;;;Health Center of Kalithea
+116;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Πλ. Αμερικής;1;Φιντίου 19;11253;2108649208;;;Health Center of Pl. Amerikis
+117;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Ζωγράφου;1;Κρίνων 24;15772;2107753145;;;Health Center of Zografou
+118;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Οικογένειας;1;Καρόλου 16;10437;2105222263;;;Health Center for Family Care
+119;Ιατρείο – Πρώην Ιατροκοινωνικό Κέντρο Παιδική Πολυκλινική Αθηνών;1;Καρόλου 16;10437;2105223775;;;Health Center for Children Care of Athens
+120;Κέντρο Υγείας Αίγινας;1;Μακρίνας Τζίκα;18010;2297022222;kentrotgeiasaegina@yahoo.gr;;Health Center of Eginas
+121;Κέντρο Υγείας Αμοργού;39;Χώρα Αμοργού;84008;2285071207;amorgos@naxoshospital.gr;;Health Center of Amorgos
+122;Κέντρο Υγείας Άνδρου;39;Χώρα Άνδρου;84500;2282360000;hc.andros@vardakeio.gr;;Health Center of Andros
+123;Κέντρο Υγείας Άντισσας;32;Άντισσα Λέσβου;81103;2253350000;info@ky.antissas.gr;;Health Center of Antissa
+124;Κέντρο Υγείας Αρχαγγέλου;40;Αρχάγγελος;85102;2244022400;ky.arxaggelou@rhodes-hospital.gr;;Health Center of Arhagelou
+125;Κέντρο Υγείας Βάρης;1;Τριπτολέμου 22;16672;2132030300;hcvaris@0266.syzefxis.gov.gr;;Health Center of Bari
+126;Κέντρο Υγείας Γαλατά;1;Γαλατάς Αττικής ;18020;2298320300;;;Health Center of Galatas
+127;Κέντρο Υγείας Ελευσίνας;1;Χ.Τρικούπη 43 & Ωκεανίδων;19200;2132006900;k.y.elefsinas@gmail.com;;Health Center of Elefsina
+128;Κέντρο Υγείας Έμπωνα Ρόδου;40;Έμπωνας Ρόδου;85108;2246360000;grammateia@1649.syzefxis.gov.gr;;Health Center of Empona, Rodos
+129;Κέντρο Υγείας Ευδήλου;33;Ευδηλος;83302;2275033030;;;Health Center of Efdilos
+130;Κέντρο Υγείας Θήρας;39;Φηρά - Θήρας Κυκλάδων ;84700;2286360300;hc.thira@vardakeio.gr;;Health Center of Thiras
+131;Κέντρο Υγείας Ίου;39;Ίος;84001;2286360000;hc.ios@vardakeio.gr;;Health Center of Ios
+132;Κέντρο Υγείας Καλλόνης;32;Καλλονή;81107;2253022222;kykall@otenet.gr;;Health Center of Kallonis
+133;Κέντρο Υγείας Καρλοβάσσου;33;Καρλόβασι Σάμου;83200;2273352000;grprosopikoukyk@gmail.com;;Health Center of Karlovassi
+134;Κέντρο Υγείας Καρπάθου;40;Πηγάδια, Κάρπαθος Δωδεκανήσου;85700;2245022228;dioik_kyk@yahoo.com;;Health Center of Karpathos
+135;Κέντρο Υγείας Μεγάρων;1;Μέγαρα Αττικής ;19100;2296022222;megaraky@thriassio-hosp.gr;;Health Center of Megara
+136;Κέντρο Υγείας Μήλου;1;Πλάκα;84800;2287360000;hc.milos@vardakeio.gr;;Health Center of Milos
+137;Κέντρο Υγείας Μυκόνου;39;Αργύραινα;84600;2289360000;hc.mykonos@vardakeio.gr;;Health Center of Mikonos
+138;Κέντρο Υγείας Πάρου;39;Παροικιά;84400;2284360000;hc.paros@vardakeio.gr;;Health Center of Paros
+139;Κέντρο Υγείας Πάτμου;40;Πάτμος;85500;2247031211;k.y.patmou@yahoo.gr;;Health Center of Patmos
+140;Κέντρο Υγείας Περιστερίου;1;Χρήστου Λαδά 43 και Λάττα,  Περιστέρι;12132;2105748562;kyperisteriou@gmail.com;;Health Center of Peristeri
+141;Κέντρο Υγείας Πλωμαρίου;32;Πλωμάρι Λέσβου;81200;2252032151;kentroygeiasplomarioy@yahoo.gr;;Health Center of Plomari
+142;Κέντρο Υγείας Πολυχνίτου;32;Πολύχνιτος Λέσβου;83100;2252041111;kypolihnitou@gmail.com;;Health Center of Polihniti
+143;Κέντρο Υγείας Πυργίου;31;Πυργί;82102;2271350107;kypyrgi@xios hosp.gr;;Health Center of Pirgos
+144;Κέντρο Υγείας Σαλαμίνας;1;Λεωφόρος Φανερωμένης;18900;2132008500;ds.kys@0275.syzefxis.gov.gr;;Health Center of Salamina
+145;Κέντρο Υγείας Τήνου;39;Μάρκου Κρικέλη 10;84200;2283360000;hc.tinos@vardakeio.gr;;Health Center of Tinos
+146;Κέντρο Ψυχικής Υγείας Αγ. Αναργύρων;1;Ν. Πλαστήρα 123 & Δράμας;13562;2102621260;;;Mental Health Center of Ag. Anrgiri
+147;Κέντρο Ψυχικής Υγείας Κορυδαλλού;1;Κων. Παλαιολόγου 3β - Κορυδαλλός (Πλατεία Μέμου);18120;2104944937;mhcntro@otenet.gr;;Mental Health Center of Koridalos
+148;Κέντρο Ψυχικής Υγείας Περιστερίου;1;Πλούτωνος 19 και Ηφαίστου 10;12135;2132027800;mhc.peristeri@yahoo.com;;Mental Health Center of Peristeri
+149;Κέντρο Ψυχικής Υγείας Σάμου;33;Πλατεία Γρ. Αυξεντίου, Βαθύ Σάμου;83100;2273080953;kpsysamos1@yahoo.gr;;Mental Health Center of Samos

@@ -32,6 +32,7 @@ class Hospital(db.Model):
     telephone = db.Column(db.String)
     email = db.Column(db.String)
     website = db.Column(db.String)
+    name_en = db.Column(db.String)
 
 
 class Department(db.Model):
