@@ -21,10 +21,7 @@ function set_lang(lang_code) {
 }
 
 function get_lang() {
-    if (document.cookie.split(";").some((item) => item.includes("lang=el")))
-        return "el";
-
-    return "en"
+    return $('html').attr('lang') || "en";
 }
 
 // #Set and get current language

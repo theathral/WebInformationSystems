@@ -45,19 +45,22 @@ def create_app(test_config=None):
             return request.cookies["lang"]
         return request.accept_languages.best_match(translations, default="en")
 
+    app.jinja_env.globals['get_locale'] = get_locale
+    app.jinja_env.globals['req_datetime'] = datetime.now()
+
     @app.route("/")
     @app.route("/home")
     def home():
-        return render_template("home.html", req_datetime=datetime.now())
+        return render_template("home.html")
 
     @app.route("/hospitals")
     def hospitals():
-        return render_template("hospitals.html", req_datetime=datetime.now())
+        return render_template("hospitals.html")
 
     @app.route("/contact_us", methods=['POST', 'GET'])
     def contact_us():
         if flask.request.method == 'GET':
-            return render_template("contact_us.html", req_datetime=datetime.now())
+            return render_template("contact_us.html")
         elif flask.request.method == 'POST':
             rname = request.form['contact-name']
             remail = request.form['contact-email']
@@ -77,7 +80,7 @@ def create_app(test_config=None):
 
     @app.route("/covid19")
     def covid19():
-        return render_template("covid19.html", req_datetime=datetime.now())
+        return render_template("covid19.html")
 
     @app.route("/log_in", methods=['POST', 'GET'])
     def log_in():
@@ -86,7 +89,7 @@ def create_app(test_config=None):
             return redirect(url_for('home'))
 
         if flask.request.method == 'GET':
-            return render_template("log_in.html", req_datetime=datetime.now())
+            return render_template("log_in.html")
         elif flask.request.method == 'POST':
             email = request.form['email']
             password = request.form['password']
@@ -108,7 +111,7 @@ def create_app(test_config=None):
             return redirect(url_for('home'))
 
         if flask.request.method == 'GET':
-            return render_template("sign_up.html", req_datetime=datetime.now())
+            return render_template("sign_up.html")
         elif flask.request.method == 'POST':
             first_name = request.form['first_name']
             last_name = request.form['last_name']
@@ -137,7 +140,7 @@ def create_app(test_config=None):
     @login_required
     def change_password():
         if flask.request.method == 'GET':
-            return render_template("change_password.html", req_datetime=datetime.now())
+            return render_template("change_password.html")
         elif flask.request.method == 'POST':
             password = request.form['old_password']
             new_password = request.form['new_password']
@@ -158,7 +161,7 @@ def create_app(test_config=None):
     @login_required
     def account_details():
         if flask.request.method == 'GET':
-            return render_template("account_details.html", req_datetime=datetime.now())
+            return render_template("account_details.html")
         elif flask.request.method == 'POST':
             email = request.form['email']
             existing_user = User.query.filter_by(email=email).first()
@@ -197,7 +200,7 @@ def create_app(test_config=None):
             return redirect(url_for('home'))
 
         if flask.request.method == 'GET':
-            return render_template("forgot_password.html", req_datetime=datetime.now())
+            return render_template("forgot_password.html")
         elif flask.request.method == 'POST':
             email = request.form['email']
             first_name = request.form['first_name']
