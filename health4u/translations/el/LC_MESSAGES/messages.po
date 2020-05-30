@@ -18,71 +18,115 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: __init__.py:68
-msgid "Warning : No message included!"
+##### __init__.py #####
+
+#: def contact_us
+msgid "Empty message warning" #"Warning : No message included!"
 msgstr "Προσοχή : Δε συμπεριλάβατε κάποιο μήνυμα!"
 
-#: __init__.py:75
-msgid "Message sent successfully!"
+msgid "Successful Msg" #"Message sent successfully!"
 msgstr "Το μήνυμά σας στάλθηκε επιτυχώς!"
 
-#: __init__.py:85 __init__.py:107
-msgid "You are already logged in!"
+#: def log_in & sign_up
+msgid "Already logged in" #"You are already logged in!"
 msgstr "Είστε ήδη συνδεδεμένος!"
 
-#: __init__.py:97
-msgid "You have successfully logged in!"
+msgid "Successful log in" #"You have successfully logged in!"
 msgstr "Η σύνδεση έγινε με επιτυχία!"
 
-#: __init__.py:101
-msgid "Wrong Credentials"
-msgstr "Εσφαλμένα στοιχεία"
+msgid "Wrong Credentials" #"No user found with these credentials"
+msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
 
-#: __init__.py:128
-msgid "Registration was Successful. Please Log in."
+msgid "Successful registration" #"Registration was Successful. Please Log in."
 msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
 
-#: __init__.py:130
-msgid "Passwords do not match. Please try again."
+msgid "Not matched passwords" #"Passwords do not match. Please try again."
 msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
 
-#: __init__.py:133
-msgid "Email address already exists."
+msgid "Existed email" #"Email address already exists."
 msgstr "Η διεύθυνση email υπάρχει ήδη."
 
-#: __init__.py:151
-msgid "Password changed successfully!"
+#: def change_password
+msgid "Successful password change" #"Password changed successfully!"
 msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
 
-#: __init__.py:154
-msgid "Something went wrong. Try again"
+msgid "Something went wrong" #"Something went wrong. Try again"
 msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
 
-#: __init__.py:175
-msgid "Account details changed successfully!"
+#: def account_details
+msgid "Successful details update" #"Account details changed successfully!"
 msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
 
-#: __init__.py:178
-msgid "This email already exists. Try again"
-msgstr "Η διεύθυνση email υπάρχει ήδη. Προσπαθήστε ξανά."
+    # msgid "Existed email" (above)
 
-#: __init__.py:190
-msgid "Your account has been successfully deleted."
+#: def delete_account
+msgid "Successful account delete" #"Your account has been successfully deleted."
 msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
 
-#: __init__.py:196
-msgid "Logout to access this page!"
+#: def forgot_password
+msgid "Logout to access page" #"Logout to access this page!"
 msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
 
+msgid "Successful request submit" #"Your request has been submitted. Someone will contact you soon!"
+msgstr "Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό!"
+
+    # msgid "Wrong Credentials" (above)
+
+
+
+
+
+
+
+
+
+#: base.html
+#: home.html
+#: hospital.html
+#: covid19.html
+#: contact_us.html
+#: sign_up.html
+#: log_in.html
+#: Forms (account_details.html, change_password.html, forgot_password.html)
+#: error.html
+
+
+
+
+
+
+
+#: __init__.py:68
+
+#: __init__.py:75
+
+#: __init__.py:85 __init__.py:107
+
+#: __init__.py:97
+
+#: __init__.py:101
+
+#: __init__.py:128
+
+#: __init__.py:130
+
+#: __init__.py:133
+
+#: __init__.py:151
+
+#: __init__.py:154
+
+#: __init__.py:175
+
+#: __init__.py:178
+
+#: __init__.py:190
+
+#: __init__.py:196
+
 #: __init__.py:213
-msgid "Your request has been submitted. Someone will contact you soon!"
-msgstr ""
-"Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το "
-"συντομότερο δυνατό!"
 
 #: __init__.py:216
-msgid "No user found with these credentials"
-msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
 
 #: templates/account_details.html:23 templates/base.html:80
 msgid "Account Details"

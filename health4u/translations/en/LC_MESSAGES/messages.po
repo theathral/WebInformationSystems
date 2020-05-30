@@ -18,6 +18,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
+#: __init__.py
+
+
+
+#: base.html
+#: home.html
+#: hospital.html
+#: covid19.html
+#: contact_us.html
+#: sign_up.html
+#: log_in.html
+#: Forms (account_details.html, change_password.html, forgot_password.html)
+#: error.html
+
+
+
+
+
+
+
 #: __init__.py:68
 msgid "Warning : No message included!"
 msgstr ""

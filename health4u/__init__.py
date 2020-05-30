@@ -2,10 +2,10 @@ from datetime import datetime
 
 import flask
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from flask_restful import Api
 from flask_babel import Babel
 from flask_babel import gettext
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
+from flask_restful import Api
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
@@ -17,7 +17,7 @@ def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
     app.app_context().push()
-    app.secret_key = 'gfdskjn@/r31ff@#%g45'
+    app.secret_key = "gfdskjn@/r31ff@#%g45"
 
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
@@ -27,7 +27,7 @@ def create_app(test_config=None):
         load_data()
 
     login_manager = LoginManager()
-    login_manager.login_view = 'log_in'
+    login_manager.login_view = "log_in"
     login_manager.login_message_category = "danger"
     login_manager.init_app(app)
 
@@ -38,6 +38,7 @@ def create_app(test_config=None):
     api.add_resource(FilterResource, "/filter", "/filter/")
 
     babel = Babel(app)
+
     @babel.localeselector
     def get_locale():
         translations = [str(translation) for translation in babel.list_translations()]
@@ -45,8 +46,8 @@ def create_app(test_config=None):
             return request.cookies["lang"]
         return request.accept_languages.best_match(translations, default="en")
 
-    app.jinja_env.globals['get_locale'] = get_locale
-    app.jinja_env.globals['req_datetime'] = datetime.now()
+    app.jinja_env.globals["get_locale"] = get_locale
+    app.jinja_env.globals["req_datetime"] = datetime.now()
 
     @app.route("/")
     @app.route("/home")
@@ -57,131 +58,131 @@ def create_app(test_config=None):
     def hospitals():
         return render_template("hospitals.html")
 
-    @app.route("/contact_us", methods=['POST', 'GET'])
+    @app.route("/contact_us", methods=["POST", "GET"])
     def contact_us():
-        if flask.request.method == 'GET':
+        if flask.request.method == "GET":
             return render_template("contact_us.html")
-        elif flask.request.method == 'POST':
-            rname = request.form['contact-name']
-            remail = request.form['contact-email']
-            rneed = request.form['contact-need']
-            rmessage = request.form['contact-message']
+        elif flask.request.method == "POST":
+            rname = request.form["contact-name"]
+            remail = request.form["contact-email"]
+            rneed = request.form["contact-need"]
+            rmessage = request.form["contact-message"]
 
             if rmessage == "":
-                flash(gettext('Warning : No message included!'), 'danger')
-                return redirect(url_for('contact_us'))
-            new_Req = Request(name=rname, email=remail, need=rneed, message=rmessage)
+                flash(gettext("Empty message warning"), "danger")
+                return redirect(url_for("contact_us"))
+            new_req = Request(name=rname, email=remail, need=rneed, message=rmessage)
 
-            db.session.add(new_Req)
+            db.session.add(new_req)
             db.session.commit()
 
-            flash(gettext('Message sent successfully!'), 'success')
-            return redirect(url_for('contact_us'))
+            flash(gettext("Successful Msg"), "success")
+            return redirect(url_for("contact_us"))
 
     @app.route("/covid19")
     def covid19():
         return render_template("covid19.html")
 
-    @app.route("/log_in", methods=['POST', 'GET'])
+    @app.route("/log_in", methods=["POST", "GET"])
     def log_in():
         if current_user.is_authenticated:
-            flash(gettext('You are already logged in!'), 'info')
-            return redirect(url_for('home'))
+            flash(gettext("Already logged in"), "info")
+            return redirect(url_for("home"))
 
-        if flask.request.method == 'GET':
+        if flask.request.method == "GET":
             return render_template("log_in.html")
-        elif flask.request.method == 'POST':
-            email = request.form['email']
-            password = request.form['password']
+        elif flask.request.method == "POST":
+            email = request.form["email"]
+            password = request.form["password"]
 
             temp_user = User.query.filter_by(email=email).first()
 
             if temp_user is not None and check_password_hash(temp_user.password, password):
-                flash(gettext('You have successfully logged in!'), 'success')
+                flash(gettext("Successful log in"), "success")
                 login_user(temp_user)
-                return redirect(url_for('home'))
+                return redirect(url_for("home"))
             else:
-                flash(gettext('Wrong Credentials'), 'danger')
-                return redirect(url_for('log_in'))
+                flash(gettext("Wrong Credentials"), "danger")
+                return redirect(url_for("log_in"))
 
-    @app.route("/sign_up", methods=['POST', 'GET'])
+    @app.route("/sign_up", methods=["POST", "GET"])
     def sign_up():
         if current_user.is_authenticated:
-            flash(gettext('You are already logged in!'), 'info')
-            return redirect(url_for('home'))
+            flash(gettext("Already logged in"), "info")
+            return redirect(url_for("home"))
 
-        if flask.request.method == 'GET':
+        if flask.request.method == "GET":
             return render_template("sign_up.html")
-        elif flask.request.method == 'POST':
-            first_name = request.form['first_name']
-            last_name = request.form['last_name']
-            region_id = request.form['region']
-            email = request.form['email']
-            password = request.form['password']
-            confirm = request.form['confirm-password']
+        elif flask.request.method == "POST":
+            first_name = request.form["first_name"]
+            last_name = request.form["last_name"]
+            region_id = request.form["region"]
+            email = request.form["email"]
+            password = request.form["password"]
+            confirm = request.form["confirm-password"]
 
             existing_user = User.query.filter_by(email=email).first()
 
             if existing_user is None:
                 if password == confirm:
                     new_user = User(first_name=first_name, last_name=last_name, region_id=int(region_id), email=email,
-                                    password=generate_password_hash(password, method='sha256'))
+                                    password=generate_password_hash(password, method="sha256"))
                     db.session.add(new_user)
                     db.session.commit()
-                    flash(gettext('Registration was Successful. Please Log in.'), 'success')
+                    flash(gettext("Successful registration"), "success")
                     return redirect(url_for('log_in'))
-                flash(gettext('Passwords do not match. Please try again.'), 'danger')
-                return redirect(url_for('sign_up'))
+                flash(gettext("Not matched passwords"), "danger")
+                return redirect(url_for("sign_up"))
 
-            flash(gettext('Email address already exists.'), 'danger')
-            return redirect(url_for('sign_up'))
+            flash(gettext("Existed email"), "danger")
+            return redirect(url_for("sign_up"))
 
-    @app.route("/change_password", methods=['POST', 'GET'])
+    @app.route("/change_password", methods=["POST", "GET"])
     @login_required
     def change_password():
-        if flask.request.method == 'GET':
+        if flask.request.method == "GET":
             return render_template("change_password.html")
-        elif flask.request.method == 'POST':
-            password = request.form['old_password']
-            new_password = request.form['new_password']
-            conf_new_pass = request.form['conf_new_password']
+        elif flask.request.method == "POST":
+            password = request.form["old_password"]
+            new_password = request.form["new_password"]
+            conf_new_pass = request.form["conf_new_password"]
 
             if check_password_hash(current_user.password, password) and new_password == conf_new_pass:
-                current_user.password = generate_password_hash(new_password, method='sha256')
+                current_user.password = generate_password_hash(new_password, method="sha256")
                 db.session.add(current_user)
                 db.session.commit()
 
-                flash(gettext('Password changed successfully!'), 'success')
+                flash(gettext("Successful password change"), "success")
                 return redirect(url_for('home'))
             else:
-                flash(gettext('Something went wrong. Try again'), 'danger')
-                return redirect(url_for('change_password'))
+                flash(gettext("Something went wrong"), "danger")
+                return redirect(url_for("change_password"))
 
-    @app.route("/account_details", methods=['POST', 'GET'])
+    @app.route("/account_details", methods=["POST", "GET"])
     @login_required
     def account_details():
-        if flask.request.method == 'GET':
+        if flask.request.method == "GET":
             return render_template("account_details.html")
-        elif flask.request.method == 'POST':
-            email = request.form['email']
+        elif flask.request.method == "POST":
+            email = request.form["email"]
             existing_user = User.query.filter_by(email=email).first()
 
             if existing_user is None or current_user.email == email:
-                current_user.first_name = request.form['first_name']
-                current_user.last_name = request.form['last_name']
-                current_user.region_id = request.form['region_account']
-                current_user.email = request.form['email']
+                current_user.first_name = request.form["first_name"]
+                current_user.last_name = request.form["last_name"]
+                current_user.region_id = request.form["region_account"]
+                current_user.email = request.form["email"]
 
                 db.session.add(current_user)
                 db.session.commit()
 
-                flash(gettext('Account details changed successfully!'), 'success')
+                flash(gettext("Successful details update"), 'success')
                 return redirect(url_for('home'))
             else:
-                flash(gettext('This email already exists. Try again'), 'danger')
-                return redirect(url_for('account_details'))
+                flash(gettext("Existed email"), "danger")
+                return redirect(url_for("account_details"))
 
-    @app.route("/deleteUser")
+    @app.route("/delete_account")
     @login_required
     def delete_account():
 
@@ -190,22 +191,22 @@ def create_app(test_config=None):
 
         logout_user()
 
-        flash(gettext('Your account has been successfully deleted.'), 'success')
-        return redirect(url_for('home'))
+        flash(gettext("Successful account delete"), "success")
+        return redirect(url_for("home"))
 
-    @app.route("/forgot_password", methods=['POST', 'GET'])
+    @app.route("/forgot_password", methods=["POST", "GET"])
     def forgot_password():
         if current_user.is_authenticated:
-            flash(gettext('Logout to access this page!'), 'info')
-            return redirect(url_for('home'))
+            flash(gettext("Logout to access page"), "info")
+            return redirect(url_for("home"))
 
-        if flask.request.method == 'GET':
+        if flask.request.method == "GET":
             return render_template("forgot_password.html")
-        elif flask.request.method == 'POST':
-            email = request.form['email']
-            first_name = request.form['first_name']
-            last_name = request.form['last_name']
-            region_id = request.form['region_forgot']
+        elif flask.request.method == "POST":
+            email = request.form["email"]
+            first_name = request.form["first_name"]
+            last_name = request.form["last_name"]
+            region_id = request.form["region_forgot"]
 
             temp_user = User.query.filter_by(email=email).first()
 
@@ -213,27 +214,27 @@ def create_app(test_config=None):
                 new_req = Request(email=temp_user.email, name=temp_user.last_name, need='-1', message='-1')
                 db.session.add(new_req)
                 db.session.commit()
-                flash(gettext('Your request has been submitted. Someone will contact you soon!'), 'success')
+                flash(gettext("Successful request submit"), "success")
                 return redirect(url_for('home'))
             else:
-                flash(gettext('No user found with these credentials'), 'danger')
-                return redirect(url_for('forgot_password'))
+                flash(gettext('No user found with these credentials'), "danger")
+                return redirect(url_for("forgot_password"))
 
     @app.route('/logout')
     @login_required
     def logout():
         logout_user()
-        return redirect(url_for('log_in'))
+        return redirect(url_for("log_in"))
 
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
 
-    # @app.errorhandler(Exception)
-    # def page_not_found(e):
-    #     return render_template('error.html'), 400
+    @app.errorhandler(Exception)
+    def page_not_found(e):
+        return render_template("error.html"), 400
 
-    # app.register_error_handler(400, page_not_found)
+    app.register_error_handler(400, page_not_found)
 
     return app
 

@@ -23,7 +23,6 @@ function set_lang(lang_code) {
 function get_lang() {
     return $('html').attr('lang') || "en";
 }
-
 // #Set and get current language
 
 
@@ -215,11 +214,11 @@ function make_info(hos) {
 
 function setHospitals(current_region) {
 
-    const region_id = $('#regionFilter').val().toString();
-    const hospital = $('#hospitalFilter').val().toString();
-    const department = $('#departmentFilter').val().toString();
-    const onDuty = $('#onDutyCheckbox').is(":checked");
-    const date = $('#dateFilter').val().toString();
+    const region_id = $("#regionFilter").val().toString();
+    const hospital = $("#hospitalFilter").val().toString();
+    const department = $("#departmentFilter").val().toString();
+    const onDuty = $("#onDutyCheckbox").is(":checked");
+    const date = $("#dateFilter").val().toString();
 
     let filterStr = ""
     if (region_id !== "") {
@@ -290,7 +289,7 @@ $("#deleteBtn").on("click", function () {
                     timerProgressBar: true,
                 }
             ).then(() => {
-                window.location = "/deleteUser"
+                window.location = "/delete_account"
             })
         } else {
             Swal.fire({
