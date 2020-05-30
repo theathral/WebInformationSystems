@@ -73,6 +73,48 @@ msgstr "Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα
     # msgid "Wrong Credentials" (above)
 
 
+##### base.html #####
+
+msgid "Home"
+msgstr "Αρχική"
+
+msgid "Hospitals"
+msgstr "Νοσοκομεία"
+
+msgid "Covid-19"
+msgstr "Covid-19"
+
+msgid "Contact Us"
+msgstr "Επικοινωνία"
+
+msgid "Lang to greek" #"Change language to greek"
+msgstr "Αλλαγή γλώσσας στα ελληνικά"
+
+msgid "Lang to english" #"Change language to english"
+msgstr "Αλλαγή γλώσσας στα αγγλικά"
+
+msgid "Sign Up"
+msgstr "Εγγραφή"
+
+msgid "Login"
+msgstr "Σύνδεση"
+
+msgid "Account"
+msgstr "Λογαριασμός"
+
+msgid "Account Details"
+msgstr "Πληροφορίες Λογαριασμού"
+
+msgid "Change Password"
+msgstr "Αλλαγή Κωδικού"
+
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+msgid "Footer msg"
+#"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
+#"Styliani, Makris Ioannis"
+msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, Μακρή Ιωάννη"
 
 
 
@@ -168,49 +210,26 @@ msgid "Delete Account"
 msgstr "Διαγραφή Λογαριασμού"
 
 #: templates/base.html:42
-msgid "Home"
-msgstr "Αρχική"
 
 #: templates/base.html:45 templates/home.html:123
-msgid "Hospitals"
-msgstr "Νοσοκομεία"
 
 #: templates/base.html:48
-msgid "Covid-19"
-msgstr "Covid-19"
 
 #: templates/base.html:51
-msgid "Contact Us"
-msgstr "Επικοινωνία"
 
 #: templates/base.html:64
-msgid "Sign Up"
-msgstr "Εγγραφή"
 
 #: templates/base.html:68
-msgid "Login"
-msgstr "Σύνδεση"
 
 #: templates/base.html:75
-msgid "Account"
-msgstr "Λογαριασμός"
 
 #: templates/base.html:83 templates/change_password.html:23
 #: templates/change_password.html:43
-msgid "Change Password"
-msgstr "Αλλαγή Κωδικού"
 
 #: templates/base.html:86
-msgid "Logout"
-msgstr "Αποσύνδεση"
 
 #: templates/base.html:102
-msgid ""
-"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
-"Styliani, Makris Ioannis"
-msgstr ""
-"Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, "
-"Μακρή Ιωάννη"
+
 
 #: templates/change_password.html:24
 msgid "Fill the following form, to change your password"
