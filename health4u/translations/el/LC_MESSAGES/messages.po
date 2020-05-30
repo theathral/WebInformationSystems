@@ -228,7 +228,7 @@ msgid "On duty checkbox"
 msgstr "Εφημερεύον"
 
 #"Date"
-msgid "Date picker"
+msgid "Datepicker title"
 msgstr "Ημερομηνία"
 
 
@@ -321,7 +321,7 @@ msgstr "Λόγος αποστολής μηνύματος"
 
 #"Select Need"
 msgid "Specify need placeholder"
-msgstr "Επιλογής κατηγορίας μηνύματος"
+msgstr "Επιλογής Κατηγορίας Μηνύματος"
 
 #"Functionalities Addition"
 msgid "Functionalities Addition option"
