@@ -183,7 +183,7 @@ msgstr "Κάρτα/φωτογραφία σελίδας νοσοκομείων"
 
 #"On this page, you can find more information about the hospitals in Greece."
 msgid "Hospital card explanation"
-msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα νοσοκομεία της Ελλάδας."
+msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα νοσοκομεία της Ελλάδος."
 
 msgid "Covid-19 Card Image"
 msgstr "Κάρτα/φωτογραφία σελίδας Covid-19"
@@ -191,6 +191,45 @@ msgstr "Κάρτα/φωτογραφία σελίδας Covid-19"
 #"On this page, you can find out more about Covid-19 disease."
 msgid "Covid-19 card explanation"
 msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την ασθένεια Covid-19"
+
+
+##### hospital.html #####
+
+#"Filters"
+msgid "Filter tab"
+msgstr "Φίλτρα"
+
+#"Region"
+msgid "Region filter"
+msgstr "Νομός"
+
+#"Select Region"
+msgid "Region filter placeholder"
+msgstr "Επιλογή Νομού"
+
+#"Hospital"
+msgid "Hospital filter"
+msgstr "Νοσοκομείο"
+
+#"Select Hospital"
+msgid "Hospital filter placeholder"
+msgstr "Επιλογή Νοσοκομείου"
+
+#"Clinic"
+msgid "Clinic filter"
+msgstr "Κλινική"
+
+#"Seloct Clinic"
+msgid "Clinic filter placeholder"
+msgstr "Επιλογή Κλινικής"
+
+#"On duty"
+msgid "On duty checkbox"
+msgstr "Εφημερεύον"
+
+#"Date"
+msgid "Date picker"
+msgstr "Ημερομηνία"
 
 
 
@@ -516,32 +555,18 @@ msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορ
 #: templates/home.html:143
 
 #: templates/hospitals.html:19
-msgid "Filters"
-msgstr "Φίλτρα"
 
 #: templates/hospitals.html:40
-msgid "Hospital"
-msgstr "Νοσοκομείο"
 
 #: templates/hospitals.html:42
-msgid "Select Hospital"
-msgstr "Επιλογή Νοσοκομείου"
 
 #: templates/hospitals.html:48
-msgid "Department"
-msgstr "Τμήμα"
 
 #: templates/hospitals.html:50
-msgid "Select Department"
-msgstr "Επιλογή Τμήματος"
 
 #: templates/hospitals.html:57
-msgid "On duty"
-msgstr "Εφημερεύον"
 
 #: templates/hospitals.html:60
-msgid "Date"
-msgstr "Ημερομηνία"
 
 #: templates/log_in.html:21 templates/log_in.html:54
 msgid "Sign in"
