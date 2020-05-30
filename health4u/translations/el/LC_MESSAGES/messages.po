@@ -362,6 +362,90 @@ msgstr "Δευ - Παρ"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##### error.html #####
+
+#"Page Not Found"
+msgid "Page not found title"
+msgstr "Η σελίδα δε βρέθηκε"
+
+#"What you were looking for is just not there."
+msgid "Page not found text"
+msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
+
+#"Go somewhere nice"
+msgid "Page not found link"
+msgstr "Μεταφερθείτε κάπου όμορφα"
+
+
+
 #: base.html
 #: home.html
 #: hospital.html
@@ -536,16 +620,10 @@ msgstr "Επιβεβαίωση νέου κωδικού"
 #: templates/covid19.html:48
 
 #: templates/error.html:2 templates/error.html:9
-msgid "Page Not Found"
-msgstr "Η σελίδα δε βρέθηκε"
 
 #: templates/error.html:10
-msgid "What you were looking for is just not there."
-msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
 
 #: templates/error.html:11
-msgid "Go somewhere nice"
-msgstr "Μεταφερθείτε κάπου όμορφα"
 
 #: templates/forgot_password.html:23
 msgid "Forgot Password"
