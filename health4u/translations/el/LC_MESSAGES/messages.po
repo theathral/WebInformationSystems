@@ -287,6 +287,78 @@ msgstr ""
 ############################# hospital names
 
 
+##### contact_us.html #####
+
+    # "Contact us" (above)
+
+#"Please use the contact form below."
+msgid "Contact us subtitle"
+msgstr "Μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας την παρακάτω φόρμα."
+
+#"Write to us:"
+msgid "Contact us form title"
+msgstr "Στείλτε μας μήνυμα: "
+
+#"Your name "
+msgid "Name title"
+msgstr "Όνομα"
+
+#"Name"
+msgid "Name placeholder"
+msgstr "Όνομα"
+
+#"Your email"
+msgid "Email title"
+msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομίου"
+
+#"Email"
+msgid "Email placeholder"
+msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομίου"
+
+#"Please specify your need"
+msgid "Specify need title"
+msgstr "Λόγος αποστολής μηνύματος"
+
+#"Select Need"
+msgid "Specify need placeholder"
+msgstr "Επιλογής κατηγορίας μηνύματος"
+
+#"Functionalities Addition"
+msgid "Functionalities Addition option"
+msgstr "Προσθήκη Λειτουργιών"
+
+#"Report a Problem"
+msgid "Report a Problem option"
+msgstr "Αναφορά Προβλήματος"
+
+#"Out of Date Data"
+msgid "Out of Date Data option"
+msgstr "Μη ενημερωμένα δεδομένα"
+
+#"Other"
+msgid "Other option"
+msgstr "Άλλο"
+
+#"Message"
+msgid "Message title"
+msgstr "Μήνυμα"
+
+#"Type your message here"
+msgid "Message text"
+msgstr "Πληκτρολογήστε το μήνυμά σας εδώ"
+
+#"Submit"
+msgid "Submit button"
+msgstr "Υποβολή"
+
+#Thessaloniki,<br>Greece
+msgid "Website address"
+msgstr "Θεσσαλονίκη,<br>Ελλάδα"
+
+#"Mon - Fri"
+msgid "Open days"
+msgstr "Δευ - Παρ"
+
 
 
 
@@ -416,80 +488,42 @@ msgid "Confirm New Password"
 msgstr "Επιβεβαίωση νέου κωδικού"
 
 #: templates/contact_us.html:17
-msgid "Contact us"
-msgstr "Επικοινωνία"
 
 #: templates/contact_us.html:20
-msgid "Please use the contact form below."
-msgstr "Μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας την παρακάτω φόρμα."
 
 #: templates/contact_us.html:43
-msgid "Write to us:"
-msgstr "Στείλτε μας μήνυμα: "
 
 #: templates/contact_us.html:50
-msgid "Your name "
-msgstr "Όνομα"
 
 #: templates/contact_us.html:56
-msgid "Name"
-msgstr "Όνομα"
 
 #: templates/contact_us.html:65
-msgid "Your email "
-msgstr "Email"
 
 #: templates/contact_us.html:71
-msgid "Email"
-msgstr "Email"
 
 #: templates/contact_us.html:78 templates/contact_us.html:82
-msgid "Please specify your need"
-msgstr "Λόγος αποστολής μηνύματος"
 
 #: templates/contact_us.html:83
-msgid "Select Need"
-msgstr "Επιλογής κατηγορίας μηνύματος"
 
 #: templates/contact_us.html:85
-msgid "Functionalities Addition"
-msgstr "Προσθήκη Λειτουργιών"
 
 #: templates/contact_us.html:86
-msgid "Report a Problem"
-msgstr "Αναφορά Προβλήματος"
 
 #: templates/contact_us.html:87
-msgid "Out of Date Data"
-msgstr "Μη ενημερωμένα δεδομένα"
 
 #: templates/contact_us.html:88
-msgid "Other"
-msgstr "Άλλο"
 
 #: templates/contact_us.html:94
-msgid "Message"
-msgstr "Μήνυμα"
 
 #: templates/contact_us.html:98
-msgid "Type your message here"
-msgstr "Πληκτρολογήστε το μήνυμά σας εδώ"
 
 #: templates/contact_us.html:103 templates/forgot_password.html:49
-msgid "Submit"
-msgstr "Υποβολή"
 
 #: templates/contact_us.html:121
-msgid "Thessaloniki"
-msgstr "Θεσσαλονίκη"
 
 #: templates/contact_us.html:122
-msgid "Greece"
-msgstr "Ελλάδα"
 
 #: templates/contact_us.html:131
-msgid "Mon - Fri"
-msgstr "Δευ - Παρ"
 
 #: templates/covid19.html:12
 
