@@ -232,12 +232,59 @@ msgid "Date picker"
 msgstr "Ημερομηνία"
 
 
+##### covid19.html #####
 
+#"Map"
+msgid "Map tab"
+msgstr "Χάρτης"
 
+#"Information"
+msgid "Information tab"
+msgstr "Πληροφορίες"
 
+#"About the COVID-19 disease"
+msgid "About Covid-19 title"
+msgstr "Σχετικά με τον COVID-19"
 
+#"Coronavirus disease 2019 (COVID-19) is an infectious disease caused by "
+#"severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The disease "
+#"was first identified in December 2019 in Wuhan, the capital of China's "
+#"Hubei province, and has since spread globally, resulting in the ongoing "
+#"2019–20 coronavirus pandemic. Common symptoms include fever, cough and "
+#"shortness of breath. Other symptoms may include fatigue, muscle pain, "
+#"diarrhoea, sore throat, loss of smell and abdominal pain. The time from "
+#"exposure to onset of symptoms is typically around five days, but may range "
+#"from two to fourteen days. While the majority of cases result in mild "
+#"symptoms, some progress to viral pneumonia and multi-organ failure. As "
+#"of 11 April 2020, more than 1.69 million cases have been reported in more "
+#"than 200 countries and territories, resulting in more than 102,000 deaths. "
+#"More than 376,000 people have recovered."
+msgid "About Covid-19 text"
+msgstr ""
+"Η νόσος Coronavirus 2019 (COVID-19) είναι μια μολυσματική ασθένεια που "
+"προκαλείται από σοβαρό σύνδρομο οξέος αναπνευστικού coronavirus 2 (SARS-"
+"CoV-2). Η ασθένεια εντοπίστηκε για πρώτη φορά τον Δεκέμβριο του 2019 στο "
+"Γουχάν, την πρωτεύουσα της επαρχίας Χουμπέι της Κίνας, και έκτοτε "
+"εξαπλώθηκε παγκοσμίως, με αποτέλεσμα την συνεχιζόμενη πανδημία κοροναϊού "
+"2019-20. Τα κοινά συμπτώματα περιλαμβάνουν πυρετό, βήχα και δύσπνοια. "
+"Άλλα συμπτώματα μπορεί να περιλαμβάνουν κόπωση, μυϊκό πόνο, διάρροια, "
+"πονόλαιμο, απώλεια μυρωδιάς και κοιλιακό άλγος. Ο χρόνος από την έκθεση "
+"έως την έναρξη των συμπτωμάτων είναι συνήθως περίπου πέντε ημέρες, αλλά "
+"μπορεί να κυμαίνεται από δύο έως δεκατέσσερις ημέρες. Ενώ η πλειονότητα "
+"των περιπτώσεων οδηγεί σε ήπια συμπτώματα, ορισμένες εξελίσσονται σε "
+"ιογενή πνευμονία και αποτυχία πολλαπλών οργάνων. Από τις 11 Απριλίου "
+"2020, έχουν αναφερθεί περισσότερα από 1,69 εκατομμύρια περιπτώσεις σε "
+"περισσότερες από 200 χώρες και εδάφη, με αποτέλεσμα περισσότερους από "
+"102.000 θανάτους. Περισσότεροι από 376.000 άνθρωποι έχουν αναρρώσει."
 
+#"In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
+#"hospitals are:"
+msgid "About Covid-19 text2"
+msgstr ""
+"Στην Ελλάδα υπάρχουν 13 νοσοκομεία αναφοράς, αποκλειστικά για κρούσματα "
+"Covid-19. Τα νοσοκομεία αυτά είναι τα εξής :"
 
+############################# hospital names
 
 
 
@@ -445,62 +492,14 @@ msgid "Mon - Fri"
 msgstr "Δευ - Παρ"
 
 #: templates/covid19.html:12
-msgid "Map"
-msgstr "Χάρτης"
 
 #: templates/covid19.html:14
-msgid "Information"
-msgstr "Πληροφορίες"
 
 #: templates/covid19.html:32
-msgid "About the COVID-19 disease"
-msgstr "Σχετικά με τον COVID-19"
 
 #: templates/covid19.html:35
-msgid ""
-"Coronavirus disease 2019 (COVID-19) is an infectious disease caused by "
-"severe acute respiratory\n"
-"                    syndrome coronavirus 2 (SARS-CoV-2). The disease was "
-"first identified in December 2019 in Wuhan, the\n"
-"                    capital of China's Hubei province, and has since "
-"spread globally, resulting in the ongoing 2019–20\n"
-"                    coronavirus pandemic. Common symptoms include fever, "
-"cough and shortness of breath. Other symptoms\n"
-"                    may include fatigue, muscle pain, diarrhoea, sore "
-"throat, loss of smell and abdominal pain. The time\n"
-"                    from exposure to onset of symptoms is typically "
-"around five days, but may range from two to fourteen\n"
-"                    days. While the majority of cases result in mild "
-"symptoms, some progress to viral pneumonia and\n"
-"                    multi-organ failure. As of 11 April 2020, more than "
-"1.69 million cases have been reported in more\n"
-"                    than 200 countries and territories, resulting in more"
-" than 102,000 deaths. More than 376,000 people\n"
-"                    have recovered."
-msgstr ""
-"Η νόσος Coronavirus 2019 (COVID-19) είναι μια μολυσματική ασθένεια που "
-"προκαλείται από σοβαρό σύνδρομο οξέος αναπνευστικού coronavirus 2 (SARS-"
-"CoV-2). Η ασθένεια εντοπίστηκε για πρώτη φορά τον Δεκέμβριο του 2019 στο "
-"Γουχάν, την πρωτεύουσα της επαρχίας Χουμπέι της Κίνας, και έκτοτε "
-"εξαπλώθηκε παγκοσμίως, με αποτέλεσμα την συνεχιζόμενη πανδημία κοροναϊού "
-"2019-20. Τα κοινά συμπτώματα περιλαμβάνουν πυρετό, βήχα και δύσπνοια. "
-"Άλλα συμπτώματα μπορεί να περιλαμβάνουν κόπωση, μυϊκό πόνο, διάρροια, "
-"πονόλαιμο, απώλεια μυρωδιάς και κοιλιακό άλγος. Ο χρόνος από την έκθεση "
-"έως την έναρξη των συμπτωμάτων είναι συνήθως περίπου πέντε ημέρες, αλλά "
-"μπορεί να κυμαίνεται από δύο έως δεκατέσσερις ημέρες. Ενώ η πλειονότητα "
-"των περιπτώσεων οδηγεί σε ήπια συμπτώματα, ορισμένες εξελίσσονται σε "
-"ιογενή πνευμονία και αποτυχία πολλαπλών οργάνων. Από τις 11 Απριλίου "
-"2020, έχουν αναφερθεί περισσότερα από 1,69 εκατομμύρια περιπτώσεις σε "
-"περισσότερες από 200 χώρες και εδάφη, με αποτέλεσμα περισσότερους από "
-"102.000 θανάτους. Περισσότεροι από 376.000 άνθρωποι έχουν αναρρώσει."
 
 #: templates/covid19.html:48
-msgid ""
-"In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
-"hospitals are:"
-msgstr ""
-"Στην Ελλάδα υπάρχουν 13 νοσοκομεία αναφοράς, αποκλειστικά για κρούσματα "
-"Covid-19. Τα νοσοκομεία αυτά είναι τα εξής :"
 
 #: templates/error.html:2 templates/error.html:9
 msgid "Page Not Found"
