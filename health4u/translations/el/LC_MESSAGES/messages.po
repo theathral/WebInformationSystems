@@ -300,11 +300,11 @@ msgid "Contact us form title"
 msgstr "Στείλτε μας μήνυμα: "
 
 #"Your name "
-msgid "Name title"
+msgid "Full name title"
 msgstr "Όνομα"
 
-#"Name"
-msgid "Name placeholder"
+#"Full Name"
+msgid "Full name placeholder"
 msgstr "Όνομα"
 
 #"Your email"
@@ -360,6 +360,76 @@ msgid "Open days"
 msgstr "Δευ - Παρ"
 
 
+##### sign_up.html #####
+
+#"Create an Account"
+msgid "Sign up form title"
+msgstr "Δημιουργία Λογαριασμού"
+
+#"Sign up with your social media account or email address"
+msgid "Sign up form subtitle"
+msgstr "Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή με την διεύθυνση ηλεκτρονικού ταχυδρομίου που διαθέτετε"
+
+msgid "or"
+msgstr "Ή"
+
+#"First Name"
+msgid "First Name placeholder"
+msgstr "Όνομα"
+
+#"Last Name"
+msgid "Last Name placeholder"
+msgstr "Επώνυμο"
+
+    # Region filter (above)
+    # Region filter placeholder (above)
+    # Email title (above)
+    # Email placeholder (above)
+
+msgid "Password"
+msgstr "Κωδικός Πρόσβασης"
+
+msgid "Confirm Password"
+msgstr "Επιβεβαίωση Κωδικού Πρόσβασης"
+
+#"Sign up"
+msgid "Sign up form button"
+msgstr "Δημιουργία"
+
+
+##### log_in.html #####
+
+    # Login (above)
+
+#"Sign in with your social media account or username"
+msgid "Log in form subtitle"
+msgstr "Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή με το όνομα χρήστη που διαθέτετε"
+
+    # or (above)
+    # Email title (above)
+    # Email placeholder (above)
+    # Password (above)
+    # Login
+
+#"Forgot Your password?"
+msgid "Forgot password msg"
+msgstr "Ξεχάσατε τον κωδικό σας;"
+
+
+##### account_details.html #####
+
+
+
+
+
+##### change_password.html #####
+
+
+
+
+
+
+##### forgot_password.html #####
 
 
 
@@ -501,29 +571,19 @@ msgstr "Μεταφερθείτε κάπου όμορφα"
 #: templates/account_details.html:26 templates/account_details.html:28
 #: templates/forgot_password.html:32 templates/forgot_password.html:34
 #: templates/sign_up.html:43 templates/sign_up.html:45
-msgid "First Name"
-msgstr "Όνομα"
 
 #: templates/account_details.html:31 templates/account_details.html:33
 #: templates/forgot_password.html:37 templates/forgot_password.html:39
 #: templates/sign_up.html:48 templates/sign_up.html:50
-msgid "Last Name"
-msgstr "Επώνυμο"
 
 #: templates/account_details.html:36 templates/forgot_password.html:42
 #: templates/hospitals.html:32 templates/sign_up.html:53
-msgid "Region"
-msgstr "Περιοχή"
 
 #: templates/account_details.html:38 templates/forgot_password.html:44
 #: templates/hospitals.html:34 templates/sign_up.html:54
-msgid "Select Region"
-msgstr "Επιλογή Περιοχής"
 
 #: templates/account_details.html:45 templates/forgot_password.html:29
 #: templates/log_in.html:45 templates/sign_up.html:62
-msgid "Email Address"
-msgstr "Διεύθυνση email"
 
 #: templates/account_details.html:48
 msgid "Change Account Details"
@@ -680,39 +740,21 @@ msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορ
 #: templates/hospitals.html:60
 
 #: templates/log_in.html:21 templates/log_in.html:54
-msgid "Sign in"
-msgstr "Είσοδος"
 
 #: templates/log_in.html:22
-msgid "Sign in with your social media account or username"
-msgstr "Συνδεθείτε με λογαριασμό κοινωνικού δικτύου ή με το όνομα χρήστη σας"
 
 #: templates/log_in.html:35 templates/sign_up.html:35
-msgid "or"
-msgstr "Ή"
 
 #: templates/log_in.html:49 templates/log_in.html:51 templates/sign_up.html:65
 #: templates/sign_up.html:67
-msgid "Password"
-msgstr "Κωδικός"
 
 #: templates/log_in.html:61
-msgid "Forgot Your password?"
-msgstr "Ξεχάσατε τον κωδικό σας;"
 
 #: templates/sign_up.html:21
-msgid "Create an Account"
-msgstr "Δημιουργία Λογαριασμού"
 
 #: templates/sign_up.html:22
-msgid "Sign up with your social media account or email address"
-msgstr "Συνδεθείτε με λογαριασμό από social media ή με το email"
 
 #: templates/sign_up.html:70 templates/sign_up.html:72
-msgid "Confirm Password"
-msgstr "Επιβεβαίωση κωδικού"
 
 #: templates/sign_up.html:75
-msgid "Sign up"
-msgstr "Δημιουργία"
 
