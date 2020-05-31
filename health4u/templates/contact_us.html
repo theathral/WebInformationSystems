@@ -1,12 +1,5 @@
 {% extends 'base.html' %}
 
-<!--<script>-->
-<!--    {% if current_user.is_authenticated %}-->
-    <!--    document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";-->
-    <!--    {% endif %}-->
-<!--</script>-->
-
-
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
@@ -14,10 +7,10 @@
     <div class="container mt-4 mx-auto justify-content-center">
 
         <div class="row mx-auto">
-            <h1 class="text-center row mx-auto">{{ gettext("Contact us") }}</h1>
+            <h1 class="text-center row mx-auto">{{ gettext("Contact Us") }}</h1>
         </div>
         <div class="row mx-auto">
-            <p class="text-center row pb-2 mx-auto">{{ gettext("Please use the contact form below.") }}</p>
+            <p class="text-center row pb-2 mx-auto">{{ gettext("Contact us subtitle") }}</p>
         </div>
 
         <div class="row align-items-center justify-content-center mx-auto">
@@ -28,7 +21,7 @@
                     {% if messages %}
                         {% for category, message in messages %}
                             <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                                <span>{{message}}</span>
+                                <span>{{ message }}</span>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -40,20 +33,20 @@
 
                     <div class="card-header p-0 main-color-bg">
                         <div class="text-white text-center py-2 h2">
-                            <i class="fa fa-envelope"></i> {{ gettext("Write to us:") }}
+                            <i class="fa fa-envelope"></i> {{ gettext("Contact us form title") }}
                         </div>
                     </div>
 
                     <div class="card-body p-3">
 
                         <div class="form-group">
-                            <label class="h5" for="contact-name">{{ gettext("Your name ") }}*</label>
+                            <label class="h5" for="contact-name">{{ gettext("Full name title") }}*</label>
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user fa-lg ic main-color"></i>
                                 </div>
                                 <input type="text" class="form-control" id="contact-name" name="contact-name"
-                                       placeholder={{gettext("Name")}}
+                                       placeholder="{{ gettext("Full name placeholder") }}"
                                         {% if current_user.is_authenticated %}
                                        value="{{ current_user.first_name }} {{ current_user.last_name }}"
                                         {% endif %}
@@ -62,45 +55,43 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="h5" for="contact-email">{{ gettext("Your email ") }}*</label>
+                            <label class="h5" for="contact-email">{{ gettext("Email title") }}*</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon">
                                     <i class="fa fa-envelope fa-lg ic main-color"></i>
                                 </div>
                                 <input type="text" class="form-control" id="contact-email" name="contact-email"
-                                       placeholder={{gettext("Email")}}
-                                       value="{{ current_user.email }}"
+                                       placeholder="{{ gettext("Email placeholder") }}" value="{{ current_user.email }}"
                                        required="required">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="h5" for="contact-need">{{ gettext("Please specify your need") }}*</label>
+                            <label class="h5" for="contact-need">{{ gettext("Specify need title") }}*</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"><i class="fa fa-tag fa-lg ic main-color"></i></div>
                                 <select id="contact-need" class="selectpicker form-control" name="contact-need"
-                                        data-error="{{ gettext("Please specify your need") }}" data-live-search="true"
-                                        title="{{ gettext("Select Need") }}" required="required">
-                                    <option value=""></option>
-                                    <option value="0">{{ gettext("Functionalities Addition") }}</option>
-                                    <option value="1">{{ gettext("Report a Problem") }}</option>
-                                    <option value="2">{{ gettext("Out of Date Data") }}</option>
-                                    <option value="3">{{ gettext("Other") }}</option>
+                                        title="{{ gettext("Specify need placeholder") }}" required="required">
+                                    <option value="0">{{ gettext("Functionalities Addition option") }}</option>
+                                    <option value="1">{{ gettext("Report a Problem option") }}</option>
+                                    <option value="2">{{ gettext("Out of Date Data option") }}</option>
+                                    <option value="3">{{ gettext("Other option") }}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="h5" for="contact-message">{{ gettext("Message") }}</label>
+                            <label class="h5" for="contact-message">{{ gettext("Message title") }}</label>
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"></div>
                                 <textarea class="form-control" id="contact-message" name="contact-message"
-                                          placeholder="{{ gettext("Type your message here") }}"></textarea>
+                                          placeholder="{{ gettext("Message text") }}" required></textarea>
                             </div>
                         </div>
 
                         <div class="text-center">
-                            <button class="btn btn-block py-2 text-white main-color-bg with-border"><h3>{{ gettext("Submit") }}</h3>
+                            <button class="btn btn-lg btn-block rgba-opacity main-color-bg font-weight-bold my-4 with-border">
+                                {{ gettext("Submit button") }}
                             </button>
                         </div>
 
@@ -118,8 +109,7 @@
                         <i class="fa fa-map-marker fa-lg"></i>
                     </a>
                     <p>
-                        {{ gettext("Thessaloniki") }},<br>
-                        {{ gettext("Greece") }}
+                        {{ gettext("Website address") }}
                     </p>
                 </div>
 
@@ -128,7 +118,7 @@
                             class="fa fa-phone fa-lg fa-flip-horizontal"></i></a>
                     <p>
                         <a href="tel:231 011 1222">231 011 1222</a><br>
-                        {{ gettext("Mon - Fri") }}, 12:00-24:00
+                        {{ gettext("Open days") }}, 12:00-24:00
                     </p>
                 </div>
 
@@ -137,7 +127,6 @@
                             class="fa fa-envelope fa-lg"></i></a>
                     <p>
                         <a href="mailto:health4u.informations@gmail.com">health4u.informations<br>@gmail.com</a>
-                        <!--<a href="mailto:info2@gmail.com">info2@gmail.com</a>-->
                     </p>
                 </div>
             </div>

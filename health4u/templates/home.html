@@ -21,12 +21,10 @@
         <!-- Welcome Card -->
         <div class="card rounded-lg with-border my-2">
             <div class="h2 card-title text-white text-center main-color-bg rounded mx-3 my-3 p-2">
-                {{ gettext("Welcome!") }}
+                {{ gettext("Welcome") }}
             </div>
             <div class="h5 font-weight-light card-body">
-                {{ gettext("Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers
-                up to date information about") }} <a class="main-color" href="{{ url_for('covid19') }}"><u>Covid-19</u></a>
-                {{ gettext("as long as the outbreak is active.") }}
+                {{ gettext("Welcome msg") }}
             </div>
         </div>
         <!-- #Welcome Card -->
@@ -35,15 +33,16 @@
         <div class="card rounded-lg">
 
             <div class="card-title text-white bg-danger rounded w-50 mx-3 my-3 p-2">
-                <div class="h6 my-2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ gettext("COVID-19 alert") }}</div>
+                <div class="h6 my-2">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    {{ gettext("Covid-19 alert") }}
+                </div>
             </div>
 
             <div class="card-body">
-                <div class="card-subtitle mb-2">{{ gettext("Stay at home if you feel unwell. If you have a fever, cough and
-                    difficulty breathing, seek medical attention and call in advance. Follow the directions of your
-                    local health authority. Source:") }}
+                <div class="card-subtitle mb-2">{{ gettext("Covid-19 alert msg") }}
                     <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
-                       target="_blank"><u>{{ gettext("World Health Organization") }}</u></a>
+                       target="_blank"><u>{{ gettext("WHO") }}</u></a>
                 </div>
 
                 <button type="button" class="btn btn-link btn-md border-secondary rounded-pill col-xs">
@@ -67,8 +66,9 @@
                      data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
                      data-hide-cover="false" data-show-facepile="true">
                     <blockquote cite="https://www.facebook.com/Health-4U-106028021134710/"
-                                class="fb-xfbml-parse-ignore"><a
-                            href="https://www.facebook.com/Health-4U-106028021134710/">Health 4U</a></blockquote>
+                                class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/Health-4U-106028021134710/">Health 4U</a>
+                    </blockquote>
                 </div>
             </div>
             <!-- #Facebook plugin -->
@@ -85,15 +85,15 @@
                     <div class="carousel-inner">
                         <div class="carousel-item h-100 active">
                             <img class="d-block w-100" src="../static/images/img-carousel-who.png"
-                                 alt={{gettext("Who Choose Health Image from Sustainable Development Goals")}}>
+                                 alt={{ gettext("SDG img") }}>
                         </div>
                         <div class="carousel-item h-100">
                             <img class="d-block w-100" src="../static/images/img-carousel-health-care.png"
-                                 alt={{gettext("Health Care Image")}}>
+                                 alt={{ gettext("Health Care Image") }}>
                         </div>
                         <div class="carousel-item h-100">
                             <img class="d-block w-100" src="../static/images/img-carousel-covid.png"
-                                 alt={{gettext("World Health Organization Image about Covid-19")}}>
+                                 alt={{ gettext("WHO img Covid-19") }}>
                         </div>
                     </div>
 
@@ -117,14 +117,15 @@
 
             <a class="col-xs mx-auto my-3" href="{{ url_for('hospitals') }}">
                 <div class="card img-fluid">
-                    <img class="card-img-top" src="../static/images/img-card-hospitals.png" alt="{{ gettext("Hospital Card Image") }}">
+                    <img class="card-img-top" src="../static/images/img-card-hospitals.png"
+                         alt="{{ gettext("Hospital Card Image") }}">
                     <div class="card-img-overlay">
 
                         <div class="card-header card-title text-dark h5"><u>{{ gettext("Hospitals") }}</u></div>
 
                         <div class="card-body">
                             <p class="card-text font-weight-bold text-dark">
-                                {{ gettext("On this page, you can find more information about the hospitals in Greece.") }}
+                                {{ gettext("Hospital card explanation") }}
                             </p>
                         </div>
                     </div>
@@ -133,14 +134,15 @@
 
             <a class="col-xs m-auto my-3" href="{{ url_for('covid19') }}">
                 <div class="card img-fluid ">
-                    <img class="card-img-top" src="../static/images/img-card-covid.png" alt="{{ gettext("Covid-19 Card Image") }}">
+                    <img class="card-img-top" src="../static/images/img-card-covid.png"
+                         alt="{{ gettext("Covid-19 Card Image") }}">
                     <div class="card-img-overlay">
 
                         <div class="card-header card-title text-white h5"><u>Covid-19</u></div>
 
                         <div class="card-body">
                             <p class="card-text font-weight-bold text-white">
-                                {{ gettext("On this page, you can find out more about Covid-19 disease.") }}
+                                {{ gettext("Covid-19 card explanation") }}
                             </p>
                         </div>
                     </div>

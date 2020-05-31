@@ -18,281 +18,197 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: __init__.py:68
-msgid "Warning : No message included!"
-msgstr "Προσοχή : Δε συμπεριλάβατε κάποιο μήνυμα!"
+##### __init__.py #####
 
-#: __init__.py:75
-msgid "Message sent successfully!"
+#: def contact_us
+msgid "Empty message warning"
+msgstr "Προσοχή: Δε συμπεριλάβατε κάποιο μήνυμα!"
+
+msgid "Successful Msg"
 msgstr "Το μήνυμά σας στάλθηκε επιτυχώς!"
 
-#: __init__.py:85 __init__.py:107
-msgid "You are already logged in!"
+#: def log_in & sign_up
+msgid "Already logged in"
 msgstr "Είστε ήδη συνδεδεμένος!"
 
-#: __init__.py:97
-msgid "You have successfully logged in!"
+msgid "Successful log in"
 msgstr "Η σύνδεση έγινε με επιτυχία!"
 
-#: __init__.py:101
 msgid "Wrong Credentials"
-msgstr "Εσφαλμένα στοιχεία"
-
-#: __init__.py:128
-msgid "Registration was Successful. Please Log in."
-msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
-
-#: __init__.py:130
-msgid "Passwords do not match. Please try again."
-msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
-
-#: __init__.py:133
-msgid "Email address already exists."
-msgstr "Η διεύθυνση email υπάρχει ήδη."
-
-#: __init__.py:151
-msgid "Password changed successfully!"
-msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
-
-#: __init__.py:154
-msgid "Something went wrong. Try again"
-msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
-
-#: __init__.py:175
-msgid "Account details changed successfully!"
-msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
-
-#: __init__.py:178
-msgid "This email already exists. Try again"
-msgstr "Η διεύθυνση email υπάρχει ήδη. Προσπαθήστε ξανά."
-
-#: __init__.py:190
-msgid "Your account has been successfully deleted."
-msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
-
-#: __init__.py:196
-msgid "Logout to access this page!"
-msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
-
-#: __init__.py:213
-msgid "Your request has been submitted. Someone will contact you soon!"
-msgstr ""
-"Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το "
-"συντομότερο δυνατό!"
-
-#: __init__.py:216
-msgid "No user found with these credentials"
 msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
 
-#: templates/account_details.html:23 templates/base.html:80
-msgid "Account Details"
-msgstr "Πληροφορίες Λογαριασμού"
+msgid "Successful registration"
+msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
 
-#: templates/account_details.html:26 templates/account_details.html:28
-#: templates/forgot_password.html:32 templates/forgot_password.html:34
-#: templates/sign_up.html:43 templates/sign_up.html:45
-msgid "First Name"
-msgstr "Όνομα"
+msgid "Not matched passwords"
+msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
 
-#: templates/account_details.html:31 templates/account_details.html:33
-#: templates/forgot_password.html:37 templates/forgot_password.html:39
-#: templates/sign_up.html:48 templates/sign_up.html:50
-msgid "Last Name"
-msgstr "Επώνυμο"
+msgid "Existed email"
+msgstr "Η διεύθυνση email υπάρχει ήδη."
 
-#: templates/account_details.html:36 templates/forgot_password.html:42
-#: templates/hospitals.html:32 templates/sign_up.html:53
-msgid "Region"
-msgstr "Περιοχή"
+#: def change_password
+msgid "Successful password change"
+msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
 
-#: templates/account_details.html:38 templates/forgot_password.html:44
-#: templates/hospitals.html:34 templates/sign_up.html:54
-msgid "Select Region"
-msgstr "Επιλογή Περιοχής"
+msgid "Something went wrong"
+msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
 
-#: templates/account_details.html:45 templates/forgot_password.html:29
-#: templates/log_in.html:45 templates/sign_up.html:62
-msgid "Email Address"
-msgstr "Διεύθυνση email"
+#: def account_details
+msgid "Successful details update"
+msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
 
-#: templates/account_details.html:48
-msgid "Change Account Details"
-msgstr "Αλλαγή Στοιχείων Λογαριασμού"
+    # msgid "Existed email" (above)
 
-#: templates/account_details.html:52
-msgid "Delete Account"
-msgstr "Διαγραφή Λογαριασμού"
+#: def delete_account
+msgid "Successful account delete"
+msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
 
-#: templates/base.html:42
+#: def forgot_password
+msgid "Logout to access page"
+msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
+
+msgid "Successful request submit"
+msgstr "Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό!"
+
+    # msgid "Wrong Credentials" (above)
+
+
+##### base.html #####
+
 msgid "Home"
 msgstr "Αρχική"
 
-#: templates/base.html:45 templates/home.html:123
 msgid "Hospitals"
 msgstr "Νοσοκομεία"
 
-#: templates/base.html:48
 msgid "Covid-19"
 msgstr "Covid-19"
 
-#: templates/base.html:51
 msgid "Contact Us"
 msgstr "Επικοινωνία"
 
-#: templates/base.html:64
+msgid "Lang to greek"
+msgstr "Αλλαγή γλώσσας στα ελληνικά"
+
+msgid "Lang to english"
+msgstr "Αλλαγή γλώσσας στα αγγλικά"
+
 msgid "Sign Up"
 msgstr "Εγγραφή"
 
-#: templates/base.html:68
 msgid "Login"
 msgstr "Σύνδεση"
 
-#: templates/base.html:75
 msgid "Account"
 msgstr "Λογαριασμός"
 
-#: templates/base.html:83 templates/change_password.html:23
-#: templates/change_password.html:43
-msgid "Change Password"
-msgstr "Αλλαγή Κωδικού"
+msgid "Account Details"
+msgstr "Πληροφορίες Λογαριασμού"
 
-#: templates/base.html:86
+msgid "Change Password"
+msgstr "Αλλαγή Κωδικού Πρόσβασης"
+
 msgid "Logout"
 msgstr "Αποσύνδεση"
 
-#: templates/base.html:102
-msgid ""
-"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
-"Styliani, Makris Ioannis"
+msgid "Footer msg"
+msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, Μακρή Ιωάννη"
+
+
+##### home.html #####
+
+msgid "Welcome"
+msgstr "Καλωσήρθατε!"
+
+msgid "Welcome msg"
 msgstr ""
-"Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, "
-"Μακρή Ιωάννη"
+"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα "
+"μόνο  κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
+"<a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> "
+"όσο η πανδημία παραμένει σε έξαρση!"
 
-#: templates/change_password.html:24
-msgid "Fill the following form, to change your password"
-msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό σας"
+msgid "Covid-19 alert"
+msgstr "Προειδοποίηση για τον COVID-19"
 
-#: templates/change_password.html:27 templates/change_password.html:29
-msgid "Old Password"
-msgstr "Προηγούμενος κωδικός"
+msgid "Covid-19 alert msg"
+msgstr "Εαν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπική υγειονομικής αρχής. Πηγή: "
 
-#: templates/change_password.html:33 templates/change_password.html:35
-msgid "New Password"
-msgstr "Νέος κωδικός"
+msgid "WHO"
+msgstr "Παγκόσμιος Οργανισμός Υγείας"
 
-#: templates/change_password.html:38 templates/change_password.html:40
-msgid "Confirm New Password"
-msgstr "Επιβεβαίωση νέου κωδικού"
+msgid "National Organization of Public Health"
+msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
 
-#: templates/contact_us.html:17
-msgid "Contact us"
-msgstr "Επικοινωνία"
+msgid "SDG img"
+msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα από τα SGDs"
 
-#: templates/contact_us.html:20
-msgid "Please use the contact form below."
-msgstr "Μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας την παρακάτω φόρμα."
+msgid "Health Care Image"
+msgstr "Εικόνα για την υγεία"
 
-#: templates/contact_us.html:43
-msgid "Write to us:"
-msgstr "Στείλτε μας μήνυμα: "
+msgid "WHO img Covid-19"
+msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα για την ασθένεια Covid-19"
 
-#: templates/contact_us.html:50
-msgid "Your name "
-msgstr "Όνομα"
+msgid "Previous"
+msgstr "Προηγούμενο"
 
-#: templates/contact_us.html:56
-msgid "Name"
-msgstr "Όνομα"
+msgid "Next"
+msgstr "Επόμενο"
 
-#: templates/contact_us.html:65
-msgid "Your email "
-msgstr "Email"
+msgid "Hospital Card Image"
+msgstr "Κάρτα/φωτογραφία σελίδας νοσοκομείων"
 
-#: templates/contact_us.html:71
-msgid "Email"
-msgstr "Email"
+msgid "Hospital card explanation"
+msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα νοσοκομεία της Ελλάδος."
 
-#: templates/contact_us.html:78 templates/contact_us.html:82
-msgid "Please specify your need"
-msgstr "Λόγος αποστολής μηνύματος"
+msgid "Covid-19 Card Image"
+msgstr "Κάρτα/φωτογραφία σελίδας Covid-19"
 
-#: templates/contact_us.html:83
-msgid "Select Need"
-msgstr "Επιλογής κατηγορίας μηνύματος"
+msgid "Covid-19 card explanation"
+msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την ασθένεια Covid-19"
 
-#: templates/contact_us.html:85
-msgid "Functionalities Addition"
-msgstr "Προσθήκη Λειτουργιών"
 
-#: templates/contact_us.html:86
-msgid "Report a Problem"
-msgstr "Αναφορά Προβλήματος"
+##### hospital.html #####
 
-#: templates/contact_us.html:87
-msgid "Out of Date Data"
-msgstr "Μη ενημερωμένα δεδομένα"
+msgid "Filter tab"
+msgstr "Φίλτρα"
 
-#: templates/contact_us.html:88
-msgid "Other"
-msgstr "Άλλο"
+msgid "Region filter"
+msgstr "Νομός"
 
-#: templates/contact_us.html:94
-msgid "Message"
-msgstr "Μήνυμα"
+msgid "Region filter placeholder"
+msgstr "Επιλογή Νομού"
 
-#: templates/contact_us.html:98
-msgid "Type your message here"
-msgstr "Πληκτρολογήστε το μήνυμά σας εδώ"
+msgid "Hospital filter"
+msgstr "Νοσοκομείο"
 
-#: templates/contact_us.html:103 templates/forgot_password.html:49
-msgid "Submit"
-msgstr "Υποβολή"
+msgid "Hospital filter placeholder"
+msgstr "Επιλογή Νοσοκομείου"
 
-#: templates/contact_us.html:121
-msgid "Thessaloniki"
-msgstr "Θεσσαλονίκη"
+msgid "Clinic filter"
+msgstr "Κλινική"
 
-#: templates/contact_us.html:122
-msgid "Greece"
-msgstr "Ελλάδα"
+msgid "Clinic filter placeholder"
+msgstr "Επιλογή Κλινικής"
 
-#: templates/contact_us.html:131
-msgid "Mon - Fri"
-msgstr "Δευ - Παρ"
+msgid "On duty checkbox"
+msgstr "Εφημερεύον"
 
-#: templates/covid19.html:12
-msgid "Map"
+msgid "Datepicker title"
+msgstr "Ημερομηνία"
+
+
+##### covid19.html #####
+
+msgid "Map tab"
 msgstr "Χάρτης"
 
-#: templates/covid19.html:14
-msgid "Information"
+msgid "Information tab"
 msgstr "Πληροφορίες"
 
-#: templates/covid19.html:32
-msgid "About the COVID-19 disease"
+msgid "About Covid-19 title"
 msgstr "Σχετικά με τον COVID-19"
 
-#: templates/covid19.html:35
-msgid ""
-"Coronavirus disease 2019 (COVID-19) is an infectious disease caused by "
-"severe acute respiratory\n"
-"                    syndrome coronavirus 2 (SARS-CoV-2). The disease was "
-"first identified in December 2019 in Wuhan, the\n"
-"                    capital of China's Hubei province, and has since "
-"spread globally, resulting in the ongoing 2019–20\n"
-"                    coronavirus pandemic. Common symptoms include fever, "
-"cough and shortness of breath. Other symptoms\n"
-"                    may include fatigue, muscle pain, diarrhoea, sore "
-"throat, loss of smell and abdominal pain. The time\n"
-"                    from exposure to onset of symptoms is typically "
-"around five days, but may range from two to fourteen\n"
-"                    days. While the majority of cases result in mild "
-"symptoms, some progress to viral pneumonia and\n"
-"                    multi-organ failure. As of 11 April 2020, more than "
-"1.69 million cases have been reported in more\n"
-"                    than 200 countries and territories, resulting in more"
-" than 102,000 deaths. More than 376,000 people\n"
-"                    have recovered."
+msgid "About Covid-19 text"
 msgstr ""
 "Η νόσος Coronavirus 2019 (COVID-19) είναι μια μολυσματική ασθένεια που "
 "προκαλείται από σοβαρό σύνδρομο οξέος αναπνευστικού coronavirus 2 (SARS-"
@@ -305,180 +221,231 @@ msgstr ""
 "έως την έναρξη των συμπτωμάτων είναι συνήθως περίπου πέντε ημέρες, αλλά "
 "μπορεί να κυμαίνεται από δύο έως δεκατέσσερις ημέρες. Ενώ η πλειονότητα "
 "των περιπτώσεων οδηγεί σε ήπια συμπτώματα, ορισμένες εξελίσσονται σε "
-"ιογενή πνευμονία και αποτυχία πολλαπλών οργάνων. Από τις 11 Απριλίου "
+"ιογενή πνευμονία και αποτυχία πολλαπλών οργάνων. Μέχρι τις 11 Απριλίου "
 "2020, έχουν αναφερθεί περισσότερα από 1,69 εκατομμύρια περιπτώσεις σε "
 "περισσότερες από 200 χώρες και εδάφη, με αποτέλεσμα περισσότερους από "
 "102.000 θανάτους. Περισσότεροι από 376.000 άνθρωποι έχουν αναρρώσει."
 
-#: templates/covid19.html:48
-msgid ""
-"In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
-"hospitals are:"
+msgid "About Covid-19 text2"
 msgstr ""
 "Στην Ελλάδα υπάρχουν 13 νοσοκομεία αναφοράς, αποκλειστικά για κρούσματα "
 "Covid-19. Τα νοσοκομεία αυτά είναι τα εξής :"
 
-#: templates/error.html:2 templates/error.html:9
-msgid "Page Not Found"
-msgstr "Η σελίδα δε βρέθηκε"
+msgid "Main Hospital"
+msgstr 'Βασικό:'
 
-#: templates/error.html:10
-msgid "What you were looking for is just not there."
-msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
+msgid "Hospital Sotiria"
+msgstr 'Γενικό Νοσοκομείο Νοσημάτων Θώρακος Αθηνών “Η ΣΩΤΗΡΙΑ”'
 
-#: templates/error.html:11
-msgid "Go somewhere nice"
-msgstr "Μεταφερθείτε κάπου όμορφα"
+msgid "Hospital Euaggelismos"
+msgstr 'Γενικό Νοσοκομείο Αθηνών “ΕΥΑΓΓΕΛΙΣΜΟΣ”'
 
-#: templates/forgot_password.html:23
-msgid "Forgot Password"
-msgstr "Επαναφορά Κωδικού"
+msgid "Hospital Attikon"
+msgstr 'Πανεπιστημιακό Γενικό Νοσοκομείο "ΑΤΤΙΚΟΝ"'
 
-#: templates/forgot_password.html:24
-msgid "Fill the following details in order to submit a new password"
-msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούριο κωδικό"
+msgid "Hospital Thriasio"
+msgstr 'Γενικό Νοσοκομείο Ελευσίνας "ΘΡΙΑΣΙΟ"'
 
-#: templates/home.html:24
-msgid "Welcome!"
-msgstr "Καλωσήρθατε!"
+msgid "Hospital AHEPA"
+msgstr 'Πανεπιστημιακό Γενικό Νοσοκομείο Θεσσαλονίκης “ΑΧΕΠΑ”'
 
-#: templates/home.html:27
-msgid ""
-"Health4U brings all hospitals of Greece in your hands with only a couple "
-"of clicks and it delivers\n"
-"                up to date information about"
+msgid "University Hospital of Alexandroupoli"
+msgstr 'Πανεπιστημιακό Νοσοκομείο Αλεξανδρούπολης'
+
+msgid "Hospital Mpodasakio"
+msgstr 'Γενικό Νοσοκομείο Πτολεμαΐδας “ΜΠΟΔΟΣΑΚΕΙΟ”'
+
+msgid "University Hospital of Larisa"
+msgstr 'Πανεπιστημιακό Γενικό Νοσοκομείο Λάρισας'
+
+msgid "Hospital of Lamia"
+msgstr 'Γενικό Νοσοκομείο Λαμίας'
+
+msgid "University Hospital of Patra"
+msgstr 'Πανεπιστημιακό Γενικό Νοσοκομείο Πατρών "Παναγιά η Βοήθεια"'
+
+msgid "University Hospital of Ioannina"
+msgstr 'Πανεπιστημιακό Γενικό Νοσοκομείο Ιωαννίνων'
+
+msgid "University Hospital of Iraklio"
+msgstr 'Πανεπιστημιακό Γενικό Νοσοκομείο Ηρακλείου'
+
+msgid "Hospital O Agios Georgios"
+msgstr 'Γενικό Νοσοκομείο Χανίων “Ο ΑΓΙΟΣ ΓΕΩΡΓΙΟΣ”'
+
+
+##### contact_us.html #####
+
+    # "Contact us" (above)
+
+msgid "Contact us subtitle"
+msgstr "Μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας την παρακάτω φόρμα."
+
+msgid "Contact us form title"
+msgstr "Στείλτε μας μήνυμα: "
+
+msgid "Full name title"
+msgstr "Όνομα"
+
+msgid "Full name placeholder"
+msgstr "Όνομα"
+
+msgid "Email title"
+msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομίου"
+
+msgid "Email placeholder"
+msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομίου"
+
+msgid "Specify need title"
+msgstr "Λόγος αποστολής μηνύματος"
+
+msgid "Specify need placeholder"
+msgstr "Επιλογής Κατηγορίας Μηνύματος"
+
+msgid "Functionalities Addition option"
+msgstr "Προσθήκη Λειτουργιών"
+
+msgid "Report a Problem option"
+msgstr "Αναφορά Προβλήματος"
+
+msgid "Out of Date Data option"
+msgstr "Μη ενημερωμένα δεδομένα"
+
+msgid "Other option"
+msgstr "Άλλο"
+
+msgid "Message title"
+msgstr "Μήνυμα"
+
+msgid "Message text"
+msgstr "Πληκτρολογήστε το μήνυμά σας εδώ"
+
+msgid "Submit button"
+msgstr "Υποβολή"
+
+msgid "Website address"
+msgstr "Θεσσαλονίκη,<br>Ελλάδα"
+
+msgid "Open days"
+msgstr "Δευ - Παρ"
+
+
+##### sign_up.html #####
+
+msgid "Sign up form title"
+msgstr "Δημιουργία Λογαριασμού"
+
+msgid "Sign up form subtitle"
 msgstr ""
-"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα μόνο "
-"κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
+"Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή με "
+"την διεύθυνση ηλεκτρονικού ταχυδρομίου που διαθέτετε."
 
-#: templates/home.html:29
-msgid "as long as the outbreak is active."
-msgstr " όσο η πανδημία παραμένει σε έξαρση!"
-
-#: templates/home.html:38
-msgid "COVID-19 alert"
-msgstr " Προειδοποίηση COVID-19"
-
-#: templates/home.html:42
-msgid ""
-"Stay at home if you feel unwell. If you have a fever, cough and\n"
-"                    difficulty breathing, seek medical attention and call"
-" in advance. Follow the directions of your\n"
-"                    local health authority. Source:"
-msgstr ""
-"Εαν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπική υγειονομικής "
-"αρχής. Πηγή:"
-
-#: templates/home.html:46
-msgid "World Health Organization"
-msgstr "Παγκόσμιος Οργανισμός Υγείας"
-
-#: templates/home.html:52
-msgid "National Organization of Public Health"
-msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
-
-#: templates/home.html:88
-msgid "Who Choose Health Image from Sustainable Development Goals"
-msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα από τα SGDs"
-
-#: templates/home.html:92
-msgid "Health Care Image"
-msgstr "Εικόνα για την υγεία"
-
-#: templates/home.html:96
-msgid "World Health Organization Image about Covid-19"
-msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα για την ασθένεια Covid-19"
-
-#: templates/home.html:102
-msgid "Previous"
-msgstr "Προηγούμενο"
-
-#: templates/home.html:106
-msgid "Next"
-msgstr "Επόμενο"
-
-#: templates/home.html:120
-msgid "Hospital Card Image"
-msgstr "Κάρτα/φωτογραφεία σελίδας νοσοκομείων"
-
-#: templates/home.html:127
-msgid "On this page, you can find more information about the hospitals in Greece."
-msgstr ""
-"Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα "
-"νοσοκομεία της Ελλάδας."
-
-#: templates/home.html:136
-msgid "Covid-19 Card Image"
-msgstr "Κάρτα/φωτογραφεία σελίδας Covid-19"
-
-#: templates/home.html:143
-msgid "On this page, you can find out more about Covid-19 disease."
-msgstr ""
-"Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την "
-"ασθένεια Covid-19"
-
-#: templates/hospitals.html:19
-msgid "Filters"
-msgstr "Φίλτρα"
-
-#: templates/hospitals.html:40
-msgid "Hospital"
-msgstr "Νοσοκομείο"
-
-#: templates/hospitals.html:42
-msgid "Select Hospital"
-msgstr "Επιλογή Νοσοκομείου"
-
-#: templates/hospitals.html:48
-msgid "Department"
-msgstr "Τμήμα"
-
-#: templates/hospitals.html:50
-msgid "Select Department"
-msgstr "Επιλογή Τμήματος"
-
-#: templates/hospitals.html:57
-msgid "On duty"
-msgstr "Εφημερεύον"
-
-#: templates/hospitals.html:60
-msgid "Date"
-msgstr "Ημερομηνία"
-
-#: templates/log_in.html:21 templates/log_in.html:54
-msgid "Sign in"
-msgstr "Είσοδος"
-
-#: templates/log_in.html:22
-msgid "Sign in with your social media account or username"
-msgstr "Συνδεθείτε με λογαριασμό κοινωνικού δικτύου ή με το όνομα χρήστη σας"
-
-#: templates/log_in.html:35 templates/sign_up.html:35
 msgid "or"
 msgstr "Ή"
 
-#: templates/log_in.html:49 templates/log_in.html:51 templates/sign_up.html:65
-#: templates/sign_up.html:67
+msgid "First Name placeholder"
+msgstr "Όνομα"
+
+msgid "Last Name placeholder"
+msgstr "Επώνυμο"
+
+    # Region filter (above)
+    # Region filter placeholder (above)
+    # Email title (above)
+    # Email placeholder (above)
+
 msgid "Password"
-msgstr "Κωδικός"
+msgstr "Κωδικός Πρόσβασης"
 
-#: templates/log_in.html:61
-msgid "Forgot Your password?"
-msgstr "Ξεχάσατε τον κωδικό σας;"
-
-#: templates/sign_up.html:21
-msgid "Create an Account"
-msgstr "Δημιουργία Λογαριασμού"
-
-#: templates/sign_up.html:22
-msgid "Sign up with your social media account or email address"
-msgstr "Συνδεθείτε με λογαριασμό από social media ή με το email"
-
-#: templates/sign_up.html:70 templates/sign_up.html:72
 msgid "Confirm Password"
-msgstr "Επιβεβαίωση κωδικού"
+msgstr "Επιβεβαίωση Κωδικού Πρόσβασης"
 
-#: templates/sign_up.html:75
-msgid "Sign up"
+msgid "Sign up form button"
 msgstr "Δημιουργία"
 
+
+##### log_in.html #####
+
+    # Login (above)
+
+msgid "Log in form subtitle"
+msgstr ""
+"Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή "
+"με το όνομα χρήστη που διαθέτετε."
+
+    # or (above)
+    # Email title (above)
+    # Email placeholder (above)
+    # Password (above)
+    # Login
+
+msgid "Forgot password msg"
+msgstr "Ξεχάσατε τον κωδικό σας;"
+
+
+##### account_details.html #####
+
+    # First Name title
+    # First Name placeholder
+    # Last Name title
+    # Last Name placeholder
+    # Region filter
+    # Region filter placeholder
+    # Email title (above)
+    # Email placeholder (above)
+
+msgid "Change details form button"
+msgstr "Αλλαγή Στοιχείων Λογαριασμού"
+
+msgid "Delete account form button"
+msgstr "Διαγραφή Λογαριασμού"
+
+
+##### change_password.html #####
+
+    # Change Password
+
+msgid "Change Password subtitle"
+msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό πρόσβασής σας"
+
+msgid "Old Password"
+msgstr "Προηγούμενος Κωδικός Πρόσβασης"
+
+msgid "New Password"
+msgstr "Νέος Κωδικός Πρόσβασης"
+
+msgid "Confirm New Password"
+msgstr "Επιβεβαίωση Νέου Κωδικού Πρόσβασης"
+
+    # Change Password
+
+
+##### forgot_password.html #####
+
+msgid "Forgot Password title"
+msgstr "Επαναφορά Κωδικού Πρόσβασης"
+
+msgid "Forgot Password subtitle"
+msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούργιο κωδικό πρόσβασης"
+
+    # Email title (above)
+    # Email placeholder (above)
+    # First Name title
+    # First Name placeholder
+    # Last Name title
+    # Last Name placeholder
+    # Region filter
+    # Region filter placeholder
+    # Submit button
+
+
+##### error.html #####
+
+msgid "Page not found title"
+msgstr "Η σελίδα δε βρέθηκε"
+
+msgid "Page not found text"
+msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
+
+msgid "Page not found link"
+msgstr "Μεταφερθείτε κάπου όμορφα"

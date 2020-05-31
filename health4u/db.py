@@ -1,9 +1,7 @@
 from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import inspect
-from sqlalchemy.orm import relationship
-from sqlalchemy.schema import ForeignKeyConstraint, PrimaryKeyConstraint
-
+from sqlalchemy.schema import ForeignKeyConstraint
 
 db = SQLAlchemy()
 

@@ -54,11 +54,11 @@
         <ul class="navbar-nav ml-auto h5 font-weight-normal">
             {% if get_locale() == "en" %}
             <a class="nav-link nav-link-hover" id="greekFlag" onclick="set_lang('el')">
-                <img src="../static/images/flag_gr_24.png" alt="Change language to Greek"/>
+                <img src="../static/images/flag_gr_24.png" alt={{ gettext("Lang to greek") }}/>
             </a>
             {% else %}
             <a class="nav-link nav-link-hover" id="englishFlag" onclick="set_lang('en')">
-                <img src="../static/images/flag_uk_24.png" alt="Change language to English"/>
+                <img src="../static/images/flag_uk_24.png" alt={{ gettext("Lang to english") }}/>
             </a>
             {% endif %}
             {% if not current_user.is_authenticated %}
@@ -102,7 +102,7 @@
 <footer class="p-3 w-100 color-3-bg position-absolute fixed-bottom low-z-index">
     <div class="container text-center text-white">
         ©Copyright {{ req_datetime.year }}<br>
-        {{ gettext("Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama Styliani, Makris Ioannis") }}<br>
+        {{ gettext("Footer msg") }}<br>
     </div>
 </footer>
 <!-- #Footer -->
