@@ -23,6 +23,7 @@ function set_lang(lang_code) {
 function get_lang() {
     return $('html').attr('lang') || "en";
 }
+
 // #Set and get current language
 
 
@@ -265,16 +266,19 @@ $('.filterChange').on("change", function () {
 
 // Confirmation alert when deleting an account
 $("#deleteBtn").on("click", function () {
+    let greek = get_lang() === "el"
+
     Swal.fire({
-        title: "Are you sure?",
-        text: "Your account will be deleted. You won't be able to revert this!",
+        title: greek ? "Είστε σίγουρος" : "Are you sure?",
+        text: greek ? "Ο λογαριασμός σας θα διαγραφεί. Αυτή η ενέργεια είναι μη αναστρέψιμη!"
+            : "Your account will be deleted. You won't be able to revert this!",
         icon: "warning",
         timer: 10000,
         timerProgressBar: true,
         showCancelButton: true,
-        confirmButtonText: "Yes, delete it!",
+        confirmButtonText: greek ? "Διάγραφή!" : "Yes, delete it!",
         confirmButtonColor: '#d33',
-        cancelButtonText: "No, cancel!",
+        cancelButtonText: greek ? "Ακύρωση!" : "Cancel!",
         allowOutsideClick: false,
         allowEscapeKey: false,
         allowEnterKey: false
@@ -282,8 +286,9 @@ $("#deleteBtn").on("click", function () {
     }).then((result) => {
         if (result.value) {
             Swal.fire({
-                    title: "Deleted!",
-                    text: "Your account has been deleted. We will miss you!",
+                    title: greek ? "Διεγράφει!" : "Deleted!",
+                    text: greek ? "Ο λογαριασμός σας διεγράφει επιτυχώς. Θα μας λείψετε!"
+                        : "Your account has been deleted. We will miss you!",
                     icon: "success",
                     timer: 5000,
                     timerProgressBar: true,
@@ -293,8 +298,8 @@ $("#deleteBtn").on("click", function () {
             })
         } else {
             Swal.fire({
-                    title: "Cancelled!",
-                    text: "Your account is safe ❤",
+                    title: greek ? "Ακυρώθηκε!" : "Cancelled!",
+                    text: greek ? "Ο λογαριασμός σας είναι ασφαλής! ❤" : "Your account is safe! ❤",
                     icon: "info",
                     timer: 5000,
                     timerProgressBar: true,
@@ -308,13 +313,16 @@ $("#deleteBtn").on("click", function () {
 
 // Under Construction alert
 $(".underConstruction").on("click", function () {
+    let greek = get_lang() === "el"
+
     Swal.fire({
-        title: "Under Construction!",
-        text: "This functionality is not available, yet. Try something else!",
+        title: greek ? "Υπό κατασκευή!" : "Under Construction!",
+        text: greek ? "Αυτή η λειτουργία δεν είναι διαθέσιμη, ακόμα. Δοκιμάστε κάτι διαφορετικό!"
+            : "This functionality is not available, yet. Try something else!",
         icon: "info",
         timer: 10000,
         timerProgressBar: true,
-        confirmButtonText: "OK!"
+        confirmButtonText: greek ? "ΟΚ!" : "OK!"
     })
 })
 // #Under Construction alert
