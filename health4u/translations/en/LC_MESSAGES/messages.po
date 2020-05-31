@@ -232,7 +232,47 @@ msgstr ""
 "In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
 "hospitals are:"
 
-############################# hospital names
+msgid "Main Hospital"
+msgstr 'Main:'
+
+msgid "Hospital Sotiria"
+msgstr 'General Thoracic Hospital "H SOTIRIA"'
+
+msgid "Hospital Euaggelismos"
+msgstr 'General Hospital of Athens "EUAGGELISMOS"'
+
+msgid "Hospital Attikon"
+msgstr 'University Hospital "ATTIKON"'
+
+msgid "Hospital Thriasio"
+msgstr 'General Hospital of Elefsina "THIASIO"'
+
+msgid "Hospital AHEPA"
+msgstr 'University Hospital of Thessaloniki "AHEPA"'
+
+msgid "University Hospital of Alexandroupoli"
+msgstr 'University Hospital of Alexandroupoli'
+
+msgid "Hospital Mpodasakio"
+msgstr 'General Hospital of Ptolemaida "MPOSAKIO"'
+
+msgid "University Hospital of Larisa"
+msgstr 'University Hospital of Larisa'
+
+msgid "Hospital of Lamia"
+msgstr 'General Hospital of Lamia'
+
+msgid "University Hospital of Patra"
+msgstr 'University Hospital of Patra "Panagia i Voithia'
+
+msgid "University Hospital of Ioannina"
+msgstr 'University Hospital of Ioannina'
+
+msgid "University Hospital of Iraklio"
+msgstr 'University Hospital of Iraklio'
+
+msgid "Hospital O Agios Georgios"
+msgstr 'General Hospital of Chania "O AGIOS GEORGIOS"'
 
 
 ##### contact_us.html #####

@@ -1,12 +1,5 @@
 {% extends 'base.html' %}
 
-<!--<script>-->
-<!--    {% if current_user.is_authenticated %}-->
-    <!--    document.getElementById("contact-name").value = "{{ current_user.first_name }} {{ current_user.last_name }}";-->
-    <!--    {% endif %}-->
-<!--</script>-->
-
-
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
@@ -92,13 +85,12 @@
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"></div>
                                 <textarea class="form-control" id="contact-message" name="contact-message"
-                                          placeholder="{{ gettext("Message text") }}"></textarea>
+                                          placeholder="{{ gettext("Message text") }}" required></textarea>
                             </div>
                         </div>
 
                         <div class="text-center">
                             <button class="btn btn-lg btn-block rgba-opacity main-color-bg font-weight-bold my-4 with-border">
-
                                 {{ gettext("Submit button") }}
                             </button>
                         </div>

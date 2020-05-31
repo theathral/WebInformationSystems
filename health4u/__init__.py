@@ -68,9 +68,6 @@ def create_app(test_config=None):
             rneed = request.form["contact-need"]
             rmessage = request.form["contact-message"]
 
-            if rmessage == "":
-                flash(gettext("Empty message warning"), "danger")
-                return redirect(url_for("contact_us"))
             new_req = Request(name=rname, email=remail, need=rneed, message=rmessage)
 
             db.session.add(new_req)
