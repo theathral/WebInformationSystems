@@ -418,8 +418,22 @@ msgstr "Ξεχάσατε τον κωδικό σας;"
 
 ##### account_details.html #####
 
+    # First Name title
+    # First Name placeholder
+    # Last Name title
+    # Last Name placeholder
+    # Region filter
+    # Region filter placeholder
+    # Email title (above)
+    # Email placeholder (above)
 
+#"Change Account Details"
+msgid "Change details form button"
+msgstr "Αλλαγή Στοιχείων Λογαριασμού"
 
+#Delete Account"
+msgid "Delete account form button"
+msgstr "Διαγραφή Λογαριασμού"
 
 
 ##### change_password.html #####
@@ -586,12 +600,8 @@ msgstr "Μεταφερθείτε κάπου όμορφα"
 #: templates/log_in.html:45 templates/sign_up.html:62
 
 #: templates/account_details.html:48
-msgid "Change Account Details"
-msgstr "Αλλαγή Στοιχείων Λογαριασμού"
 
 #: templates/account_details.html:52
-msgid "Delete Account"
-msgstr "Διαγραφή Λογαριασμού"
 
 #: templates/base.html:42
 
