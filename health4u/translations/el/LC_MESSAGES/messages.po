@@ -123,7 +123,7 @@ msgid "Account Details"
 msgstr "Πληροφορίες Λογαριασμού"
 
 msgid "Change Password"
-msgstr "Αλλαγή Κωδικού"
+msgstr "Αλλαγή Κωδικού Πρόσβασης"
 
 msgid "Logout"
 msgstr "Αποσύνδεση"
@@ -438,9 +438,22 @@ msgstr "Διαγραφή Λογαριασμού"
 
 ##### change_password.html #####
 
+    # Change Password
 
+#"Fill the following form, to change your password"
+msgid "Change Password subtitle"
+msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό πρόσβασής σας"
 
+msgid "Old Password"
+msgstr "Προηγούμενος Κωδικός Πρόσβασης"
 
+msgid "New Password"
+msgstr "Νέος Κωδικός Πρόσβασης"
+
+msgid "Confirm New Password"
+msgstr "Επιβεβαίωση Νέου Κωδικού Πρόσβασης"
+
+    # Change Password
 
 
 ##### forgot_password.html #####
@@ -626,20 +639,12 @@ msgstr "Μεταφερθείτε κάπου όμορφα"
 
 
 #: templates/change_password.html:24
-msgid "Fill the following form, to change your password"
-msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό σας"
 
 #: templates/change_password.html:27 templates/change_password.html:29
-msgid "Old Password"
-msgstr "Προηγούμενος κωδικός"
 
 #: templates/change_password.html:33 templates/change_password.html:35
-msgid "New Password"
-msgstr "Νέος κωδικός"
 
 #: templates/change_password.html:38 templates/change_password.html:40
-msgid "Confirm New Password"
-msgstr "Επιβεβαίωση νέου κωδικού"
 
 #: templates/contact_us.html:17
 
