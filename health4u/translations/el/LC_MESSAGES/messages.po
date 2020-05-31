@@ -21,67 +21,52 @@ msgstr ""
 ##### __init__.py #####
 
 #: def contact_us
-#"Warning : No message included!"
 msgid "Empty message warning"
 msgstr "Προσοχή: Δε συμπεριλάβατε κάποιο μήνυμα!"
 
-#"Message sent successfully!"
 msgid "Successful Msg"
 msgstr "Το μήνυμά σας στάλθηκε επιτυχώς!"
 
 #: def log_in & sign_up
-#"You are already logged in!"
 msgid "Already logged in"
 msgstr "Είστε ήδη συνδεδεμένος!"
 
-#"You have successfully logged in!"
 msgid "Successful log in"
 msgstr "Η σύνδεση έγινε με επιτυχία!"
 
-#"No user found with these credentials"
 msgid "Wrong Credentials"
 msgstr "Δεν υπάρχει κάποιος χρήστης με τα στοιχεία που δώσατε."
 
-#"Registration was Successful. Please Log in."
 msgid "Successful registration"
 msgstr "Η εγγραφή ήταν επιτυχής. Παρακαλώ συνδεθείτε."
 
-#"Passwords do not match. Please try again."
 msgid "Not matched passwords"
 msgstr "Οι κωδικοί δεν ταιριάζουν! Δοκιμάστε ξανά."
 
-#"Email address already exists."
 msgid "Existed email"
 msgstr "Η διεύθυνση email υπάρχει ήδη."
 
 #: def change_password
-#"Password changed successfully!"
 msgid "Successful password change"
 msgstr "Η αλλαγή του κωδικού έγινε με επιτυχία!"
 
-#"Something went wrong. Try again."
 msgid "Something went wrong"
 msgstr "Κάτι πήγε στραβά. Προσπαθήστε ξανά."
 
 #: def account_details
-#"Account details changed successfully!"
 msgid "Successful details update"
 msgstr "Τα στοιχεία του λογαριασμού ενημερώθηκαν επιτυχώς!"
 
     # msgid "Existed email" (above)
 
 #: def delete_account
-#"Your account has been successfully deleted."
 msgid "Successful account delete"
 msgstr "Η διαγραφή του λογαριασμού έγινε επιτυχώς!"
 
 #: def forgot_password
-#"Logout to access this page!"
 msgid "Logout to access page"
-msgstr "Πρέπει να είστε αποσυνδεδεμένος για να"
-"έχετε πρόσβαση σε αυτήν την σελίδα!"
+msgstr "Πρέπει να είστε αποσυνδεδεμένος για να έχετε πρόσβαση σε αυτήν την σελίδα!"
 
-#"Your request has been submitted. Someone will contact you soon!"
 msgid "Successful request submit"
 msgstr "Το αίτημά σας καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό!"
 
@@ -102,11 +87,9 @@ msgstr "Covid-19"
 msgid "Contact Us"
 msgstr "Επικοινωνία"
 
-#"Change language to greek"
 msgid "Lang to greek"
 msgstr "Αλλαγή γλώσσας στα ελληνικά"
 
-#"Change language to english"
 msgid "Lang to english"
 msgstr "Αλλαγή γλώσσας στα αγγλικά"
 
@@ -128,47 +111,40 @@ msgstr "Αλλαγή Κωδικού Πρόσβασης"
 msgid "Logout"
 msgstr "Αποσύνδεση"
 
-#"Made with ❤ by Athanasakis Theodosios, Giannakopoulos Grigorios, Kyrama "
-#"Styliani, Makris Ioannis"
 msgid "Footer msg"
 msgstr "Με ❤ από τους Αθανασάκη Θεοδόση, Γιαννακόπουλο Γρηγόρη, Κυραμά Στυλιανή, Μακρή Ιωάννη"
 
 
 ##### home.html #####
 
-#"Welcome!"
 msgid "Welcome"
 msgstr "Καλωσήρθατε!"
 
-#"Health4U brings all hospitals of Greece in your hands with only a couple of clicks and it delivers up to date information about <a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> as long as the outbreak is active."
 msgid "Welcome msg"
-msgstr "Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα μόνο  κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον <a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> όσο η πανδημία παραμένει σε έξαρση!"
+msgstr ""
+"Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα "
+"μόνο  κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
+"<a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> "
+"όσο η πανδημία παραμένει σε έξαρση!"
 
 msgid "Covid-19 alert"
 msgstr "Προειδοποίηση για τον COVID-19"
 
-#"Stay at home if you feel unwell. If you have a fever, cough and\n"
-#"                    difficulty breathing, seek medical attention and call"
-#" in advance. Follow the directions of your\n"
-#"                    local health authority. Source:"
 msgid "Covid-19 alert msg"
 msgstr "Εαν δεν αισθάνεστε καλά, ακολουθήστε τις οδηγίες της τοπική υγειονομικής αρχής. Πηγή: "
 
-#"World Health Organization"
 msgid "WHO"
 msgstr "Παγκόσμιος Οργανισμός Υγείας"
 
 msgid "National Organization of Public Health"
 msgstr "Εθνικός Οργανισμός Δημόσιας Υγείας"
 
-#"Who Choose Health Image from Sustainable Development Goals"
 msgid "SDG img"
 msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα από τα SGDs"
 
 msgid "Health Care Image"
 msgstr "Εικόνα για την υγεία"
 
-#"World Health Organization Image about Covid-19"
 msgid "WHO img Covid-19"
 msgstr "Παγκόσμιος Οργανισμός Υγείας, Εικόνα για την ασθένεια Covid-19"
 
@@ -181,84 +157,57 @@ msgstr "Επόμενο"
 msgid "Hospital Card Image"
 msgstr "Κάρτα/φωτογραφία σελίδας νοσοκομείων"
 
-#"On this page, you can find more information about the hospitals in Greece."
 msgid "Hospital card explanation"
 msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για τα νοσοκομεία της Ελλάδος."
 
 msgid "Covid-19 Card Image"
 msgstr "Κάρτα/φωτογραφία σελίδας Covid-19"
 
-#"On this page, you can find out more about Covid-19 disease."
 msgid "Covid-19 card explanation"
 msgstr "Στη σελίδα αυτή μπορείτε να βρείτε περισσότερες πληροφορίες για την ασθένεια Covid-19"
 
 
 ##### hospital.html #####
 
-#"Filters"
 msgid "Filter tab"
 msgstr "Φίλτρα"
 
-#"Region"
 msgid "Region filter"
 msgstr "Νομός"
 
-#"Select Region"
 msgid "Region filter placeholder"
 msgstr "Επιλογή Νομού"
 
-#"Hospital"
 msgid "Hospital filter"
 msgstr "Νοσοκομείο"
 
-#"Select Hospital"
 msgid "Hospital filter placeholder"
 msgstr "Επιλογή Νοσοκομείου"
 
-#"Clinic"
 msgid "Clinic filter"
 msgstr "Κλινική"
 
-#"Seloct Clinic"
 msgid "Clinic filter placeholder"
 msgstr "Επιλογή Κλινικής"
 
-#"On duty"
 msgid "On duty checkbox"
 msgstr "Εφημερεύον"
 
-#"Date"
 msgid "Datepicker title"
 msgstr "Ημερομηνία"
 
 
 ##### covid19.html #####
 
-#"Map"
 msgid "Map tab"
 msgstr "Χάρτης"
 
-#"Information"
 msgid "Information tab"
 msgstr "Πληροφορίες"
 
-#"About the COVID-19 disease"
 msgid "About Covid-19 title"
 msgstr "Σχετικά με τον COVID-19"
 
-#"Coronavirus disease 2019 (COVID-19) is an infectious disease caused by "
-#"severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The disease "
-#"was first identified in December 2019 in Wuhan, the capital of China's "
-#"Hubei province, and has since spread globally, resulting in the ongoing "
-#"2019–20 coronavirus pandemic. Common symptoms include fever, cough and "
-#"shortness of breath. Other symptoms may include fatigue, muscle pain, "
-#"diarrhoea, sore throat, loss of smell and abdominal pain. The time from "
-#"exposure to onset of symptoms is typically around five days, but may range "
-#"from two to fourteen days. While the majority of cases result in mild "
-#"symptoms, some progress to viral pneumonia and multi-organ failure. As "
-#"of 11 April 2020, more than 1.69 million cases have been reported in more "
-#"than 200 countries and territories, resulting in more than 102,000 deaths. "
-#"More than 376,000 people have recovered."
 msgid "About Covid-19 text"
 msgstr ""
 "Η νόσος Coronavirus 2019 (COVID-19) είναι μια μολυσματική ασθένεια που "
@@ -277,8 +226,6 @@ msgstr ""
 "περισσότερες από 200 χώρες και εδάφη, με αποτέλεσμα περισσότερους από "
 "102.000 θανάτους. Περισσότεροι από 376.000 άνθρωποι έχουν αναρρώσει."
 
-#"In Greece, there are 13 hospitals exclusively for COVID-19 cases. These "
-#"hospitals are:"
 msgid "About Covid-19 text2"
 msgstr ""
 "Στην Ελλάδα υπάρχουν 13 νοσοκομεία αναφοράς, αποκλειστικά για κρούσματα "
@@ -291,93 +238,74 @@ msgstr ""
 
     # "Contact us" (above)
 
-#"Please use the contact form below."
 msgid "Contact us subtitle"
 msgstr "Μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας την παρακάτω φόρμα."
 
-#"Write to us:"
 msgid "Contact us form title"
 msgstr "Στείλτε μας μήνυμα: "
 
-#"Your name "
 msgid "Full name title"
 msgstr "Όνομα"
 
-#"Full Name"
 msgid "Full name placeholder"
 msgstr "Όνομα"
 
-#"Your email"
 msgid "Email title"
 msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομίου"
 
-#"Email"
 msgid "Email placeholder"
 msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομίου"
 
-#"Please specify your need"
 msgid "Specify need title"
 msgstr "Λόγος αποστολής μηνύματος"
 
-#"Select Need"
 msgid "Specify need placeholder"
 msgstr "Επιλογής Κατηγορίας Μηνύματος"
 
-#"Functionalities Addition"
 msgid "Functionalities Addition option"
 msgstr "Προσθήκη Λειτουργιών"
 
-#"Report a Problem"
 msgid "Report a Problem option"
 msgstr "Αναφορά Προβλήματος"
 
-#"Out of Date Data"
 msgid "Out of Date Data option"
 msgstr "Μη ενημερωμένα δεδομένα"
 
-#"Other"
 msgid "Other option"
 msgstr "Άλλο"
 
-#"Message"
 msgid "Message title"
 msgstr "Μήνυμα"
 
-#"Type your message here"
 msgid "Message text"
 msgstr "Πληκτρολογήστε το μήνυμά σας εδώ"
 
-#"Submit"
 msgid "Submit button"
 msgstr "Υποβολή"
 
-#Thessaloniki,<br>Greece
 msgid "Website address"
 msgstr "Θεσσαλονίκη,<br>Ελλάδα"
 
-#"Mon - Fri"
 msgid "Open days"
 msgstr "Δευ - Παρ"
 
 
 ##### sign_up.html #####
 
-#"Create an Account"
 msgid "Sign up form title"
 msgstr "Δημιουργία Λογαριασμού"
 
-#"Sign up with your social media account or email address"
 msgid "Sign up form subtitle"
-msgstr "Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή με την διεύθυνση ηλεκτρονικού ταχυδρομίου που διαθέτετε"
+msgstr ""
+"Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή με "
+"την διεύθυνση ηλεκτρονικού ταχυδρομίου που διαθέτετε."
 
 msgid "or"
 msgstr "Ή"
 
-#"First Name"
 msgid "First Name placeholder"
 msgstr "Όνομα"
 
-#"Last Name"
 msgid "Last Name placeholder"
 msgstr "Επώνυμο"
 
@@ -392,7 +320,6 @@ msgstr "Κωδικός Πρόσβασης"
 msgid "Confirm Password"
 msgstr "Επιβεβαίωση Κωδικού Πρόσβασης"
 
-#"Sign up"
 msgid "Sign up form button"
 msgstr "Δημιουργία"
 
@@ -401,9 +328,10 @@ msgstr "Δημιουργία"
 
     # Login (above)
 
-#"Sign in with your social media account or username"
 msgid "Log in form subtitle"
-msgstr "Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή με το όνομα χρήστη που διαθέτετε"
+msgstr ""
+"Συνδεθείτε με κάποιο από τα κονωνικά δίκτυα παρακάτω ή "
+"με το όνομα χρήστη που διαθέτετε."
 
     # or (above)
     # Email title (above)
@@ -411,7 +339,6 @@ msgstr "Συνδεθείτε με κάποιο από τα κονωνικά δί
     # Password (above)
     # Login
 
-#"Forgot Your password?"
 msgid "Forgot password msg"
 msgstr "Ξεχάσατε τον κωδικό σας;"
 
@@ -427,11 +354,9 @@ msgstr "Ξεχάσατε τον κωδικό σας;"
     # Email title (above)
     # Email placeholder (above)
 
-#"Change Account Details"
 msgid "Change details form button"
 msgstr "Αλλαγή Στοιχείων Λογαριασμού"
 
-#Delete Account"
 msgid "Delete account form button"
 msgstr "Διαγραφή Λογαριασμού"
 
@@ -440,7 +365,6 @@ msgstr "Διαγραφή Λογαριασμού"
 
     # Change Password
 
-#"Fill the following form, to change your password"
 msgid "Change Password subtitle"
 msgstr "Συμπληρώστε την παρακάτω φόρμα για να αλλάξετε τον κωδικό πρόσβασής σας"
 
@@ -458,11 +382,9 @@ msgstr "Επιβεβαίωση Νέου Κωδικού Πρόσβασης"
 
 ##### forgot_password.html #####
 
-#"Forgot Password"
 msgid "Forgot Password title"
 msgstr "Επαναφορά Κωδικού Πρόσβασης"
 
-#"Fill the following details in order to submit a new password"
 msgid "Forgot Password subtitle"
 msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούργιο κωδικό πρόσβασης"
 
@@ -477,309 +399,13 @@ msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορ
     # Submit button
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##### error.html #####
 
-#"Page Not Found"
 msgid "Page not found title"
 msgstr "Η σελίδα δε βρέθηκε"
 
-#"What you were looking for is just not there."
 msgid "Page not found text"
 msgstr "Αυτό που ψάχνετε δεν βρίσκεται εδώ."
 
-#"Go somewhere nice"
 msgid "Page not found link"
 msgstr "Μεταφερθείτε κάπου όμορφα"
-
-
-
-#: base.html
-#: home.html
-#: hospital.html
-#: covid19.html
-#: contact_us.html
-#: sign_up.html
-#: log_in.html
-#: Forms (account_details.html, change_password.html, forgot_password.html)
-#: error.html
-
-
-
-
-
-
-
-#: __init__.py:68
-
-#: __init__.py:75
-
-#: __init__.py:85 __init__.py:107
-
-#: __init__.py:97
-
-#: __init__.py:101
-
-#: __init__.py:128
-
-#: __init__.py:130
-
-#: __init__.py:133
-
-#: __init__.py:151
-
-#: __init__.py:154
-
-#: __init__.py:175
-
-#: __init__.py:178
-
-#: __init__.py:190
-
-#: __init__.py:196
-
-#: __init__.py:213
-
-#: __init__.py:216
-
-#: templates/account_details.html:23 templates/base.html:80
-#msgid "Account Details"
-#msgstr "Πληροφορίες Λογαριασμού"
-
-#: templates/account_details.html:26 templates/account_details.html:28
-#: templates/forgot_password.html:32 templates/forgot_password.html:34
-#: templates/sign_up.html:43 templates/sign_up.html:45
-
-#: templates/account_details.html:31 templates/account_details.html:33
-#: templates/forgot_password.html:37 templates/forgot_password.html:39
-#: templates/sign_up.html:48 templates/sign_up.html:50
-
-#: templates/account_details.html:36 templates/forgot_password.html:42
-#: templates/hospitals.html:32 templates/sign_up.html:53
-
-#: templates/account_details.html:38 templates/forgot_password.html:44
-#: templates/hospitals.html:34 templates/sign_up.html:54
-
-#: templates/account_details.html:45 templates/forgot_password.html:29
-#: templates/log_in.html:45 templates/sign_up.html:62
-
-#: templates/account_details.html:48
-
-#: templates/account_details.html:52
-
-#: templates/base.html:42
-
-#: templates/base.html:45 templates/home.html:123
-
-#: templates/base.html:48
-
-#: templates/base.html:51
-
-#: templates/base.html:64
-
-#: templates/base.html:68
-
-#: templates/base.html:75
-
-#: templates/base.html:83 templates/change_password.html:23
-#: templates/change_password.html:43
-
-#: templates/base.html:86
-
-#: templates/base.html:102
-
-
-#: templates/change_password.html:24
-
-#: templates/change_password.html:27 templates/change_password.html:29
-
-#: templates/change_password.html:33 templates/change_password.html:35
-
-#: templates/change_password.html:38 templates/change_password.html:40
-
-#: templates/contact_us.html:17
-
-#: templates/contact_us.html:20
-
-#: templates/contact_us.html:43
-
-#: templates/contact_us.html:50
-
-#: templates/contact_us.html:56
-
-#: templates/contact_us.html:65
-
-#: templates/contact_us.html:71
-
-#: templates/contact_us.html:78 templates/contact_us.html:82
-
-#: templates/contact_us.html:83
-
-#: templates/contact_us.html:85
-
-#: templates/contact_us.html:86
-
-#: templates/contact_us.html:87
-
-#: templates/contact_us.html:88
-
-#: templates/contact_us.html:94
-
-#: templates/contact_us.html:98
-
-#: templates/contact_us.html:103 templates/forgot_password.html:49
-
-#: templates/contact_us.html:121
-
-#: templates/contact_us.html:122
-
-#: templates/contact_us.html:131
-
-#: templates/covid19.html:12
-
-#: templates/covid19.html:14
-
-#: templates/covid19.html:32
-
-#: templates/covid19.html:35
-
-#: templates/covid19.html:48
-
-#: templates/error.html:2 templates/error.html:9
-
-#: templates/error.html:10
-
-#: templates/error.html:11
-
-#: templates/forgot_password.html:23
-
-#: templates/forgot_password.html:24
-
-#: templates/home.html:24
-
-#: templates/home.html:27
-
-#: templates/home.html:29
-
-#: templates/home.html:38
-
-#: templates/home.html:42
-
-#: templates/home.html:46
-
-#: templates/home.html:52
-
-#: templates/home.html:88
-
-#: templates/home.html:92
-
-#: templates/home.html:96
-
-#: templates/home.html:102
-
-#: templates/home.html:106
-
-#: templates/home.html:120
-
-#: templates/home.html:127
-
-#: templates/home.html:136
-
-#: templates/home.html:143
-
-#: templates/hospitals.html:19
-
-#: templates/hospitals.html:40
-
-#: templates/hospitals.html:42
-
-#: templates/hospitals.html:48
-
-#: templates/hospitals.html:50
-
-#: templates/hospitals.html:57
-
-#: templates/hospitals.html:60
-
-#: templates/log_in.html:21 templates/log_in.html:54
-
-#: templates/log_in.html:22
-
-#: templates/log_in.html:35 templates/sign_up.html:35
-
-#: templates/log_in.html:49 templates/log_in.html:51 templates/sign_up.html:65
-#: templates/sign_up.html:67
-
-#: templates/log_in.html:61
-
-#: templates/sign_up.html:21
-
-#: templates/sign_up.html:22
-
-#: templates/sign_up.html:70 templates/sign_up.html:72
-
-#: templates/sign_up.html:75
-
