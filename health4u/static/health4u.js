@@ -23,7 +23,6 @@ function set_lang(lang_code) {
 function get_lang() {
     return $('html').attr('lang') || "en";
 }
-
 // #Set and get current language
 
 
@@ -172,12 +171,15 @@ function add_hospital_result(hos) {
 }
 
 function make_info(hos) {
+    let greek = get_lang() === "el"
+
     let prepend_protocol = (url) => {
         if (!url.match(/^[a-zA-Z]+:\/\//)) {
             return 'http://' + url;
         }
         return url;
     }
+
     let make_field_value = (info_field, hos) => {
         if (info_field.name === "telephone") {
             return $("<a/>").attr("href", "tel:" + hos[info_field.name]).text(hos[info_field.name]);
@@ -189,13 +191,14 @@ function make_info(hos) {
             return hos[info_field.name];
         }
     };
+
     let info = $("<div/>").addClass(["contact-info-wrapper", "m-3", "overflow-auto"]);
     let info_fields = [
-        {name: "telephone", icon_class: "fa-phone-alt", pretext: "Telephone:"},
-        {name: "address", icon_class: "fa-map-marker-alt", pretext: "Address:"},
-        {name: "email", icon_class: "fa-envelope", pretext: "Email:"},
-        {name: "postcode", icon_class: "fa-map-pin", pretext: "Postcode:"},
-        {name: "website", icon_class: "fa-link", pretext: "Website:"}
+        {name: "telephone", icon_class: "fa-phone-alt", pretext: greek ? "Τηλέφωνο:" : "Telephone:"},
+        {name: "address", icon_class: "fa-map-marker-alt", pretext: greek ? "Διεύθυνση:" : "Address:"},
+        {name: "email", icon_class: "fa-envelope", pretext: greek ? "Ηλεκτρονικό Ταχυδρομείο:" : "Email:"},
+        {name: "postcode", icon_class: "fa-map-pin", pretext: greek ? "Ταχυδρομικός Κώδικας:" : "Postcode:"},
+        {name: "website", icon_class: "fa-link", pretext: greek ? "Ιστοσελίδα:" : "Website:"}
     ];
     info_fields.forEach(
         info_field => {
