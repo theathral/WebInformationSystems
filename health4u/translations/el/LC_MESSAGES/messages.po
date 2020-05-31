@@ -458,9 +458,23 @@ msgstr "Επιβεβαίωση Νέου Κωδικού Πρόσβασης"
 
 ##### forgot_password.html #####
 
+#"Forgot Password"
+msgid "Forgot Password title"
+msgstr "Επαναφορά Κωδικού Πρόσβασης"
 
+#"Fill the following details in order to submit a new password"
+msgid "Forgot Password subtitle"
+msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούργιο κωδικό πρόσβασης"
 
-
+    # Email title (above)
+    # Email placeholder (above)
+    # First Name title
+    # First Name placeholder
+    # Last Name title
+    # Last Name placeholder
+    # Region filter
+    # Region filter placeholder
+    # Submit button
 
 
 
@@ -701,12 +715,8 @@ msgstr "Μεταφερθείτε κάπου όμορφα"
 #: templates/error.html:11
 
 #: templates/forgot_password.html:23
-msgid "Forgot Password"
-msgstr "Επαναφορά Κωδικού"
 
 #: templates/forgot_password.html:24
-msgid "Fill the following details in order to submit a new password"
-msgstr "Συμπληρώστε τα παρακάτω πεδία για να ορίσετε καινούριο κωδικό"
 
 #: templates/home.html:24
 
