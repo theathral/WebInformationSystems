@@ -191,7 +191,7 @@ msgid "Clinic filter"
 msgstr "Clinic"
 
 msgid "Clinic filter placeholder"
-msgstr "Seloct Clinic"
+msgstr "Select Clinic"
 
 msgid "On duty checkbox"
 msgstr "On duty"
