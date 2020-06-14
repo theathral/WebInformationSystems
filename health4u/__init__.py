@@ -8,7 +8,8 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from flask_restful import Api
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
+from .api import RegionResource, HospitalResource, DepartmentResource, FilterHospitalResource, FilterRegionResource, \
+    FilterDepartmentResource
 from .db import db, User, Hospital, Department, OnDuty, Request
 from .init_db import load_data
 
@@ -35,7 +36,9 @@ def create_app(test_config=None):
     api.add_resource(RegionResource, "/region", "/region/", "/region/<int:id>")
     api.add_resource(HospitalResource, "/hospital", "/hospital/", "/hospital/<int:id>")
     api.add_resource(DepartmentResource, "/department", "/department/", "/department/<int:id>")
-    api.add_resource(FilterResource, "/filter", "/filter/")
+    api.add_resource(FilterRegionResource, "/filter_region", "/filter_region/")
+    api.add_resource(FilterHospitalResource, "/filter_hospital", "/filter_hospital/")
+    api.add_resource(FilterDepartmentResource, "/filter_department", "/filter_department/")
 
     babel = Babel(app)
 

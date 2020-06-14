@@ -54,10 +54,15 @@ $(".datepicker").datepicker({
 
 
 // Dynamic Filtering
-function add_options_region(divId, currentRegion) {
-    fetch("/api/v1/region")
+function add_options_region(filterStr, divId, currentRegion) {
+    fetch(filterStr)
         .then(response => response.json())
         .then(data => {
+
+            // if (Object.getOwnPropertyNames(data).length === 0)
+            //     return;
+
+            $("#" + divId).empty().append('<option value=""></option>');
 
             if (get_lang() === "el") {
                 Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
@@ -96,10 +101,15 @@ function add_options_region(divId, currentRegion) {
         });
 }
 
-function add_options_hospital() {
-    fetch("/api/v1/hospital")
+function add_options_hospital(filterStr) {
+    fetch(filterStr)
         .then(response => response.json())
         .then(data => {
+
+            // if (Object.getOwnPropertyNames(data).length === 0)
+            //     return;
+
+            $("#hospitalFilter").empty().append('<option value=""></option>');
 
             if (get_lang() === "el") {
 
@@ -123,10 +133,15 @@ function add_options_hospital() {
         });
 }
 
-function add_options_department() {
-    fetch("/api/v1/department")
+function add_options_department(filterStr) {
+    fetch(filterStr)
         .then(response => response.json())
         .then(data => {
+
+            // if (Object.getOwnPropertyNames(data).length === 0)
+            //     return;
+
+            $("#departmentFilterFilter").empty().append('<option value=""></option>');
 
             if (get_lang() === "el") {
                 Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
@@ -216,7 +231,30 @@ function make_info(hos) {
     return info;
 }
 
-function setHospitals(current_region) {
+function setHospitals(filterStr) {
+
+    fetch(filterStr)
+        .then(response => response.json())
+        .then(data => {
+
+            document.getElementById("hospital-results").innerHTML = "";
+
+            if (get_lang() === "el")
+                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
+            else
+                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(add_hospital_result);
+
+            $("*.btn-collapse").on("click", function () {
+                $(this).toggleClass("collapsed");
+                $(this).closest("*.card-header").next().collapse("toggle");
+            });
+
+            $('.selectpicker').selectpicker('refresh');
+        });
+
+}
+
+function setFilterPath(current_region) {
 
     const region_id = $("#regionFilter").val().toString();
     const hospital = $("#hospitalFilter").val().toString();
@@ -240,29 +278,58 @@ function setHospitals(current_region) {
         filterStr += "date=" + date + "&"
     }
 
-    fetch("/api/v1/filter?" + filterStr)
-        .then(response => response.json())
-        .then(data => {
-
-            document.getElementById("hospital-results").innerHTML = "";
-
-            if (get_lang() === "el")
-                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
-            else
-                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(add_hospital_result);
-
-            $("*.btn-collapse").on("click", function () {
-                $(this).toggleClass("collapsed");
-                $(this).closest("*.card-header").next().collapse("toggle");
-            });
-
-            $('.selectpicker').selectpicker('refresh');
-        });
-
+    return filterStr;
 }
 
-$('.filterChange').on("change", function () {
-    setHospitals("");
+$("#regionFilter").on("change", function () {
+
+    let filterStr = setFilterPath("")
+
+    // add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
+    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
+    add_options_department("/api/v1/filter_department?" + filterStr)
+    setHospitals("/api/v1/filter_hospital?" + filterStr);
+});
+
+$("#hospitalFilter").on("change", function () {
+
+    let filterStr = setFilterPath("")
+
+    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
+    // add_options_hospital("/api/v1/filter_hospital?" + filterStr)
+    add_options_department("/api/v1/filter_department?" + filterStr)
+    setHospitals("/api/v1/filter_hospital?" + filterStr);
+});
+
+$("#departmentFilter").on("change", function () {
+
+    let filterStr = setFilterPath("")
+
+    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
+    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
+    // add_options_department("/api/v1/filter_department?" + filterStr)
+    setHospitals("/api/v1/filter_hospital?" + filterStr);
+});
+
+
+$("#onDutyCheckboxDiv").on("change", function () {
+
+    let filterStr = setFilterPath("")
+
+    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
+    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
+    add_options_department("/api/v1/filter_department?" + filterStr)
+    setHospitals("/api/v1/filter_hospital?" + filterStr);
+});
+
+$("#dateDiv").on("change", function () {
+
+    let filterStr = setFilterPath("")
+
+    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
+    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
+    add_options_department("/api/v1/filter_department?" + filterStr)
+    setHospitals("/api/v1/filter_hospital?" + filterStr);
 });
 // #Dynamic Filtering
 
