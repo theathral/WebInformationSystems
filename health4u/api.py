@@ -47,8 +47,6 @@ class FilterRegionResource(Resource):
         )
         if args["hospital_id"] is not None:
             region_query = region_query.filter_by(id=args["hospital_id"])
-        if args["region_id"] is not None:
-            region_query = region_query.filter_by(region_id=args["region_id"])
         if args["department_id"] is not None:
             region_query = region_query.join(
                 HasDepartment, Hospital.id == HasDepartment.hospital_id
@@ -68,7 +66,7 @@ class FilterRegionResource(Resource):
                 )
             region_query = region_query.filter_by(date=args["date"])
 
-        all_objects = [object_as_dict(hos) for hos in region_query.all()]
+        all_objects = [object_as_dict(reg) for reg in region_query.all()]
         return {obj["id"]: obj for obj in all_objects}
 
 
@@ -76,8 +74,6 @@ class FilterHospitalResource(Resource):
     def get(self):
         args = filter_parser.parse_args()
         hospital_query = Hospital.query
-        if args["hospital_id"] is not None:
-            hospital_query = hospital_query.filter_by(id=args["hospital_id"])
         if args["region_id"] is not None:
             hospital_query = hospital_query.filter_by(region_id=args["region_id"])
         if args["department_id"] is not None:
@@ -115,22 +111,45 @@ class FilterDepartmentResource(Resource):
             department_query = department_query.filter_by(id=args["hospital_id"])
         if args["region_id"] is not None:
             department_query = department_query.filter_by(region_id=args["region_id"])
+        if args["date"] is not None:
+            department_query = department_query.join(
+                OnDuty,
+                and_(
+                    Hospital.id == OnDuty.hospital_id,
+                    HasDepartment.department_id == OnDuty.department_id,
+                ),
+            ).filter_by(date=args["date"])
+
+        all_objects = [object_as_dict(dep) for dep in department_query.all()]
+        return {obj["id"]: obj for obj in all_objects}
+
+
+class FilterHospitalResultsResource(Resource):
+    def get(self):
+        args = filter_parser.parse_args()
+        hospital_query = Hospital.query
+        if args["hospital_id"] is not None:
+            hospital_query = hospital_query.filter_by(id=args["hospital_id"])
+        if args["region_id"] is not None:
+            hospital_query = hospital_query.filter_by(region_id=args["region_id"])
         if args["department_id"] is not None:
-            department_query = department_query.filter(Department.id == args["department_id"])
+            hospital_query = hospital_query.join(
+                HasDepartment, Hospital.id == HasDepartment.hospital_id
+            ).filter_by(department_id=args["department_id"])
         if args["date"] is not None:
             if args["department_id"] is None:
-                department_query = department_query.join(
+                hospital_query = hospital_query.join(
                     OnDuty, Hospital.id == OnDuty.hospital_id
                 )
             else:
-                department_query = department_query.join(
+                hospital_query = hospital_query.join(
                     OnDuty,
                     and_(
                         Hospital.id == OnDuty.hospital_id,
                         HasDepartment.department_id == OnDuty.department_id,
                     ),
                 )
-            department_query = department_query.filter_by(date=args["date"])
+            hospital_query = hospital_query.filter_by(date=args["date"])
 
-        all_objects = [object_as_dict(hos) for hos in department_query.all()]
+        all_objects = [object_as_dict(hos) for hos in hospital_query.all()]
         return {obj["id"]: obj for obj in all_objects}

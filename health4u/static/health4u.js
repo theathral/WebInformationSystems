@@ -23,6 +23,7 @@ function set_lang(lang_code) {
 function get_lang() {
     return $('html').attr('lang') || "en";
 }
+
 // #Set and get current language
 
 
@@ -54,127 +55,90 @@ $(".datepicker").datepicker({
 
 
 // Dynamic Filtering
-function add_options_region(filterStr, divId, currentRegion) {
+let regOpt = [{}]
+let hosOpt = [{}]
+let depOpt = [{}]
+
+function compare_function(a, b) {
+
+    if (get_lang() === "el")
+        return a.name.localeCompare(b.name)
+
+    return a.name_en.localeCompare(b.name_en)
+
+}
+
+function add_option(divId, data) {
+    let id = data.id;
+    let name = get_lang() === "el" ? data.name : data.name_en
+
+    $("#" + divId).append($("<option></option>")
+        .attr("value", id)
+        .append(name));
+}
+
+function add_option_selected(divId, data) {
+    let id = data.id;
+    let name = get_lang() === "el" ? data.name : data.name_en
+
+    $("#" + divId).append($("<option></option>")
+        .attr('selected', true)
+        .attr("value", id)
+        .append(name));
+}
+
+function add_filter_options(filterStr, divId, option) {
     fetch(filterStr)
         .then(response => response.json())
         .then(data => {
 
-            // if (Object.getOwnPropertyNames(data).length === 0)
-            //     return;
+            // fetch selected
+            // push it in data + delete duplicates
+            // or
+            // push it if not exists
+
+            console.log(divId)
+            console.log(data);
+            console.log(option);
 
             $("#" + divId).empty().append('<option value=""></option>');
 
-            if (get_lang() === "el") {
-                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
+            console.log(Object.getOwnPropertyNames(data).length)
 
-                    if (currentRegion === data.id.toString()) {
-                        $("#" + divId)
-                            .append($("<option></option>").attr('selected', true).attr("value", data.id)
-                                .append(data.name));
-                        $('.selectpicker').selectpicker('refresh');
-                    } else {
-                        $("#" + divId)
-                            .append($("<option></option>").attr("value", data.id)
-                                .append(data.name));
-                    }
-                });
+            if (Object.getOwnPropertyNames(data).length === 0) {
 
-                $('.selectpicker').selectpicker('refresh');
+                console.log(Object.getOwnPropertyNames(data).length === 0)
 
-            } else {
-                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(data => {
+                if (option !== "")
+                    fetch(filterStr.split("_")[0] + "/" + option)
+                        .then(response => response.json())
+                        .then(reg => add_option_selected(divId, reg));
 
-                    if (currentRegion === data.id.toString()) {
-                        $("#" + divId)
-                            .append($("<option></option>").attr('selected', true).attr("value", data.id)
-                                .append(data.name_en));
-                        $('.selectpicker').selectpicker('refresh');
-                    } else {
-                        $("#" + divId)
-                            .append($("<option></option>").attr("value", data.id)
-                                .append(data.name_en));
-                    }
-                });
-
-                $('.selectpicker').selectpicker('refresh');
+                return;
             }
-        });
-}
 
-function add_options_hospital(filterStr) {
-    fetch(filterStr)
-        .then(response => response.json())
-        .then(data => {
+            Object.values(data).sort((a, b) => compare_function(a, b)).forEach(data => {
 
-            // if (Object.getOwnPropertyNames(data).length === 0)
-            //     return;
+                if (option === data.id.toString()) {
+                    add_option_selected(divId, data);
+                    $('.selectpicker').selectpicker('refresh');
+                } else
+                    add_option(divId, data);
 
-            $("#hospitalFilter").empty().append('<option value=""></option>');
+            });
 
-            if (get_lang() === "el") {
+            $('.selectpicker').selectpicker('refresh');
 
-                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
-                    $("#hospitalFilter")
-                        .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
-                            .append(data.name));
-                });
-
-                $('.selectpicker').selectpicker('refresh');
-
-            } else {
-                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(data => {
-                    $("#hospitalFilter")
-                        .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
-                            .append(data.name_en));
-                });
-
-                $('.selectpicker').selectpicker('refresh');
-            }
-        });
-}
-
-function add_options_department(filterStr) {
-    fetch(filterStr)
-        .then(response => response.json())
-        .then(data => {
-
-            // if (Object.getOwnPropertyNames(data).length === 0)
-            //     return;
-
-            $("#departmentFilterFilter").empty().append('<option value=""></option>');
-
-            if (get_lang() === "el") {
-                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(data => {
-                    $("#departmentFilter")
-                        .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
-                            .append(data.name));
-                });
-
-                $('.selectpicker').selectpicker('refresh');
-
-            } else {
-                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(data => {
-                    $("#departmentFilter")
-                        .append($("<option></option>").attr("value", data.id).attr("id", "hos-" + data.id)
-                            .append(data.name_en));
-                });
-
-                $('.selectpicker').selectpicker('refresh');
-            }
         });
 }
 
 function add_hospital_result(hos) {
-    let hos_name = hos.name_en
-    if (get_lang() === "el")
-        hos_name = hos.name
-
-    $("<div/>").addClass(["card", "hospital-card"]).attr("id", "hos-res-" + hos.id).append(
+    ("<div/>").addClass(["card", "hospital-card"]).attr("id", "hos-res-" + hos.id).append(
         $("<div/>").addClass(["card-header", "p-0"]).attr("role", "tab").append(
             $("<button/>").addClass(["btn", "btn-block", "text-left", "rgba-opacity", "main-color-bg", "btn-collapse", "collapsed"]).attr("aria-expanded", "true").append(
                 $("<div/>").addClass(["h5", "mb-0"]).append(
                     $("<i/>").addClass(["fas", "fa-hospital"]),
-                    " ", hos_name,
+                    " ", get_lang() === "el" ? hos.name : hos.name_en,
                     $("<i/>").addClass(["fas", "fa-angle-up", "rotate-icon", "float-right"])
                 )
             )
@@ -237,12 +201,12 @@ function setHospitals(filterStr) {
         .then(response => response.json())
         .then(data => {
 
+            console.log("setHospitals")
+            console.log(data);
+
             document.getElementById("hospital-results").innerHTML = "";
 
-            if (get_lang() === "el")
-                Object.values(data).sort((a, b) => a.name.localeCompare(b.name)).forEach(add_hospital_result);
-            else
-                Object.values(data).sort((a, b) => a.name_en.localeCompare(b.name_en)).forEach(add_hospital_result);
+            Object.values(data).sort((a, b) => compare_function(a, b)).forEach(add_hospital_result);
 
             $("*.btn-collapse").on("click", function () {
                 $(this).toggleClass("collapsed");
@@ -285,51 +249,50 @@ $("#regionFilter").on("change", function () {
 
     let filterStr = setFilterPath("")
 
-    // add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
-    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
-    add_options_department("/api/v1/filter_department?" + filterStr)
-    setHospitals("/api/v1/filter_hospital?" + filterStr);
+    // add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "{{ current_user.region_id }}");
+    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
+    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#hospitalFilter").on("change", function () {
 
     let filterStr = setFilterPath("")
 
-    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
-    // add_options_hospital("/api/v1/filter_hospital?" + filterStr)
-    add_options_department("/api/v1/filter_department?" + filterStr)
-    setHospitals("/api/v1/filter_hospital?" + filterStr);
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    // add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
+    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#departmentFilter").on("change", function () {
 
     let filterStr = setFilterPath("")
 
-    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
-    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
-    // add_options_department("/api/v1/filter_department?" + filterStr)
-    setHospitals("/api/v1/filter_hospital?" + filterStr);
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    // add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
+    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
-
 
 $("#onDutyCheckboxDiv").on("change", function () {
 
     let filterStr = setFilterPath("")
 
-    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
-    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
-    add_options_department("/api/v1/filter_department?" + filterStr)
-    setHospitals("/api/v1/filter_hospital?" + filterStr);
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
+    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#dateDiv").on("change", function () {
 
     let filterStr = setFilterPath("")
 
-    add_options_region("/api/v1/filter_region?" + filterStr, "regionFilter", "")
-    add_options_hospital("/api/v1/filter_hospital?" + filterStr)
-    add_options_department("/api/v1/filter_department?" + filterStr)
-    setHospitals("/api/v1/filter_hospital?" + filterStr);
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
+    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 // #Dynamic Filtering
 
