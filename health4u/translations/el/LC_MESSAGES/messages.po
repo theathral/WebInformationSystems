@@ -124,8 +124,9 @@ msgid "Welcome msg"
 msgstr ""
 "Το Health4U φέρνει κοντά σας όλα τα νοσοκομεία της Ελλάδας με ένα "
 "μόνο  κλικ, και σας παρέχει τις τελευταίες εξελίξεις σχετικά με τον "
-"<a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> "
-"όσο η πανδημία παραμένει σε έξαρση!"
+
+msgid "Welcome msg 2"
+msgstr "όσο η πανδημία παραμένει σε έξαρση!"
 
 msgid "Covid-19 alert"
 msgstr "Προειδοποίηση για τον COVID-19"

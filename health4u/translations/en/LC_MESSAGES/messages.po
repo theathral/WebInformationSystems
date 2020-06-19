@@ -124,8 +124,9 @@ msgid "Welcome msg"
 msgstr ""
 "Health4U brings all hospitals of Greece in your hands with only a "
 "couple of clicks and it delivers up to date information about "
-"<a class='main-color' href='{{ url_for('covid19') }}'><u>Covid-19</u></a> "
-"as long as the outbreak is active."
+
+msgid "Welcome msg 2"
+msgstr "as long as the outbreak is active."
 
 msgid "Covid-19 alert"
 msgstr "Covid-19 alert"

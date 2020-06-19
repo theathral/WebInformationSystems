@@ -86,7 +86,11 @@ function add_filter_options(filterStr, divId, option) {
         .then(response => response.json())
         .then(data => {
 
-            $("#" + divId).empty().append('<option value=""></option>');
+            $("#" + divId).empty();
+
+            if (divId === "regionFilter") {
+                $("#" + divId).append('<option value=""></option>');
+            }
 
             fetch(filterStr.split("_")[0] + "/" + option)
                 .then(response => response.json())
@@ -180,6 +184,10 @@ function setHospitals(filterStr) {
 
             document.getElementById("hospital-results").innerHTML = "";
 
+            if (Object.keys(data).length === 0) {
+                document.getElementById("hospital-results").innerHTML = get_lang() === "el" ? "(Δεν βρέθηκαν δεδομένα)" : "(No results found)";
+            }
+
             Object.values(data).sort((a, b) => compare_function(a, b)).forEach(add_hospital_result);
 
             $("*.btn-collapse").on("click", function () {
@@ -220,6 +228,7 @@ function setFilterPath(current_region) {
 $("#regionFilter").on("change", function () {
     let filterStr = setFilterPath("")
 
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
@@ -229,6 +238,7 @@ $("#hospitalFilter").on("change", function () {
     let filterStr = setFilterPath("")
 
     add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
+    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
@@ -238,6 +248,7 @@ $("#departmentFilter").on("change", function () {
 
     add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
