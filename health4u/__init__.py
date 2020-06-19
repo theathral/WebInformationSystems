@@ -8,7 +8,8 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from flask_restful import Api
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from .api import RegionResource, HospitalResource, DepartmentResource, FilterResource
+from .api import RegionResource, HospitalResource, DepartmentResource, FilterHospitalResource, FilterRegionResource, \
+    FilterDepartmentResource, FilterHospitalResultsResource
 from .db import db, User, Hospital, Department, OnDuty, Request
 from .init_db import load_data
 
@@ -35,7 +36,10 @@ def create_app(test_config=None):
     api.add_resource(RegionResource, "/region", "/region/", "/region/<int:id>")
     api.add_resource(HospitalResource, "/hospital", "/hospital/", "/hospital/<int:id>")
     api.add_resource(DepartmentResource, "/department", "/department/", "/department/<int:id>")
-    api.add_resource(FilterResource, "/filter", "/filter/")
+    api.add_resource(FilterRegionResource, "/region_filter", "/region_filter/")
+    api.add_resource(FilterHospitalResource, "/hospital_filter", "/hospital_filter/")
+    api.add_resource(FilterDepartmentResource, "/department_filter", "/department_filter/")
+    api.add_resource(FilterHospitalResultsResource, "/hospital_results", "/hospital_results/")
 
     babel = Babel(app)
 
@@ -174,7 +178,7 @@ def create_app(test_config=None):
                 db.session.commit()
 
                 flash(gettext("Successful details update"), 'success')
-                return redirect(url_for('home'))
+                return redirect(url_for("home"))
             else:
                 flash(gettext("Existed email"), "danger")
                 return redirect(url_for("account_details"))
@@ -205,9 +209,14 @@ def create_app(test_config=None):
             last_name = request.form["last_name"]
             region_id = request.form["region_forgot"]
 
-            temp_user = User.query.filter_by(email=email).first()
+            temp_user = User.query\
+                .filter_by(email=email)\
+                .filter_by(first_name=first_name)\
+                .filter_by(last_name=last_name)\
+                .filter_by(region_id=region_id)\
+                .first()
 
-            if temp_user and temp_user.email == email and temp_user.first_name == first_name and temp_user.last_name == last_name and temp_user.region_id == region_id:
+            if temp_user:
                 new_req = Request(email=temp_user.email, name=temp_user.last_name, need='-1', message='-1')
                 db.session.add(new_req)
                 db.session.commit()

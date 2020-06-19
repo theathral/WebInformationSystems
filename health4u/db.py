@@ -47,9 +47,10 @@ class HasDepartment(db.Model):
 
 
 class OnDuty(db.Model):
-    date = db.Column(db.Date, primary_key=True, index=True)
-    hospital_id = db.Column(db.Integer, primary_key=True)
-    department_id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Date, index=True)
+    hospital_id = db.Column(db.Integer)
+    department_id = db.Column(db.Integer)
 
     __table_args__ = (
         ForeignKeyConstraint(

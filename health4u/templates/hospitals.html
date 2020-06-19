@@ -22,7 +22,7 @@
                         </button>
                     </div>
 
-                    <div id="collapseFilter" class="collapse filterChange show" role="tabpanel"
+                    <div id="collapseFilter" class="collapse show" role="tabpanel"
                          aria-labelledby="headingFilter" data-parent="#filter-list">
 
                         <form class="rounded-lg p-2 color-4-bg">
@@ -51,7 +51,7 @@
                                         {# Dynamic loading of option #}
                                     </select>
                                 </div>
-                                <div class="custom-control custom-checkbox my-3">
+                                <div class="custom-control custom-checkbox my-3" id="onDutyCheckboxDiv">
                                     <input type="checkbox" class="custom-control-input" id="onDutyCheckbox" checked>
                                     <label class="custom-control-label" for="onDutyCheckbox">
                                         {{ gettext("On duty checkbox") }}
