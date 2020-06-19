@@ -178,7 +178,7 @@ def create_app(test_config=None):
                 db.session.commit()
 
                 flash(gettext("Successful details update"), 'success')
-                return redirect(url_for('home'))
+                return redirect(url_for("home"))
             else:
                 flash(gettext("Existed email"), "danger")
                 return redirect(url_for("account_details"))
@@ -209,9 +209,14 @@ def create_app(test_config=None):
             last_name = request.form["last_name"]
             region_id = request.form["region_forgot"]
 
-            temp_user = User.query.filter_by(email=email).first()
+            temp_user = User.query\
+                .filter_by(email=email)\
+                .filter_by(first_name=first_name)\
+                .filter_by(last_name=last_name)\
+                .filter_by(region_id=region_id)\
+                .first()
 
-            if temp_user and temp_user.email == email and temp_user.first_name == first_name and temp_user.last_name == last_name and temp_user.region_id == region_id:
+            if temp_user:
                 new_req = Request(email=temp_user.email, name=temp_user.last_name, need='-1', message='-1')
                 db.session.add(new_req)
                 db.session.commit()

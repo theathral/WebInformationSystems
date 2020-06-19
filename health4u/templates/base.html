@@ -148,30 +148,23 @@
 <script>
 
     $(window).ready(function () {
-
         // Database actions on window load
         if (window.location.pathname === "/hospitals") {
-            let region = "";
-            {% if current_user.is_authenticated %}
-                region = "{{ current_user.region_id }}";
-                console.log("bla bla bla bla bla")
-            {% endif %}
+            let filterStr = setFilterPath("{{ current_user.region_id }}")
 
-            let filterStr = setFilterPath(region)
-
-            add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", region);
+            add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "{{ current_user.region_id }}");
             add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
             add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
             setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 
         } else if (window.location.pathname === "/sign_up") {
-            add_filter_options("/api/v1/region", "region");
+            add_filter_options("/api/v1/region", "region", "");
 
         } else if (window.location.pathname === "/account_details") {
-            {#add_filter_options("/api/v1/region", "region_account", "{{ current_user.region_id }}");#}
+            add_filter_options("/api/v1/region", "region_account", "{{ current_user.region_id }}");
 
         } else if (window.location.pathname === "/forgot_password") {
-            add_filter_options("/api/v1/region", "region_forgot");
+            add_filter_options("/api/v1/region", "region_forgot", "");
 
         } else {
             // Nothing

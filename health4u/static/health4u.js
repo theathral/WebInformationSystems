@@ -55,17 +55,11 @@ $(".datepicker").datepicker({
 
 
 // Dynamic Filtering
-let regOpt = [{}]
-let hosOpt = [{}]
-let depOpt = [{}]
-
 function compare_function(a, b) {
-
     if (get_lang() === "el")
         return a.name.localeCompare(b.name)
 
     return a.name_en.localeCompare(b.name_en)
-
 }
 
 function add_option(divId, data) {
@@ -92,48 +86,31 @@ function add_filter_options(filterStr, divId, option) {
         .then(response => response.json())
         .then(data => {
 
-            // fetch selected
-            // push it in data + delete duplicates
-            // or
-            // push it if not exists
-
-            console.log(divId)
-            console.log(data);
-            console.log(option);
-
             $("#" + divId).empty().append('<option value=""></option>');
 
-            console.log(Object.getOwnPropertyNames(data).length)
+            fetch(filterStr.split("_")[0] + "/" + option)
+                .then(response => response.json())
+                .then(item => {
 
-            if (Object.getOwnPropertyNames(data).length === 0) {
+                    if (option !== "" && !data.hasOwnProperty(item.id))
+                        data[item.id] = item;
 
-                console.log(Object.getOwnPropertyNames(data).length === 0)
+                    Object.values(data).sort((a, b) => compare_function(a, b)).forEach(data => {
 
-                if (option !== "")
-                    fetch(filterStr.split("_")[0] + "/" + option)
-                        .then(response => response.json())
-                        .then(reg => add_option_selected(divId, reg));
+                        if (option === data.id.toString()) {
+                            add_option_selected(divId, data);
+                            $('.selectpicker').selectpicker('refresh');
+                        } else
+                            add_option(divId, data);
+                    });
 
-                return;
-            }
-
-            Object.values(data).sort((a, b) => compare_function(a, b)).forEach(data => {
-
-                if (option === data.id.toString()) {
-                    add_option_selected(divId, data);
                     $('.selectpicker').selectpicker('refresh');
-                } else
-                    add_option(divId, data);
-
-            });
-
-            $('.selectpicker').selectpicker('refresh');
-
+                });
         });
 }
 
 function add_hospital_result(hos) {
-    ("<div/>").addClass(["card", "hospital-card"]).attr("id", "hos-res-" + hos.id).append(
+    $("<div/>").addClass(["card", "hospital-card"]).attr("id", "hos-res-" + hos.id).append(
         $("<div/>").addClass(["card-header", "p-0"]).attr("role", "tab").append(
             $("<button/>").addClass(["btn", "btn-block", "text-left", "rgba-opacity", "main-color-bg", "btn-collapse", "collapsed"]).attr("aria-expanded", "true").append(
                 $("<div/>").addClass(["h5", "mb-0"]).append(
@@ -192,17 +169,14 @@ function make_info(hos) {
             }
         }
     )
+
     return info;
 }
 
 function setHospitals(filterStr) {
-
     fetch(filterStr)
         .then(response => response.json())
         .then(data => {
-
-            console.log("setHospitals")
-            console.log(data);
 
             document.getElementById("hospital-results").innerHTML = "";
 
@@ -215,11 +189,9 @@ function setHospitals(filterStr) {
 
             $('.selectpicker').selectpicker('refresh');
         });
-
 }
 
 function setFilterPath(current_region) {
-
     const region_id = $("#regionFilter").val().toString();
     const hospital = $("#hospitalFilter").val().toString();
     const department = $("#departmentFilter").val().toString();
@@ -246,50 +218,42 @@ function setFilterPath(current_region) {
 }
 
 $("#regionFilter").on("change", function () {
-
     let filterStr = setFilterPath("")
 
-    // add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "{{ current_user.region_id }}");
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#hospitalFilter").on("change", function () {
-
     let filterStr = setFilterPath("")
 
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
-    // add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#departmentFilter").on("change", function () {
-
     let filterStr = setFilterPath("")
 
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
-    // add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#onDutyCheckboxDiv").on("change", function () {
-
     let filterStr = setFilterPath("")
 
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
 });
 
 $("#dateDiv").on("change", function () {
-
     let filterStr = setFilterPath("")
 
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", "");
+    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
@@ -359,4 +323,3 @@ $(".underConstruction").on("click", function () {
     })
 })
 // #Under Construction alert
-
