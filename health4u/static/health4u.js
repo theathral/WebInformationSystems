@@ -88,7 +88,7 @@ function add_filter_options(filterStr, divId, option) {
 
             $("#" + divId).empty();
 
-            if (divId === "regionFilter") {
+            if (divId !== "region" && divId !== "region_account" && divId !== "region_forgot") {
                 $("#" + divId).append('<option value=""></option>');
             }
 
@@ -225,49 +225,33 @@ function setFilterPath(current_region) {
     return filterStr;
 }
 
-$("#regionFilter").on("change", function () {
+function updateFilters() {
     let filterStr = setFilterPath("")
 
     add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
     add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
     add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
     setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
+}
+
+$("#regionFilter").on("change", function () {
+    updateFilters();
 });
 
 $("#hospitalFilter").on("change", function () {
-    let filterStr = setFilterPath("")
-
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
-    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
-    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
-    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
+    updateFilters();
 });
 
 $("#departmentFilter").on("change", function () {
-    let filterStr = setFilterPath("")
-
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
-    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
-    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
-    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
+    updateFilters();
 });
 
 $("#onDutyCheckboxDiv").on("change", function () {
-    let filterStr = setFilterPath("")
-
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
-    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
-    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
-    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
+    updateFilters();
 });
 
 $("#dateDiv").on("change", function () {
-    let filterStr = setFilterPath("")
-
-    add_filter_options("/api/v1/region_filter?" + filterStr, "regionFilter", $("#regionFilter").val().toString());
-    add_filter_options("/api/v1/hospital_filter?" + filterStr, "hospitalFilter", $("#hospitalFilter").val().toString())
-    add_filter_options("/api/v1/department_filter?" + filterStr, "departmentFilter", $("#departmentFilter").val().toString())
-    setHospitals("/api/v1/hospital_results?" + filterStr, $("#departmentFilter").val().toString());
+    updateFilters();
 });
 // #Dynamic Filtering
 
