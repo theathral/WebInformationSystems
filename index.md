@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+## English Description
 
-You can use the [editor on GitHub](https://github.com/theathral/WebInformationSystems/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Bachelor level project during "Web Information Systems" course. The goal of the project is the creation of a website, which represents in real-time, all the on-duty hospitals of Greece, as well as their contact details. Moreover, the user has the opportunity to find information about COVID-19.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Ελληνική Περιγραφή
 
-### Markdown
+Εργασία προπτυχιακού επιπέδου κατά την διάρκεια του μαθήματος "Πληροφοριακά Συστήματα Παγκόσμιου Ιστού". Σκοπός της εργασίας είναι η υλοποίηση μιας ιστοσελίδας, η οποία απεικονίζει σε πραγματικό χρόνο τα εφημερεύοντα νοσοκομεία της Ελλάδος, καθώς και τρόπους επικοινωνίας με αυτά. Επίσης, στην ιστοσελίδα, ο χρήστης έχει τη δυνατότητα να αποκομίσει πληροφορίες σχετικά με τον COVID-19.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Contributors
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/theathral/WebInformationSystems/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[Athanasakis Theodosios](https://theathral.github.io)\
+[Giannakopoulos Grigorios](https://github.com/grigoriosgiann)\
+[Kyrama Styliani](https://github.com/KyraStyl)\
+[Makris Ioannis](https://github.com/GiannisMak)
